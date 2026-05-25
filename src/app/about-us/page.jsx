@@ -119,15 +119,15 @@ export default function AboutUs() {
             <p className="text-slate-500 mt-2">The strategic minds behind Fintax Adviser.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {team.map((member, idx) => (
-              <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full">
+              <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full mx-w-[360px] mx-suto">
                 {/* Image Wrap */}
-                <div className="h-100  overflow-hidden relative bg-slate-200 flex justify-center">
+                <div className="h-[260]  overflow-hidden relative bg-slate-100 flex justify-center item-center">
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                    className="w-[300px] h-[300px] object-cover rounded-xl hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 {/* Content */}
@@ -179,10 +179,6 @@ export default function AboutUs() {
           <h3 className="text-2xl font-bold text-slate-900">
             Arun Sharma
           </h3>
-
-          <p className="mt-5 space-y-2 text-slate-600 text-sm">
-            MBA-Operation,NMIMS
-          </p>
         </div>
       </div>
 
@@ -202,9 +198,6 @@ export default function AboutUs() {
             Mohit Gauhan
           </h3>
 
-          <div className="mt-5 space-y-2 text-slate-600 text-sm">
-            <p>🎓B.com,M.com</p>
-          </div>
         </div>
       </div>
 
@@ -223,10 +216,9 @@ export default function AboutUs() {
           <h3 className="text-2xl font-bold text-slate-900">
             Jagat Bisht
           </h3>
-
-          <div className="mt-5 space-y-2 text-slate-600 text-sm">
+          {/* <div className="mt-5 space-y-2 text-slate-600 text-sm">
             <p>🎓 B.Com hons</p>
-          </div>
+          </div> */}
         </div>
       </div>
 

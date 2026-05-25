@@ -13,10 +13,7 @@ export default function Footer() {
   ];
 
   const resourceLinks = [
-    { label: "Tax Calendar 2026", href: "/resources/tax-calendar" },
-    { label: "Important Circulars", href: "/resources/circulars" },
-    { label: "Downloadable Forms", href: "/resources/forms" },
-    { label: "Financial Calculators", href: "/resources/calculators" },
+    { label: "Financial Calculators", href: "https://www.incometaxindia.gov.in/income-tax-calculator" },
     { label: "Latest Blogs & News", href: "/blogs" },
   ];
 
@@ -29,7 +26,7 @@ export default function Footer() {
     },
     {
       name: 'Instagram',
-      href: 'https://www.instagram.com/fintaxadviser?igsh=MXdyaTk4ZmhhYW45dA==',
+      href: 'https://www.instagram.com/fintaxadviser',
       icon: <FaInstagram />,
       hoverClass: 'hover:text-pink-500 hover:bg-pink-50 hover:border-pink-200'
     },
@@ -47,7 +44,7 @@ export default function Footer() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/company/fintax-partners',
+      href: 'https://www.linkedin.com/company/xxxxxxx',
       icon: <FaLinkedinIn />,
       hoverClass: 'hover:text-blue-600 hover:bg-blue-50 hover:border-blue-200'
     }

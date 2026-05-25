@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, Menu, X} from "lucide-react";
+import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { FiPhone, FiMail } from "react-icons/fi";
 
-const menuData = [  
+const menuData = [
   {
     title: "Start-Up",
     sections: [
@@ -218,15 +218,15 @@ export default function Navbar() {
               Get Free Consultation
             </Link>
 
-             {isLoggedIn ? (
-            <button onClick={() => {handleLogout(); setMobileOpen(false); }} className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">
-              Logout
-            </button>
-          ) : (
-            <Link href="/admin/login" onClick={() => setMobileOpen(false)} className="bg-white border border-blue-900 text-black px-4 py-2 rounded-lg font-semibold text-sm">
-               <span>Dashboard</span>  
-            </Link>
-          )}
+            {isLoggedIn ? (
+              <button onClick={() => { handleLogout(); setMobileOpen(false); }} className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                Logout
+              </button>
+            ) : (
+              <Link href="/admin/login" onClick={() => setMobileOpen(false)} className="bg-white border border-blue-900 text-black px-4 py-2 rounded-lg font-semibold text-sm">
+                <span>Dashboard</span>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@ export default function Navbar() {
       {/* Main Navigation Row */}
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
         <div className="flex items-center justify-between h-20">
-          
+
           {/* Brand Logo */}
           <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 group">
             <img
@@ -247,10 +247,10 @@ export default function Navbar() {
           {/* Desktop Links */}
           <nav className="hidden lg:flex items-center gap-6">
             {menuData.map((menu, index) => {
-              let maxWidthStyle = "1152px"; 
+              let maxWidthStyle = "1152px";
               if (menu.sections.length === 1) maxWidthStyle = "320px";
-              if (menu.sections.length === 2) maxWidthStyle = "672px"; 
-              if (menu.sections.length === 3) maxWidthStyle = "896px"; 
+              if (menu.sections.length === 2) maxWidthStyle = "672px";
+              if (menu.sections.length === 3) maxWidthStyle = "896px";
 
               return (
                 <div
@@ -270,7 +270,7 @@ export default function Navbar() {
                     ${activeMenu === index
                         ? "opacity-100 visible translate-y-0"
                         : "opacity-0 invisible -translate-y-2 pointer-events-none"
-                    }`}
+                      }`}
                   >
                     <div
                       className="mx-auto w-full text-gray-800 shadow-2xl p-10 rounded-xl border border-gray-100"
@@ -317,8 +317,8 @@ export default function Navbar() {
             <a href="tel:+919990924477" className="p-2 text-gray-700 bg-slate-100 rounded-full hover:text-blue-600 transition">
               <FiPhone size={18} />
             </a>
-            <button 
-              onClick={() => setMobileOpen(!mobileOpen)} 
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 text-gray-800 hover:bg-gray-100 rounded-lg transition"
               aria-label="Toggle Menu"
               suppressHydrationWarning={true}
@@ -330,21 +330,19 @@ export default function Navbar() {
       </div>
 
       {/* Backdrop Backdrop Overlay shadow */}
-      <div 
-        className={`fixed inset-0 top-20 bg-black/40 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+      <div
+        className={`fixed inset-0 top-20 bg-black/40 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setMobileOpen(false)}
       />
 
       {/* Slide Drawer container */}
-      <div className={`fixed right-0 top-20 bottom-0 w-full sm:w-[380px] bg-white z-50 lg:hidden shadow-xl border-l flex flex-col transition-transform duration-300 ease-in-out ${
-        mobileOpen ? "translate-x-0" : "translate-x-full"
-      }`}>
+      <div className={`fixed right-0 top-20 bottom-0 w-full sm:w-[380px] bg-white z-50 lg:hidden shadow-xl border-l flex flex-col transition-transform duration-300 ease-in-out ${mobileOpen ? "translate-x-0" : "translate-x-full"
+        }`}>
         <div className="flex-1 overflow-y-auto px-6 py-6 space-y-4">
           {menuData.map((menu, index) => (
             <div key={index} className="border-b border-gray-100 pb-3">
-              <button 
+              <button
                 onClick={() => toggleMobileMenu(index)}
                 className="flex items-center justify-between w-full font-bold text-gray-900 text-base py-1"
                 suppressHydrationWarning={true}
@@ -352,7 +350,7 @@ export default function Navbar() {
                 <span>{menu.title}</span>
                 {mobileActiveMenu === index ? <ChevronUp size={18} className="text-blue-600" /> : <ChevronDown size={18} className="text-gray-500" />}
               </button>
-              
+
               {mobileActiveMenu === index && (
                 <div className="mt-3 pl-3 space-y-4 border-l-2 border-blue-500/30 transition-all">
                   {menu.sections.map((section, i) => (
@@ -378,10 +376,77 @@ export default function Navbar() {
             </div>
           ))}
 
-          <div className="space-y-3 pt-2">
+          {/* <div className="space-y-3 pt-2">
             <Link href="/about-us" onClick={() => setMobileOpen(false)} className="text-[15px] font-semibold text-gray-800 block py-1 border-b border-gray-50">About Us</Link>
             <Link href="/blogs" onClick={() => setMobileOpen(false)} className="text-[15px] font-semibold text-gray-800 block py-1 border-b border-gray-50">Blogs</Link>
             <Link href="/contact-us" onClick={() => setMobileOpen(false)} className="text-[15px] font-semibold text-gray-800 block py-1 border-b border-gray-50">Contact Us</Link>
+          </div> */}
+          <div className="space-y-3 pt-2">
+
+            {/* Mobile Buttons */}
+
+            {/* Existing Links */}
+            <Link
+              href="/about-us"
+              onClick={() => setMobileOpen(false)}
+              className="text-[15px] font-semibold text-slate-900 block py-1 border-b border-gray-50"
+            >
+              About Us
+            </Link>
+
+            <Link
+              href="/blogs"
+              onClick={() => setMobileOpen(false)}
+              className="text-[15px] font-semibold text-slate-900 block py-1 border-b border-gray-50"
+            >
+              Blogs
+            </Link>
+
+            <Link
+              href="/contact-us"
+              onClick={() => setMobileOpen(false)}
+              className="text-[15px] font-semibold text-slate-900 block py-1 border-b border-gray-50"
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="https://calendly.com/fintaxadviser-info/30min"
+              target="_blank"
+              onClick={() => setMobileOpen(false)}
+              className="block w-full text-center bg-blue-600 text-white py-3 rounded-xl font-semibold"
+            >
+              Schedule Meeting
+            </Link>
+
+            <Link
+              href="/get-free-consultant"
+              onClick={() => setMobileOpen(false)}
+              className="block w-full text-center border border-blue-600 text-blue-600 py-3 rounded-xl font-semibold"
+            >
+              Get Free Consultation
+            </Link>
+
+            {isLoggedIn ? (
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setMobileOpen(false);
+                }}
+                className="w-full bg-red-600 text-white py-3 rounded-xl font-semibold"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                href="/admin/login"
+                onClick={() => setMobileOpen(false)}
+                className="block w-full text-center bg-black text-white py-3 rounded-xl font-semibold"
+              >
+                Dashboard
+              </Link>
+            )}
+
+
           </div>
         </div>
       </div>

@@ -230,9 +230,6 @@
 import React, { useState } from 'react';
 import { IoMdClose } from "react-icons/io";
 
-// NOTE: Metadata cannot be exported directly from a "use client" file in Next.js.
-// Move the metadata object to your page.js / layout.js file instead to prevent build errors.
-
 export default function BannerSection() {
     const [modal, setModal] = useState(false);
 
@@ -374,7 +371,7 @@ export default function BannerSection() {
                     <img
                         src="/assets/banner.png"
                         alt="vcfo banner"
-                        className="w-full h-full object-cover object-center opacity-40 lg:opacity-100"
+                        className="w-full h-full object-cover object-center opacity-40 lg:opacity-100 "
                     />
                     {/* Soft gradient overlay to keep text highly legible over custom graphics on small screens */}
                     <div className="absolute inset-0 bg-gradient-to-l from-white via-white/70 to-transparent lg:from-transparent" />
