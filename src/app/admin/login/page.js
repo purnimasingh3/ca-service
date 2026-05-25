@@ -65,6 +65,7 @@ return (
       onChange={(e) =>
         setEmail(e.target.value)
       }
+      suppressHydrationWarning={true}
     />
 
     <input
@@ -74,11 +75,13 @@ return (
       onChange={(e) =>
         setPassword(e.target.value)
       }
+      suppressHydrationWarning={true}
     />
 
     <button
     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg"
       onClick={handleLogin}
+    suppressHydrationWarning={true}
     >
       Login
     </button>

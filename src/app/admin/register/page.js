@@ -80,6 +80,7 @@
             onChange={(e)=>
               setEmail(e.target.value)
             }
+            suppressHydrationWarning={true}
           />
 
           <input
@@ -89,11 +90,13 @@
             onChange={(e)=>
               setPassword(e.target.value)
             }
+            suppressHydrationWarning={true}
           />
 
           <button
             onClick={handleRegister}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg"
+          suppressHydrationWarning={true}
           >
             Register
           </button>
