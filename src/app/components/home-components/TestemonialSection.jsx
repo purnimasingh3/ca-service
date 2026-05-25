@@ -82,8 +82,8 @@ export default function TestimonialSection() {
               <div className="flex items-center gap-4">
 
                 <Image
-                  src="/reviews/reviews2.avif"
-                  alt="client"
+                  src="/reviews/reviews1.jpeg"
+                  alt="Rank"
                   width={65}
                   height={65}
                   className="rounded-full object-cover"
@@ -92,13 +92,10 @@ export default function TestimonialSection() {
                 <div>
 
                   <h3 className="text-xl font-semibold text-gray-900">
-
-                    Rahul Sharma
-
+                    Rank mercantile private limited
                   </h3>
-
                   <p className="text-gray-500">
-                    Startup Founder
+                    Anshuman bhargava , Director
                   </p>
 
                 </div>
@@ -113,7 +110,7 @@ export default function TestimonialSection() {
 
           {/* CARD 2 */}
 
-          <div className="group bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#2563eb] rounded-[35px] p-8 text-white shadow-[0_20px_60px_rgba(37,99,235,0.25)] hover:-translate-y-3 transition duration-500">
+          <div className="group bg-white rounded-[35px] p-8 text-white shadow-[0_20px_60px_rgba(37,99,235,0.25)] hover:-translate-y-3 transition duration-500">
 
             {/* Stars */}
 
@@ -129,14 +126,13 @@ export default function TestimonialSection() {
 
             {/* Review */}
 
-            <p className="text-blue-100 leading-8 text-lg mb-8">
+            <p className="text-gray-500 leading-8 text-lg mb-8">
 
               “Professional and highly experienced team.
               Their taxation and compliance support helped
               our business scale confidently.”
 
             </p>
-
             {/* User */}
 
             <div className="flex items-center justify-between">
@@ -144,8 +140,8 @@ export default function TestimonialSection() {
               <div className="flex items-center gap-4">
 
                 <Image
-                  src="/reviews/reviews1.avif"
-                  alt="client"
+                  src="/reviews/reviews2.jpeg"
+                  alt="Qurex"
                   width={65}
                   height={65}
                   className="rounded-full object-cover"
@@ -153,18 +149,14 @@ export default function TestimonialSection() {
 
                 <div>
 
-                  <h3 className="text-xl font-semibold">
-
-                    Priya Verma
-
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Qurex health private limited
                   </h3>
 
-                  <p className="text-blue-200">
-                    Business Owner
+                  <p className="text-gray-500">
+                    Shailja mittal, Director
                   </p>
-
                 </div>
-
               </div>
 
               <Quote className="w-10 h-10 text-blue-300" />
@@ -206,8 +198,8 @@ export default function TestimonialSection() {
               <div className="flex items-center gap-4">
 
                 <Image
-                  src="/reviews/reviews3.avif"
-                  alt="client"
+                  src="/reviews/reviews3.jpeg"
+                  alt="astha"
                   width={65}
                   height={65}
                   className="rounded-full object-cover"
@@ -216,13 +208,11 @@ export default function TestimonialSection() {
                 <div>
 
                   <h3 className="text-xl font-semibold text-gray-900">
-
-                    Aman Gupta
-
+                    Astha online ventures LLP
                   </h3>
 
                   <p className="text-gray-500">
-                    Entrepreneur
+                    Aastha goel , Partner
                   </p>
 
                 </div>
