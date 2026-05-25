@@ -73,7 +73,7 @@ export default function AboutUs() {
         </div>
         <div className="grid grid-cols-2 gap-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
           <div>
-            <p className="text-4xl font-extrabold text-blue-600">$20M+</p>
+            <p className="text-4xl font-extrabold text-blue-600">₹20M+</p>
             <p className="text-sm font-medium text-slate-500 mt-1">Tax Savings Managed</p>
           </div>
           <div>
@@ -123,7 +123,7 @@ export default function AboutUs() {
             {team.map((member, idx) => (
               <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full mx-w-[360px] mx-suto">
                 {/* Image Wrap */}
-                <div className="h-[260]  overflow-hidden relative bg-slate-100 flex justify-center item-center">
+                <div className="h-[270]  overflow-hidden relative bg-slate-100 flex justify-center item-center">
                   <img 
                     src={member.image} 
                     alt={member.name}

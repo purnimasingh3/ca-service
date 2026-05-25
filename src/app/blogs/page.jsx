@@ -35,6 +35,7 @@ export default function Blogs() {
   const [showAdmin, setShowAdmin] = useState(true);
   const [search, setSearch] = useState('');
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
   const categories = useMemo(
@@ -181,6 +182,21 @@ export default function Blogs() {
     }
 
   };
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    window.location.reload();
+  };
+  //   const toggleMobileMenu = (index) => {
+  //   setMobileActiveMenu(mobileActiveMenu === index ? null : index);
+  // };
 
   return (
     <div className={`${styles.page} min-h-screen`}>
@@ -227,6 +243,17 @@ export default function Blogs() {
                 ))}
               </div>
             </div>
+
+            {isLoggedIn ? (
+              <button onClick={() => { handleLogout(); setMobileOpen(false); }} className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                Logout
+              </button>
+            ) : (
+              <Link href="/admin/login" onClick={() => setMobileOpen(false)} className="bg-blue-900 text-white border border-blue-900 text-black px-4 py-2 rounded-lg font-semibold text-sm">
+                <span>Post</span>
+              </Link>
+            )}
+
           </div>
 
           {/* Featured Post */}

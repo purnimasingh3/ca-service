@@ -218,7 +218,7 @@ export default function Navbar() {
               Get Free Consultation
             </Link>
 
-            {isLoggedIn ? (
+            {/* {isLoggedIn ? (
               <button onClick={() => { handleLogout(); setMobileOpen(false); }} className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">
                 Logout
               </button>
@@ -226,7 +226,7 @@ export default function Navbar() {
               <Link href="/admin/login" onClick={() => setMobileOpen(false)} className="bg-white border border-blue-900 text-black px-4 py-2 rounded-lg font-semibold text-sm">
                 <span>Dashboard</span>
               </Link>
-            )}
+            )} */}
           </div>
         </div>
       </div>
@@ -426,7 +426,7 @@ export default function Navbar() {
               Get Free Consultation
             </Link>
 
-            {isLoggedIn ? (
+            {/* {isLoggedIn ? (
               <button
                 onClick={() => {
                   handleLogout();
@@ -444,7 +444,7 @@ export default function Navbar() {
               >
                 Dashboard
               </Link>
-            )}
+            )} */}
 
 
           </div>
