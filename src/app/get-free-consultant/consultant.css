@@ -1,0 +1,93 @@
+.consultant-page{
+  min-height:100vh;
+  display:flex;
+  gap:50px;
+  padding:60px 8%;
+  align-items:center;
+  justify-content:center;
+  background:#f5f9ff;
+  flex-wrap:wrap;
+}
+
+.consultant-left{
+  flex:1;
+  min-width:300px;
+}
+
+.consultant-left h1{
+  font-size:48px;
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+.consultant-left p{
+  color:#475569;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.consultant-features{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-bottom:30px;
+  font-weight:600;
+}
+
+.consultant-image{
+  width:100%;
+  max-width:450px;
+}
+
+.consultant-right{
+  flex:1;
+  min-width:320px;
+}
+
+.consultant-form{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.consultant-form input,
+.consultant-form select,
+.consultant-form textarea{
+  width:100%;
+  padding:15px;
+  border:1px solid #dbeafe;
+  border-radius:12px;
+  outline:none;
+  font-size:16px;
+}
+
+.consultant-form button{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:16px;
+  border-radius:12px;
+  font-size:17px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.consultant-form button:hover{
+  background:#1d4ed8;
+}
+
+@media(max-width:768px){
+
+  .consultant-page{
+    padding:40px 20px;
+  }
+
+  .consultant-left h1{
+    font-size:36px;
+  }
+
+}
