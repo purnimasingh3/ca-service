@@ -249,7 +249,7 @@ export default function Blogs() {
                 Logout
               </button>
             ) : (
-              <Link href="/admin/login" onClick={() => setMobileOpen(false)} className="bg-blue-900 text-white border border-blue-900 text-black px-4 py-2 rounded-lg font-semibold text-sm">
+              <Link href="/admin/login" onClick={() => setMobileOpen(false)} className="bg-blue-700 text-white border border-blue-900 text-black px-4 py-2 rounded-lg font-semibold text-sm">
                 <span>Post</span>
               </Link>
             )}

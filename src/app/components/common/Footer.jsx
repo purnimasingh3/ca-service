@@ -32,7 +32,7 @@ export default function Footer() {
     },
     {
       name: 'Twitter',
-      href: 'https://twitter.com/yourusername',
+      href: 'https://x.com/fintaxadviser',
       icon: <FaTwitter />,
       hoverClass: 'hover:text-sky-500 hover:bg-sky-50 hover:border-sky-200'
     },
