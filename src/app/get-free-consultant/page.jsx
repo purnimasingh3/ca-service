@@ -22,7 +22,7 @@ export default function GetFreeConsultant() {
         </div>
 
         <img
-          src="/consulting.png"
+          src="/assets/consultation.avif"
           alt="Consultation"
           className="consultant-image"
         />

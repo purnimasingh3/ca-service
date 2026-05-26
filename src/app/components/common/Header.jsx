@@ -13,10 +13,10 @@ const menuData = [
         links: [
           "Private Limited Company",
           "LLP Registration",
-          "One Person Company",
-          "Partnership Firm",
-          "Startup India Registration",
-          "Section 8 Company",
+          // "One Person Company",
+          // "Partnership Firm",
+          // "Startup India Registration",
+          // "Section 8 Company",
         ],
       },
       {
@@ -25,7 +25,7 @@ const menuData = [
           "GST Registration",
           "PAN-TAN Application",
           "MSME Registration",
-          "12A & 80G Registration",
+          // "12A & 80G Registration",
         ],
       },
       {
@@ -33,8 +33,8 @@ const menuData = [
         links: [
           "FSSAI",
           "Import Export",
-          "Drug License",
-          "ISO Certification",
+          // "Drug License",
+          // "ISO Certification",
         ],
       },
     ],
@@ -47,19 +47,19 @@ const menuData = [
         links: [
           "Trademark Registration",
           "Trademark Objection",
-          "Patent Registration",
-          "Copyright Registration",
+          // "Patent Registration",
+          // "Copyright Registration",
         ],
       },
-      {
-        heading: "Legal Agreements",
-        links: [
-          "Founders Agreement",
-          "NDA Agreement",
-          "Employment Agreement",
-          "Vendor Agreement",
-        ],
-      },
+      // {
+      //   heading: "Legal Agreements",
+      //   links: [
+      //     "Founders Agreement",
+      //     "NDA Agreement",
+      //     "Employment Agreement",
+      //     "Vendor Agreement",
+      //   ],
+      // },
     ],
   },
   {
@@ -69,19 +69,19 @@ const menuData = [
         heading: "Fundraising Services",
         links: [
           "Fundraising services",
-          "Mudra Loan",
-          "Startup Grants",
-          "Pitch Deck",
-          "Valuation Certificate",
+          // "Mudra Loan",
+          // "Startup Grants",
+          // "Pitch Deck",
+          // "Valuation Certificate",
         ],
       },
-      {
-        heading: "Compliance",
-        links: [
-          "Fundraising Compliance",
-          "Secretarial Compliance",
-        ],
-      },
+      // {
+      //   heading: "Compliance",
+      //   links: [
+      //     "Fundraising Compliance",
+      //     "Secretarial Compliance",
+      //   ],
+      // },
     ],
   },
   {
@@ -95,8 +95,8 @@ const menuData = [
           "Income Tax return filling",
           "Income Tax notice handling",
           "Income Tax refund handling",
-          "TDS Compliance",
-          "Bookkeeping Services",
+          // "TDS Compliance",
+          // "Bookkeeping Services",
         ],
       },
       {
@@ -105,14 +105,14 @@ const menuData = [
           "ROC annual filing",
         ],
       },
-      {
-        heading: "Closures",
-        links: [
-          "Company Closure",
-          "LLP Closure",
-          "Partnership Closure",
-        ],
-      },
+      // {
+      //   heading: "Closures",
+      //   links: [
+      //     "Company Closure",
+      //     "LLP Closure",
+      //     "Partnership Closure",
+      //   ],
+      // },
       {
         heading: "Reporting",
         links: [
@@ -130,32 +130,32 @@ const menuData = [
           "Virtual CFO Services",
         ],
       },
-      {
-        heading: "Financial Advisory",
-        links: [
-          "Cash Flow Management",
-        ],
-      },
+      // {
+      //   heading: "Financial Advisory",
+      //   links: [
+      //     "Cash Flow Management",
+      //   ],
+      // },
     ],
   },
   {
     title: "HR Services",
     sections: [
-      {
-        heading: "People Management",
-        links: [
-          "Payroll Services",
-          "HR Outsourcing",
-          "Employee Management",
-        ],
-      },
+      // {
+      //   heading: "People Management",
+      //   links: [
+      //     "Payroll Services",
+      //     "HR Outsourcing",
+      //     "Employee Management",
+      //   ],
+      // },
       {
         heading: "Labour Law",
         links: [
           "Labour Law Compliance",
-          "ESI Compliance",
           "EPF Registration",
-          "Labor Law Registration",
+          // "ESI Compliance",
+          // "Labor Law Registration",
         ],
       },
     ],

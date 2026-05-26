@@ -24,12 +24,12 @@ export default function FooterNewsletter() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter institutional email address" 
             required
-            className="w-full h-full bg-transparent text-xs text-black focus:outline-none placeholder-slate-600 font-light tracking-widest"
+            className="w-full h-full bg-transparent text-xs text-black focus:outline-none placeholder-slate-600 px-4 py-3 font-light "
             suppressHydrationWarning={true}
           />
           <button 
             type="submit" 
-            className="text-slate-400 text-blue-400 font-medium text-[10px] uppercase tracking-[0.25em] transition-colors duration-300 shrink-0 my-1 mx-2 px-3 py-1 rounded-full border border-blue-400 hover:bg-blue-400 hover:text-white"
+            className="text-slate-400 text-white bg-blue-600 font-medium text-[10px] uppercase tracking-[0.25em] transition-colors duration-300 shrink-0 my-1 mx-2 px-3 py-1 rounded-full border border-blue-400 hover:bg-blue-400 hover:text-white"
             suppressHydrationWarning={true}
           >
             Submit

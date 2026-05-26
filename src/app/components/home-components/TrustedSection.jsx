@@ -29,122 +29,87 @@ export default function TrustedSection() {
 
                 <div className="flex gap-20 animate-marquee whitespace-nowrap">
 
-                    <Image className = "complogo"
-                        src="/complogo/bonsen.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
-                    <Image className = "complogo"
-                        src="/complogo/cavaza.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
-
-                    <Image className = "complogo"
-                        src="/complogo/fabmoney.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
-
-                    <Image className = "complogo"
-                        src="/complogo/grest.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
-
-                    <Image className = "complogo"
-                        src="/complogo/L.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
-                    <Image className = "complogo"
-                        src="/complogo/melangebox.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
-
-                    <Image className = "complogo"
+                    <Image className="complogo"
                         src="/complogo/men.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
-
-                    <Image className = "complogo"
+                    <Image className="complogo"
                         src="/complogo/mole.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
-                    <Image className = "complogo"
-                        src="/complogo/pync.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
 
-                    <Image className = "complogo"
-                        src="/complogo/spirit.jpeg"
+                    <Image className="complogo"
+                        src="/complogo/whisco.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
-
-                    <Image className = "complogo"
-                        src="/complogo/stock.jpeg"
+                    <Image className="complogo"
+                        src="/complogo/creme.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
-                    <Image className = "complogo"
-                        src="/complogo/studio.jpeg"
+                    <Image className="complogo"
+                        src="/complogo/fg.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
-
-                    <Image className = "complogo"
-                        src="/complogo/sub.jpeg"
+                    <Image className="complogo"
+                        src="/complogo/frontier.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
-
-                    <Image className = "complogo"
-                        src="/complogo/whish.jpeg"
+                    <Image className="complogo"
+                        src="/complogo/golden.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
-
+                    <Image className="complogo"
+                        src="/complogo/media.jpeg"
+                        alt="logo"
+                        width={140}
+                        height={60}
+                    />
+                    <Image className="complogo"
+                        src="/complogo/zotic.jpeg"
+                        alt="logo"
+                        width={140}
+                        height={60}
+                    />
+                    <Image className="complogo"
+                        src="/complogo/sharda.jpeg"
+                        alt="logo"
+                        width={140}
+                        height={60}
+                    />
                     {/* Duplicate */}
- 
-                    <Image
-                        src="/complogo/bonsen.jpeg"
+                    <Image className="complogo"
+                        src="/complogo/whisco.jpeg"
+                        alt="logo"
+                        width={140}
+                        height={60}
+                    />
+                    <Image className="complogo"
+                        src="/complogo/creme.jpeg"
+                        alt="logo"
+                        width={140}
+                        height={60}
+                    />
+                    <Image className="complogo"
+                        src="/complogo/golden.jpeg"
                         alt="logo"
                         width={140}
                         height={60}
                     />
 
-                    <Image 
-                        src="/complogo/cavaza.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
-
-                    <Image
-                        src="/complogo/fabmoney.jpeg"
-                        alt="logo"
-                        width={140}
-                        height={60}
-                    />
 
                 </div>
 
