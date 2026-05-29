@@ -7,23 +7,9 @@ export const metadata = {
   title: "Fintax Adviser",
   description:
     "Professional GST registration and taxation compliance services for startups and businesses.",
-
-  keywords: [
-    "GST registration",
-    "tax services",
-    "business taxation",
-    "CA services",
-    "Virtual CFO Services",
-    "Virtual CFO India",
-    "CFO Services for Startups",
-    "Financial Advisory Services",
-    "Business Financial Planning",
-    "Cash Flow Management",
-    "Accounting Services",
-    "Startup Financial Consultant",
-    "Virtual CFO Delhi",
-    "Fintax Adviser",
-  ],
+    verification:{
+      google:"0V1FOsC4tZ8ptWxLwu-Oa4IdUeNxP7zhfaD6947WH0Q"
+    },
 };
 
 export default function RootLayout({ children }) {

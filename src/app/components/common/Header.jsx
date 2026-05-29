@@ -10,31 +10,42 @@ const menuData = [
     sections: [
       {
         heading: "Business Incorporation",
-        links: [
-          "Private Limited Company",
-          "LLP Registration",
-          // "One Person Company",
-          // "Partnership Firm",
-          // "Startup India Registration",
-          // "Section 8 Company",
+        links: [ {
+          name : "Private Limited Company",
+          slug: "best-private-limited-company-registration-service-delhi-india",
+        },
+           {
+            name:"LLP Registration",
+            slug:"best-llp-registration-service-delhi-india",
+          }
+        
         ],
       },
       {
         heading: "Tax Registrations",
         links: [
-          "GST Registration",
-          "PAN-TAN Application",
-          "MSME Registration",
-          // "12A & 80G Registration",
+          {name:"GST Registration",
+           slug:"best-gst-registration-service-delhi-india",
+          },
+          {
+            name:"PAN-TAN Application",
+            slug:"best-pan-tan-service-delhi-india",
+          },{
+          name:"MSME Registration",
+        slug:"best-msme-registration-service-delhi-india"
+      }
+    
         ],
       },
       {
         heading: "Licences",
-        links: [
-          "FSSAI",
-          "Import Export",
-          // "Drug License",
-          // "ISO Certification",
+        links: [{
+          name:"FSSAI",
+          slug:"best-fssai-registration-service-delhi-india"
+        },{
+          name:"Import Export",
+          slug:"best-iec-registration-service-delhi-india"
+        }
         ],
       },
     ],
@@ -45,10 +56,13 @@ const menuData = [
       {
         heading: "IPR & Trademark",
         links: [
-          "Trademark Registration",
-          "Trademark Objection",
-          // "Patent Registration",
-          // "Copyright Registration",
+          {
+          name:"Trademark Registration",
+          slug:"best-trademark-registration-service-delhi-india",
+          },{
+          name:"Trademark Objection",
+          slug:"best-trademark-objection-service-delhi-india",
+          }
         ],
       },
       // {
@@ -68,11 +82,10 @@ const menuData = [
       {
         heading: "Fundraising Services",
         links: [
-          "Fundraising services",
-          // "Mudra Loan",
-          // "Startup Grants",
-          // "Pitch Deck",
-          // "Valuation Certificate",
+          {
+            name:"Fundraising services",
+            slug:"best-startup-fundraising-service-delhi-india"
+          }
         ],
       },
       // {
@@ -90,19 +103,35 @@ const menuData = [
       {
         heading: "Accounting & Compliance",
         links: [
-          "GST notice handling",
-          "GST refund handling",
-          "Income Tax return filling",
-          "Income Tax notice handling",
-          "Income Tax refund handling",
-          // "TDS Compliance",
-          // "Bookkeeping Services",
+          {
+         name: "GST notice handling",
+         slug:"best-gst-notice-service-delhi-india"
+          },
+          {
+          name:"GST refund handling",
+          slug:"best-gst-refund-service-delhi-india"
+          },
+          {
+          name:"Income Tax return filling",
+          slug:"best-itr-filling-service-delhi-india"
+          },
+          {
+          name:"Income Tax notice handling",
+          slug:"best-income-tax-notice-service-delhi-india"
+          },
+          {
+          name:"Income Tax refund handling",
+          slug:"best-income-tax-refund-service-delhi-india"
+          }
         ],
       },
       {
         heading: "Secretarial Compliance",
         links: [
-          "ROC annual filing",
+          {
+          name:"ROC Compliance",
+          slug:"best-roc-compliance-service-delhi-india"
+          }
         ],
       },
       // {
@@ -116,7 +145,10 @@ const menuData = [
       {
         heading: "Reporting",
         links: [
-          "MIS Reporting",
+          {
+          name:"MIS Reporting",
+          slug:"best-mis-reporting-service-delhi-india"
+          }
         ],
       },
     ],
@@ -127,7 +159,10 @@ const menuData = [
       {
         heading: "Virtual CFO ",
         links: [
-          "Virtual CFO Services",
+          {
+          name:"Virtual CFO Services",
+          slug:"best-virtual-cfo-service-delhi-india"
+          }
         ],
       },
       // {
@@ -151,11 +186,14 @@ const menuData = [
       // },
       {
         heading: "Labour Law",
-        links: [
-          "Labour Law Compliance",
-          "EPF Registration",
-          // "ESI Compliance",
-          // "Labor Law Registration",
+        links: [{
+         name: "Labour Law Compliance",
+         slug:"best-labour-law-compliance-service-delhi-india"
+        },
+          {
+          name:"PF and ESI Registration",
+          slug:"best-pf-esi-service-delhi-india"
+          }
         ],
       },
     ],
@@ -291,10 +329,10 @@ export default function Navbar() {
                             {section.links.map((link, idx) => (
                               <li key={idx}>
                                 <Link
-                                  href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
+                                  href={`/${link.slug}`}
                                   className="text-gray-600 hover:text-blue-600 text-[14px] transition-all duration-150 block hover:translate-x-1"
                                 >
-                                  {link}
+                                  {link.name}
                                 </Link>
                               </li>
                             ))}
