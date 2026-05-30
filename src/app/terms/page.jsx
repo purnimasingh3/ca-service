@@ -11,7 +11,7 @@ export default function TermsAndConditions() {
             Please read these Terms and Conditions carefully before using our
             website or engaging our professional services.
           </p>
-          <p className="mt-4 text-sm text-gray-300">
+          <p className="mt-4 text-sm text-blue-700">
             Last Updated: January 2026
           </p>
         </div>

@@ -13,7 +13,7 @@ export default function Disclaimer() {
             informational and educational purposes only.
           </p>
 
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-sm text-blue-700">
             Last Updated: January 2026
           </p>
         </div>

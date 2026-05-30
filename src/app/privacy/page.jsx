@@ -3,7 +3,7 @@ export default function PrivacyPolicy() {
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
       <section className="bg-slate-50  py-16">
-        <div className="max-w-6xl mx-auto px-6 border-l-4 border-red-500 p-5 rounded-lg">
+        <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800">
             Privacy Policy
           </h1>
