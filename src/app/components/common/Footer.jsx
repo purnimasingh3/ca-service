@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp,FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaXTwitter, FaWhatsapp,FaLinkedinIn , } from 'react-icons/fa6';
 import FooterNewsletter from './FooterNewsletter';
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: 'Facebook',
-      href: 'https://facebook.com/yourusername',
+      href: 'https://www.facebook.com/profile.php?id=61589774084657',
       icon: <FaFacebookF />,
       hoverClass: 'hover:text-blue-600 hover:bg-blue-50 hover:border-blue-200'
     },
@@ -33,7 +33,7 @@ export default function Footer() {
     {
       name: 'Twitter',
       href: 'https://x.com/fintaxadviser',
-      icon: <FaTwitter />,
+      icon: <FaXTwitter />,
       hoverClass: 'hover:text-sky-500 hover:bg-sky-50 hover:border-sky-200'
     },
     {
@@ -44,7 +44,7 @@ export default function Footer() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/company/xxxxxxx',
+      href: 'https://www.linkedin.com/in/fintax-adviser-900a55410',
       icon: <FaLinkedinIn />,
       hoverClass: 'hover:text-blue-600 hover:bg-blue-50 hover:border-blue-200'
     }
@@ -127,8 +127,8 @@ export default function Footer() {
              H NO-631 F/F KH NO-20/11,<br /> GALI NO-12 SHAHEED BHAGAT, Sabhapur, Delhi North East, North West Delhi- 110094, Delhi
               </p>
               <div className="pt-1 text-xs space-y-1.5 border-t border-slate-200/60">
-                <p><span className="text-slate-400 font-normal">Phone:</span> <span className="text-slate-700 font-semibold">+919990924477</span></p>
-                <p><span className="text-slate-400 font-normal">Email:</span> <span className="text-slate-700 font-semibold">contact@fintaxadviser.com</span></p>
+                <a href="tel:+919990924477"><span className="text-slate-400 font-normal">Phone:</span> <span className="text-slate-700 font-semibold">+919990924477</span></a> <br/>
+                <a href="mailto:info@fintaxadviser.com"><span className="text-slate-400 font-normal">Email:</span> <span className="text-slate-700 font-semibold">info@fintaxadviser.com</span></a>
               </div>
             </div>
           </div>
