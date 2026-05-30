@@ -3,7 +3,7 @@ export default function TermsAndConditions() {
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
       <section className="bg-blue-50 text-slate-900 py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6 ">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Terms & Conditions
           </h1>
@@ -290,7 +290,7 @@ export default function TermsAndConditions() {
           <br/>
 
           {/* Contact */}
-          <section className="bg-gray-900 text-slate-900 rounded-2xl p-8">
+          <section className="bg-blue-50 text-slate-900 rounded-2xl p-8">
             <h2 className="text-3xl font-bold mb-6">
               Contact Information
             </h2>

@@ -3,7 +3,7 @@ export default function PrivacyPolicy() {
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
       <section className="bg-slate-50  py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6 border-l-4 border-red-500 p-5 rounded-lg">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800">
             Privacy Policy
           </h1>
@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
             At Fintax Adviser, we are committed to protecting the privacy,
             security, and confidentiality of our clients and website visitors.
           </p>
-          <p className="mt-4 text-sm text-gray-300">
+          <p className="mt-4 text-sm text-blue-700">
             Last Updated: January 2026
           </p>
         </div>
@@ -215,11 +215,11 @@ export default function PrivacyPolicy() {
               We may update this Privacy Policy from time to time. Any changes
               will be posted on this page along with the updated effective date.
             </p>
-             <br/>
           </section>
+           <br/>
 
           {/* Contact */}
-          <section className="bg-gray-900 text-slate rounded-2xl p-8">
+          <section className="bg-blue-50 text-slate-800 rounded-2xl p-8">
             <h2 className="text-3xl font-bold mb-6">
               Contact Us
             </h2>
