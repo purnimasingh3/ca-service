@@ -398,11 +398,11 @@ export default function Navbar() {
                         {section.links.map((link, idx) => (
                           <li key={idx}>
                             <Link
-                              href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
+                              href={`/${link.slug}`}
                               onClick={() => setMobileOpen(false)}
                               className="text-gray-600 hover:text-blue-600 text-[14px] block py-1"
                             >
-                              {link}
+                              {link.name}
                             </Link>
                           </li>
                         ))}
