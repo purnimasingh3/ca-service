@@ -6,10 +6,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const servicesLinks = [
-    { label: "Virtual CFO", href: "/virtual-cfo-services" },
-    { label: "ITR Filling", href: "/income-tax-return-filling" },
-    { label: "Private Limited Comapny", href: "/private-limited-company" },
-    { label: "GST Registration", href: "/gst-registration" },
+    { label: "Virtual CFO", href: "/best-virtual-cfo-service-delhi-india" },
+    { label: "ITR Filling", href: "/best-itr-filling-service-delhi-india" },
+    { label: "Private Limited Comapny", href: "/best-private-limited-company-registration-service-delhi-india" },
+    { label: "GST Registration", href: "/best-gst-registration-service-delhi-india" },
   ];
 
   const resourceLinks = [
