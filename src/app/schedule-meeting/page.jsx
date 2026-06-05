@@ -275,6 +275,7 @@ export default function ScheduleMeeting() {
               <div className="bg-[#0d0e15] border border-white/[0.06] rounded-2xl overflow-hidden p-2">
                 <InlineWidget
                   url="https://calendly.com/fintaxadviser-info/30min"
+                  
                   styles={{
                     height: "700px",
                   }}

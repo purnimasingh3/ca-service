@@ -10,41 +10,82 @@ const menuData = [
     sections: [
       {
         heading: "Business Incorporation",
-        links: [ {
-          name : "Private Limited Company",
-          slug: "best-private-limited-company-registration-service-delhi-india",
-        },
-           {
-            name:"LLP Registration",
-            slug:"best-llp-registration-service-delhi-india",
+        links: [
+          {
+            name: "Private Limited Company",
+            slug: "best-private-limited-company-registration-service-delhi-india",
+          },
+          {
+            name: "LLP Registration",
+            slug: "best-llp-registration-service-delhi-india",
+          },
+          {
+            name: "Partnership Firm Registration",
+            slug: "best-partnership-firm-registration-service-delhi-india",
+          },
+          {
+            name: "One Person Company",
+            slug: "best-opc-registration-service-delhi-india",
+          },
+          {
+            name: "Section 8 Company(NGO)",
+            slug: "best-section-8-company-registration-service-delhi-india",
+          },
+          {
+            name: "Society Registration",
+            slug: "best-society-registration-service-delhi-india",
+          },
+          {
+            name: "Nidhi Company Registration",
+            slug: "best-nidhi-company-registration-service-delhi-india",
+          },
+          {
+            name: "Sole Proprietorship Registration",
+            slug: "best-sole-proprietorship-registration-service-delhi-india",
+          },
+          {
+            name: "Foreign Subsidiary Registration",
+            slug: "best-foreign-subsidiary-registration-service-delhi-india",
+          },
+          {
+            name: "Producer Company Registration",
+            slug: "best-producer-company-registration-service-delhi-india",
+          },
+          {
+            name: "Partnership to LLP Registration",
+            slug: "best-partnership-to-llp-registration-service-delhi-india",
+          },
+          {
+            name: "Business Consultation for Startups",
+            slug: "best-business-consultation-service-delhi-india",
           }
-        
         ],
       },
       {
         heading: "Tax Registrations",
         links: [
-          {name:"GST Registration",
-           slug:"best-gst-registration-service-delhi-india",
+          {
+            name: "GST Registration",
+            slug: "best-gst-registration-service-delhi-india",
           },
           {
-            name:"PAN-TAN Application",
-            slug:"best-pan-tan-service-delhi-india",
-          },{
-          name:"MSME Registration",
-        slug:"best-msme-registration-service-delhi-india"
-      }
-    
+            name: "PAN-TAN Application",
+            slug: "best-pan-tan-service-delhi-india",
+          }, {
+            name: "MSME Registration",
+            slug: "best-msme-registration-service-delhi-india"
+          }
+
         ],
       },
       {
         heading: "Licences",
         links: [{
-          name:"FSSAI",
-          slug:"best-fssai-registration-service-delhi-india"
-        },{
-          name:"Import Export",
-          slug:"best-iec-registration-service-delhi-india"
+          name: "FSSAI",
+          slug: "best-fssai-registration-service-delhi-india"
+        }, {
+          name: "Import Export",
+          slug: "best-iec-registration-service-delhi-india"
         }
         ],
       },
@@ -57,12 +98,25 @@ const menuData = [
         heading: "IPR & Trademark",
         links: [
           {
-          name:"Trademark Registration",
-          slug:"best-trademark-registration-service-delhi-india",
-          },{
-          name:"Trademark Objection",
-          slug:"best-trademark-objection-service-delhi-india",
-          }
+            name: "Trademark Registration",
+            slug: "best-trademark-registration-service-delhi-india",
+          },
+          {
+            name: "Trademark Objection",
+            slug: "best-trademark-objection-service-delhi-india",
+          },
+          {
+            name: "Trademark Assignment",
+            slug: "best-trademark-assignment-service-delhi-india",
+          },
+          {
+            name: "Patent Registration",
+            slug: "best-patent-registration-service-delhi-india",
+          },
+          {
+            name: "Copyright Registration",
+            slug: "best-copyright-registration-service-delhi-india",
+          },
         ],
       },
       // {
@@ -74,7 +128,7 @@ const menuData = [
       //     "Vendor Agreement",
       //   ],
       // },
-      
+
     ],
   },
   {
@@ -84,8 +138,8 @@ const menuData = [
         heading: "Fundraising Services",
         links: [
           {
-            name:"Fundraising services",
-            slug:"best-startup-fundraising-service-delhi-india"
+            name: "Fundraising services",
+            slug: "best-startup-fundraising-service-delhi-india"
           }
         ],
       },
@@ -105,24 +159,24 @@ const menuData = [
         heading: "Accounting & Compliance",
         links: [
           {
-         name: "GST notice handling",
-         slug:"best-gst-notice-service-delhi-india"
+            name: "GST notice handling",
+            slug: "best-gst-notice-service-delhi-india"
           },
           {
-          name:"GST refund handling",
-          slug:"best-gst-refund-service-delhi-india"
+            name: "GST refund handling",
+            slug: "best-gst-refund-service-delhi-india"
           },
           {
-          name:"Income Tax return filling",
-          slug:"best-itr-filling-service-delhi-india"
+            name: "Income Tax return filling",
+            slug: "best-itr-filling-service-delhi-india"
           },
           {
-          name:"Income Tax notice handling",
-          slug:"best-income-tax-notice-service-delhi-india"
+            name: "Income Tax notice handling",
+            slug: "best-income-tax-notice-service-delhi-india"
           },
           {
-          name:"Income Tax refund handling",
-          slug:"best-income-tax-refund-service-delhi-india"
+            name: "Income Tax refund handling",
+            slug: "best-income-tax-refund-service-delhi-india"
           }
         ],
       },
@@ -130,8 +184,8 @@ const menuData = [
         heading: "Secretarial Compliance",
         links: [
           {
-          name:"ROC Compliance",
-          slug:"best-roc-compliance-service-delhi-india"
+            name: "ROC Compliance",
+            slug: "best-roc-compliance-service-delhi-india"
           }
         ],
       },
@@ -147,8 +201,8 @@ const menuData = [
         heading: "Reporting",
         links: [
           {
-          name:"MIS Reporting",
-          slug:"best-mis-reporting-service-delhi-india"
+            name: "MIS Reporting",
+            slug: "best-mis-reporting-service-delhi-india"
           }
         ],
       },
@@ -161,8 +215,8 @@ const menuData = [
         heading: "Virtual CFO ",
         links: [
           {
-          name:"Virtual CFO Services",
-          slug:"best-virtual-cfo-service-delhi-india"
+            name: "Virtual CFO Services",
+            slug: "best-virtual-cfo-service-delhi-india"
           }
         ],
       },
@@ -188,13 +242,13 @@ const menuData = [
       {
         heading: "Labour Law",
         links: [{
-         name: "Labour Law Compliance",
-         slug:"best-labour-law-compliance-service-delhi-india"
+          name: "Labour Law Compliance",
+          slug: "best-labour-law-compliance-service-delhi-india"
         },
-          {
-          name:"PF and ESI Registration",
-          slug:"best-pf-esi-service-delhi-india"
-          }
+        {
+          name: "PF and ESI Registration",
+          slug: "best-pf-esi-service-delhi-india"
+        }
         ],
       },
     ],
