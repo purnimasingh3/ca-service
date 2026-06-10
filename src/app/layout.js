@@ -32,6 +32,11 @@ export default function RootLayout({ children }) {
         gtag('config', 'AW-18208580269');
       `}
         </Script>
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="H6IiFdjcFfgLnSiv1dC5jA"
+          strategy="afterInteractive"
+        />
       </head>
 
       <body className="min-h-screen flex flex-col">
