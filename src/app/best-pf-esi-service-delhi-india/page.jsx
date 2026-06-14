@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.pfEsi;
@@ -12,6 +13,15 @@ export default function PremiumPFESILanding() {
     "500+ Happy Clients Served",
     "100% Compliance Assurance",
     "Expert Support At Every Step",
+  ];
+  const faqs = [
+    { q: "What is PF Registration?", a: "PF Registration is the process of registering an employer under EPFO for employee provident fund compliance and retirement contribution management." },
+    { q: "What is ESI Registration?", a: "ESI Registration helps businesses provide medical and insurance benefits to employees under ESIC regulations." },
+    { q: "Is PF Registration mandatory for businesses?", a: "PF applicability depends on employee count and labour law provisions. Eligible organizations must complete registration." },
+    { q: "What is included in PF Return Filing Services?", a: "Our services include monthly return filing, challan preparation, employee contribution management, reconciliation, and compliance monitoring." },
+    { q: "Do startups require PF & ESI Registration?", a: "Yes, startups with eligible employee strength should establish compliance systems from the beginning." },
+    { q: "Can you manage employee enrollment?", a: "Yes, we handle employee registration, UAN generation, insurance enrollment, and documentation support." },
+    { q: "Do you provide online PF & ESI filing services?", a: "Yes, Fintax Adviser provides complete online compliance support across India." }
   ];
 
   return (
@@ -34,7 +44,7 @@ export default function PremiumPFESILanding() {
               </span>
 
               <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
-                PF & ESI Registration 
+                PF & ESI Registration
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   & Filing Services in Delhi, India
                 </span>
@@ -415,22 +425,7 @@ export default function PremiumPFESILanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "What is PF Registration?", a: "PF Registration is the process of registering an employer under EPFO for employee provident fund compliance and retirement contribution management." },
-              { q: "What is ESI Registration?", a: "ESI Registration helps businesses provide medical and insurance benefits to employees under ESIC regulations." },
-              { q: "Is PF Registration mandatory for businesses?", a: "PF applicability depends on employee count and labour law provisions. Eligible organizations must complete registration." },
-              { q: "What is included in PF Return Filing Services?", a: "Our services include monthly return filing, challan preparation, employee contribution management, reconciliation, and compliance monitoring." },
-              { q: "Do startups require PF & ESI Registration?", a: "Yes, startups with eligible employee strength should establish compliance systems from the beginning." },
-              { q: "Can you manage employee enrollment?", a: "Yes, we handle employee registration, UAN generation, insurance enrollment, and documentation support." },
-              { q: "Do you provide online PF & ESI filing services?", a: "Yes, Fintax Adviser provides complete online compliance support across India." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

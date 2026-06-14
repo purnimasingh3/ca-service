@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata = servicesMetadata.soleProprietorship;
 
@@ -11,6 +12,14 @@ export default function SoleProprietorshipLanding() {
     "Minimal Compliance",
     "Maximum Control",
     "100% Legal & Compliant",
+  ];
+  const faqs = [
+    { q: "Is Sole Proprietorship registration mandatory?", a: "While there is no separate incorporation process, obtaining registrations such as GST, MSME, or Shop & Establishment helps establish clear business legitimacy and operations." },
+    { q: "Can a Sole Proprietorship open a current account?", a: "Yes, once you obtain the necessary business registrations and verification documents through our CA firm." },
+    { q: "Is GST registration mandatory for a Proprietorship?", a: "GST registration depends directly on your operational turnover limits, business activities, or inter-state operations parameters." },
+    { q: "What is the primary benefit of MSME registration?", a: "MSME/Udyam registration unlocks immediate access to strategic government schemes, financial subsidies, and single-owner business protection tools." },
+    { q: "How long does Sole Proprietorship registration take?", a: "Generally, the complete legal registration framework can be fully closed within just a few working days, subject to verified document submissions." },
+    { q: "Why choose the Best Sole Proprietorship Registration CA Firm in Delhi India?", a: "Professional registration ensures complete compliance layouts, smoother banking allocations, legal protection, and optimized fast-paced business growth paths." }
   ];
 
   return (
@@ -61,7 +70,7 @@ export default function SoleProprietorshipLanding() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Consultation 
+                  Book a Free Consultation
                 </Link>
               </div>
             </div>
@@ -196,13 +205,13 @@ export default function SoleProprietorshipLanding() {
       <section className="py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             <div className="lg:col-span-5 space-y-5">
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
                 What is a Sole Proprietorship?
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
-                A Sole Proprietorship is a business owned and managed by a single individual. The proprietor has complete authority over business operations, profits, and decision-making. 
+                A Sole Proprietorship is a business owned and managed by a single individual. The proprietor has complete authority over business operations, profits, and decision-making.
               </p>
               <p className="text-slate-600 text-base leading-relaxed">
                 Fintax Adviser helps entrepreneurs establish their business legally and obtain all necessary registrations required for smooth, standard day-to-day operations.
@@ -286,14 +295,14 @@ export default function SoleProprietorshipLanding() {
       <section className="py-20 bg-slate-100 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            
+
             {/* Left: Registration Process */}
             <div className="space-y-6">
               <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
                 Our Streamlined Registration Process
               </h3>
               <div className="w-16 h-1 bg-blue-600 rounded"></div>
-              
+
               <div className="space-y-4">
                 {[
                   { step: "Step 1", title: "Business Consultation", desc: "Understanding specific business activities and mapping core licensing milestones safely." },
@@ -385,22 +394,8 @@ export default function SoleProprietorshipLanding() {
               Frequently Asked Questions
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "Is Sole Proprietorship registration mandatory?", a: "While there is no separate incorporation process, obtaining registrations such as GST, MSME, or Shop & Establishment helps establish clear business legitimacy and operations." },
-              { q: "Can a Sole Proprietorship open a current account?", a: "Yes, once you obtain the necessary business registrations and verification documents through our CA firm." },
-              { q: "Is GST registration mandatory for a Proprietorship?", a: "GST registration depends directly on your operational turnover limits, business activities, or inter-state operations parameters." },
-              { q: "What is the primary benefit of MSME registration?", a: "MSME/Udyam registration unlocks immediate access to strategic government schemes, financial subsidies, and single-owner business protection tools." },
-              { q: "How long does Sole Proprietorship registration take?", a: "Generally, the complete legal registration framework can be fully closed within just a few working days, subject to verified document submissions." },
-              { q: "Why choose the Best Sole Proprietorship Registration CA Firm in Delhi India?", a: "Professional registration ensures complete compliance layouts, smoother banking allocations, legal protection, and optimized fast-paced business growth paths." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

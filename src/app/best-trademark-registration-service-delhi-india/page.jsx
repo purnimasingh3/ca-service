@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.trademarkRegistration;
@@ -12,6 +13,14 @@ export default function PremiumTrademarkLanding() {
     "500+ Happy Clients",
     "100% Secure & Reliable",
     "Expert Consultation & Support",
+  ];
+  const faqs = [
+    { q: "What is Trademark Registration?", a: "Trademark Registration is the legal process of protecting your business name, logo, brand identity, slogan, product name, symbol, design, or tagline under the Trademark Act to prevent others from using similar branding." },
+    { q: "Can startups register trademarks?", a: "Yes. Startups should protect their brand identity and market assets at an early stage to eliminate copying risks and safeguard their investments." },
+    { q: "Can logos be trademarked?", a: "Yes. Logos and distinctive graphics can be legally registered under trademark laws to give you exclusive ownership rights." },
+    { q: "Is trademark registration mandatory?", a: "No, it is not mandatory by law, but it is highly recommended to protect your digital presence and avoid legal disputes." },
+    { q: "How long does trademark registration take?", a: "The overall timeline heavily depends on official government examination and approval stages." },
+    { q: "Can trademark objections be handled?", a: "Yes. Fintax Adviser provides dedicated trademark objection support, including response drafting and compliance tracking." }
   ];
 
   return (
@@ -471,22 +480,8 @@ export default function PremiumTrademarkLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "What is Trademark Registration?", a: "Trademark Registration is the legal process of protecting your business name, logo, brand identity, slogan, product name, symbol, design, or tagline under the Trademark Act to prevent others from using similar branding." },
-              { q: "Can startups register trademarks?", a: "Yes. Startups should protect their brand identity and market assets at an early stage to eliminate copying risks and safeguard their investments." },
-              { q: "Can logos be trademarked?", a: "Yes. Logos and distinctive graphics can be legally registered under trademark laws to give you exclusive ownership rights." },
-              { q: "Is trademark registration mandatory?", a: "No, it is not mandatory by law, but it is highly recommended to protect your digital presence and avoid legal disputes." },
-              { q: "How long does trademark registration take?", a: "The overall timeline heavily depends on official government examination and approval stages." },
-              { q: "Can trademark objections be handled?", a: "Yes. Fintax Adviser provides dedicated trademark objection support, including response drafting and compliance tracking." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

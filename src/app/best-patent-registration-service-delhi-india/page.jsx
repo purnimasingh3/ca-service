@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata = servicesMetadata.patentRegistration;
 
@@ -12,7 +13,13 @@ export default function PatentRegistrationLanding() {
     "Expert Patent Consultants",
     "End-to-End Patent Support",
   ];
-
+  const faqs = [
+    { q: "What is the validity period of a patent in India?", a: "A patent is generally valid for 20 years from the filing date, subject to renewal requirements." },
+    { q: "Can software be patented in India?", a: "Patentability depends on the nature of the invention and applicable legal provisions." },
+    { q: "Is patent registration mandatory?", a: "No, but registration provides exclusive legal rights and protection against unauthorized use." },
+    { q: "How long does patent registration take?", a: "Patent timelines vary depending on examination, objections, and approval processes." },
+    { q: "Can startups apply for patents?", a: "Yes. Startups are encouraged to protect innovative technologies through patents with our startup-friendly approach." }
+  ];
   return (
     <div className="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen">
 
@@ -303,7 +310,7 @@ export default function PatentRegistrationLanding() {
       <section className="py-24 bg-sky-50 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            
+
             {/* Who Can Apply */}
             <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
               <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">Who Can Apply For A Patent?</h3>
@@ -453,20 +460,7 @@ export default function PatentRegistrationLanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "What is the validity period of a patent in India?", a: "A patent is generally valid for 20 years from the filing date, subject to renewal requirements." },
-              { q: "Can software be patented in India?", a: "Patentability depends on the nature of the invention and applicable legal provisions." },
-              { q: "Is patent registration mandatory?", a: "No, but registration provides exclusive legal rights and protection against unauthorized use." },
-              { q: "How long does patent registration take?", a: "Patent timelines vary depending on examination, objections, and approval processes." },
-              { q: "Can startups apply for patents?", a: "Yes. Startups are encouraged to protect innovative technologies through patents with our startup-friendly approach." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

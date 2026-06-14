@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.incomeTaxRefund;
@@ -12,6 +13,13 @@ export default function PremiumIncomeTaxRefundLanding() {
     "Expert Tax Consultants",
     "500+ Happy Clients",
     "Maximum Refund Guaranteed",
+  ];
+  const faqs = [
+    { q: "What is an Income Tax Refund?", a: "An Income Tax Refund is the amount returned by the Income Tax Department when a taxpayer pays more tax than required during a financial year." },
+    { q: "Why do tax refunds happen?", a: "They usually arise due to excess TDS deductions, advance tax overpayments, incorrect tax estimations, or missing investment declarations." },
+    { q: "Can salaried employees and businesses claim refunds?", a: "Yes. Salaried employees can recover excess salary deductions, and businesses can receive refunds from overpaid advance or self-assessment taxes." },
+    { q: "Can delayed refunds be monitored?", a: "Yes, our team provides full refund status tracking and follow-up monitoring assistance until the settlement is finalized." },
+    { q: "Do you provide revised return and NRI support?", a: "Yes, we handle corrections, rectifications, revised returns, and specialized tax/adjustment reviews for NRI profiles." }
   ];
 
   return (
@@ -443,21 +451,7 @@ export default function PremiumIncomeTaxRefundLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is an Income Tax Refund?", a: "An Income Tax Refund is the amount returned by the Income Tax Department when a taxpayer pays more tax than required during a financial year." },
-              { q: "Why do tax refunds happen?", a: "They usually arise due to excess TDS deductions, advance tax overpayments, incorrect tax estimations, or missing investment declarations." },
-              { q: "Can salaried employees and businesses claim refunds?", a: "Yes. Salaried employees can recover excess salary deductions, and businesses can receive refunds from overpaid advance or self-assessment taxes." },
-              { q: "Can delayed refunds be monitored?", a: "Yes, our team provides full refund status tracking and follow-up monitoring assistance until the settlement is finalized." },
-              { q: "Do you provide revised return and NRI support?", a: "Yes, we handle corrections, rectifications, revised returns, and specialized tax/adjustment reviews for NRI profiles." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

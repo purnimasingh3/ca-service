@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Updated metadata for Copyright Registration
 export const metadata = servicesMetadata.copyrightRegistration;
@@ -12,6 +13,14 @@ export default function CopyrightRegistrationLanding() {
     "500+ Happy Clients",
     "Expert IP Consultants",
     "Pan India Services",
+  ];
+
+  const faqs = [
+    { q: "Is copyright registration compulsory?", a: "No, it is not compulsory, but it is highly recommended for strong legal protection and proof of ownership in enforcement courts." },
+    { q: "How long does copyright protection last?", a: "Generally, for literary, dramatic, musical, and artistic works, protection lasts for the lifetime of the author/creator plus 60 years." },
+    { q: "Can software be copyrighted?", a: "Yes, software computer programs, mobile applications, and original source code are fully eligible for copyright protection." },
+    { q: "Can website content be copyrighted?", a: "Yes, original website layout items, distinct blog write-ups, articles, and unique digital content can be protected safely." },
+    { q: "Can I sell or license my copyright?", a: "Yes, a registered copyright can be assigned, sold, or licensed to other individuals or businesses for commercial royalty use." }
   ];
 
   return (
@@ -62,7 +71,7 @@ export default function CopyrightRegistrationLanding() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Consultation 
+                  Book a Free Consultation
                 </Link>
               </div>
             </div>
@@ -408,21 +417,8 @@ export default function CopyrightRegistrationLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "Is copyright registration compulsory?", a: "No, it is not compulsory, but it is highly recommended for strong legal protection and proof of ownership in enforcement courts." },
-              { q: "How long does copyright protection last?", a: "Generally, for literary, dramatic, musical, and artistic works, protection lasts for the lifetime of the author/creator plus 60 years." },
-              { q: "Can software be copyrighted?", a: "Yes, software computer programs, mobile applications, and original source code are fully eligible for copyright protection." },
-              { q: "Can website content be copyrighted?", a: "Yes, original website layout items, distinct blog write-ups, articles, and unique digital content can be protected safely." },
-              { q: "Can I sell or license my copyright?", a: "Yes, a registered copyright can be assigned, sold, or licensed to other individuals or businesses for commercial royalty use." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Dynamically pulling metadata for the startup consulting service
 export const metadata = servicesMetadata.startupConsultant;
@@ -74,6 +75,14 @@ export default function StartupConsultantLanding() {
     { step: "Step 6", title: "Ongoing Advisory Support", desc: "Continuous guidance as your startup grows." }
   ];
 
+  const faqs = [
+    { q: "Why does a startup need a business consultant?", a: "A startup consultant helps entrepreneurs structuralize business planning, build reliable financial management tracking, navigate compliance maps, structure funding plays, and deploy scalable growth strategies safely." },
+    { q: "When should I hire a startup consultant?", a: "Ideally, you should engage a consultant right from the initial business idea stage to ensure complete validation, proper regulatory strategy execution, and sound framework planning from day one." },
+    { q: "Can you help with startup funding?", a: "Yes, absolutely. We assist business owners with total investor readiness, crafting optimized business plans, building robust pitch documentation, and setting complex financial projections." },
+    { q: "Do you provide startup registration services?", a: "Yes. Fintax Adviser provides complete structural incorporation support covering Private Limited Companies, LLPs, OPC structures, Partnership formations, and immediate compliance registration." },
+    { q: "Can you help with business growth planning?", a: "Definitely. We design deep, customized business growth roadmaps and operational frameworks explicitly optimized around your specific industry, market realities, and overarching corporate milestones." }
+  ];
+
   return (
     <div className="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen">
 
@@ -94,7 +103,7 @@ export default function StartupConsultantLanding() {
               </span>
 
               <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
-                Best Business Consultant 
+                Best Business Consultant
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   for Startups in Delhi, India
                 </span>
@@ -143,7 +152,7 @@ export default function StartupConsultantLanding() {
             Looking for the Best Business Consultant for Startups in Delhi India?
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Welcome to <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>. Starting a business involves much more than registering a company. Entrepreneurs need strategic planning, business structuring, funding guidance, financial management, legal compliance, tax planning, and growth strategies. 
+            Welcome to <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>. Starting a business involves much more than registering a company. Entrepreneurs need strategic planning, business structuring, funding guidance, financial management, legal compliance, tax planning, and growth strategies.
           </p>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             With <strong>15+ Years of Experience</strong> and <strong>500+ Happy Clients Served</strong>, Fintax Adviser is recognized as the premier destination for helping startups build strong foundations for sustainable, scalable growth.
@@ -155,7 +164,7 @@ export default function StartupConsultantLanding() {
       <section className="py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             <div className="lg:col-span-5 space-y-5">
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
                 Why Choose a Startup Business Consultant?
@@ -390,21 +399,8 @@ export default function StartupConsultantLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "Why does a startup need a business consultant?", a: "A startup consultant helps entrepreneurs structuralize business planning, build reliable financial management tracking, navigate compliance maps, structure funding plays, and deploy scalable growth strategies safely." },
-              { q: "When should I hire a startup consultant?", a: "Ideally, you should engage a consultant right from the initial business idea stage to ensure complete validation, proper regulatory strategy execution, and sound framework planning from day one." },
-              { q: "Can you help with startup funding?", a: "Yes, absolutely. We assist business owners with total investor readiness, crafting optimized business plans, building robust pitch documentation, and setting complex financial projections." },
-              { q: "Do you provide startup registration services?", a: "Yes. Fintax Adviser provides complete structural incorporation support covering Private Limited Companies, LLPs, OPC structures, Partnership formations, and immediate compliance registration." },
-              { q: "Can you help with business growth planning?", a: "Definitely. We design deep, customized business growth roadmaps and operational frameworks explicitly optimized around your specific industry, market realities, and overarching corporate milestones." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

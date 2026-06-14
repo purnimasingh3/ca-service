@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Updated metadata reference for Trademark Assignment
 export const metadata = servicesMetadata.trademarkAssignment;
@@ -12,6 +13,14 @@ export default function TrademarkAssignmentLanding() {
     "Expert CA & Legal Team",
     "500+ Happy Clients",
     "Pan India Services",
+  ];
+  const faqs = [
+    { q: "Can a trademark be transferred to another person?", a: "Yes. A registered or pending trademark can generally be transferred through a legally compliant trademark assignment." },
+    { q: "Is Trademark Registry approval required?", a: "Yes. The assignment must be explicitly recorded with the Trademark Registry for official ownership recognition." },
+    { q: "Can a trademark be sold?", a: "Yes. Trademark rights can be completely sold through a valid assignment agreement." },
+    { q: "What is the difference between assignment and licensing?", a: "Assignment permanently transfers absolute ownership, while licensing only grants usage rights over the intellectual property." },
+    { q: "Can pending trademarks be assigned?", a: "Yes. Pending trademark applications can also be legally assigned to another party." },
+    { q: "Why choose the Best Trademark Assignment Services CA Firm in Delhi India?", a: "Professional handling guarantees a legally valid ownership transfer and maintains absolute compliance with trademark regulations." }
   ];
 
   return (
@@ -62,7 +71,7 @@ export default function TrademarkAssignmentLanding() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Consultation 
+                  Book a Free Consultation
                 </Link>
               </div>
             </div>
@@ -185,7 +194,7 @@ export default function TrademarkAssignmentLanding() {
 
             <div className="lg:col-span-5 space-y-5">
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                Why Businesses Need Trademark Assignment 
+                Why Businesses Need Trademark Assignment
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
                 Trademark Assignment is the legal process of transferring ownership rights of a registered or pending trademark from one party (Assignor) to another party (Assignee). It may involve cases such as Brand Name Transfers, Logo Transfers, Trademark Sales, Business Acquisitions, Brand Ownership Transitions, or Intellectual Property Restructuring.
@@ -312,7 +321,7 @@ export default function TrademarkAssignmentLanding() {
             </h2>
             <p className="text-sm text-slate-500 mt-1">Our step-by-step methodology ensures seamless legal status tracking and updates.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center text-xs font-bold text-slate-700">
             {[
               { step: "Step 1", title: "Consultation & Review", desc: "Review of trademark ownership & objectives" },
@@ -427,21 +436,7 @@ export default function TrademarkAssignmentLanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "Can a trademark be transferred to another person?", a: "Yes. A registered or pending trademark can generally be transferred through a legally compliant trademark assignment." },
-              { q: "Is Trademark Registry approval required?", a: "Yes. The assignment must be explicitly recorded with the Trademark Registry for official ownership recognition." },
-              { q: "Can a trademark be sold?", a: "Yes. Trademark rights can be completely sold through a valid assignment agreement." },
-              { q: "What is the difference between assignment and licensing?", a: "Assignment permanently transfers absolute ownership, while licensing only grants usage rights over the intellectual property." },
-              { q: "Can pending trademarks be assigned?", a: "Yes. Pending trademark applications can also be legally assigned to another party." },
-              { q: "Why choose the Best Trademark Assignment Services CA Firm in Delhi India?", a: "Professional handling guarantees a legally valid ownership transfer and maintains absolute compliance with trademark regulations." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

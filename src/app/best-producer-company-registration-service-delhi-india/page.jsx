@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Updated metadata reference for Producer Company
 export const metadata = servicesMetadata.producerCompany;
@@ -12,6 +13,13 @@ export default function ProducerCompanyRegistrationLanding() {
     "500+ Happy Clients Served",
     "Expert CA Support At Every Step",
     "100% Compliant With Indian Laws",
+  ];
+  const faqs = [
+    { q: "What is the minimum number of members required?", a: "Generally, at least 10 individual primary producers or 2 producer institutions are required to form a Producer Company." },
+    { q: "Can a Producer Company earn and distribute profits?", a: "Yes. A Producer Company can conduct its business operations and distribute benefits or profits among members in complete accordance with applicable laws." },
+    { q: "Is Producer Company registration suitable for individual farmers?", a: "Yes. This specialized structure is explicitly designed for farmers, primary producers, and allied groups to pool capabilities and scale growth." },
+    { q: "Can a Producer Company obtain government benefits?", a: "Absolutely. Registered Producer Companies and FPOs gain institutional eligibility for multiple dedicated agricultural schemes, development programs, and subsidies." },
+    { q: "How long does the entire registration process take?", a: "The framework generally takes around 10-15 working days, heavily subject to documentation readiness and MCA processing timelines." }
   ];
 
   return (
@@ -348,21 +356,7 @@ export default function ProducerCompanyRegistrationLanding() {
               Frequently Asked Questions
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is the minimum number of members required?", a: "Generally, at least 10 individual primary producers or 2 producer institutions are required to form a Producer Company." },
-              { q: "Can a Producer Company earn and distribute profits?", a: "Yes. A Producer Company can conduct its business operations and distribute benefits or profits among members in complete accordance with applicable laws." },
-              { q: "Is Producer Company registration suitable for individual farmers?", a: "Yes. This specialized structure is explicitly designed for farmers, primary producers, and allied groups to pool capabilities and scale growth." },
-              { q: "Can a Producer Company obtain government benefits?", a: "Absolutely. Registered Producer Companies and FPOs gain institutional eligibility for multiple dedicated agricultural schemes, development programs, and subsidies." },
-              { q: "How long does the entire registration process take?", a: "The framework generally takes around 10-15 working days, heavily subject to documentation readiness and MCA processing timelines." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

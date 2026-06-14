@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.trademarkObjection;
@@ -12,6 +13,15 @@ export default function PremiumTrademarkLanding() {
     "Expert Trademark Consultants",
     "500+ Happy Clients Served",
     "100% Compliance Assurance",
+  ];
+  const faqs = [
+    { q: "What is a Trademark Objection?", a: "A trademark objection is an official query or statutory concern raised by the Trademark Examiner during application review before approving it for journal publication." },
+    { q: "Does an objection mean my trademark has been rejected?", a: "No. Objection is not immediate rejection. It simply means the department requires clarification, supporting usage documents, or legal justification." },
+    { q: "What is a Section 9 objection?", a: "Section 9 objections relate primarily to a lack of core distinctiveness, generic word structures, or overly descriptive brand names." },
+    { q: "What is a Section 11 objection?", a: "Section 11 concerns arise when your applied trademark resembles visually or phonetically identical brand properties already registered on records." },
+    { q: "Can trademark objections be resolved?", a: "Yes. Submitting a clear, well-supported legal reply within deadlines resolves objections and moves applications forward." },
+    { q: "Do you provide official hearing support?", a: "Yes. Fintax Adviser provides complete professional preparation, file packaging, and hearing representation assistance." },
+    { q: "What is the timeline to file an objection response?", a: "Applicants must file a formal, digitized legal response within exactly 30 days of the emission of the examination report." }
   ];
 
   return (
@@ -438,23 +448,8 @@ export default function PremiumTrademarkLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "What is a Trademark Objection?", a: "A trademark objection is an official query or statutory concern raised by the Trademark Examiner during application review before approving it for journal publication." },
-              { q: "Does an objection mean my trademark has been rejected?", a: "No. Objection is not immediate rejection. It simply means the department requires clarification, supporting usage documents, or legal justification." },
-              { q: "What is a Section 9 objection?", a: "Section 9 objections relate primarily to a lack of core distinctiveness, generic word structures, or overly descriptive brand names." },
-              { q: "What is a Section 11 objection?", a: "Section 11 concerns arise when your applied trademark resembles visually or phonetically identical brand properties already registered on records." },
-              { q: "Can trademark objections be resolved?", a: "Yes. Submitting a clear, well-supported legal reply within deadlines resolves objections and moves applications forward." },
-              { q: "Do you provide official hearing support?", a: "Yes. Fintax Adviser provides complete professional preparation, file packaging, and hearing representation assistance." },
-              { q: "What is the timeline to file an objection response?", a: "Applicants must file a formal, digitized legal response within exactly 30 days of the emission of the examination report." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

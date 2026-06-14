@@ -1,7 +1,8 @@
-import React  from 'react';
+import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import { FAQAccordion } from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.fundraising;
@@ -12,6 +13,14 @@ export default function PremiumFundraisingLanding() {
     "25+ Legal Professionals",
     "200+ Happy Clients",
     "100% Legal Compliance",
+  ];
+  const faqs = [
+    { q: "Is Sole Proprietorship registration mandatory?", a: "While there is no separate incorporation process, obtaining registrations such as GST, MSME, or Shop & Establishment helps establish clear business legitimacy and operations." },
+    { q: "Can a Sole Proprietorship open a current account?", a: "Yes, once you obtain the necessary business registrations and verification documents through our CA firm." },
+    { q: "Is GST registration mandatory for a Proprietorship?", a: "GST registration depends directly on your operational turnover limits, business activities, or inter-state operations parameters." },
+    { q: "What is the primary benefit of MSME registration?", a: "MSME/Udyam registration unlocks immediate access to strategic government schemes, financial subsidies, and single-owner business protection tools." },
+    { q: "How long does Sole Proprietorship registration take?", a: "Generally, the complete legal registration framework can be fully closed within just a few working days, subject to verified document submissions." },
+    { q: "Why choose the Best Sole Proprietorship Registration CA Firm in Delhi India?", a: "Professional registration ensures complete compliance layouts, smoother banking allocations, legal protection, and optimized fast-paced business growth paths." }
   ];
 
   return (

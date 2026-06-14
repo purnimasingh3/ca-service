@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.panTan;
@@ -12,6 +13,13 @@ export default function PremiumPanTanLanding() {
     "25+ Compliance Professionals",
     "200+ Happy Clients",
     "100% Secure & Compliant",
+  ];
+  const faqs = [
+    { q: "What is PAN Registration?", a: "PAN (Permanent Account Number) Registration provides a unique 10-digit alphanumeric identification code mandatory for all legal entities executing taxable financial transactions and filing returns in India." },
+    { q: "What is TAN Registration and is it compulsory?", a: "TAN (Tax Deduction and Collection Account Number) is required for every corporate entity responsible for deducting tax at source (TDS) on payments like vendor invoices or employee salaries." },
+    { q: "Can PAN and TAN be applied for together?", a: "Yes. For new startups and companies, both applications are regularly structured and filed simultaneously to secure operational bank accounts faster." },
+    { q: "How long does PAN & TAN registration processing take?", a: "Usually, the entire process takes just a few working days, completely contingent upon the validation speed of the administrative department." },
+    { q: "Do you provide correction services for existing cards?", a: "Yes. Fintax Advisers offers complete correction and update services to fix typographical database issues, official corporate name updates, or office location shifts." }
   ];
 
   return (
@@ -423,21 +431,7 @@ export default function PremiumPanTanLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is PAN Registration?", a: "PAN (Permanent Account Number) Registration provides a unique 10-digit alphanumeric identification code mandatory for all legal entities executing taxable financial transactions and filing returns in India." },
-              { q: "What is TAN Registration and is it compulsory?", a: "TAN (Tax Deduction and Collection Account Number) is required for every corporate entity responsible for deducting tax at source (TDS) on payments like vendor invoices or employee salaries." },
-              { q: "Can PAN and TAN be applied for together?", a: "Yes. For new startups and companies, both applications are regularly structured and filed simultaneously to secure operational bank accounts faster." },
-              { q: "How long does PAN & TAN registration processing take?", a: "Usually, the entire process takes just a few working days, completely contingent upon the validation speed of the administrative department." },
-              { q: "Do you provide correction services for existing cards?", a: "Yes. Fintax Advisers offers complete correction and update services to fix typographical database issues, official corporate name updates, or office location shifts." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

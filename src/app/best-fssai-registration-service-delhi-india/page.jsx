@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.fssai;
@@ -12,6 +13,13 @@ export default function FSSAIRegistrationLanding() {
     "500+ Happy Clients Served",
     "100% Legal Compliance",
     "Fast & Easy Process",
+  ];
+  const faqs = [
+    { q: "What is FSSAI Registration?", a: "FSSAI Registration is the structural approval issued by the Food Safety and Standards Authority of India for food businesses operating legally in India." },
+    { q: "Is FSSAI mandatory for food businesses?", a: "Yes. Most food businesses require FSSAI Registration or a license depending on their annual turnover parameters and specific business type." },
+    { q: "What are the types of FSSAI licenses?", a: "The types are categorized into Basic Registration, State License, and Central License based on business sizing variables." },
+    { q: "Can home kitchens apply for FSSAI?", a: "Yes. Home food businesses, home kitchens, and food startups can securely obtain standard FSSAI registration parameters." },
+    { q: "Do restaurants require an FSSAI License?", a: "Yes. Restaurants, cafes, and cloud kitchens generally require systematic FSSAI licensing before starting operations." }
   ];
 
   return (
@@ -429,21 +437,7 @@ export default function FSSAIRegistrationLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is FSSAI Registration?", a: "FSSAI Registration is the structural approval issued by the Food Safety and Standards Authority of India for food businesses operating legally in India." },
-              { q: "Is FSSAI mandatory for food businesses?", a: "Yes. Most food businesses require FSSAI Registration or a license depending on their annual turnover parameters and specific business type." },
-              { q: "What are the types of FSSAI licenses?", a: "The types are categorized into Basic Registration, State License, and Central License based on business sizing variables." },
-              { q: "Can home kitchens apply for FSSAI?", a: "Yes. Home food businesses, home kitchens, and food startups can securely obtain standard FSSAI registration parameters." },
-              { q: "Do restaurants require an FSSAI License?", a: "Yes. Restaurants, cafes, and cloud kitchens generally require systematic FSSAI licensing before starting operations." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

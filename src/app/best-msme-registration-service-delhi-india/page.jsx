@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.msme;
@@ -28,6 +29,13 @@ export default function MSMERegistrationLanding() {
     { name: "Micro Enterprises", desc: "Small-scale businesses with limited investment and turnover." },
     { name: "Small Enterprises", desc: "Growing businesses requiring financial and operational support." },
     { name: "Medium Enterprises", desc: "Established companies seeking expansion opportunities." },
+  ];
+  const faqs = [
+    { q: "What is MSME Registration?", a: "MSME Registration is the official process of registering commercial business structures under the Government of India's online Udyam portal to lock in corporate recognition and financial benefits." },
+    { q: "Is MSME Registration mandatory?", a: "No, registration is fully voluntary; however, it is highly recommended and beneficial for early startups, freelancers, and growing small business setups." },
+    { q: "What is the Udyam Registration Certificate?", a: "It is the certified legal document generated directly after online micro-enterprise application verification and portal approval." },
+    { q: "Can startups and service businesses qualify?", a: "Yes. Startups, manufacturing setups, trade businesses, service companies, and freelancers are fully eligible to apply." },
+    { q: "Is the registration completed fully online?", a: "Yes. The process is completely digital. Corrections, profile updates, activity modifications, and data changes can also be filed seamlessly later if required." }
   ];
 
   return (
@@ -217,7 +225,7 @@ export default function MSMERegistrationLanding() {
               <p className="text-slate-600 text-base leading-relaxed">
                 Many business owners ignore MSME Registration, but it offers major advantages for sustainable corporate growth, competitiveness, and regional market expansion.
               </p>
-              
+
               <div className="p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl space-y-2">
                 <h5 className="font-bold text-sm text-blue-900">What Registered Businesses Receive:</h5>
                 <ul className="text-xs text-blue-800 space-y-1 font-medium">
@@ -291,7 +299,7 @@ export default function MSMERegistrationLanding() {
             </h2>
             <p className="text-sm text-slate-500 mt-1">Our Udyam registration services are perfectly ideal for the following verticals:</p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm font-semibold text-slate-700">
             {[
               { role: 'Startups', note: 'Get early-stage government support and recognition.' },
@@ -425,21 +433,7 @@ export default function MSMERegistrationLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is MSME Registration?", a: "MSME Registration is the official process of registering commercial business structures under the Government of India's online Udyam portal to lock in corporate recognition and financial benefits." },
-              { q: "Is MSME Registration mandatory?", a: "No, registration is fully voluntary; however, it is highly recommended and beneficial for early startups, freelancers, and growing small business setups." },
-              { q: "What is the Udyam Registration Certificate?", a: "It is the certified legal document generated directly after online micro-enterprise application verification and portal approval." },
-              { q: "Can startups and service businesses qualify?", a: "Yes. Startups, manufacturing setups, trade businesses, service companies, and freelancers are fully eligible to apply." },
-              { q: "Is the registration completed fully online?", a: "Yes. The process is completely digital. Corrections, profile updates, activity modifications, and data changes can also be filed seamlessly later if required." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { FiPhone, FiMail } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 const menuData = [
   {
@@ -259,14 +260,9 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileActiveMenu, setMobileActiveMenu] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const menuRef = useRef(null);
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
 
   // Prevent background scrolling when mobile panel is open
   useEffect(() => {
@@ -279,12 +275,23 @@ export default function Navbar() {
       document.body.style.overflow = "unset";
     };
   }, [mobileOpen]);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
+      ) {
+        setActiveMenu(null);
+      }
+    };
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("role");
-    window.location.reload();
-  };
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
 
   const toggleMobileMenu = (index) => {
     setMobileActiveMenu(mobileActiveMenu === index ? null : index);
@@ -296,10 +303,10 @@ export default function Navbar() {
       <div className="hidden lg:block bg-slate-900 text-slate-300 text-xs">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <a href="tel:+919990924477" className="flex items-center gap-2 text-white hover:text-blue-500 transition">
+            <a href="tel:+919990924477" className="flex items-center gap-2 text-white hover:text-blue-500 transition text-lg">
               <FiPhone className="text-blue-500" /> +91 9990924477
             </a>
-            <a href="mailto:info@fintaxadviser.com" className="flex items-center gap-2 text-white hover:text-blue-500 transition">
+            <a href="mailto:info@fintaxadviser.com" className="flex items-center gap-2 text-white hover:text-blue-500 transition text-lg">
               <FiMail className="text-blue-500" /> <span>info@fintaxadviser.com</span>
             </a>
           </div>
@@ -310,16 +317,6 @@ export default function Navbar() {
             <Link href="/get-free-consultant" className="text-white border border-white px-2 py-2 rounded-xl text-sm font-semibold transition">
               Get Free Consultation
             </Link>
-
-            {/* {isLoggedIn ? (
-              <button onClick={() => { handleLogout(); setMobileOpen(false); }} className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">
-                Logout
-              </button>
-            ) : (
-              <Link href="/admin/login" onClick={() => setMobileOpen(false)} className="bg-white border border-blue-900 text-black px-4 py-2 rounded-lg font-semibold text-sm">
-                <span>Dashboard</span>
-              </Link>
-            )} */}
           </div>
         </div>
       </div>
@@ -338,12 +335,13 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav ref={menuRef}
+            className="hidden lg:flex items-center gap-5">
             {menuData.map((menu, index) => {
-              let maxWidthStyle = "1152px";
-              if (menu.sections.length === 1) maxWidthStyle = "320px";
-              if (menu.sections.length === 2) maxWidthStyle = "672px";
-              if (menu.sections.length === 3) maxWidthStyle = "896px";
+              // let maxWidthStyle = "1152px";
+              // if (menu.sections.length === 1) maxWidthStyle = "320px";
+              // if (menu.sections.length === 2) maxWidthStyle = "672px";
+              // if (menu.sections.length === 3) maxWidthStyle = "760px";
 
               return (
                 <div
@@ -352,9 +350,26 @@ export default function Navbar() {
                   onMouseEnter={() => setActiveMenu(index)}
                   onMouseLeave={() => setActiveMenu(null)}
                 >
-                  <button className="flex items-center gap-1 py-6 text-[16px] font-medium text-gray-800 hover:text-blue-600 transition">
+                  <button
+                    onClick={() =>
+                      setActiveMenu(activeMenu === index ? null : index)
+                    }
+                    className={`flex items-center gap-1 py-6 text-[16px] font-medium transition ${activeMenu === index
+                      ? "text-blue-600"
+                      : "text-gray-800 hover:text-slate-900"
+                      }`}
+                  >
                     {menu.title}
-                    <ChevronDown size={14} className="mt-0.5" />
+                    {activeMenu === index ? (
+                      <ChevronUp size={16} className="text-blue-600 " />
+                    ) : (
+                      <ChevronDown size={16} className="text-gray-800" />
+                    )}
+                    {/* <ChevronDown
+                      size={14}
+                      className={`transition-transform duration-200 ${activeMenu === index ? "rotate-180" : ""
+                        }`}
+                    /> */}
                   </button>
 
                   {/* Mega Menu Window Panel */}
@@ -371,7 +386,8 @@ export default function Navbar() {
                         backgroundColor: "#ffffff",
                         display: "grid",
                         gap: "2.5rem",
-                        maxWidth: maxWidthStyle,
+                        maxWidth: "1200px",
+                        width: "100%",
                         gridTemplateColumns: `repeat(${menu.sections.length}, minmax(0, 1fr))`
                       }}
                     >
@@ -385,7 +401,11 @@ export default function Navbar() {
                               <li key={idx}>
                                 <Link
                                   href={`/${link.slug}`}
-                                  className="text-gray-600 hover:text-blue-600 text-[14px] transition-all duration-150 block hover:translate-x-1"
+                                  onClick={() => setActiveMenu(null)}
+                                  className={`text-[14px] transition-all duration-150 block hover:translate-x-1 ${pathname === `/${link.slug}`
+                                    ? "text-blue-600 font-bold"
+                                    : "text-gray-600 hover:text-blue-600"
+                                    }`}
                                 >
                                   {link.name}
                                 </Link>
@@ -454,7 +474,10 @@ export default function Navbar() {
                           <li key={idx}>
                             <Link
                               href={`/${link.slug}`}
-                              onClick={() => setMobileOpen(false)}
+                              onClick={() => {
+                                setMobileOpen(false);
+                                setActiveMenu(null);
+                              }}
                               className="text-gray-600 hover:text-blue-600 text-[14px] block py-1"
                             >
                               {link.name}

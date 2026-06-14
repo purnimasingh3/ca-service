@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata = servicesMetadata.societyRegistration;
 
@@ -11,6 +12,14 @@ export default function SocietyRegistrationLanding() {
     "500+ Happy Clients Served",
     "Expert CA Support At Every Step",
     "Complete Compliance Support",
+  ];
+  const faqs = [
+    { q: "How many members are required to register a society?", a: "Generally, a minimum of seven (7) members are mandatory under structural legislative frameworks to execute a valid incorporation profile parameters setup." },
+    { q: "Can a society receive donations?", a: "Yes, an official legally registered society holding approved parameters can systematically receive corporate grants and non-profit donations." },
+    { q: "Is society registration mandatory for NGOs?", a: "While not explicitly mandatory for baseline basic charitable operations, full corporate registration provides critical statutory independent legal recognition, validation status, and institutional credibility." },
+    { q: "Can a society apply for 12A and 80G registration?", a: "Absolutely. Once the baseline statutory registration certificate issues, eligible societies can apply for these advanced tax certifications to claim active operational tax exemptions." },
+    { q: "What is the difference between a Society, Trust, and Section 8 Company?", a: "Each setup structure features fundamentally different legal governance matrices, member composition requirements, and compliance structures. Our dedicated CAs analyze your goals to implement the ideal legal form." },
+    { q: "How long does society registration take?", a: "The exact functional delivery timeline parameters remain dependent on speed of documentation processing validation and corporate state registrar review steps." }
   ];
 
   return (
@@ -61,7 +70,7 @@ export default function SocietyRegistrationLanding() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Consultation 
+                  Book a Free Consultation
                 </Link>
               </div>
             </div>
@@ -197,8 +206,8 @@ export default function SocietyRegistrationLanding() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center text-xs sm:text-sm font-bold text-slate-700">
             {[
-              'Educational Development', 'Social Welfare Activities', "Women's Empowerment", 
-              'Healthcare Initiatives', 'Cultural Promotion', 'Environmental Protection', 
+              'Educational Development', 'Social Welfare Activities', "Women's Empowerment",
+              'Healthcare Initiatives', 'Cultural Promotion', 'Environmental Protection',
               'Sports Development', 'Community Development', 'Research Activities', 'Youth Programs'
             ].map((objective) => (
               <div key={objective} className="p-5 bg-slate-50 rounded-xl border border-slate-200/80 hover:border-blue-400 transition-colors flex items-center justify-center">
@@ -268,7 +277,7 @@ export default function SocietyRegistrationLanding() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            
+
             {/* Minimum Criteria Card */}
             <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm lg:col-span-1 space-y-6">
               <h3 className="text-xl font-bold text-slate-900 border-b border-slate-100 pb-3">Minimum Requirements</h3>
@@ -291,7 +300,7 @@ export default function SocietyRegistrationLanding() {
             {/* Documents Grid Wrapper */}
             <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
               <h3 className="text-xl font-bold text-slate-900 border-b border-slate-100 pb-3">Required Onboarding Documents List</h3>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-sm text-slate-900 mb-2.5">Identity Proof of Members</h4>
@@ -475,22 +484,7 @@ export default function SocietyRegistrationLanding() {
               Frequently Asked Questions
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "How many members are required to register a society?", a: "Generally, a minimum of seven (7) members are mandatory under structural legislative frameworks to execute a valid incorporation profile parameters setup." },
-              { q: "Can a society receive donations?", a: "Yes, an official legally registered society holding approved parameters can systematically receive corporate grants and non-profit donations." },
-              { q: "Is society registration mandatory for NGOs?", a: "While not explicitly mandatory for baseline basic charitable operations, full corporate registration provides critical statutory independent legal recognition, validation status, and institutional credibility." },
-              { q: "Can a society apply for 12A and 80G registration?", a: "Absolutely. Once the baseline statutory registration certificate issues, eligible societies can apply for these advanced tax certifications to claim active operational tax exemptions." },
-              { q: "What is the difference between a Society, Trust, and Section 8 Company?", a: "Each setup structure features fundamentally different legal governance matrices, member composition requirements, and compliance structures. Our dedicated CAs analyze your goals to implement the ideal legal form." },
-              { q: "How long does society registration take?", a: "The exact functional delivery timeline parameters remain dependent on speed of documentation processing validation and corporate state registrar review steps." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

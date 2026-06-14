@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.partnershipRegistration;
@@ -14,6 +15,15 @@ export default function PartnershipRegistrationLanding() {
     "LEGALLY DRAFTED PARTNERSHIP DEED",
     "COST-EFFECTIVE SOLUTIONS",
     "EXPERT CA SUPPORT AT EVERY STEP",
+  ];
+  const faqs = [
+    { q: "Is partnership firm registration mandatory?", a: "Partnership registration is not mandatory under the Partnership Act, but a registered firm enjoys significant legal advantages, financial credibility, and stronger foundation attributes." },
+    { q: "How many partners are required to start a partnership firm?", a: "A minimum of two partners are legally required to start and operate a partnership firm structure." },
+    { q: "Can a partnership firm obtain GST registration?", a: "Yes, partnership firms can easily apply for and obtain GST tax registration configurations based on operational requirements." },
+    { q: "How long does partnership firm registration take?", a: "Generally, the formal setup can be completed within a few working days depending on structural document readiness and quick submissions." },
+    { q: "What is the role of a partnership deed?", a: "The partnership deed acts as the primary legal document defining profit-sharing ratios, structural capital distribution, partner responsibilities, and operational guidelines." },
+    { q: "Why should I choose the Best Partnership Firm Registration CA Firm in Delhi India?", a: "Professional registration minimizes legal risks, ensures smooth document formatting, sets up accurate tax profiles, and establishes a solid track for business scaling." },
+    { q: "Why choose Fintax Adviser?", a: "Fintax Adviser is recognized as a premiere CA firm in Delhi India, providing expert registration services backed by 15+ years of experience and 500+ satisfied clients." }
   ];
 
   return (
@@ -103,7 +113,7 @@ export default function PartnershipRegistrationLanding() {
                 What is a Partnership Firm?
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
-                A Partnership Firm is a business structure where two or more individuals agree to operate and manage a business together while sharing profits and losses according to mutually agreed terms. 
+                A Partnership Firm is a business structure where two or more individuals agree to operate and manage a business together while sharing profits and losses according to mutually agreed terms.
               </p>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Choosing the Best Partnership Firm Registration CA Firm in Delhi India ensures your business starts on a strong legal foundation with proper documentation and compliance support.
@@ -255,11 +265,11 @@ export default function PartnershipRegistrationLanding() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center text-xs sm:text-sm font-bold text-slate-700">
             {[
-              'Traders & Retail Businesses', 
-              'Professional Service Firms', 
-              'Family-Owned Businesses', 
-              'Startup Founders', 
-              'Small Manufacturing Units', 
+              'Traders & Retail Businesses',
+              'Professional Service Firms',
+              'Family-Owned Businesses',
+              'Startup Founders',
+              'Small Manufacturing Units',
               'Service Providers'
             ].map((sector) => (
               <div key={sector} className="p-4 bg-white rounded-xl shadow-xs border border-slate-200/80 hover:border-blue-400 transition-colors flex items-center justify-center">
@@ -446,22 +456,7 @@ export default function PartnershipRegistrationLanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "Is partnership firm registration mandatory?", a: "Partnership registration is not mandatory under the Partnership Act, but a registered firm enjoys significant legal advantages, financial credibility, and stronger foundation attributes." },
-              { q: "How many partners are required to start a partnership firm?", a: "A minimum of two partners are legally required to start and operate a partnership firm structure." },
-              { q: "Can a partnership firm obtain GST registration?", a: "Yes, partnership firms can easily apply for and obtain GST tax registration configurations based on operational requirements." },
-              { q: "How long does partnership firm registration take?", a: "Generally, the formal setup can be completed within a few working days depending on structural document readiness and quick submissions." },
-              { q: "What is the role of a partnership deed?", a: "The partnership deed acts as the primary legal document defining profit-sharing ratios, structural capital distribution, partner responsibilities, and operational guidelines." },
-              { q: "Why should I choose the Best Partnership Firm Registration CA Firm in Delhi India?", a: "Professional registration minimizes legal risks, ensures smooth document formatting, sets up accurate tax profiles, and establishes a solid track for business scaling." },
-              { q: "Why choose Fintax Adviser?", a: "Fintax Adviser is recognized as a premiere CA firm in Delhi India, providing expert registration services backed by 15+ years of experience and 500+ satisfied clients." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

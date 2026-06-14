@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.rocCompliance;
@@ -12,6 +13,13 @@ export default function ROCComplianceLanding() {
     "500+ Happy Clients",
     "Accurate & Reliable",
     "100% Legal Compliance",
+  ];
+  const faqs = [
+    { q: "What is ROC Compliance?", a: "ROC Compliance refers to mandatory filings and legal obligations that companies must complete with the Registrar of Companies (ROC) under the Ministry of Corporate Affairs (MCA)." },
+    { q: "Is ROC filing mandatory for all companies?", a: "Yes, all registered corporate entities (including Private Limited, OPC, and Section 8 companies) must complete annual ROC compliance." },
+    { q: "What happens if ROC filing is delayed?", a: "Delayed filing attracts additional fees, accumulating statutory penalties, legal notices, and risks of director disqualification." },
+    { q: "What common forms are used in ROC filing?", a: "The foundational compliance forms include Form AOC-4 (for financial reporting), Form MGT-7 (Annual Return), Form DIR-3 KYC, and Form ADT-1." },
+    { q: "Can Fintax Adviser handle long overdue or pending filings?", a: "Yes. We regularly assist corporate entities in analyzing, structuring, and cleanly submitting overdue and pending corporate filings." }
   ];
 
   return (
@@ -422,20 +430,7 @@ export default function ROCComplianceLanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "What is ROC Compliance?", a: "ROC Compliance refers to mandatory filings and legal obligations that companies must complete with the Registrar of Companies (ROC) under the Ministry of Corporate Affairs (MCA)." },
-              { q: "Is ROC filing mandatory for all companies?", a: "Yes, all registered corporate entities (including Private Limited, OPC, and Section 8 companies) must complete annual ROC compliance." },
-              { q: "What happens if ROC filing is delayed?", a: "Delayed filing attracts additional fees, accumulating statutory penalties, legal notices, and risks of director disqualification." },
-              { q: "What common forms are used in ROC filing?", a: "The foundational compliance forms include Form AOC-4 (for financial reporting), Form MGT-7 (Annual Return), Form DIR-3 KYC, and Form ADT-1." },
-              { q: "Can Fintax Adviser handle long overdue or pending filings?", a: "Yes. We regularly assist corporate entities in analyzing, structuring, and cleanly submitting overdue and pending corporate filings." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

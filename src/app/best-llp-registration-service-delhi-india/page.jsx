@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.llpRegistration;
@@ -12,6 +13,16 @@ export default function PremiumLLPLanding() {
     "25+ Legal & Tax Professionals",
     "200+ Happy Clients",
     "100% Legal Compliance",
+  ];
+  const faqs = [
+    { q: "What is LLP Incorporation?", a: "LLP Incorporation is the legal process of registering a Limited Liability Partnership under the Ministry of Corporate Affairs (MCA)." },
+    { q: "How many partners are required for LLP Registration?", a: "A minimum of 2 partners are required for successful LLP registration in India." },
+    { q: "Is there any minimum capital requirement for LLP?", a: "No, there is absolutely no minimum capital requirement enforced for LLP registration." },
+    { q: "How long does LLP registration take?", a: "Usually, the complete end-to-end LLP registration process takes 7-15 working days." },
+    { q: "Can NRIs register LLPs in India?", a: "Yes, NRIs and foreign nationals can legally register and partner in LLPs in India." },
+    { q: "What is DSC in LLP Registration?", a: "DSC stands for Digital Signature Certificate, which is used to securely authorize digital MCA filing forms." },
+    { q: "Is GST mandatory for LLPs?", a: "GST Registration is not auto-mandatory; it completely depends on your business activities and overall annual turnover metrics." },
+    { q: "Do LLPs need annual compliance?", a: "Yes, all registered LLPs must mandatorily complete their annual corporate ROC filings and annual tax submissions." }
   ];
 
   return (
@@ -386,23 +397,7 @@ export default function PremiumLLPLanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "What is LLP Incorporation?", a: "LLP Incorporation is the legal process of registering a Limited Liability Partnership under the Ministry of Corporate Affairs (MCA)." },
-              { q: "How many partners are required for LLP Registration?", a: "A minimum of 2 partners are required for successful LLP registration in India." },
-              { q: "Is there any minimum capital requirement for LLP?", a: "No, there is absolutely no minimum capital requirement enforced for LLP registration." },
-              { q: "How long does LLP registration take?", a: "Usually, the complete end-to-end LLP registration process takes 7-15 working days." },
-              { q: "Can NRIs register LLPs in India?", a: "Yes, NRIs and foreign nationals can legally register and partner in LLPs in India." },
-              { q: "What is DSC in LLP Registration?", a: "DSC stands for Digital Signature Certificate, which is used to securely authorize digital MCA filing forms." },
-              { q: "Is GST mandatory for LLPs?", a: "GST Registration is not auto-mandatory; it completely depends on your business activities and overall annual turnover metrics." },
-              { q: "Do LLPs need annual compliance?", a: "Yes, all registered LLPs must mandatorily complete their annual corporate ROC filings and annual tax submissions." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.privateLimited;
@@ -13,6 +14,32 @@ export default function PremiumCompanyRegistrationLanding() {
     "200+ Happy Clients",
     "100% Legal Compliance",
   ];
+const faqs = [
+  {
+    q: "How many directors are required for registration?",
+    a: "A minimum of 2 directors are required for Private Limited Company Registration."
+  },
+  {
+    q: "What is the minimum capital requirement?",
+    a: "There is no minimum capital requirement for registering a company in India."
+  },
+  {
+    q: "How long does company registration take?",
+    a: "Usually, the entire process takes about 7-15 working days."
+  },
+  {
+    q: "Can NRIs register companies in India?",
+    a: "Yes, NRIs and foreign nationals can legally register and open companies in India."
+  },
+  {
+    q: "What are ROC compliances?",
+    a: "ROC compliances include annual return filing and mandatory legal company compliance documentation submitted to the Registrar of Companies."
+  },
+   { 
+    q: "What do DSC and DIN stand for?", 
+    a: "DSC stands for Digital Signature Certificate (used for online MCA filing), and DIN means Director Identification Number issued to company directors."
+   }
+];
 
   return (
     <div className="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen">
@@ -326,28 +353,15 @@ export default function PremiumCompanyRegistrationLanding() {
 
       {/* FAQs Accordion */}
       <section id="faqs" className="py-24 bg-white scroll-mt-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "How many directors are required for registration?", a: "A minimum of 2 directors are required for Private Limited Company Registration." },
-              { q: "What is the minimum capital requirement?", a: "There is no minimum capital requirement for registering a company in India." },
-              { q: "How long does company registration take?", a: "Usually, the entire process takes about 7-15 working days." },
-              { q: "Can NRIs register companies in India?", a: "Yes, NRIs and foreign nationals can legally register and open companies in India." },
-              { q: "What are ROC compliances?", a: "ROC compliances include annual return filing and mandatory legal company compliance documentation submitted to the Registrar of Companies." },
-              { q: "What do DSC and DIN stand for?", a: "DSC stands for Digital Signature Certificate (used for online MCA filing), and DIN means Director Identification Number issued to company directors." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
+          
         </div>
       </section>
 

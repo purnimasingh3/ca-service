@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.misReporting;
@@ -12,6 +13,28 @@ export default function PremiumMISReportingLanding() {
     "500+ Happy Clients",
     "100% Accurate & Secure Process",
     "Expert Consultation & Support",
+  ];
+  const faqs = [
+    {
+      q: "What are MIS Reporting Services?",
+      a: "MIS Reporting Services involve the systematic collection, analysis, and presentation of business operational and financial data in a structured layout. These help tracking indicators, control costs, and plan strategic growth paths."
+    },
+    {
+      q: "Why are MIS reports important for businesses?",
+      a: "They offer granular transparency covering margins, department productivity logs, revenue trends, and working capital status. This ensures leadership decisions are based on accurate data rather than assumptions."
+    },
+    {
+      q: "What distinct types of MIS reports do you provide?",
+      a: "We provide comprehensive solutions including Monthly MIS Reports, Cash Flow Reports, Sales Performance Reps, Budget vs Actual variance analytics, and custom KPI dashboards."
+    },
+    {
+      q: "What exactly are Virtual CFO Services?",
+      a: "Virtual CFO Services provide professional corporate financial guidance without hiring an expensive full-time executive. Responsibilities include long-term forecasting, capital risk analysis, budgeting systems, and investor reports."
+    },
+    {
+      q: "How do customized management dashboards improve my profitability?",
+      a: "By tracking trends in real time, dashboards help you isolate profitable segments, monitor variable overhead costs, identify operational leaks, and focus resources on high-margin products."
+    }
   ];
 
   return (
@@ -441,36 +464,7 @@ export default function PremiumMISReportingLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { 
-                q: "What are MIS Reporting Services?", 
-                a: "MIS Reporting Services involve the systematic collection, analysis, and presentation of business operational and financial data in a structured layout. These help tracking indicators, control costs, and plan strategic growth paths." 
-              },
-              { 
-                q: "Why are MIS reports important for businesses?", 
-                a: "They offer granular transparency covering margins, department productivity logs, revenue trends, and working capital status. This ensures leadership decisions are based on accurate data rather than assumptions." 
-              },
-              { 
-                q: "What distinct types of MIS reports do you provide?", 
-                a: "We provide comprehensive solutions including Monthly MIS Reports, Cash Flow Reports, Sales Performance Reps, Budget vs Actual variance analytics, and custom KPI dashboards." 
-              },
-              { 
-                q: "What exactly are Virtual CFO Services?", 
-                a: "Virtual CFO Services provide professional corporate financial guidance without hiring an expensive full-time executive. Responsibilities include long-term forecasting, capital risk analysis, budgeting systems, and investor reports." 
-              },
-              { 
-                q: "How do customized management dashboards improve my profitability?", 
-                a: "By tracking trends in real time, dashboards help you isolate profitable segments, monitor variable overhead costs, identify operational leaks, and focus resources on high-margin products." 
-              }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

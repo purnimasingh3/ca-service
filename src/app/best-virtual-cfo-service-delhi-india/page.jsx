@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.virtualCFO;
@@ -12,6 +13,13 @@ export default function PremiumVirtualCFOLanding() {
     "25+ Financial Experts",
     "200+ Happy Clients ",
     "Complete Compliance]",
+  ];
+  const faqs = [
+    { q: "What are Virtual CFO Services?", a: "Virtual CFO Services provide outsourced financial management, strategic leadership solutions, and business advisory without hiring a full-time officer." },
+    { q: "Is a Virtual CFO suitable for startups?", a: "Yes. Startups benefit significantly through growth forecasting, metric budgeting, financial roadmaps, and investor readiness support." },
+    { q: "Do SMEs need Virtual CFO Services?", a: "Absolutely. SMEs gain crucial day-to-day financial data control, visibility dashboards, and sustainable long-term growth planning." },
+    { q: "Can you help with fundraising?", a: "Yes, we provide investor support, business valuations, pitch documentation, and robust financial projections." },
+    { q: "Do you manage cash flow?", a: "Yes, cash flow optimization and working capital tracking are among our core focus services." }
   ];
 
   return (
@@ -62,7 +70,7 @@ export default function PremiumVirtualCFOLanding() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Consultation 
+                  Book a Free Consultation
                 </Link>
               </div>
             </div>
@@ -80,11 +88,11 @@ export default function PremiumVirtualCFOLanding() {
       <section className="py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Transform Business Growth with Professional Virtual CFO Services 
+            Transform Business Growth with Professional Virtual CFO Services
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             Welcome to <strong className="text-blue-600 font-semibold">Fintax Advisers</strong>. Running a business today is not only about managing sales and operations. Sustainable growth requires strong financial planning, cash flow management, strategic decisions, investor readiness, and profitability control.
-             We help startups, SMEs, established companies, and international businesses build stronger financial systems and achieve long-term growth.
+            We help startups, SMEs, established companies, and international businesses build stronger financial systems and achieve long-term growth.
           </p>
         </div>
       </section>
@@ -94,7 +102,7 @@ export default function PremiumVirtualCFOLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-              Our Virtual CFO Services Include 
+              Our Virtual CFO Services Include
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
               Strategic and customizable financial solutions tailored to improve performance and support expansion.
@@ -213,7 +221,7 @@ export default function PremiumVirtualCFOLanding() {
 
             <div className="lg:col-span-5 space-y-5">
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                Why Businesses Need Virtual CFO Services 
+                Why Businesses Need Virtual CFO Services
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
                 Many businesses generate revenue but still struggle financially due to a lack of visibility, delayed reporting, or weak growth planning. A professional consultant identifies financial gaps and optimizes operations.
@@ -257,7 +265,7 @@ export default function PremiumVirtualCFOLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-2">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-slate-900">
-              Benefits of Hiring Virtual CFO Services 
+              Benefits of Hiring Virtual CFO Services
             </h2>
             <p className="text-slate-500 text-sm sm:text-base">
               Gain access to experienced professionals at a fraction of the cost of hiring full-time internal leadership.
@@ -298,7 +306,7 @@ export default function PremiumVirtualCFOLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-              Industries & Sectors We Serve 
+              Industries & Sectors We Serve
             </h2>
             <p className="text-xs text-slate-500 mt-1">Providing customized financial services across size, industry, and goals.</p>
           </div>
@@ -323,7 +331,7 @@ export default function PremiumVirtualCFOLanding() {
             <div className="w-full space-y-8">
               <div className="space-y-4">
                 <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                  Why Choose Fintax Advisers 
+                  Why Choose Fintax Advisers
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>
               </div>
@@ -399,24 +407,10 @@ export default function PremiumVirtualCFOLanding() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">
-              Frequently Asked Questions 
+              Frequently Asked Questions
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What are Virtual CFO Services?", a: "Virtual CFO Services provide outsourced financial management, strategic leadership solutions, and business advisory without hiring a full-time officer." },
-              { q: "Is a Virtual CFO suitable for startups?", a: "Yes. Startups benefit significantly through growth forecasting, metric budgeting, financial roadmaps, and investor readiness support." },
-              { q: "Do SMEs need Virtual CFO Services?", a: "Absolutely. SMEs gain crucial day-to-day financial data control, visibility dashboards, and sustainable long-term growth planning." },
-              { q: "Can you help with fundraising?", a: "Yes, we provide investor support, business valuations, pitch documentation, and robust financial projections." },
-              { q: "Do you manage cash flow?", a: "Yes, cash flow optimization and working capital tracking are among our core focus services." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

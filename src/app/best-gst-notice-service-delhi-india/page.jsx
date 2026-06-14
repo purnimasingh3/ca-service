@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.gstNotice;
@@ -13,6 +14,15 @@ export default function PremiumGSTNoticeLanding() {
     "Expert GST Consultants",
     "500+ Happy Clients",
     "Accurate Reply & Resolution",
+  ];
+  const faqs = [
+    { q: "What is a GST Notice?", a: "A GST Notice is an official communication issued by tax authorities seeking clarification, documentation, tax explanation, or compliance verification purposes." },
+    { q: "Should GST notices be ignored?", a: "No. Ignoring notices may result in severe penalties, high interest charges, additional tax liability, and formal legal action." },
+    { q: "Can GST registration be cancelled due to notices?", a: "Yes, unresolved notices or poor compliance management may directly affect and result in registration suspension or cancellation." },
+    { q: "Do you handle GST scrutiny and assessment cases?", a: "Yes. Fintax Adviser provides complete professional assessment, litigation, and department scrutiny support handling." },
+    { q: "Can startups receive GST notices?", a: "Yes. Startups may regularly receive notices related to return mismatches, late filing, or general regulatory compliance." },
+    { q: "Do you provide online GST notice support across India?", a: "Yes. Fintax Adviser provides online digital assistance and expert GST notice services across India." },
+    { q: "Can Input Tax Credit (ITC) notices be successfully resolved?", a: "Yes. Proper document verification, data reconciliation statements, and accurate technical replies help resolve many ITC mismatch cases safely." }
   ];
 
   return (
@@ -469,23 +479,8 @@ export default function PremiumGSTNoticeLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "What is a GST Notice?", a: "A GST Notice is an official communication issued by tax authorities seeking clarification, documentation, tax explanation, or compliance verification purposes." },
-              { q: "Should GST notices be ignored?", a: "No. Ignoring notices may result in severe penalties, high interest charges, additional tax liability, and formal legal action." },
-              { q: "Can GST registration be cancelled due to notices?", a: "Yes, unresolved notices or poor compliance management may directly affect and result in registration suspension or cancellation." },
-              { q: "Do you handle GST scrutiny and assessment cases?", a: "Yes. Fintax Adviser provides complete professional assessment, litigation, and department scrutiny support handling." },
-              { q: "Can startups receive GST notices?", a: "Yes. Startups may regularly receive notices related to return mismatches, late filing, or general regulatory compliance." },
-              { q: "Do you provide online GST notice support across India?", a: "Yes. Fintax Adviser provides online digital assistance and expert GST notice services across India." },
-              { q: "Can Input Tax Credit (ITC) notices be successfully resolved?", a: "Yes. Proper document verification, data reconciliation statements, and accurate technical replies help resolve many ITC mismatch cases safely." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

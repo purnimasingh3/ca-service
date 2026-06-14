@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.incomeTaxNotice;
@@ -12,6 +13,13 @@ export default function PremiumIncomeTaxNoticeLanding() {
     "Dedicated Notice Specialists",
     "500+ Happy Clients Served",
     "Complete Digital Consultation",
+  ];
+  const faqs = [
+    { q: "What should I do after receiving an Income Tax Notice?", a: "Review the parameters carefully to analyze the applicable sections and consult tax professionals before drafting or submitting a response." },
+    { q: "Does every tax notice mean an automatic penalty?", a: "No. Many notices are issued strictly for verification, system corrections, data clarifications, or accounting mismatch resolutions." },
+    { q: "Can my notice compliance case be resolved online?", a: "Yes. Most modern income tax cases and notice queries can be completely managed and filed digitally through secure web options." },
+    { q: "Do you provide comprehensive scrutiny and assessment support?", a: "Yes. We deliver complete representation, documentation management, and end-to-end assistance for detailed scrutiny proceedings." },
+    { q: "Can businesses receive notices, or are they only for individuals?", a: "Both individuals and business entities (Companies, LLPs, Partnerships) can receive notices for transaction reviews or filing corrections." }
   ];
 
   return (
@@ -34,7 +42,7 @@ export default function PremiumIncomeTaxNoticeLanding() {
               </span>
 
               <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
-                Income Tax Notices 
+                Income Tax Notices
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Handling Service in Delhi India
                 </span>
@@ -451,21 +459,7 @@ export default function PremiumIncomeTaxNoticeLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What should I do after receiving an Income Tax Notice?", a: "Review the parameters carefully to analyze the applicable sections and consult tax professionals before drafting or submitting a response." },
-              { q: "Does every tax notice mean an automatic penalty?", a: "No. Many notices are issued strictly for verification, system corrections, data clarifications, or accounting mismatch resolutions." },
-              { q: "Can my notice compliance case be resolved online?", a: "Yes. Most modern income tax cases and notice queries can be completely managed and filed digitally through secure web options." },
-              { q: "Do you provide comprehensive scrutiny and assessment support?", a: "Yes. We deliver complete representation, documentation management, and end-to-end assistance for detailed scrutiny proceedings." },
-              { q: "Can businesses receive notices, or are they only for individuals?", a: "Both individuals and business entities (Companies, LLPs, Partnerships) can receive notices for transaction reviews or filing corrections." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

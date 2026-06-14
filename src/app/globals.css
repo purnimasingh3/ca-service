@@ -67,3 +67,46 @@
 }
 .schedule-calendar .react-calendar__month-view__days__day--neighboringMonth { color: #3f3f46; }
 .schedule-calendar .react-calendar__tile:disabled { color: #27272a; }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.ripple-1 {
+  animation: ripple 2.5s linear infinite;
+}
+
+.ripple-2 {
+  animation: ripple 2.5s linear infinite 1.2s;
+}
+.ripple-3 {
+  animation: ripple 2.5s linear infinite 2.4s;
+}
+.ripple-4 {
+  animation: ripple 2.5s linear infinite 3.6s;
+}
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}

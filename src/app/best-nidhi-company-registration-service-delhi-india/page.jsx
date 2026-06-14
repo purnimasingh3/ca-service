@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Dynamically typed metadata tracking for the specific registration routing module
 export const metadata = servicesMetadata.nidhiCompanyRegistration;
@@ -12,6 +13,14 @@ export default function NidhiCompanyRegistrationLanding() {
     "500+ Happy Clients",
     "Separate Legal Entity",
     "Limited Liability Protection",
+  ];
+  const faqs = [
+    { q: "What is the minimum number of members required in a Nidhi Company?", a: "A Nidhi Company requires a minimum of seven shareholders at the time of incorporation." },
+    { q: "Can a Nidhi Company provide loans to the public?", a: "No. A Nidhi Company can provide loans only to its members." },
+    { q: "Is RBI approval required for Nidhi Company registration?", a: "Generally, Nidhi Companies are regulated under the Companies Act and specific Nidhi Rules, but compliance requirements must be followed carefully." },
+    { q: "Can a Nidhi Company accept deposits?", a: "Yes, deposits can be accepted from members subject to applicable rules and regulations." },
+    { q: "How long does Nidhi Company registration take?", a: "The registration timeline depends on swift documentation delivery and MCA processing workflows and structural approvals." },
+    { q: "Why choose the Best Nidhi Company Registration CA Firm in Delhi India?", a: "Professional registration ensures total statutory legal compliance, smooth incorporation steps, and proper internal corporate business structuring." }
   ];
 
   return (
@@ -63,7 +72,7 @@ export default function NidhiCompanyRegistrationLanding() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Consultation 
+                  Book a Free Consultation
                 </Link>
               </div>
             </div>
@@ -305,7 +314,7 @@ export default function NidhiCompanyRegistrationLanding() {
       {/* Eligibility & Step-by-Step Registration Process */}
       <section className="py-24 bg-sky-50 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           {/* Eligibility Sub-Block */}
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm max-w-4xl mx-auto">
             <h3 className="text-xl font-bold text-slate-900 mb-4 text-center">
@@ -383,22 +392,7 @@ export default function NidhiCompanyRegistrationLanding() {
               FAQs - Best Nidhi Company Registration CA Firm in Delhi India
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is the minimum number of members required in a Nidhi Company?", a: "A Nidhi Company requires a minimum of seven shareholders at the time of incorporation." },
-              { q: "Can a Nidhi Company provide loans to the public?", a: "No. A Nidhi Company can provide loans only to its members." },
-              { q: "Is RBI approval required for Nidhi Company registration?", a: "Generally, Nidhi Companies are regulated under the Companies Act and specific Nidhi Rules, but compliance requirements must be followed carefully." },
-              { q: "Can a Nidhi Company accept deposits?", a: "Yes, deposits can be accepted from members subject to applicable rules and regulations." },
-              { q: "How long does Nidhi Company registration take?", a: "The registration timeline depends on swift documentation delivery and MCA processing workflows and structural approvals." },
-              { q: "Why choose the Best Nidhi Company Registration CA Firm in Delhi India?", a: "Professional registration ensures total statutory legal compliance, smooth incorporation steps, and proper internal corporate business structuring." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

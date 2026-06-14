@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Updated metadata pointer for Foreign Subsidiary services
 export const metadata = servicesMetadata.foreignSubsidiary;
@@ -41,6 +42,13 @@ export default function ForeignSubsidiaryLanding() {
     { num: "05", title: "Incorporation Filing", desc: "Drafting and filing SPICe+ forms alongside Memorandum (MOA) and Articles of Association (AOA)." },
     { num: "06", title: "Certificate of Incorporation", desc: "Formal review by corporate registrars followed by official issuance of the legal business certificate." },
     { num: "07", title: "PAN, TAN, GST & Compliance Setup", desc: "Completion of post-incorporation tax registrations, bank account openings, and capital remittance reporting." }
+  ];
+  const faqs = [
+    { q: "Can a foreign company own 100% of an Indian subsidiary?", a: "Yes, in many sectors under the automatic FDI route, foreign companies can own 100% equity subject to applicable sector regulations." },
+    { q: "Is RBI approval required for setting up a foreign subsidiary?", a: "It depends completely on the business sector and the specific FDI route applicable. Most standard sectors fall under the automatic route requiring simple post-facto intimate reporting rather than prior approval." },
+    { q: "How long does the foreign subsidiary registration take?", a: "Generally, the verification, name setup, and final incorporation take between 10-20 working days depending on how quickly international documents are apostilled." },
+    { q: "Can foreign nationals become directors in the Indian company?", a: "Yes. Foreign nationals can act as directors subject to obtaining a valid DIN and maintaining compliance, provided at least one director on the board is a resident of India." },
+    { q: "What is the ultimate advantage of an Indian foreign subsidiary?", a: "It sets up an entirely separate legal entity with limited liability protection and grants clear, direct operational access to target India's rapidly growing consumer economy." }
   ];
 
   return (
@@ -88,13 +96,7 @@ export default function ForeignSubsidiaryLanding() {
                 ))}
               </div>
 
-              {/* Supported Countries Footer Element inside Hero */}
-              <div className="pt-6 text-center lg:text-left border-t border-slate-200/60 max-w-xl mx-auto lg:mx-0">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Trusted by Businesses Across</p>
-                <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center lg:justify-start text-sm font-bold text-slate-600">
-                  <span>USA</span>•<span>UK</span>•<span>UAE</span>•<span>SINGAPORE</span>•<span>AUSTRALIA</span>•<span>CANADA</span>•<span>GERMANY</span>
-                </div>
-              </div>
+
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
@@ -120,8 +122,8 @@ export default function ForeignSubsidiaryLanding() {
             Expert Foreign Subsidiary Registration Services by Fintax Adviser
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Looking for the <strong className="text-blue-600 font-semibold">Best Foreign Subsidiary Company Registration CA Firm in Delhi India</strong>? 
-            Fintax Adviser provides complete structural configuration setups for overseas businesses, multinational corporations, foreign investors, startups, and international organizations planning to establish their presence in India. 
+            Looking for the <strong className="text-blue-600 font-semibold">Best Foreign Subsidiary Company Registration CA Firm in Delhi India</strong>?
+            Fintax Adviser provides complete structural configuration setups for overseas businesses, multinational corporations, foreign investors, startups, and international organizations planning to establish their presence in India.
             A Foreign Subsidiary Company is an Indian company in which a foreign corporation owns more than 50% of the shareholding, operating as a separate legal entity while remaining securely controlled by the foreign parent setup.
           </p>
         </div>
@@ -362,21 +364,9 @@ export default function ForeignSubsidiaryLanding() {
               Frequently Asked Questions
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "Can a foreign company own 100% of an Indian subsidiary?", a: "Yes, in many sectors under the automatic FDI route, foreign companies can own 100% equity subject to applicable sector regulations." },
-              { q: "Is RBI approval required for setting up a foreign subsidiary?", a: "It depends completely on the business sector and the specific FDI route applicable. Most standard sectors fall under the automatic route requiring simple post-facto intimate reporting rather than prior approval." },
-              { q: "How long does the foreign subsidiary registration take?", a: "Generally, the verification, name setup, and final incorporation take between 10-20 working days depending on how quickly international documents are apostilled." },
-              { q: "Can foreign nationals become directors in the Indian company?", a: "Yes. Foreign nationals can act as directors subject to obtaining a valid DIN and maintaining compliance, provided at least one director on the board is a resident of India." },
-              { q: "What is the ultimate advantage of an Indian foreign subsidiary?", a: "It sets up an entirely separate legal entity with limited liability protection and grants clear, direct operational access to target India's rapidly growing consumer economy." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 

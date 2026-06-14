@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Updated metadata reference for Partnership to LLP Conversion
 export const metadata = servicesMetadata.partnershipToLLP || {
@@ -15,6 +16,14 @@ export default function PartnershipToLLPRegistration() {
     "500+ Happy Clients",
     "Expert CA & Compliance Team",
     "100% Compliant With Law",
+  ];
+
+  const faqs = [
+    { q: "Can an existing partnership firm be converted into LLP?", a: "Yes. All eligible traditional partnership firms can seamlessly transform into an LLP under the exact legal framework regulations set by the Ministry of Corporate Affairs (MCA)." },
+    { q: "Is a completely new business entity created after conversion?", a: "Yes, the registered LLP takes over with a new distinct corporate profile status and is recognized as a separate standalone legal entity separate from its constituent partners." },
+    { q: "Do all active partners need to transition into the new LLP?", a: "Yes, under general regulations, all existing active partners of the partnership firm must become partners in the converted LLP structure upon initialization." },
+    { q: "How long does the complete LLP conversion process typically take?", a: "It typically takes about 10-15 working days, heavily contingent upon proper documentation submission speeds and backend MCA portal review approvals." },
+    { q: "Why should we choose Fintax Adviser for our partnership conversion requirements?", a: "Professional conversion guarantees zero errors, seamless brand value transfer, flawless document drafting, and absolute compliance safety throughout your legal upgrade roadmap." }
   ];
 
   return (
@@ -65,7 +74,7 @@ export default function PartnershipToLLPRegistration() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Conversion Consultation 
+                  Book a Free Conversion Consultation
                 </Link>
               </div>
             </div>
@@ -86,8 +95,8 @@ export default function PartnershipToLLPRegistration() {
             Expert Partnership Firm to LLP Conversion Services by Fintax Adviser
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Looking for the <strong className="text-blue-600 font-semibold">Best Partnership to LLP Registration CA Firm in Delhi India</strong>? 
-            Fintax Adviser provides end-to-end Partnership Firm to LLP Conversion services, helping traditional businesses transition seamlessly with full legal compliance and professional governance. 
+            Looking for the <strong className="text-blue-600 font-semibold">Best Partnership to LLP Registration CA Firm in Delhi India</strong>?
+            Fintax Adviser provides end-to-end Partnership Firm to LLP Conversion services, helping traditional businesses transition seamlessly with full legal compliance and professional governance.
             LLPs offer the perfect mix: combining the strategic flexibility of a standard partnership with the complete legal liability protection of a Private Limited company.
           </p>
         </div>
@@ -388,21 +397,7 @@ export default function PartnershipToLLPRegistration() {
               Frequently Asked Questions
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "Can an existing partnership firm be converted into LLP?", a: "Yes. All eligible traditional partnership firms can seamlessly transform into an LLP under the exact legal framework regulations set by the Ministry of Corporate Affairs (MCA)." },
-              { q: "Is a completely new business entity created after conversion?", a: "Yes, the registered LLP takes over with a new distinct corporate profile status and is recognized as a separate standalone legal entity separate from its constituent partners." },
-              { q: "Do all active partners need to transition into the new LLP?", a: "Yes, under general regulations, all existing active partners of the partnership firm must become partners in the converted LLP structure upon initialization." },
-              { q: "How long does the complete LLP conversion process typically take?", a: "It typically takes about 10-15 working days, heavily contingent upon proper documentation submission speeds and backend MCA portal review approvals." },
-              { q: "Why should we choose Fintax Adviser for our partnership conversion requirements?", a: "Professional conversion guarantees zero errors, seamless brand value transfer, flawless document drafting, and absolute compliance safety throughout your legal upgrade roadmap." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

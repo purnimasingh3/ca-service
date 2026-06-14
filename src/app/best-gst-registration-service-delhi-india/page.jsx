@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.gstRegistration;
@@ -12,6 +13,32 @@ export default function PremiumGSTLanding() {
     "25+ Tax Professionals",
     "200+ Happy Clients",
     "100% Compliant Process",
+  ];
+  const faqs = [
+    {
+      q: "What is GST Registration?",
+      a: "GST Registration is the digital process through which businesses obtain a unique GSTIN (Goods and Services Tax Identification Number) from the tax department. It allows businesses to collect GST legally, claim input tax credits, and maintain flawless legal compliance."
+    },
+    {
+      q: "Who requires mandatory GST Registration?",
+      a: "Businesses crossing prescribed regional turnover thresholds, online marketplace e-commerce sellers, businesses performing interstate supply transactions, import-export companies, and specific professionals require registration. Many startups choose voluntary registration for enhanced industry credibility."
+    },
+    {
+      q: "How long does the GST Registration process take?",
+      a: "Normally, GST Registration takes around 3-7 working days. This timeline is heavily dependent on documentation accuracy and the speed of tax department verification rounds."
+    },
+    {
+      q: "Is GST Registration compulsory for early-stage startups?",
+      a: "Not always, as it depends strictly on threshold turnovers, industries, and operational parameters. However, early voluntary registration prevents funding issues, builds investor confidence, and prepares the business layout for growth readiness."
+    },
+    {
+      q: "Can freelancers, designers, and consultants apply for GST?",
+      a: "Yes. Freelancers, independent consultants, digital marketers, software developers, and individual service providers can apply for registration depending on turnover rules and client profile requirements."
+    },
+    {
+      q: "Can the entire registration process be completed online?",
+      a: "Yes, the process is completely online. Our team manages your documentation submission, application filing, department follow-ups, and eventual certificate delivery remotely."
+    }
   ];
 
   return (
@@ -170,7 +197,7 @@ export default function PremiumGSTLanding() {
             </h2>
             <p className="text-sm text-slate-500 mt-1">We assist various constitution types and industrial business sectors with specialized tax frameworks.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-5 border border-slate-200 bg-slate-50 rounded-xl">
               <h4 className="font-bold text-base text-blue-600">Startups</h4>
@@ -408,43 +435,10 @@ export default function PremiumGSTLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { 
-                q: "What is GST Registration?", 
-                a: "GST Registration is the digital process through which businesses obtain a unique GSTIN (Goods and Services Tax Identification Number) from the tax department. It allows businesses to collect GST legally, claim input tax credits, and maintain flawless legal compliance." 
-              },
-              { 
-                q: "Who requires mandatory GST Registration?", 
-                a: "Businesses crossing prescribed regional turnover thresholds, online marketplace e-commerce sellers, businesses performing interstate supply transactions, import-export companies, and specific professionals require registration. Many startups choose voluntary registration for enhanced industry credibility." 
-              },
-              { 
-                q: "How long does the GST Registration process take?", 
-                a: "Normally, GST Registration takes around 3-7 working days. This timeline is heavily dependent on documentation accuracy and the speed of tax department verification rounds." 
-              },
-              { 
-                q: "Is GST Registration compulsory for early-stage startups?", 
-                a: "Not always, as it depends strictly on threshold turnovers, industries, and operational parameters. However, early voluntary registration prevents funding issues, builds investor confidence, and prepares the business layout for growth readiness." 
-              },
-              { 
-                q: "Can freelancers, designers, and consultants apply for GST?", 
-                a: "Yes. Freelancers, independent consultants, digital marketers, software developers, and individual service providers can apply for registration depending on turnover rules and client profile requirements." 
-              },
-              { 
-                q: "Can the entire registration process be completed online?", 
-                a: "Yes, the process is completely online. Our team manages your documentation submission, application filing, department follow-ups, and eventual certificate delivery remotely." 
-              }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
-      
+
     </div>
   );
 }

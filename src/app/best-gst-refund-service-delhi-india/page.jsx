@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.gstRefund;
@@ -12,6 +13,15 @@ export default function PremiumGstRefundLanding() {
     "Expert GST Consultants",
     "500+ Happy Clients Served",
     "Maximum Refund Guaranteed",
+  ];
+  const faqs = [
+    { q: "What is a GST Refund?", a: "A GST Refund is the formal tax amount returned by GST authorities when eligible taxpayers demonstrate excess tax payment, wrong tax deposits, accumulated credit files, or specific export transaction structures." },
+    { q: "Who can claim a GST Refund?", a: "Exporters, manufacturers, traders, e-commerce entities, and services firms carrying accumulated credit structures or inverted duty matrices are fully entitled to claim." },
+    { q: "Can exporters claim GST refunds?", a: "Yes, export entities routinely claim complex GST refunds across goods or service provisions (including export operations handled under LUT/Bond systems)." },
+    { q: "What is an ITC refund?", a: "It represents the direct legal recovery and cash refund of accumulated Input Tax Credits trapped inside internal corporate purchase records." },
+    { q: "Can excess GST payments be refunded?", a: "Yes, completely subject to systematic department eligibility rules, verification matrix audits, and matching ledger configurations." },
+    { q: "Do you handle refund rejections?", a: "Yes. Fintax Adviser provides dedicated refund rectification, official clarification replies, notice handling, and comprehensive re-submission support services." },
+    { q: "Can startups use GST refund services?", a: "Yes. Startups often utilize recovery services to reclaim accumulated ITC or export balances to optimize internal operating runway loops." }
   ];
 
   return (
@@ -456,22 +466,8 @@ export default function PremiumGstRefundLanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "What is a GST Refund?", a: "A GST Refund is the formal tax amount returned by GST authorities when eligible taxpayers demonstrate excess tax payment, wrong tax deposits, accumulated credit files, or specific export transaction structures." },
-              { q: "Who can claim a GST Refund?", a: "Exporters, manufacturers, traders, e-commerce entities, and services firms carrying accumulated credit structures or inverted duty matrices are fully entitled to claim." },
-              { q: "Can exporters claim GST refunds?", a: "Yes, export entities routinely claim complex GST refunds across goods or service provisions (including export operations handled under LUT/Bond systems)." },
-              { q: "What is an ITC refund?", a: "It represents the direct legal recovery and cash refund of accumulated Input Tax Credits trapped inside internal corporate purchase records." },
-              { q: "Can excess GST payments be refunded?", a: "Yes, completely subject to systematic department eligibility rules, verification matrix audits, and matching ledger configurations." },
-              { q: "Do you handle refund rejections?", a: "Yes. Fintax Adviser provides dedicated refund rectification, official clarification replies, notice handling, and comprehensive re-submission support services." },
-              { q: "Can startups use GST refund services?", a: "Yes. Startups often utilize recovery services to reclaim accumulated ITC or export balances to optimize internal operating runway loops." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
+
         </div>
       </section>
 

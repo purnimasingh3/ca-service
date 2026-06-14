@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.iec;
@@ -12,6 +13,13 @@ export default function PremiumIECLanding() {
     "500+ Happy Clients Served",
     "100% DGFT Compliant",
     "Fast & Hassle-Free Process",
+  ];
+  const faqs = [
+    { q: "What is IEC Registration?", a: "Import Export Code (IEC) is a unique 10-digit registration number issued by the Director General of Foreign Trade (DGFT), Ministry of Commerce, Government of India for tracking global trade." },
+    { q: "Is IEC mandatory for an export business?", a: "Yes. Most commercial import and export activities crossing international borders legally require active IEC registration." },
+    { q: "Who explicitly issues the Import Export Code?", a: "The code is officially managed and generated online by the Director General of Foreign Trade (DGFT)." },
+    { q: "Can service exporters apply for IEC?", a: "Yes. Service providers or agencies receiving overseas client payments can obtain IEC to keep transactions legitimate." },
+    { q: "Is IEC required for e-commerce exports?", a: "Yes, online merchants selling internationally through overseas storefront platforms require proper documentation." }
   ];
 
   return (
@@ -399,21 +407,7 @@ export default function PremiumIECLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is IEC Registration?", a: "Import Export Code (IEC) is a unique 10-digit registration number issued by the Director General of Foreign Trade (DGFT), Ministry of Commerce, Government of India for tracking global trade." },
-              { q: "Is IEC mandatory for an export business?", a: "Yes. Most commercial import and export activities crossing international borders legally require active IEC registration." },
-              { q: "Who explicitly issues the Import Export Code?", a: "The code is officially managed and generated online by the Director General of Foreign Trade (DGFT)." },
-              { q: "Can service exporters apply for IEC?", a: "Yes. Service providers or agencies receiving overseas client payments can obtain IEC to keep transactions legitimate." },
-              { q: "Is IEC required for e-commerce exports?", a: "Yes, online merchants selling internationally through overseas storefront platforms require proper documentation." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

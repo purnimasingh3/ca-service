@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 // Updated metadata mapping for Section 8 Company Registration
 export const metadata = servicesMetadata.section8Company || {
@@ -19,6 +20,14 @@ export default function Section8NGORegistrationLanding() {
     "Limited Liability Protection",
     "Perpetual Succession & Separate Legal Entity",
     "Complete End-to-End Support"
+  ];
+  const faqs = [
+    { q: "What is the minimum number of members required for a Section 8 Company?", a: "A minimum of two directors and two shareholders are generally required for incorporation." },
+    { q: "Can a Section 8 Company earn income?", a: "Yes, but profits must be utilized only for charitable objectives and cannot be distributed among members or directors under any circumstances." },
+    { q: "Is Section 8 Company better than a Trust or Society?", a: "A Section 8 Company often enjoys higher systemic credibility, financial transparency, operational lifespan, and corporate donor confidence." },
+    { q: "Can a Section 8 Company receive donations?", a: "Yes, registered NGOs can legally receive donations and can apply for additional tax-saving registrations such as 12A and 80G." },
+    { q: "Is CSR funding available for Section 8 Companies?", a: "Yes, many modern corporates explicitly prefer contributing Corporate Social Responsibility (CSR) funds directly to registered Section 8 corporate frameworks." },
+    { q: "How long does registration take?", a: "The exact registration timeline depends on internal document accuracy, layout verification speeds, and external MCA government approval windows." }
   ];
 
   return (
@@ -46,7 +55,7 @@ export default function Section8NGORegistrationLanding() {
                   (NGO) Registration
                 </span>
               </h1>
-              
+
               <h2 className="text-lg sm:text-xl font-bold text-slate-700 tracking-tight">
                 Register Your NGO. Create a Better Tomorrow. Build Credibility. Earn Trust. Drive Change.
               </h2>
@@ -73,7 +82,7 @@ export default function Section8NGORegistrationLanding() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
                 <Link href="/get-free-consultant" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base shadow-xl shadow-blue-600/20 active:scale-95">
-                  Book a Free Consultation 
+                  Book a Free Consultation
                 </Link>
               </div>
             </div>
@@ -94,9 +103,9 @@ export default function Section8NGORegistrationLanding() {
             Looking for the Best Section 8 Company (NGO) Registration CA Firm in Delhi India?
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Professional NGO Registration Services by <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>. 
-            We provide complete Section 8 Company Registration services for NGOs, charitable organizations, non-profit institutions, 
-            trusts, welfare societies, educational organizations, and social enterprises across India. 
+            Professional NGO Registration Services by <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>.
+            We provide complete Section 8 Company Registration services for NGOs, charitable organizations, non-profit institutions,
+            trusts, welfare societies, educational organizations, and social enterprises across India.
             A Section 8 Company is one of the most trusted legal structures for non-profit organizations seeking credibility, government recognition, donor confidence, and tax benefits. Whether your objective is education, healthcare, environmental protection, women empowerment, social welfare, or charitable activities, our experts help you complete the registration process smoothly and compliantly.
           </p>
         </div>
@@ -400,22 +409,7 @@ export default function Section8NGORegistrationLanding() {
               Frequently Asked Questions (FAQs)
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is the minimum number of members required for a Section 8 Company?", a: "A minimum of two directors and two shareholders are generally required for incorporation." },
-              { q: "Can a Section 8 Company earn income?", a: "Yes, but profits must be utilized only for charitable objectives and cannot be distributed among members or directors under any circumstances." },
-              { q: "Is Section 8 Company better than a Trust or Society?", a: "A Section 8 Company often enjoys higher systemic credibility, financial transparency, operational lifespan, and corporate donor confidence." },
-              { q: "Can a Section 8 Company receive donations?", a: "Yes, registered NGOs can legally receive donations and can apply for additional tax-saving registrations such as 12A and 80G." },
-              { q: "Is CSR funding available for Section 8 Companies?", a: "Yes, many modern corporates explicitly prefer contributing Corporate Social Responsibility (CSR) funds directly to registered Section 8 corporate frameworks." },
-              { q: "How long does registration take?", a: "The exact registration timeline depends on internal document accuracy, layout verification speeds, and external MCA government approval windows." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

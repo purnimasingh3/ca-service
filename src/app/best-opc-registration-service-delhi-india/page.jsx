@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata = servicesMetadata.onePersonCompany;
 
@@ -11,6 +12,14 @@ export default function PremiumOPCLanding() {
     "500+ Happy Clients Served",
     "Limited Liability Protection",
     "100% Digital & Fast Process",
+  ];
+  const faqs = [
+    { q: "What is OPC registration?", a: "OPC registration allows a single individual to legally register a business structure with corporate limited liability protection under the guidelines of the Ministry of Corporate Affairs." },
+    { q: "Who can apply for OPC registration?", a: "Any natural Indian citizen who is a resident of India is fully authorized to act as an incorporation founder and nominee of an OPC structure under the provisions of the Companies Act." },
+    { q: "Is OPC better than sole proprietorship?", a: "Absolutely. A One Person Company structure separates your personal assets from business exposures via legal limited liability protection, whereas a proprietorship places all personal assets at risk." },
+    { q: "How long does OPC registration take?", a: "The entire process generally averages around 5–10 working days, depending purely on systemic government confirmation schedules and name clearing timelines." },
+    { q: "Is GST mandatory immediately after OPC registration?", a: "No. GST configuration depends primarily on your individual commercial layout parameters, localized operational lines, and reaching standard aggregate fiscal turnover limits." },
+    { q: "Can an OPC be converted into a Private Limited Company?", a: "Yes. An OPC can be easily expanded and legally converted into a standard Private Limited Company as your capital foundations grow and additional equity investors onboard." }
   ];
 
   return (
@@ -318,22 +327,7 @@ export default function PremiumOPCLanding() {
               Frequently Asked Questions
             </h2>
           </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "What is OPC registration?", a: "OPC registration allows a single individual to legally register a business structure with corporate limited liability protection under the guidelines of the Ministry of Corporate Affairs." },
-              { q: "Who can apply for OPC registration?", a: "Any natural Indian citizen who is a resident of India is fully authorized to act as an incorporation founder and nominee of an OPC structure under the provisions of the Companies Act." },
-              { q: "Is OPC better than sole proprietorship?", a: "Absolutely. A One Person Company structure separates your personal assets from business exposures via legal limited liability protection, whereas a proprietorship places all personal assets at risk." },
-              { q: "How long does OPC registration take?", a: "The entire process generally averages around 5–10 working days, depending purely on systemic government confirmation schedules and name clearing timelines." },
-              { q: "Is GST mandatory immediately after OPC registration?", a: "No. GST configuration depends primarily on your individual commercial layout parameters, localized operational lines, and reaching standard aggregate fiscal turnover limits." },
-              { q: "Can an OPC be converted into a Private Limited Company?", a: "Yes. An OPC can be easily expanded and legally converted into a standard Private Limited Company as your capital foundations grow and additional equity investors onboard." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

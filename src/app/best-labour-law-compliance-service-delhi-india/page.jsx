@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.labourLaw;
@@ -12,6 +13,13 @@ export default function PremiumLabourComplianceLanding() {
     "25+ Compliance Experts",
     "200+ Happy Clients Across India",
     "100% Legal Compliance",
+  ];
+  const faqs = [
+    { q: "What is Labour Law Compliance?", a: "Labour Law Compliance includes employee-related legal requirements such as PF, ESI, payroll, labour licences, employee records, and monthly statutory returns tracking." },
+    { q: "Is PF registration mandatory?", a: "PF applicability depends primarily on total employee strength thresholds along with specific government regional guidelines." },
+    { q: "What is ESI compliance?", a: "ESI compliance systematically guarantees core medical benefit access and direct social security protection parameters for covered employees." },
+    { q: "Do startups need labour compliance?", a: "Yes. Every startup operating with active personnel should establish structured employee compliance systems early on to prevent structural legal risks." },
+    { q: "Can you assist your clients with official labour notices?", a: "Absolutely. We manage all regulatory notice responses, historical compliance documentation reviews, and direct representations." }
   ];
 
   return (
@@ -466,20 +474,7 @@ export default function PremiumLabourComplianceLanding() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {[
-              { q: "What is Labour Law Compliance?", a: "Labour Law Compliance includes employee-related legal requirements such as PF, ESI, payroll, labour licences, employee records, and monthly statutory returns tracking." },
-              { q: "Is PF registration mandatory?", a: "PF applicability depends primarily on total employee strength thresholds along with specific government regional guidelines." },
-              { q: "What is ESI compliance?", a: "ESI compliance systematically guarantees core medical benefit access and direct social security protection parameters for covered employees." },
-              { q: "Do startups need labour compliance?", a: "Yes. Every startup operating with active personnel should establish structured employee compliance systems early on to prevent structural legal risks." },
-              { q: "Can you assist your clients with official labour notices?", a: "Absolutely. We manage all regulatory notice responses, historical compliance documentation reviews, and direct representations." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

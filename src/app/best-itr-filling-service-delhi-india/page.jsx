@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.itrFiling;
@@ -12,6 +13,14 @@ export default function PremiumITRFilingLanding() {
     "500+ Happy Clients",
     "Accurate & Secure Filing",
     "100% Tax Compliance",
+  ];
+  const faqs = [
+    { q: "What is Income Tax Return Filing?", a: "ITR filing is the official process of detailing and reporting your earned income parameters, claimed investment deductions, and tax liabilities directly to the Income Tax Department." },
+    { q: "Is ITR filing mandatory?", a: "Filing applicability depends explicitly on structural income volume thresholds and local legal parameters defined by tax laws." },
+    { q: "Can salaried employees file ITR?", a: "Yes, absolutely. Salaried individuals should file returns regularly to maintain financial compliance and securely process potential refund claims." },
+    { q: "Can freelancers file Income Tax Returns?", a: "Yes. Freelancers, digital creators, and independent professionals require proper tax computations and reporting structures under relevant brackets." },
+    { q: "Do startups and companies require tax filing?", a: "Yes. Registered business entities generally require strict annual tax filing compliance regardless of operational profit margins." },
+    { q: "Do you provide online ITR filing services?", a: "Yes. Fintax Adviser provides complete, end-to-end digital assistance and fast online tax filing operations across India." }
   ];
 
   return (
@@ -508,22 +517,8 @@ export default function PremiumITRFilingLanding() {
               Frequently Asked Questions
             </h2>
           </div>
+          <FAQAccordion faqs={faqs} />
 
-          <div className="space-y-4">
-            {[
-              { q: "What is Income Tax Return Filing?", a: "ITR filing is the official process of detailing and reporting your earned income parameters, claimed investment deductions, and tax liabilities directly to the Income Tax Department." },
-              { q: "Is ITR filing mandatory?", a: "Filing applicability depends explicitly on structural income volume thresholds and local legal parameters defined by tax laws." },
-              { q: "Can salaried employees file ITR?", a: "Yes, absolutely. Salaried individuals should file returns regularly to maintain financial compliance and securely process potential refund claims." },
-              { q: "Can freelancers file Income Tax Returns?", a: "Yes. Freelancers, digital creators, and independent professionals require proper tax computations and reporting structures under relevant brackets." },
-              { q: "Do startups and companies require tax filing?", a: "Yes. Registered business entities generally require strict annual tax filing compliance regardless of operational profit margins." },
-              { q: "Do you provide online ITR filing services?", a: "Yes. Fintax Adviser provides complete, end-to-end digital assistance and fast online tax filing operations across India." }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-xs">
-                <h4 className="font-bold text-slate-900 text-base">{idx + 1}. {faq.q}</h4>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed font-normal">{faq.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
