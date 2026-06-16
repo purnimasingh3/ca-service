@@ -16,7 +16,7 @@ export default function BlogDetails() {
   useEffect(() => {
     if (!slug) return;
     fetch(
-      `http://localhost:5000/api/blogs/${slug}`
+      `https://ca-service.onrender.com/api/blogs/${slug}`
     )
       .then((res) =>
         res.json()
