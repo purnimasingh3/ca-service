@@ -380,7 +380,7 @@ export default function Blogs() {
         }
         .sf-logo-text { line-height: 1.1; }
         .sf-logo-name { font-size: 22px; font-weight: 700; color: #1945ad; }
-        .sf-logo-name span { color: #0f90bb; }
+        .sf-logo-name span { color: #248ad8; }
         .sf-logo-tagline { font-size: 10px; color: #64748B; letter-spacing: 0.08em; text-transform: uppercase; }
 
         .sf-header-center {
@@ -876,7 +876,7 @@ export default function Blogs() {
           <div className="sf-topbar-right">
             <a href="/admin/login" className="sf-topbar-login">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
-              Login / Register
+              Login
             </a>
             <div className="sf-social-icons">
               <a href="https://www.facebook.com/profile.php?id=61589774084657" className="sf-fb">f</a>
