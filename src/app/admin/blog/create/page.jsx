@@ -326,7 +326,7 @@ export default function CreateBlog() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("http://localhost:5000/api/blogs/create", {
+      const response = await fetch("https://ca-service.onrender.com/api/blogs/create", {
         method: "POST",
         headers: {
           Authorization: localStorage.getItem("token"),

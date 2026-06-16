@@ -287,7 +287,7 @@ export default function Blogs() {
   const [consultForm, setConsultForm] = useState({ name: "", email: "", phone: "" });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch("https://ca-service.onrender.com/api/blogs")
       .then((res) => res.json())
       .then((data) => { if (Array.isArray(data)) setBlogs(data); })
       .catch(() => setBlogs([]));
@@ -380,7 +380,7 @@ export default function Blogs() {
         }
         .sf-logo-text { line-height: 1.1; }
         .sf-logo-name { font-size: 22px; font-weight: 700; color: #1945ad; }
-        .sf-logo-name span { color: #248ad8; }
+        .sf-logo-name span { color: #0f90bb; }
         .sf-logo-tagline { font-size: 10px; color: #64748B; letter-spacing: 0.08em; text-transform: uppercase; }
 
         .sf-header-center {

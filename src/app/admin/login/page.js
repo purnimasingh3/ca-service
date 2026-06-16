@@ -17,7 +17,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://ca-service.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ export default function Login() {
 
           <p className="mt-6 text-center text-sm text-slate-600">
             Don't have an account?{" "}
-            <Link href="/admin/login" className="font-semibold text-blue-600 hover:text-blue-700">
+            <Link href="/admin/register" className="font-semibold text-blue-600 hover:text-blue-700">
               Create one
             </Link>
           </p>

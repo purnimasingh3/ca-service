@@ -36,7 +36,7 @@ export default function EditBlog() {
       return;
     }
 
-    fetch(`http://localhost:5000/api/blogs/id/${id}`)
+    fetch(`https://ca-service.onrender.com/api/blogs/id/${id}`)
       .then((res) => {
         if (!res.ok) return res.json().then((body) => {
           throw new Error(body.message || "Unable to fetch blog details");
