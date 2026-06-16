@@ -1,3 +1,24 @@
+          //   <Link href="/admin/login" className="text-white border border-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white/10 transition">
+          //     Login/Register
+          //   </Link>
+          //             <div className="flex items-center gap-3">
+
+          //   <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-white hover:text-blue-400 transition p-2 rounded-full bg-slate-800/70">
+          //     <FaFacebookF size={14} />
+          //   </a>
+          //   <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-white hover:text-sky-400 transition p-2 rounded-full bg-slate-800/70">
+          //     <FaTwitter size={14} />
+          //   </a>
+          //   <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-white hover:text-pink-400 transition p-2 rounded-full bg-slate-800/70">
+          //     <FaInstagram size={14} />
+          //   </a>
+          //   <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-white hover:text-cyan-300 transition p-2 rounded-full bg-slate-800/70">
+          //     <FaLinkedinIn size={14} />
+          //   </a>
+          //   <a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-white hover:text-red-500 transition p-2 rounded-full bg-slate-800/70">
+          //     <FaYoutube size={14} />
+          //   </a>
+          // </div>
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";

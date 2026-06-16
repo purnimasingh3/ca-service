@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import Script from "next/script";
+import HideLayout from "./components/HideLayout";
 
 
 export const metadata = {
@@ -10,6 +11,10 @@ export const metadata = {
     "Professional GST registration and taxation compliance services for startups and businesses.",
   verification: {
     google: "0V1FOsC4tZ8ptWxLwu-Oa4IdUeNxP7zhfaD6947WH0Q"
+  },
+  metadataBase: new URL('https://fintaxadviser.com'),
+  alternates: {
+    canonical: 'https://fintaxadviser.com',
   },
 };
 
@@ -40,11 +45,9 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="min-h-screen flex flex-col">
-        <Header />
-
-        {children}
-
-        <Footer />
+        <HideLayout>
+          {children}
+        </HideLayout>
       </body>
     </html>
   );

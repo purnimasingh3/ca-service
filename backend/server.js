@@ -1,14 +1,16 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
+
 
 import connectDB from "./config/db.js";
 
 import authRoutes from "./routes/authRoutes.js";
 import blogRoutes from "./routes/BlogRoutes.js";
 
-dotenv.config();
 
+// console.log("Environment variables loaded:", process.env.MONGO_URI, process.env.PORT);
 connectDB();
 
 const app = express();
