@@ -17,10 +17,10 @@ export const metadata = {
     canonical: 'https://fintaxadviser.com',
   },
   openGraph: {
-    title: 'FinTax Adviser',
+    title: 'Fintax Adviser',
     description: 'Experts CA Services for Businesses and Individuals',
     url: 'https://fintaxadviser.com',
-    siteName: 'FinTax Adviser',
+    siteName: 'Fintax Adviser',
     images: [
       {
         url: '/og-image.jpeg',
