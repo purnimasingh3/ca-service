@@ -44,7 +44,6 @@ export default function BlogDetails() {
     <div
       className={styles.page}
     >
-
       <div className="max-w-4xl mx-auto px-6 py-16">
 
         <Link

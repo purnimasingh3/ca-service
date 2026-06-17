@@ -275,6 +275,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+import "react-quill-new/dist/quill.snow.css";
+const ReactQuill = dynamic(
+  () => import("react-quill-new"),
+  { ssr: false }
+);
 
 export default function CreateBlog() {
   const router = useRouter();
@@ -325,14 +331,20 @@ export default function CreateBlog() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log("Submitting...");
+    console.log(submitData);
     try {
       const response = await fetch("https://ca-service.onrender.com/api/blogs/create", {
+      // const response = await fetch("http://localhost:5000/api/blogs/create", {
         method: "POST",
         headers: {
           Authorization: localStorage.getItem("token"),
         },
         body: submitData,
       });
+      // console.log(response.status);
+      // const text = await response.text();
+      // console.log(text);
       const data = await response.json();
       if (response.ok) {
         alert("Blog Created Successfully");
@@ -347,8 +359,9 @@ export default function CreateBlog() {
     }
   };
 
-  const contentLength = formData.content.length;
-  const contentProgress = Math.min((contentLength / 3000) * 100, 100);
+
+  // const contentLength = formData.content.length;
+  // const contentProgress = Math.min((contentLength / 3000) * 100, 100);
 
   const categories = ["GST", "Tax", "Startup", "Compliance", "Funding"];
 
@@ -921,19 +934,30 @@ export default function CreateBlog() {
               <div className="cb-field" style={{ marginBottom: 0 }}>
                 <label className="cb-label">Content</label>
                 <div className="cb-content-wrap">
-                  <textarea
+                  {/* <textarea
                     name="content"
                     value={formData.content}
                     onChange={handleChange}
                     placeholder="Start writing…"
                     className="cb-input cb-content-area"
+                  /> */}
+                  <ReactQuill
+                    theme="snow"
+                    value={formData.content}
+                    onChange={(value) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        content: value,
+                      }))
+                    }
+                    style={{ height: "350px", marginBottom: "50px" }}
                   />
-                  <div className="cb-content-footer">
+                  {/* <div className="cb-content-footer">
                     <div className="cb-progress-bar">
                       <div className="cb-progress-fill" style={{ width: `${contentProgress}%` }} />
                     </div>
                     <span className="cb-char-count">{contentLength.toLocaleString()} chars</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
