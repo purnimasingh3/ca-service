@@ -316,7 +316,7 @@ export default function Blogs() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        //  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         .sf-page {
           font-family: 'Poppins', sans-serif;

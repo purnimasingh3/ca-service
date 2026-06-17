@@ -60,9 +60,9 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="min-h-screen flex flex-col">
-        <HideLayout>
+        <Header/>
           {children}
-        </HideLayout>
+        <Footer/>
       </body>
     </html>
   );
