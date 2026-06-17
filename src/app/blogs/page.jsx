@@ -889,7 +889,7 @@ export default function Blogs() {
         </div>
 
         {/* HEADER BANNER */}
-        <header className="sf-header">
+        {/* <header className="sf-header">
           <div className="sf-header-inner">
             <a href="/" className="sf-logo">
               <img src="/assets/icon.jpeg" className="sf-logo-mark"></img>
@@ -906,7 +906,7 @@ export default function Blogs() {
               <div className="sf-header-banner-text">Expert Insights<br />on Law &amp; Finance</div>
             </div>
           </div>
-        </header>
+        </header> */}
 
         {/* NAV */}
         {/* <nav className="sf-nav">
