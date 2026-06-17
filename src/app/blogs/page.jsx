@@ -264,6 +264,7 @@
 // }
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
+import { FaFacebookF, FaInstagram, FaXTwitter, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa6';
 import Link from "next/link";
 import Image from "next/image";
 import ContactForm from "../components/ContactForm";
@@ -353,10 +354,10 @@ export default function Blogs() {
         }
         .sf-social-icons a:hover { opacity: 0.85; }
         .sf-fb  { background: #1877F2; color: #fff; }
-        .sf-tw  { background: #1DA1F2; color: #fff; }
+        .sf-tw  { background: #021018; color: #fff; }
         .sf-ig  { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
         .sf-li  { background: #0A66C2; color: #fff; }
-        .sf-yt  { background: #22C55E; color: #fff; }
+        .sf-yt  { background: #13c053; color: #fff; }
 
         /* ── HEADER BANNER ── */
         .sf-header {
@@ -874,16 +875,16 @@ export default function Blogs() {
             {new Date().toLocaleDateString("en-IN", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}
           </div>
           <div className="sf-topbar-right">
-            <a href="/admin/login" className="sf-topbar-login">
+            {/* <a href="/admin/login" className="sf-topbar-login">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               Login
-            </a>
+            </a> */}
             <div className="sf-social-icons">
-              <a href="https://www.facebook.com/profile.php?id=61589774084657" className="sf-fb">f</a>
-              <a href="https://x.com/fintaxadviser" className="sf-tw">t</a>
-              <a href="https://www.instagram.com/fintaxadviser" className="sf-ig">◎</a>
-              <a href="https://www.linkedin.com/in/fintax-adviser-900a55410" className="sf-li">in</a>
-              <a href="https://wa.me/+919990924477" className="sf-yt">w</a>
+              <a href="https://www.facebook.com/profile.php?id=61589774084657" className="sf-fb"><FaFacebookF /></a>
+              <a href="https://x.com/fintaxadviser" className="sf-tw"><FaXTwitter/></a>
+              <a href="https://www.instagram.com/fintaxadviser" className="sf-ig"><FaInstagram/></a>
+              <a href="https://www.linkedin.com/in/fintax-adviser-900a55410" className="sf-li"><FaLinkedinIn/></a>
+              <a href="https://wa.me/+919990924477" className="sf-yt"><FaWhatsapp/></a>
             </div>
           </div>
         </div>
