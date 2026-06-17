@@ -16,6 +16,21 @@ export const metadata = {
   alternates: {
     canonical: 'https://fintaxadviser.com',
   },
+  openGraph: {
+    title: 'FinTax Adviser',
+    description: 'Experts CA Services for Businesses and Individuals',
+    url: 'https://fintaxadviser.com',
+    siteName: 'FinTax Adviser',
+    images: [
+      {
+        url: '/og-image.jpeg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {
