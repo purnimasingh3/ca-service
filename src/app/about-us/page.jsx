@@ -6,14 +6,14 @@ export default function AboutUs() {
   // Team Data
   const team = [
     {
-      name: 'Saksham Tiwari',
+      name: 'Anchal Tiwari',
       role: 'Founder of Fintax Adviser',
-      image: "assets/saksham.jpeg",
+      image: "assets/anchal.jpeg ",
     },
     {
-      name: 'Anchal Tiwari',
-      role: 'Co-Founder & Chief Financial Officer (CFO)',
-      image: "assets/anchal.jpeg",
+      name: 'Mohit Gauhan',
+      role: 'Co-Founder (CFO)',
+      image: "/assets/gaugansahib.jpeg",
     },
     // {
     //   name: 'Marcus Vance',
@@ -77,16 +77,16 @@ export default function AboutUs() {
             <p className="text-sm font-medium text-slate-500 mt-1">Tax Savings Managed</p>
           </div>
           <div>
-            <p className="text-4xl font-extrabold text-blue-600">500+</p>
-            <p className="text-sm font-medium text-slate-500 mt-1">Startups Advised</p>
+            <p className="text-4xl font-extrabold text-blue-600">200+</p>
+            <p className="text-sm font-medium text-slate-500 mt-1">Startups trust Us</p>
           </div>
           <div>
-            <p className="text-4xl font-extrabold text-blue-600">99%</p>
-            <p className="text-sm font-medium text-slate-500 mt-1">Client Retention Rate</p>
+            <p className="text-4xl font-extrabold text-blue-600">98%</p>
+            <p className="text-sm font-medium text-slate-500 mt-1">Client Satisfaction</p>
           </div>
           <div>
             <p className="text-4xl font-extrabold text-blue-600">15+</p>
-            <p className="text-sm font-medium text-slate-500 mt-1">Years Average Experience</p>
+            <p className="text-sm font-medium text-slate-500 mt-1">Years of Financial Excellence</p>
           </div>
         </div>
       </section>
@@ -187,15 +187,15 @@ export default function AboutUs() {
 
         <div className="flex justify-center pt-8">
           <img
-            src="/assets/gaugansahib.jpeg"
-            alt="gaugansahib"
+            src="assets/saksham.jpeg"
+            alt="saksham"
             className="w-52 h-52 object-cover rounded-2xl"
           />
         </div>
 
         <div className="p-6 text-center">
           <h3 className="text-2xl font-bold text-slate-900">
-            Mohit Gauhan
+            Sahsham Tiwari
           </h3>
 
         </div>

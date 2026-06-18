@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useParams }from "next/navigation";
+import { useParams } from "next/navigation";
 import styles from "../blogs.module.css";
 
 export default function BlogDetails() {
@@ -53,20 +53,18 @@ export default function BlogDetails() {
           ← Back to Blogs
         </Link>
 
-        <div className="mt-8">
+        <div className="mt-5">
 
           <span
             className={styles.categoryTag}
           >
             {blog.category}
           </span>
-
           <h1
-            className="text-5xl font-bold text-slate-900 mt-5"
+            className="text-5xl font-bold text-slate-900 mt-4"
           >
             {blog.title}
           </h1>
-
           <div className="mt-4 text-gray-500">
 
             By {blog.author}
@@ -95,7 +93,15 @@ export default function BlogDetails() {
         />
 
         <div
-          className="prose prose-lg max-w-none mt-10"
+          className="prose max-w-none mt-6
+          prose-p:my-2
+    prose-ul:my-2
+    prose-ol:my-2
+    prose-li:my-1
+
+    prose-h1:my-3
+    prose-h2:my-3
+    prose-h3:my-2"
           dangerouslySetInnerHTML={{
             __html: blog.content
           }}
