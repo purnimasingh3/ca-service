@@ -112,29 +112,73 @@ router.post(
       res.status(500).json({
         message: error.message,
       });
-    } 
+    }
     // console.log("file:",req.file);
   }
 );
+
+// router.put(
+//   "/:id",
+//   authMiddleware,
+//   adminMiddleware,
+//   async (req, res) => {
+// console.log("PUT HIT");
+// console.log(req.params.id);
+// console.log("BODY:" , req.body);
+// console.log("file:" , req.file);
+//     const blog =
+//       await Blog.findByIdAndUpdate(
+//         req.params.id,
+//         req.body,
+//         { new: true }
+//       );
+
+//     res.json(blog);
+
+//   }
+// );
 
 router.put(
   "/:id",
   authMiddleware,
   adminMiddleware,
+  upload.single("image"),
   async (req, res) => {
+    try {
+      let updateData = { ...req.body };
 
-    const blog =
-      await Blog.findByIdAndUpdate(
+      if (req.file) {
+        const result = await new Promise((resolve, reject) => {
+          const stream = cloudinary.uploader.upload_stream(
+            { folder: "blogs" },
+            (error, result) => {
+              if (error) return reject(error);
+              resolve(result);
+            }
+          );
+
+          streamifier
+            .createReadStream(req.file.buffer)
+            .pipe(stream);
+        });
+
+        updateData.image = result.secure_url;
+      }
+
+      const blog = await Blog.findByIdAndUpdate(
         req.params.id,
-        req.body,
+        updateData,
         { new: true }
       );
 
-    res.json(blog);
-
+      res.json(blog);
+    } catch (error) {
+      res.status(500).json({
+        message: error.message,
+      });
+    }
   }
 );
-
 router.delete(
   "/:id",
   authMiddleware,

@@ -231,7 +231,7 @@ const menuData = [
     ],
   },
   {
-    title: "VCFO",
+    title: "Virtual CFO",
     sections: [
       {
         heading: "Virtual CFO ",

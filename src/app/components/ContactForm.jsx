@@ -8,8 +8,9 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    stage: 'Idea Stage / Seed Funding',
-    message: ''
+    contact:'',
+    // stage: 'Idea Stage / Seed Funding',
+    // message: ''
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ export default function ContactForm() {
       name: e.target.name.value,
       email: e.target.email.value,
       contact: e.target.contact.value,
-      message: e.target.message.value,
+      // message: e.target.message.value,
     };
     try {
       const res = await fetch("/api/contact", {
@@ -37,7 +38,7 @@ export default function ContactForm() {
           name: '',
           email: '',
           contact: '',
-          message: '',
+          // message: '',
         });
         e.target.reset();
       } else {

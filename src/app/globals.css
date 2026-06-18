@@ -111,3 +111,12 @@
 .float {
   animation: float 3s ease-in-out infinite;
 }
+ *, 
+ *::before, 
+ *::after { box-sizing: border-box;
+ }
+
+ html,
+ body{
+  overflow-x: hidden !important;
+ }

@@ -2,6 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import dynamic from "next/dynamic";
+import "react-quill-new/dist/quill.snow.css";
+const ReactQuill = dynamic(
+  () => import("react-quill-new"),
+  { ssr: false }
+);
+
 
 export default function EditBlog() {
   const router = useRouter();
@@ -67,27 +74,27 @@ export default function EditBlog() {
   }, [id, router]);
 
   const handleChange = (e) => {
-  const { name, value } = e.target;
+    const { name, value } = e.target;
 
-  if (name === "title") {
+    if (name === "title") {
+      setFormData((prev) => ({
+        ...prev,
+        title: value,
+        slug:
+          prev.slug ||
+          value
+            .toLowerCase()
+            .replace(/[^a-z0-9 ]/g, "")
+            .replace(/\s+/g, "-"),
+      }));
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
-      title: value,
-      slug:
-        prev.slug ||
-        value
-          .toLowerCase()
-          .replace(/[^a-z0-9 ]/g, "")
-          .replace(/\s+/g, "-"),
+      [name]: value,
     }));
-    return;
-  }
-
-  setFormData((prev) => ({
-    ...prev,
-    [name]: value,
-  }));
-};
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -221,12 +228,24 @@ export default function EditBlog() {
             </div>
             <div>
               <label className="block font-semibold mb-2">Full Content</label>
-              <textarea
+              {/* <textarea
                 name="content"
                 value={formData.content}
                 onChange={handleChange}
                 rows="10"
                 className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              /> */}
+              <ReactQuill
+                theme="snow"
+                value={formData.content}
+                onChange={(value) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    content: value,
+                  }))
+                }
+                
+                style={{ height: "350px", marginBottom: "50px" }}
               />
             </div>
             <div>

@@ -317,8 +317,6 @@ export default function Blogs() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
 
-        //  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
         .sf-page {
           font-family: 'Poppins', sans-serif;
           background: #F5F7FA;
@@ -584,20 +582,15 @@ export default function Blogs() {
           flex-shrink: 0;
         }
         .sf-featured-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
-        .sf-cat-tag {
-          display: inline-block;
-          background: #EFF6FF;
-          color: #1B3A6B;
-          font-size: 11px;
-          font-weight: 600;
-          padding: 3px 10px;
-          border-radius: 99px;
-          margin-bottom: 8px;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
-          border: 1px solid #BFDBFE;
-          width:50px;
-        }
+     .sf-cat-tag {
+  display: inline-flex;
+  width: fit-content;
+  white-space: nowrap;
+  background: #EFF6FF;
+  color: #1B3A6B;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
         .sf-featured-title {
           font-family: 'Merriweather', serif;
           font-size: 15px;
@@ -881,10 +874,10 @@ export default function Blogs() {
             </a> */}
             <div className="sf-social-icons">
               <a href="https://www.facebook.com/profile.php?id=61589774084657" className="sf-fb"><FaFacebookF /></a>
-              <a href="https://x.com/fintaxadviser" className="sf-tw"><FaXTwitter/></a>
-              <a href="https://www.instagram.com/fintaxadviser" className="sf-ig"><FaInstagram/></a>
-              <a href="https://www.linkedin.com/in/fintax-adviser-900a55410" className="sf-li"><FaLinkedinIn/></a>
-              <a href="https://wa.me/+919990924477" className="sf-yt"><FaWhatsapp/></a>
+              <a href="https://x.com/fintaxadviser" className="sf-tw"><FaXTwitter /></a>
+              <a href="https://www.instagram.com/fintaxadviser" className="sf-ig"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/fintax-adviser-900a55410" className="sf-li"><FaLinkedinIn /></a>
+              <a href="https://wa.me/+919990924477" className="sf-yt"><FaWhatsapp /></a>
             </div>
           </div>
         </div>
@@ -989,7 +982,7 @@ export default function Blogs() {
                             <span>by {blog.author || "Unknown"}</span>
                             <span className="sf-author-dot">|</span>
                             <span>{formatDate(blog.createdAt)}</span>
-              
+
                           </div>
                         </div>
                       </article>

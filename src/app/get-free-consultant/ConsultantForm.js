@@ -95,6 +95,7 @@ export default function ConsultantForm() {
                 <option>ITR Filing</option>
                 <option>Private Limited Company</option>
                 <option>Trademark Registration</option>
+                <option>Virtual CFO </option>
                 <option>Other</option>
             </select>
 
