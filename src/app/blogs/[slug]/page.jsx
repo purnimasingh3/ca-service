@@ -81,27 +81,22 @@ export default function BlogDetails() {
                 year: "numeric"
               }
             )}
-
           </div>
-
         </div>
-
         <img
           src={blog.image}
           alt={blog.title}
           className="w-full h-[500px] object-cover rounded-3xl mt-10"
         />
-
         <div
-          className="prose max-w-none mt-6
+          className="prose prose-lg max-w-4xl w-full break-words overfow-hidden mt-6
           prose-p:my-2
-    prose-ul:my-2
-    prose-ol:my-2
-    prose-li:my-1
-
-    prose-h1:my-3
-    prose-h2:my-3
-    prose-h3:my-2"
+          prose-ul:my-2
+          prose-ol:my-2
+          prose-li:my-1
+          prose-h1:my-3
+          prose-h2:my-3
+          prose-h3:my-2"
           dangerouslySetInnerHTML={{
             __html: blog.content
           }}
