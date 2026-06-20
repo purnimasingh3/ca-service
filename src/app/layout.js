@@ -12,10 +12,10 @@ export const metadata = {
   verification: {
     google: "0V1FOsC4tZ8ptWxLwu-Oa4IdUeNxP7zhfaD6947WH0Q"
   },
-  metadataBase: new URL('https://fintaxadviser.com'),
-  alternates: {
-    canonical: 'https://fintaxadviser.com',
-  },
+  // metadataBase: new URL('https://fintaxadviser.com'),
+  // alternates: {
+  //   canonical: 'https://fintaxadviser.com',
+  // },
   openGraph: {
     title: 'Fintax Adviser',
     description: 'Experts CA Services for Businesses and Individuals',
