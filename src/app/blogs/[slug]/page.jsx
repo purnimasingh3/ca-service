@@ -184,7 +184,7 @@ export default function BlogDetails() {
             prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:italic prose-blockquote:bg-slate-50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg
             [&_img]:rounded-xl [&_img]:mx-auto [&_table]:w-full [&_pre]:overflow-x-auto [&_code]:break-all"
           dangerouslySetInnerHTML={{
-            __html: blog.content
+            __html: blog.content?.replace(/&nbsp;/g, " ")
           }}
         />
       </article>
