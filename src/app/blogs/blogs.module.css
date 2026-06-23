@@ -496,3 +496,66 @@ cursor: pointer;
   max-width: 550px;
   margin: 0 auto;
 }
+
+
+.blog-content{
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  hyphens: none;
+}
+.page {
+  background: var(--light);
+  min-height: 100vh; /* Reduced from 150vh to feel natural on short content posts */
+}
+
+/* Fallback protection properties against dynamic rich-text element overflow */
+ .page article {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+} 
+
+/* Ensure dynamic tables injected via content do not break layout on mobile views */
+.page table {
+  display: block;
+  width: 100% !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+/* Format inline code tags injected into the content body */
+.page code {
+  white-space: pre-wrap;
+  word-break: break-all;
+  background-color: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Format pre-formatted code block scripts */
+.page pre {
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 1rem;
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 12px;
+}
+.page pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  word-break: normal;
+  white-space: pre;
+}
+
+/* Dynamic Image Handling inside dangerous raw inner HTML contents */
+.page article img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
