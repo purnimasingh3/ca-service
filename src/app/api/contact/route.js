@@ -36,7 +36,7 @@ export async function POST(req) {
       subject: "Thank You for Contacting Fintax Adviser",
 
       html: `
-    <div style="font-family: Arial; padding:20px;">
+      <div style="font-family: Arial; padding:20px;">
       <h2>Thank You for Contacting Fintax Adviser</h2>
 
       <p>Dear ${name},</p>

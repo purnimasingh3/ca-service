@@ -46,7 +46,7 @@ export default function AboutUs() {
 
   return (
     <div className="bg-slate-50 min-h-screen text-slate-800 font-sans">
-      
+
       {/* Hero Section */}
       <section className="bg-sky-50 text-white py-20 px-4">
         <div className="max-w-5xl mx-auto text-center">
@@ -57,8 +57,17 @@ export default function AboutUs() {
           <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             We are a team of financial strategists, tax experts, and tech enthusiasts dedicated to simplifying financial operations for modern enterprises.
           </p>
+
         </div>
+
       </section>
+      <div className="mt-8 flex justify-center">
+        <p className="mt-6 text-md text-blue-800 italic">
+          * Fintax Adviser is a private consultancy firm providing professional
+          assistance services and is not affiliated with any Government authority
+          or agency.
+        </p>
+      </div>
 
       {/* Our Mission & Stats */}
       <section className="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -124,8 +133,8 @@ export default function AboutUs() {
               <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full mx-w-[360px] mx-suto">
                 {/* Image Wrap */}
                 <div className="h-[270]  overflow-hidden relative bg-slate-100 flex justify-center item-center">
-                  <img 
-                    src={member.image} 
+                  <img
+                    src={member.image}
                     alt={member.name}
                     className="w-[300px] h-[300px] object-cover rounded-xl hover:scale-105 transition-transform duration-300"
                   />
@@ -141,90 +150,90 @@ export default function AboutUs() {
         </div>
       </section>
 
-{/* Our Team Section */}
-<section className="py-20 px-4 bg-slate-50">
-  <div className="max-w-7xl mx-auto">
+      {/* Our Team Section */}
+      <section className="py-20 px-4 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
 
-    {/* Heading */}
-    <div className="text-center mb-14">
-      <p className="text-blue-600 font-semibold uppercase tracking-wider mb-2">
-        Our Team
-      </p>
+          {/* Heading */}
+          <div className="text-center mb-14">
+            <p className="text-blue-600 font-semibold uppercase tracking-wider mb-2">
+              Our Team
+            </p>
 
-      <h2 className="text-4xl font-bold text-slate-900">
-        Meet Our Experts
-      </h2>
+            <h2 className="text-4xl font-bold text-slate-900">
+              Meet Our Experts
+            </h2>
 
-      <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-        Experienced professionals dedicated to helping your business grow with confidence.
-      </p> <br/>
-      10+ year team experience
-    </div>
+            <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
+              Experienced professionals dedicated to helping your business grow with confidence.
+            </p> <br />
+            10+ year team experience
+          </div>
 
-    {/* Team Cards */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Team Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      {/* Member 1 */}
-      <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden border border-slate-200">
+            {/* Member 1 */}
+            <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden border border-slate-200">
 
-        <div className="flex justify-center pt-8">
-          <img
-            src="/assets/arunsharma.jpeg"
-            alt="Arun Sharma"
-            className="w-52 h-52 object-cover rounded-2xl"
-          />
-        </div>
+              <div className="flex justify-center pt-8">
+                <img
+                  src="/assets/arunsharma.jpeg"
+                  alt="Arun Sharma"
+                  className="w-52 h-52 object-cover rounded-2xl"
+                />
+              </div>
 
-        <div className="p-6 text-center">
-          <h3 className="text-2xl font-bold text-slate-900">
-            Arun Sharma
-          </h3>
-        </div>
-      </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Arun Sharma
+                </h3>
+              </div>
+            </div>
 
-      {/* Member 2 */}
-      <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden border border-slate-200">
+            {/* Member 2 */}
+            <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden border border-slate-200">
 
-        <div className="flex justify-center pt-8">
-          <img
-            src="assets/saksham.jpeg"
-            alt="saksham"
-            className="w-52 h-52 object-cover rounded-2xl"
-          />
-        </div>
+              <div className="flex justify-center pt-8">
+                <img
+                  src="assets/saksham.jpeg"
+                  alt="saksham"
+                  className="w-52 h-52 object-cover rounded-2xl"
+                />
+              </div>
 
-        <div className="p-6 text-center">
-          <h3 className="text-2xl font-bold text-slate-900">
-            Sahsham Tiwari
-          </h3>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Sahsham Tiwari
+                </h3>
 
-        </div>
-      </div>
+              </div>
+            </div>
 
-      {/* Member 3 */}
-      <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden border border-slate-200">
+            {/* Member 3 */}
+            <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden border border-slate-200">
 
-        <div className="flex justify-center pt-8">
-          <img
-            src="/assets/jagatbisht.jpeg"
-            alt="Team Member"
-            className="w-52 h-52 object-cover rounded-2xl"
-          />
-        </div>
+              <div className="flex justify-center pt-8">
+                <img
+                  src="/assets/jagatbisht.jpeg"
+                  alt="Team Member"
+                  className="w-52 h-52 object-cover rounded-2xl"
+                />
+              </div>
 
-        <div className="p-6 text-center">
-          <h3 className="text-2xl font-bold text-slate-900">
-            Jagat Bisht
-          </h3>
-          {/* <div className="mt-5 space-y-2 text-slate-600 text-sm">
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Jagat Bisht
+                </h3>
+                {/* <div className="mt-5 space-y-2 text-slate-600 text-sm">
             <p>🎓 B.Com hons</p>
           </div> */}
-        </div>
-      </div>
+              </div>
+            </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
 
       {/* CTA Section */}
@@ -233,7 +242,7 @@ export default function AboutUs() {
         <p className="text-slate-600 mb-8 max-w-xl mx-auto">
           Let’s set up a consultation call to see how FinTax Adviser can clean up your books and save you money.
         </p>
-       <Link href="https://calendly.com/fintaxadviser-info/30min" className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg shadow-sm hover:shadow transition-all">
+        <Link href="https://calendly.com/fintaxadviser-info/30min" className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg shadow-sm hover:shadow transition-all">
           Schedule a Strategy Session
         </Link>
       </section>
