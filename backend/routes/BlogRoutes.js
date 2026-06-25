@@ -25,9 +25,14 @@ router.get("/", async (req, res) => {
       }
     }
 
-    const blogs = await Blog.find(query).sort({
-      createdAt: -1
-    });
+    // const blogs = await Blog.find(query).sort({
+    //   createdAt: -1
+    // });
+    const blogs = await Blog.find(query)
+  .select("title slug category excerpt image author createdAt status")
+  .sort({ createdAt: -1 })
+  .lean();
+ 
 
     res.json(blogs);
   } catch (error) {

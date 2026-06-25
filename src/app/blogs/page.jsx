@@ -4,7 +4,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa6';
 import Link from "next/link";
 import Image from "next/image";
-import ContactForm from "../components/ContactForm";
 const DEFAULT_IMAGE = "/assets/blog-default.jpg";
 
 const formatDate = (date) => {
@@ -18,6 +17,7 @@ const formatDate = (date) => {
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [email, setEmail] = useState("");
@@ -25,11 +25,32 @@ export default function Blogs() {
   const [consultForm, setConsultForm] = useState({ name: "", email: "", phone: "" });
 
   useEffect(() => {
+    setLoading(true);
+
     fetch("https://ca-service.onrender.com/api/blogs")
       .then((res) => res.json())
-      .then((data) => { if (Array.isArray(data)) setBlogs(data); })
-      .catch(() => setBlogs([]));
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setBlogs(data);
+        } else {
+          setBlogs([]);
+        }
+      })
+      .catch(() => setBlogs([]))
+      .finally(() => setLoading(false));
   }, []);
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-500">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+          <span className="text-lg font-medium">
+            Loading blogs...
+          </span>
+        </div>
+      </div>
+    );
+  }
 
   const categories = useMemo(() => ["All", ...new Set(blogs.map((b) => b.category))], [blogs]);
 
@@ -48,6 +69,7 @@ export default function Blogs() {
   const remainingBlogs = filteredBlogs.slice(2);
 
   const handleBackToBlogs = () => { setSearch(""); setSelectedCategory("All"); };
+
 
   return (
     <>
@@ -669,7 +691,7 @@ export default function Blogs() {
               <button className="sf-search-btn" aria-label="Search">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
               </button>
-              
+
             </div>
             <div className="sf-cat-row">
               {categories.map((cat) => (
@@ -687,6 +709,7 @@ export default function Blogs() {
 
         {/* MAIN CONTENT */}
         <div className="sf-main">
+
 
           {/* LEFT — BLOG CONTENT */}
           <div>
@@ -709,7 +732,7 @@ export default function Blogs() {
                             alt={blog.title || "Blog Image"}
                             fill
                             sizes="(max-width: 900px) 100vw, 50vw"
-                            style={{ objectFit: "cover",objectPosition:"top" }}
+                            style={{ objectFit: "cover", objectPosition: "top" }}
                           />
                         </div>
                         <div className="sf-featured-body">
@@ -722,6 +745,7 @@ export default function Blogs() {
                             <span>{formatDate(blog.createdAt)}</span>
 
                           </div>
+
                         </div>
                       </article>
                     </Link>
@@ -807,7 +831,7 @@ export default function Blogs() {
         </div>
 
         {/* NEWSLETTER */}
-        <section className="sf-newsletter">
+        {/* <section className="sf-newsletter">
           <h2>Get Latest Tax Updates</h2>
           <p>Weekly insights on GST, taxation and compliance — straight to your inbox.</p>
           <div className="sf-nl-form">
@@ -832,7 +856,7 @@ export default function Blogs() {
             </button>
           </div>
           {newsletterStatus && <p className="sf-nl-status">{newsletterStatus}</p>}
-        </section>
+        </section> */}
 
       </div>
     </>
