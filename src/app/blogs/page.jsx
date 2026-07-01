@@ -731,6 +731,7 @@ export default function Blogs() {
                             src={blog.image || DEFAULT_IMAGE}
                             alt={blog.title || "Blog Image"}
                             fill
+                            loading="eager"
                             sizes="(max-width: 900px) 100vw, 50vw"
                             style={{ objectFit: "cover", objectPosition: "top" }}
                           />

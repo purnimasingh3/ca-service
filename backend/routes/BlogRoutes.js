@@ -15,7 +15,6 @@ router.get("/", async (req, res) => {
   try {
     const token = req.headers.authorization;
     let query = { status: "published" };
-
     if (token) {
       try {
         jwt.verify(token, process.env.JWT_SECRET);
@@ -28,13 +27,13 @@ router.get("/", async (req, res) => {
     // const blogs = await Blog.find(query).sort({
     //   createdAt: -1
     // });
-    const blogs = await Blog.find(query)
-  .select("title slug category excerpt image author createdAt status")
-  .sort({ createdAt: -1 })
-  .lean();
- 
 
+    const blogs = await Blog.find(query)
+      .select("title slug category excerpt image author createdAt")
+      .sort({ createdAt: -1 })
+      .lean();
     res.json(blogs);
+
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error fetching blogs" });
@@ -58,26 +57,15 @@ router.get("/:slug", async (req, res) => {
   const blog = await Blog.findOne({
     slug: req.params.slug
   });
-
+  if (!blog) {
+    return res.status(404).json({
+      message: "Blog not found",
+    });
+  }
   res.json(blog);
 
 });
 
-// router.post(
-//   "/create",
-//   authMiddleware,
-//   adminMiddleware,
-//   async (req, res) => {
-
-//     const blog = await Blog.create({
-//       ...req.body,
-//       createdBy: req.user.id
-//     });
-
-//     res.json(blog);
-
-//   }
-// );
 router.post(
   "/create",
   authMiddleware,
@@ -85,6 +73,20 @@ router.post(
   upload.single("image"),
   async (req, res) => {
     try {
+      const {
+        title,
+        slug,
+        content,
+        category,
+        author,
+      } = req.body;
+
+      if (!title || !slug || !content || !category || !author) {
+        return res.status(400).json({
+          success: false,
+          message: "All required fields are mandatory.",
+        });
+      }
       let imageUrl = "";
 
       if (req.file) {
@@ -104,6 +106,14 @@ router.post(
 
         imageUrl = result.secure_url;
       }
+      const existingBlog = await Blog.findOne({ slug });
+
+      if (existingBlog) {
+        return res.status(400).json({
+          success: false,
+          message: "Slug already exists.",
+        });
+      }
 
       const blog = await Blog.create({
         ...req.body,
@@ -121,27 +131,6 @@ router.post(
     // console.log("file:",req.file);
   }
 );
-
-// router.put(
-//   "/:id",
-//   authMiddleware,
-//   adminMiddleware,
-//   async (req, res) => {
-// console.log("PUT HIT");
-// console.log(req.params.id);
-// console.log("BODY:" , req.body);
-// console.log("file:" , req.file);
-//     const blog =
-//       await Blog.findByIdAndUpdate(
-//         req.params.id,
-//         req.body,
-//         { new: true }
-//       );
-
-//     res.json(blog);
-
-//   }
-// );
 
 router.put(
   "/:id",
@@ -189,11 +178,17 @@ router.delete(
   authMiddleware,
   adminMiddleware,
   async (req, res) => {
+    const blog = await Blog.findByIdAndDelete(req.params.id);
+    if (!blog) {
+      return res.status(404).json({
+        message: "Blog not found",
+      });
+    }
 
-    await Blog.findByIdAndDelete(
-      req.params.id
-    );
-
+    res.json({
+      success: true,
+      message: "Blog deleted successfully",
+    });
     res.json({
       success: true
     });

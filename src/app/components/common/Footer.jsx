@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram, FaXTwitter, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa6';
 import { FiPhoneCall, FiMail, } from 'react-icons/fi';
-import FooterNewsletter from './FooterNewsletter';
+
 
 export default function Footer() {
   const servicesLinks = [
