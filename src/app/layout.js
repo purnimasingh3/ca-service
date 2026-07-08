@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import Script from "next/script";
-
+import hideLayout from "./components/HideLayout";
 
 export const metadata = {
   title: "Fintax Adviser",
@@ -78,9 +78,9 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-        <Header />
+        <hideLayout />
         {children}
-        <Footer />
+        <hideLayout />
       </body>
     </html>
   );

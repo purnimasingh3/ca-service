@@ -8,6 +8,8 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Contact from "../contact";
+import Header from "../Header";
+import Footer from "../Footer";
 // import Stats from "../Stats";
 // import BottomCTA from "../BottomCTA";
 // import FloatingButtons from "../FloatingButtons";
@@ -71,7 +73,7 @@ export default function VirtualCFOLandingPage() {
 
     return (
         <div className="min-h-screen bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-500 selection:text-white">
-
+            <Header />
             {/* HERO BANNER SECTION WITH CONTACT FORM */}
             <section className="relative overflow-hidden bg-gradient-to-br from-[#1E3A8A] via-[#111827] to-[#0F172A] text-white py-12 lg:py-20">
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
@@ -604,7 +606,7 @@ export default function VirtualCFOLandingPage() {
                 </div>
             )}
 
-           
+
             {/* CONTACT FORM POPUP MODAL */}
             {isContactOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-xs p-4 overflow-y-auto">
@@ -622,7 +624,7 @@ export default function VirtualCFOLandingPage() {
                     </div>
                 </div>
             )}
-
+            <Footer />
         </div>
     );
 }
