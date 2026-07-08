@@ -505,7 +505,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm border-b sticky top-0 z-50">
+    <header className="w-full bg-white shadow-sm border-b sticky top-0 left-0 right-0 z-50">
       {/* Top Banner Bar */}
       <div className="hidden lg:block bg-slate-900 text-slate-300 text-xs">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">

@@ -10,6 +10,7 @@ import Link from "next/link";
 import Contact from "../contact";
 import Header from "../Header";
 import Footer from "../Footer";
+import LeadPopup from "../LeadPopup";
 // import Stats from "../Stats";
 // import BottomCTA from "../BottomCTA";
 // import FloatingButtons from "../FloatingButtons";
@@ -625,6 +626,7 @@ export default function VirtualCFOLandingPage() {
                 </div>
             )}
             <Footer />
+            <LeadPopup/>
         </div>
     );
 }

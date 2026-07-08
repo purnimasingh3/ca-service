@@ -11,6 +11,7 @@ import Contact from "../contact";
 import Stats from "../Stats";
 import Header from "../Header";
 import Footer from "../Footer";
+import LeadPopup from "../LeadPopup";
 
 
 export default function CompanyIncorporationLandingPage() {
@@ -430,6 +431,7 @@ export default function CompanyIncorporationLandingPage() {
                 </div>
             )}
             <Footer />
+            <LeadPopup/>
         </div>
     );
 }

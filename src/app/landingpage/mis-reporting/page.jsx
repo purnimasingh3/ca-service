@@ -11,6 +11,7 @@ import Contact from "../contact";
 import Stats from "../Stats";
 import Header from "../Header";
 import Footer from "../Footer";
+import LeadPopup from "../LeadPopup";
 
 
 export default function MISReportingLandingPage() {
@@ -410,6 +411,7 @@ export default function MISReportingLandingPage() {
                 </div>
             )}
             <Footer />
+            <LeadPopup />
         </div>
     );
 }

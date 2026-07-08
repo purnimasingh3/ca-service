@@ -3,14 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Check, Phone, ArrowRight, Star, HelpCircle, X } from "lucide-react";
 import { FaWhatsapp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Contact from "../contact";
 import Stats from "../Stats";
 import Header from "../Header";
 import Footer from "../Footer";
+import LeadPopup from "../LeadPopup";
 
 
 export default function AccountsPayableReceivableLandingPage() {
@@ -524,6 +523,7 @@ export default function AccountsPayableReceivableLandingPage() {
                 </div>
             )}
             <Footer />
+            <LeadPopup />
         </div>
     );
 }

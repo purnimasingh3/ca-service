@@ -10,6 +10,7 @@ import Link from "next/link";
 import Contact from "../contact";
 import Header from "../Header";
 import Footer from "../Footer";
+import LeadPopup from "../LeadPopup";
 
 const stats = [
     { value: 15, suffix: "+", label: "Years Experience" },
@@ -473,6 +474,7 @@ export default function IncomeTaxComplianceLandingPage() {
                 </div>
             )}
             <Footer />
+            <LeadPopup/>
         </div>
     );
 }
