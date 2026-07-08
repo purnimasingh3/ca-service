@@ -1,78 +1,89 @@
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
-
   try {
-
     const body = await req.json();
 
-    const { name, email, contact,message, service } = body;
+    const {
+      name,
+      email,
+      contact,
+      phone,
+      number,
+      mobile,
+      message,
+      service,
+      state,
+    } = body;
+
+    // Different forms may use different field names
+    const phoneNumber = contact || phone || number || mobile;
 
     const transporter = nodemailer.createTransport({
-
       host: "smtp.hostinger.com",
-
       port: 465,
-
       secure: true,
-
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-
       tls: {
         rejectUnauthorized: false,
       },
-
     });
 
-    // Send Mail To Admin
-    await transporter.sendMail({
+    // Only show fields that actually exist
+    const details = [
+      name && `<p><b>Name:</b> ${name}</p>`,
+      email && `<p><b>Email:</b> ${email}</p>`,
+      phoneNumber && `<p><b>Contact Number:</b> ${phoneNumber}</p>`,
+      service && `<p><b>Service:</b> ${service}</p>`,
+      state && `<p><b>State:</b> ${state}</p>`,
+      message && `<p><b>Message:</b> ${message}</p>`,
+    ]
+      .filter(Boolean)
+      .join("");
 
+    await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: `${process.env.EMAIL_USER},${email}`,
-
       subject: "Thank You for Contacting Fintax Adviser",
 
       html: `
-      <div style="font-family: Arial; padding:20px;">
-      <h2>Thank You for Contacting Fintax Adviser</h2>
+      <div style="font-family: Arial, sans-serif; padding:20px;">
+        <h2>Thank You for Contacting Fintax Adviser</h2>
 
-      <p>Dear ${name},</p>
+        <p>Dear <b>${name || "Customer"}</b>,</p>
 
-      <p>
-        We have received your inquiry successfully.
-        Our team will contact you shortly.
-      </p>
         <p>
-        If your matter is urgent, feel free to reply to this email.
-      </p>
-      <hr style="border:0; border-top:1px solid #ccc; margin:20px 0;" />
-      <p><b> Submitted Details(For Reference):</b></p>
+          We have received your enquiry successfully. Our team will contact you shortly.
+        </p>
 
-      <p><b>Name:</b> ${name}</p>
-      <p><b>Email:</b> ${email}</p>
-      <p><b>Contact:</b> ${contact}</p>
-      <p><b>Message:</b> ${message}</p>
-      <p><b>Service:</b> ${service}</p>
-      <br/>
+        <p>
+          If your matter is urgent, simply reply to this email or call us.
+        </p>
 
-      <p>Best Regards,</p>
+        <hr style="margin:20px 0;" />
 
-      <h3>Fintax Adviser Team</h3>
+        <h3>Submitted Details</h3>
 
-      <p>info@fintaxadviser.com</p>
-    </div>
-  `,
+        ${details}
+
+        <br>
+
+        <p>Best Regards,</p>
+
+        <h3>Fintax Adviser Team</h3>
+
+        <p>info@fintaxadviser.com</p>
+      </div>
+      `,
     });
 
     return Response.json({
       success: true,
     });
-
   } catch (error) {
-
     console.log("MAIL ERROR:", error);
 
     return Response.json({
@@ -80,4 +91,4 @@ export async function POST(req) {
       error: error.message,
     });
   }
-}             
+}

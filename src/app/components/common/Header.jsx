@@ -75,7 +75,15 @@ const menuData = [
           }, {
             name: "MSME Registration",
             slug: "best-msme-registration-service-delhi-india"
-          }
+          },
+          {
+            name: "12A 80G Registration",
+            slug: "best-12A-80G-registration-service-delhi-india"
+          },
+          {
+            name: "RCMC Registration",
+            slug: "best-rcmc-registration-service-delhi-india"
+          },
 
         ],
       },
@@ -87,7 +95,48 @@ const menuData = [
         }, {
           name: "Import Export",
           slug: "best-iec-registration-service-delhi-india"
-        }
+        }, {
+          name: "DOT(OSP) Registration",
+          slug: "best-dot-osp-registration-service-delhi-india"
+        }, {
+          name: "PSARA Licence",
+          slug: "best-psara-licence-service-delhi-india"
+        },
+        {
+          name: "Startup India Registration",
+          slug: "best-startup-india-registration-service-delhi-india"
+        }, {
+          name: "Udyog Aadhar (MSME)",
+          slug: "best-udyog-aadhar-msme-service-delhi-india"
+        }, {
+          name: "Drug Licence",
+          slug: "best-drug-licence-service-delhi-india"
+        }, {
+          name: "SEPC Licence",
+          slug: "best-sepc-licence-service-delhi-india"
+        }, {
+          name: "ISO Certification",
+          slug: "best-iso-certification-service-delhi-india"
+        }, {
+          name: "FCRA Registration",
+          slug: "best-fcra-registration-service-delhi-india"
+        }, {
+          name: "RERA Registration",
+          slug: "best-rera-registration-service-delhi-india"
+        }, {
+          name: "Trade License",
+          slug: "best-trade-license-service-delhi-india"
+        }, {
+          name: "NSIC Registration",
+          slug: "best-nsic-registration-service-delhi-india"
+        }, {
+          name: "Factory License",
+          slug: "best-factory-license-service-delhi-india"
+        }, {
+          name: "ISI Certification",
+          slug: "best-isi-certification-service-delhi-india"
+        },
+
         ],
       },
     ],
@@ -120,15 +169,30 @@ const menuData = [
           },
         ],
       },
-      // {
-      //   heading: "Legal Agreements",
-      //   links: [
-      //     "Founders Agreement",
-      //     "NDA Agreement",
-      //     "Employment Agreement",
-      //     "Vendor Agreement",
-      //   ],
-      // },
+      {
+        heading: "Legal Agreements",
+        links: [{
+          name: "Terms of use agreement",
+          slug: "best-terms-of-use-agreement-service-delhi-india",
+        }, {
+          name: "Founders agreement",
+          slug: "best-founders-agreement-service-delhi-india",
+        }, {
+          name: "Customer or Vendor agreement",
+          slug: "best-customer-vendor-agreement-service-delhi-india"
+        },
+        {
+          name: "Employment agreement",
+          slug: "best-employment-agreement-service-delhi-india"
+        }, {
+          name: "Transfer pricing agreement",
+          slug: "best-transfer-pricing-agreement-service-delhi-india"
+        }, {
+          name: "Non-disclosure agreement",
+          slug: "best-non-disclosure-agreement-service-delhi-india"
+        },
+        ],
+      },
 
     ],
   },
@@ -141,16 +205,42 @@ const menuData = [
           {
             name: "Fundraising services",
             slug: "best-startup-fundraising-service-delhi-india"
+          }, {
+            name: "Terms sheet & Shareholder agreement",
+            slug: "best-terms-sheet-shareholder-agreement-service-delhi-india"
+          }, {
+            name: "Due Diligenc services",
+            slug: "best-due-diligence-service-delhi-india"
+          },
+          {
+            name: "Pitch Deck for startups",
+            slug: "best-pitch-deck-startups-service-delhi-india"
+          }, {
+            name: "Pitch Deck for Investors",
+            slug: "best-pitch-deck-investors-service-delhi-india"
+          },
+          {
+            name: "Fundraising Services from Venture Capitalists",
+            slug: "best-fundraising-services-venture-capitalists-delhi-india"
+          },
+        ],
+      },
+      {
+        heading: "Fundraising Compliance",
+        links: [
+          {
+            name: "Valuation certificate",
+            slug: "best-valuation-certificate-service-delhi-india"
+          },
+          {
+            name: "Secretarial Compliance Fundraising",
+            slug: "best-secretarial-compliance-for-fundraising-service-delhi-india"
+          }, {
+            name: "Fundraising Secretarial Compliance",
+            slug: "best-fundraising-secretarial-compliance-service-delhi-india"
           }
         ],
       },
-      // {
-      //   heading: "Compliance",
-      //   links: [
-      //     "Fundraising Compliance",
-      //     "Secretarial Compliance",
-      //   ],
-      // },
     ],
   },
   {
@@ -165,7 +255,7 @@ const menuData = [
           },
           {
             name: "GST refund handling",
-            slug: "best-gst-refund-service-delhi-india"
+            slug: "best-gst-refund-handling-service-delhi-india"
           },
           {
             name: "Income Tax return filling",
@@ -177,8 +267,23 @@ const menuData = [
           },
           {
             name: "Income Tax refund handling",
-            slug: "best-income-tax-refund-service-delhi-india"
-          }
+            slug: "best-income-tax-refund-handling-service-delhi-india"
+          }, {
+            name: "TDS compliance",
+            slug: "best-tds-compliance-service-delhi-india",
+          }, {
+            name: "Small Business Accounting",
+            slug: "best-small-business-accounting-service-delhi-india",
+          }, {
+            name: "Healthcare Business Accounting",
+            slug: "best-healthcare-business-accounting-service-delhi-india",
+          }, {
+            name: "Fintech Business Accounting & Compliance",
+            slug: "best-fintech-business-accounting-compliance-service-delhi-india"
+          }, {
+            name: "Agreetech Business Accounting & Compliance",
+            slug: "best-agreetech-business-accounting-compliance-service-delhi-india"
+          },
         ],
       },
       {
@@ -187,26 +292,73 @@ const menuData = [
           {
             name: "ROC Compliance",
             slug: "best-roc-compliance-service-delhi-india"
-          }
+          }, {
+            name: "ROC annual compliance",
+            slug: "best-roc-annual-compliance-service-delhi-india",
+          }, {
+            name: "Change of Registered Office Address",
+            slug: "best-change-of-registered-office-address-service-delhi-india"
+          },
+          {
+            name: "Private Limited Company to Public limited Company Registration",
+            slug: "best-private-limited-to-public-limited-registration-service-delhi-india",
+          }, {
+            name: "ROC annual compliance for Public limited Company Registration",
+            slug: "best-roc-annual-compliance-for-public-limited-company-registration-service-delhi-india",
+          },
         ],
       },
-      // {
-      //   heading: "Closures",
-      //   links: [
-      //     "Company Closure",
-      //     "LLP Closure",
-      //     "Partnership Closure",
-      //   ],
-      // },
       {
         heading: "Reporting",
         links: [
           {
             name: "MIS Reporting",
             slug: "best-mis-reporting-service-delhi-india"
+          }, {
+            name: "Investors Reporting",
+            slug: "best-investors-reporting-service-delhi-india"
           }
         ],
       },
+      {
+        heading: "Statutory Refunds",
+        links: [
+          {
+            name: "SEIS & MEIS Refund",
+            slug: "best-seis-meis-refund-service-delhi-india"
+          }, {
+            name: "Goods & Services Tax Refund",
+            slug: "best-gst-refund-service-delhi-india"
+          }
+        ],
+      }, {
+        heading: "Tax Registration Closures",
+        links: [
+          {
+            name: "PAN/TAN Closure",
+            slug: "best-pan-tan-closure-service-delhi-india"
+          }, {
+            name: "EPF/ESIC Registration Surrender",
+            slug: "best-epf-esic-registration-surrender-service-delhi-india"
+          }
+        ],
+      }, {
+        heading: "Entity Closures",
+        links: [
+          {
+            name: "Closing Partnership Firm",
+            slug: "best-closing-partnership-firm-service-delhi-india"
+          },
+          {
+            name: "Closing Limited Liability Partnership",
+            slug: "best-closing-limited-liability-partnership-service-delhi-india"
+          }, {
+            name: "Closing Private Limited Company",
+            slug: "best-closing-private-limited-company-service-delhi-india"
+          },
+        ],
+      },
+
     ],
   },
   {
@@ -218,7 +370,30 @@ const menuData = [
           {
             name: "Virtual CFO Services",
             slug: "best-virtual-cfo-service-delhi-india"
+          }, {
+            name: "CA Services for Startups",
+            slug: "best-ca-services-for-startups-delhi-india"
+          },
+          {
+            name: "Startup Consultancy Services",
+            slug: "best-startup-consultancy-service-delhi-india",
+          }, {
+            name: "Legal Services for Startups",
+            slug: "best-legal-services-for-startups-service-delhi-india",
+          }, {
+            name: "Financial Reporting Services",
+            slug: "best-financial-reporting-service-delhi-india"
+          }, {
+            name: "Financial Modeling",
+            slug: "best-financial-modeling-service-delhi-india"
+          }, {
+            name: "Financial Consultancy",
+            slug: "best-financial-consultancy-service-delhi-india"
+          }, {
+            name: "Company Valuation Services",
+            slug: "best-company-valuation-service-delhi-india"
           }
+
         ],
       },
       // {
@@ -232,26 +407,59 @@ const menuData = [
   {
     title: "HR Services",
     sections: [
-      // {
-      //   heading: "People Management",
-      //   links: [
-      //     "Payroll Services",
-      //     "HR Outsourcing",
-      //     "Employee Management",
-      //   ],
-      // },
       {
-        heading: "Labour Law",
+        heading: "People Management",
+        links: [{
+          name: "Third Party Payroll Services",
+          slug: "best-third-party-payroll-service-delhi-india"
+        }, {
+          name: "Payroll Management Services",
+          slug: "best-payroll-management-service-delhi-india"
+        },
+        ],
+      },
+      {
+        heading: "Labour Law Compliances",
         links: [{
           name: "Labour Law Compliance",
           slug: "best-labour-law-compliance-service-delhi-india"
+        }, {
+          name: "Labour Law Consultancy Services",
+          slug: "best-labour-law-consultancy-service-delhi-india",
+        },
+        ],
+      },
+      {
+        heading: "Labour Law Registrations",
+        links: [{
+          name: "Professional Tax Registration",
+          slug: "best-professional-tax-registration-service-delhi-india"
         },
         {
           name: "PF and ESI Registration",
           slug: "best-pf-esi-service-delhi-india"
+        }, {
+          name: "Shop and Establishment Registration",
+          slug: "best-shop-establishment-registration-service-delhi-india",
+        }, {
+          name: "ESI Registration",
+          slug: "best-esi-registration-service-delhi-india"
+        }, {
+          name: "EPF Registration",
+          slug: "best-epf-registration-service-delhi-india"
+        }, {
+          name: "CLRA Registration",
+          slug: "best-clra-registration-service-delhi-india"
         }
         ],
       },
+      {
+        heading: "HR Policies",
+        links: [{
+          name: "Human Resource Policies",
+          slug: "best-human-resource-policies-service-delhi-india"
+        }]
+      }
     ],
   },
 ];

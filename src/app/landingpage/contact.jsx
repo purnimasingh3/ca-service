@@ -1,0 +1,278 @@
+"use client";
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { FcGoogle } from 'react-icons/fc';
+import { Phone, ShieldCheck, Pencil } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
+import Link from "next/link";
+
+export default function Contact() {
+    // 1 for Personal Details, 2 for State/Email
+    const [activeTab, setActiveTab] = useState(1);
+    const router = useRouter();
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        contact: '',
+        state: '',
+    });
+
+    const handleNext = () => {
+        if (!formData.name.trim()) {
+            alert("Please enter your name");
+            return;
+        }
+
+        if (!/^[6-9]\d{9}$/.test(formData.contact)) {
+            alert("Please enter a valid mobile number");
+            return;
+        }
+
+        // Move to Stage 2
+        setActiveTab(2);
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!formData.email.trim()) {
+            alert("Please enter your email");
+            return;
+        }
+
+        if (!formData.state) {
+            alert("Please select your state");
+            return;
+        }
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (res.ok) {
+                router.push("/thank-you");
+
+                setFormData({
+                    name: "",
+                    contact: "",
+                    email: "",
+                    state: "",
+                });
+
+                setActiveTab(1);
+            } else {
+                alert("Something went wrong");
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    return (
+        <div className="bg-white rounded-3xl p-6 shadow-2xl text-slate-900 w-full max-w-md border border-slate-100">
+            {/* Top Rating Bar */}
+            <div className="flex justify-between items-center text-sm text-indigo-900 font-bold border-b border-slate-100 pb-3 mb-4">
+                <span className="bg-white text-slate-900 rounded-full font-bold p-0.5 text-md h-4 w-4 flex items-center justify-center"><FcGoogle /></span>
+                <span className="font-bold ">4.8 Rating </span>
+                <span>25+ Financial Experts</span>
+                <span>Free Strategy Call</span>
+            </div>
+
+            {/* Header */}
+            <div className="text-center space-y-1">
+                <h3 className="text-lg font-black tracking-tight text-slate-900">
+                    Book a Free <span className="text-orange-500">CFO Consultation</span>
+                </h3>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                    Get Expert Guidance — <span className="text-blue-900">100% FREE</span>
+                </p>
+            </div>
+
+            {/* Tabs Headers */}
+            <div className="flex border-b border-slate-100 mt-5 text-xs font-bold">
+                <button
+                    type="button"
+                    onClick={() => setActiveTab(1)}
+                    className={`flex-1 pb-2 text-center border-b-2 transition-colors ${activeTab === 1 ? "border-orange-500 text-slate-900" : "border-transparent text-slate-400"}`}
+                >
+                    Personal Details
+                </button>
+                <button
+                    type="button"
+                    onClick={() => {
+                        // Validate before letting them click to Tab 2 manually
+                        if (formData.name.trim() && /^[6-9]\d{9}$/.test(formData.contact)) {
+                            setActiveTab(2);
+                        } else {
+                            alert("Please fill personal details correctly first.");
+                        }
+                    }}
+                    className={`flex-1 pb-2 text-center border-b-2 transition-colors ${activeTab === 2 ? "border-orange-500 text-slate-900" : "border-transparent text-slate-400"}`}
+                >
+                    State & Email
+                </button>
+            </div>
+
+            {/* Active Monitoring Alert */}
+            <div className="bg-emerald-50 text-emerald-700 text-center text-xs font-bold py-1.5 rounded-lg mt-4 flex items-center justify-center gap-1.5">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                Active financial monitoring for 200+ companies
+            </div>
+
+            {/* Form Fields */}
+            <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
+
+                {/* STEP 1: Personal Details */}
+                {activeTab === 1 && (
+                    <div className="space-y-4 mt-5">
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition"
+                        />
+
+                        <div className="flex gap-2">
+                            <div className="w-16 flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 font-medium text-sm text-slate-500">
+                                +91
+                            </div>
+                            <input
+                                type="tel"
+                                maxLength={10}
+                                placeholder="Mobile Number"
+                                value={formData.contact}
+                                onChange={(e) => setFormData({ ...formData, contact: e.target.value.replace(/\D/g, '') })}
+                                className="flex-1 px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition"
+                            />
+                        </div>
+
+                        <button
+                            type="button"
+                            onClick={handleNext}
+                            className="w-full py-3 rounded-xl bg-orange-500 text-white font-bold hover:bg-orange-600 transition"
+                        >
+                            Next →
+                        </button>
+                    </div>
+                )}
+
+                {/* STEP 2: Email & State */}
+                {activeTab === 2 && (
+                    <div className="space-y-4 mt-5">
+                        {/* Edit Contact Display Box */}
+                        <div className="flex justify-between items-center border border-slate-200 rounded-xl p-3 bg-slate-50">
+                            <div>
+                                <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold">Mobile Number</p>
+                                <p className="font-bold text-sm text-slate-700">
+                                    +91 {formData.contact}
+                                </p>
+                            </div>
+                            <button
+                                type="button"
+                                onClick={() => setActiveTab(1)}
+                                className="flex items-center gap-1 text-xs font-bold text-orange-500 hover:text-orange-600 transition"
+                            >
+                                <Pencil size={14} />
+                                Edit
+                            </button>
+                        </div>
+
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition"
+                        />
+
+                        <select
+                            value={formData.state}
+                            onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition bg-white appearance-none"
+                        >
+                            <option value="">Select State</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Arunachal Pradesh</option>
+                            <option>Assam</option>
+                            <option>Bihar</option>
+                            <option>Chhattisgarh</option>
+                            <option>Goa</option>
+                            <option>Gujarat</option>
+                            <option>Haryana</option>
+                            <option>Himachal Pradesh</option>
+                            <option>Jharkhand</option>
+                            <option>Karnataka</option>
+                            <option>Kerala</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Maharashtra</option>
+                            <option>Manipur</option>
+                            <option>Meghalaya</option>
+                            <option>Mizoram</option>
+                            <option>Nagaland</option>
+                            <option>Odisha</option>
+                            <option>Punjab</option>
+                            <option>Rajasthan</option>
+                            <option>Sikkim</option>
+                            <option>Tamil Nadu</option>
+                            <option>Telangana</option>
+                            <option>Tripura</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Uttarakhand</option>
+                            <option>West Bengal</option>
+                            <option>Andaman and Nicobar Islands</option>
+                            <option>Chandigarh</option>
+                            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option>Delhi</option>
+                            <option>Jammu and Kashmir</option>
+                            <option>Ladakh</option>
+                            <option>Lakshadweep</option>
+                            <option>Puducherry</option>
+                        </select>
+
+                        <button
+                            type="submit"
+                            className="w-full py-3 rounded-xl bg-gradient-to-r from-orange-400 to-orange-600 text-white font-bold hover:opacity-90 transition shadow-md"
+                        >
+                            Book Free Strategy Call
+                        </button>
+                    </div>
+                )}
+
+                {/* Footer Badges & Buttons */}
+                <p className="text-[10px] text-slate-400 font-medium text-center pt-1 flex items-center justify-center gap-1">
+                    <ShieldCheck className="h-3 w-3 inline text-slate-400" /> Your details are secure and will not be shared.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100">
+                    <Link
+                        href="tel:+919990924477"
+                        className="flex items-center justify-center gap-1.5 border border-slate-200 rounded-xl py-2.5 text-xs font-bold text-blue-600 bg-white hover:bg-slate-50 transition"
+                        title="Call Senior Advisor Desk"
+                    >
+                        <Phone className="h-3.5 w-3.5 text-blue-600 fill-blue-100" /> Call Experts
+                    </Link>
+
+                    <Link
+                        href="https://wa.me/+919990924477"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center justify-center gap-1.5 border border-emerald-200 rounded-xl py-2.5 text-xs font-bold text-emerald-600 bg-emerald-50/50 hover:bg-emerald-50 transition"
+                    >
+                        <FaWhatsapp className="h-3.5 w-3.5 text-emerald-600" /> WhatsApp
+                    </Link>
+                </div>
+            </form>
+
+            <div className="mt-4 text-center space-y-0.5 border-t border-slate-50 pt-3">
+                <p className="text-[10px] font-bold text-slate-800">Trusted by 500+ Founders Across India</p>
+                <p className="text-[9px] text-slate-400 font-semibold">100% Money-Back Guarantee if documents not filed within 15 days</p>
+            </div>
+        </div>
+    );
+}
