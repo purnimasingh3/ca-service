@@ -13,10 +13,10 @@ import Footer from "../Footer";
 import LeadPopup from "../LeadPopup";
 
 const stats = [
-    { value: 15, suffix: "+", label: "Years Experience" },
-    { value: 25, suffix: "+", label: "Financial Experts" },
-    { value: 500, suffix: "+", label: "Successful Startups" },
-    { value: 4.8, suffix: "★", label: "Google Rating", decimals: 1 },
+  { value: 15, suffix: "+", label: "Years Experience" },
+  { value: 25, suffix: "+", label: "Financial Experts" },
+  { value: 200, suffix: "+", label: "Successful Clients" },
+  { value: 4.9, suffix: "★", label: "Google Rating", decimals: 1 },
 ];
 
 export default function CAServicesForStartupsLandingPage() {
@@ -580,13 +580,13 @@ export default function CAServicesForStartupsLandingPage() {
                     href="https://wa.me/+919990924477"
                     target="_blank"
                     rel="noreferrer"
-                    className="h-12 w-12 bg-emerald-700 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-105 transition-transform"
+                    className="h-12 w-12 bg-emerald-700 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-105 transition-transform animate-bounce"
                 >
                     <FaWhatsapp className="h-6 w-6 text-white " />
                 </Link>
                 <Link
                     href="tel:+919990924477"
-                    className="w-12 h-12 rounded-full bg-blue-300 text-white flex items-center justify-center shadow-lg hover:bg-blue-700 transition-all hover:scale-110"
+                    className="w-12 h-12 rounded-full bg-blue-300 text-white flex items-center justify-center shadow-lg hover:bg-blue-700 transition-all hover:scale-110 animate-pulse"
                     title="Call Senior Advisor Desk"
                 >
                     <Phone className="w-5 h-5 text-blue-600" />

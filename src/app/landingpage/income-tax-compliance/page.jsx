@@ -13,10 +13,10 @@ import Footer from "../Footer";
 import LeadPopup from "../LeadPopup";
 
 const stats = [
-    { value: 15, suffix: "+", label: "Years Experience" },
-    { value: 22, suffix: "+", label: "Tax Advocates" },
-    { value: 450, suffix: "+", label: "ITR Filings Completed" },
-    { value: 4.9, suffix: "★", label: "Google Rating", decimals: 1 },
+  { value: 15, suffix: "+", label: "Years Experience" },
+  { value: 25, suffix: "+", label: "Financial Experts" },
+  { value: 200, suffix: "+", label: "Successful Clients" },
+  { value: 4.9, suffix: "★", label: "Google Rating", decimals: 1 },
 ];
 
 export default function IncomeTaxComplianceLandingPage() {

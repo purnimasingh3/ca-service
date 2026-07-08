@@ -9,6 +9,9 @@ export default function LeadPopup() {
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    
+    // 💡 जादू यहाँ है: यह ट्रैक रखेगा कि क्या दूसरी बार का पॉपअप शेड्यूल या दिख चुका है
+    const [hasShownSecondTime, setHasShownSecondTime] = useState(false);
 
     const initialFormState = {
         name: "",
@@ -19,11 +22,13 @@ export default function LeadPopup() {
 
     const [formData, setFormData] = useState(initialFormState);
 
-    // पहली बार स्क्रीन लोड होने पर 2 सेकंड बाद पॉपअप दिखेगा
+    // 1. पहली बार स्क्रीन लोड होने पर 2 सेकंड बाद पॉपअप दिखेगा
     useEffect(() => {
         const timer = setTimeout(() => {
             setOpen(true);
         }, 2000);
+
+        // हेडर वाले बटन का इवेंट
         const handleOpenEvent = () => {
             setOpen(true);
         };
@@ -36,18 +41,20 @@ export default function LeadPopup() {
         };
     }, []);
 
-
-
-    // 💡 क्लोज बटन दबाने पर 5 सेकंड बाद दोबारा पॉपअप दिखाने का लॉजिक
+    // 2. 💡 क्लोज बटन का एकदम सटीक लॉजिक (सिर्फ एक बार और खुलेगा 8 सेकंड बाद)
     const handleClose = () => {
-        setOpen(false); // पहले पॉपअप को बंद करो
+        setOpen(false); // पहले अभी वाले पॉपअप को बंद करो
 
-        // अगर फॉर्म सबमिट हो चुका है, तो दोबारा नहीं दिखाएंगे
-        if (!submitted) {
+        // अगर फॉर्म सबमिट नहीं हुआ है और अभी तक दूसरी बार वाला पॉपअप नहीं आया है
+        if (!submitted && !hasShownSecondTime) {
+            setHasShownSecondTime(true); // तुरंत इसे true कर दो ताकि अगली बार ये कंडीशन चले ही नहीं
+            
             setTimeout(() => {
-                setOpen(true); // 5 सेकंड (5000ms) के बाद वापस ओपन कर दो
+                setOpen(true); // ठीक 8 सेकंड बाद दूसरी बार खोल दो
             }, 8000);
         }
+        // अगर दूसरी बार भी यूजर ने कट कर दिया, तो 'hasShownSecondTime' पहले से true होगा,
+        // इसलिए यह इफ-कंडीशन दोबारा नहीं चलेगी और पॉपअप हमेशा के लिए शांत हो जाएगा!
     };
 
     const handleChange = (e) => {
@@ -70,7 +77,7 @@ export default function LeadPopup() {
                 setSubmitted(true);
                 setFormData(initialFormState);
 
-                // फॉर्म सबमिट होने के बाद 2.5 सेकंड में पॉपअप बंद होगा और दोबारा परेशान नहीं करेगा
+                // फॉर्म सबमिट होने के बाद 2 सेकंड में पॉपअप बंद होगा
                 setTimeout(() => {
                     setOpen(false);
                 }, 2000);
@@ -95,7 +102,7 @@ export default function LeadPopup() {
                 {/* Decorative Top Accent */}
                 <div className="absolute top-0 left-0 right-0 h-[6px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-600" />
 
-                {/* Close Button - 💡 अब यह handleClose फंक्शन को कॉल करेगा */}
+                {/* Close Button */}
                 <button
                     onClick={handleClose}
                     className="absolute right-5 top-5 text-slate-400 hover:text-slate-600 p-1.5 rounded-full hover:bg-slate-100 transition-all duration-200"
@@ -115,7 +122,7 @@ export default function LeadPopup() {
                         </p>
                     </div>
                 ) : (
-                    /* UI Upgraded Form State */
+                    /* Form UI */
                     <>
                         <div className="text-center mb-8">
                             <span className="inline-block text-[11px] font-bold tracking-wider text-blue-600 uppercase bg-blue-50 px-3 py-1 rounded-full mb-3">
