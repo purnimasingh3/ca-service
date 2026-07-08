@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from 'react-icons/fc';
-import { Phone, ShieldCheck, Pencil } from 'lucide-react';
+import { Phone, ShieldCheck, Pencil, ChevronDown } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import Link from "next/link";
 
@@ -74,21 +74,23 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-white rounded-3xl p-6 shadow-2xl text-slate-900 w-full max-w-md border border-slate-100">
+        <div className="w-full max-w-md bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl text-slate-900 border border-slate-100 mx-auto">
             {/* Top Rating Bar */}
-            <div className="flex justify-between items-center text-sm text-indigo-900 font-bold border-b border-slate-100 pb-3 mb-4">
-                <span className="bg-white text-slate-900 rounded-full font-bold p-0.5 text-md h-4 w-4 flex items-center justify-center"><FcGoogle /></span>
-                <span className="font-bold ">4.8 Rating </span>
+            <div className="flex flex-wrap justify-between items-center gap-2 text-[11px] sm:text-xs md:text-sm text-indigo-900 font-bold border-b border-slate-100 pb-3 mb-4">
+                <div className="flex items-center gap-1">
+                    <span className="bg-white text-slate-900 rounded-full font-bold text-md h-4 w-4 flex items-center justify-center"><FcGoogle /></span>
+                    <span className="font-bold">4.8 Rating</span>
+                </div>
                 <span>25+ Financial Experts</span>
                 <span>Free Strategy Call</span>
             </div>
 
             {/* Header */}
             <div className="text-center space-y-1">
-                <h3 className="text-lg font-black tracking-tight text-slate-900">
+                <h3 className="text-base sm:text-lg font-black tracking-tight text-slate-900">
                     Book a Free <span className="text-orange-500">CFO Consultation</span>
                 </h3>
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                <p className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider">
                     Get Expert Guidance — <span className="text-blue-900">100% FREE</span>
                 </p>
             </div>
@@ -119,9 +121,9 @@ export default function Contact() {
             </div>
 
             {/* Active Monitoring Alert */}
-            <div className="bg-emerald-50 text-emerald-700 text-center text-xs font-bold py-1.5 rounded-lg mt-4 flex items-center justify-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
-                Active financial monitoring for 200+ companies
+            <div className="bg-emerald-50 text-emerald-700 text-center text-[11px] sm:text-xs font-bold py-1.5 px-2 rounded-lg mt-4 flex items-center justify-center gap-1.5">
+                <span className="h-2 w-2 flex-shrink-0 rounded-full bg-emerald-500 animate-ping"></span>
+                <span className="truncate">Active financial monitoring for 200+ companies</span>
             </div>
 
             {/* Form Fields */}
@@ -135,11 +137,11 @@ export default function Contact() {
                             placeholder="Full Name"
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition"
+                            className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition"
                         />
 
                         <div className="flex gap-2">
-                            <div className="w-16 flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 font-medium text-sm text-slate-500">
+                            <div className="w-14 sm:w-16 flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 font-medium text-xs sm:text-sm text-slate-500">
                                 +91
                             </div>
                             <input
@@ -148,14 +150,14 @@ export default function Contact() {
                                 placeholder="Mobile Number"
                                 value={formData.contact}
                                 onChange={(e) => setFormData({ ...formData, contact: e.target.value.replace(/\D/g, '') })}
-                                className="flex-1 px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition"
+                                className="flex-1 min-w-0 px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition"
                             />
                         </div>
 
                         <button
                             type="button"
                             onClick={handleNext}
-                            className="w-full py-3 rounded-xl bg-orange-500 text-white font-bold hover:bg-orange-600 transition"
+                            className="w-full py-2.5 sm:py-3 rounded-xl bg-orange-500 text-white font-bold text-sm sm:text-base hover:bg-orange-600 transition"
                         >
                             Next →
                         </button>
@@ -168,8 +170,8 @@ export default function Contact() {
                         {/* Edit Contact Display Box */}
                         <div className="flex justify-between items-center border border-slate-200 rounded-xl p-3 bg-slate-50">
                             <div>
-                                <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold">Mobile Number</p>
-                                <p className="font-bold text-sm text-slate-700">
+                                <p className="text-[9px] sm:text-[10px] uppercase tracking-wider text-gray-400 font-bold">Mobile Number</p>
+                                <p className="font-bold text-xs sm:text-sm text-slate-700">
                                     +91 {formData.contact}
                                 </p>
                             </div>
@@ -178,7 +180,7 @@ export default function Contact() {
                                 onClick={() => setActiveTab(1)}
                                 className="flex items-center gap-1 text-xs font-bold text-orange-500 hover:text-orange-600 transition"
                             >
-                                <Pencil size={14} />
+                                <Pencil size={12} className="sm:w-3.5 sm:h-3.5" />
                                 Edit
                             </button>
                         </div>
@@ -188,56 +190,61 @@ export default function Contact() {
                             placeholder="Email Address"
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition"
+                            className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition"
                         />
 
-                        <select
-                            value={formData.state}
-                            onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:border-orange-500 transition bg-white appearance-none"
-                        >
-                            <option value="">Select State</option>
-                            <option>Andhra Pradesh</option>
-                            <option>Arunachal Pradesh</option>
-                            <option>Assam</option>
-                            <option>Bihar</option>
-                            <option>Chhattisgarh</option>
-                            <option>Goa</option>
-                            <option>Gujarat</option>
-                            <option>Haryana</option>
-                            <option>Himachal Pradesh</option>
-                            <option>Jharkhand</option>
-                            <option>Karnataka</option>
-                            <option>Kerala</option>
-                            <option>Madhya Pradesh</option>
-                            <option>Maharashtra</option>
-                            <option>Manipur</option>
-                            <option>Meghalaya</option>
-                            <option>Mizoram</option>
-                            <option>Nagaland</option>
-                            <option>Odisha</option>
-                            <option>Punjab</option>
-                            <option>Rajasthan</option>
-                            <option>Sikkim</option>
-                            <option>Tamil Nadu</option>
-                            <option>Telangana</option>
-                            <option>Tripura</option>
-                            <option>Uttar Pradesh</option>
-                            <option>Uttarakhand</option>
-                            <option>West Bengal</option>
-                            <option>Andaman and Nicobar Islands</option>
-                            <option>Chandigarh</option>
-                            <option>Dadra and Nagar Haveli and Daman and Diu</option>
-                            <option>Delhi</option>
-                            <option>Jammu and Kashmir</option>
-                            <option>Ladakh</option>
-                            <option>Lakshadweep</option>
-                            <option>Puducherry</option>
-                        </select>
+                        <div className="relative w-full">
+                            <select
+                                value={formData.state}
+                                onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                                className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition bg-white appearance-none pr-10"
+                            >
+                                <option value="">Select State</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chhattisgarh</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Telangana</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+                                <option>Andaman and Nicobar Islands</option>
+                                <option>Chandigarh</option>
+                                <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                                <option>Delhi</option>
+                                <option>Jammu and Kashmir</option>
+                                <option>Ladakh</option>
+                                <option>Lakshadweep</option>
+                                <option>Puducherry</option>
+                            </select>
+                            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-500">
+                                <ChevronDown size={16} />
+                            </div>
+                        </div>
 
                         <button
                             type="submit"
-                            className="w-full py-3 rounded-xl bg-gradient-to-r from-orange-400 to-orange-600 text-white font-bold hover:opacity-90 transition shadow-md"
+                            className="w-full py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-orange-400 to-orange-600 text-white font-bold text-sm sm:text-base hover:opacity-90 transition shadow-md"
                         >
                             Book Free Strategy Call
                         </button>
@@ -245,33 +252,34 @@ export default function Contact() {
                 )}
 
                 {/* Footer Badges & Buttons */}
-                <p className="text-[10px] text-slate-400 font-medium text-center pt-1 flex items-center justify-center gap-1">
-                    <ShieldCheck className="h-3 w-3 inline text-slate-400" /> Your details are secure and will not be shared.
+                <p className="text-[9px] sm:text-[10px] text-slate-400 font-medium text-center pt-1 flex items-center justify-center gap-1">
+                    <ShieldCheck className="h-3 w-3 flex-shrink-0 text-slate-400" /> 
+                    <span>Your details are secure and will not be shared.</span>
                 </p>
 
                 <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100">
                     <Link
                         href="tel:+919990924477"
-                        className="flex items-center justify-center gap-1.5 border border-slate-200 rounded-xl py-2.5 text-xs font-bold text-blue-600 bg-white hover:bg-slate-50 transition"
+                        className="flex items-center justify-center gap-1.5 border border-slate-200 rounded-xl py-2.5 text-[11px] sm:text-xs font-bold text-blue-600 bg-white hover:bg-slate-50 transition"
                         title="Call Senior Advisor Desk"
                     >
-                        <Phone className="h-3.5 w-3.5 text-blue-600 fill-blue-100" /> Call Experts
+                        <Phone className="h-3.5 w-3.5 text-blue-600 fill-blue-100 flex-shrink-0" /> Call Experts
                     </Link>
 
                     <Link
                         href="https://wa.me/+919990924477"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center gap-1.5 border border-emerald-200 rounded-xl py-2.5 text-xs font-bold text-emerald-600 bg-emerald-50/50 hover:bg-emerald-50 transition"
+                        className="flex items-center justify-center gap-1.5 border border-emerald-200 rounded-xl py-2.5 text-[11px] sm:text-xs font-bold text-emerald-600 bg-emerald-50/50 hover:bg-emerald-50 transition"
                     >
-                        <FaWhatsapp className="h-3.5 w-3.5 text-emerald-600" /> WhatsApp
+                        <FaWhatsapp className="h-3.5 w-3.5 text-emerald-600 flex-shrink-0" /> WhatsApp
                     </Link>
                 </div>
             </form>
 
             <div className="mt-4 text-center space-y-0.5 border-t border-slate-50 pt-3">
-                <p className="text-[10px] font-bold text-slate-800">Trusted by 500+ Founders Across India</p>
-                <p className="text-[9px] text-slate-400 font-semibold">100% Money-Back Guarantee if documents not filed within 15 days</p>
+                <p className="text-[9px] sm:text-[10px] font-bold text-slate-800">Trusted by 500+ Founders Across India</p>
+                <p className="text-[8px] sm:text-[9px] text-slate-400 font-semibold leading-tight">100% Money-Back Guarantee if documents not filed within 15 days</p>
             </div>
         </div>
     );
