@@ -50,8 +50,8 @@ export default function LeadPopup() {
             setHasShownSecondTime(true); // तुरंत इसे true कर दो ताकि अगली बार ये कंडीशन चले ही नहीं
             
             setTimeout(() => {
-                setOpen(true); // ठीक 8 सेकंड बाद दूसरी बार खोल दो
-            }, 8000);
+                setOpen(true); // ठीक 10 सेकंड बाद दूसरी बार खोल दो
+            }, 10000);
         }
         // अगर दूसरी बार भी यूजर ने कट कर दिया, तो 'hasShownSecondTime' पहले से true होगा,
         // इसलिए यह इफ-कंडीशन दोबारा नहीं चलेगी और पॉपअप हमेशा के लिए शांत हो जाएगा!

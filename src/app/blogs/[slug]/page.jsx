@@ -1,96 +1,106 @@
-
-"use client";
-import React, { useEffect, useState } from "react";
+import BlogClient from "./BlogClient";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import styles from "../blogs.module.css";
 
-export default function BlogDetails() {
-  const params = useParams();
-  const slug = params?.slug;
-  const [blog, setBlog] = useState(null);
+async function getBlog(slug) {
+  const res = await fetch(
+    `https://ca-service.onrender.com/api/blogs/${slug}`,
+    {
+      cache: "no-store", // Agar aap chahte ho ki SEO refresh ho toh isko isse hi rkho
+    }
+  );
 
-  useEffect(() => {
-    if (!slug) return;
-    fetch(`https://ca-service.onrender.com/api/blogs/${slug}`)
-      .then((res) => res.json())
-      .then((data) => setBlog(data))
-      .catch(console.error);
-  }, [slug]);
+  if (!res.ok) {
+    return null;
+  }
+  return res.json();
+}
+
+// 👑 GENERATE METADATA FIXED HERE
+export async function generateMetadata({ params }) {
+  // Params ko await karna zaroori hai!
+  const { slug } = await params; 
+  const blog = await getBlog(slug);
 
   if (!blog) {
+    return {
+      title: "Blog Not Found | Fintax Adviser",
+      description: "The requested blog could not be found.",
+    };
+  }
+
+  return {
+    title: blog.title,
+    description: blog.excerpt || "Read our latest blog post on Fintax Adviser.", // Fallback if excerpt missing
+
+    alternates: {
+      canonical: `https://fintaxadviser.com/blogs/${blog.slug}`,
+    },
+
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt,
+      url: `https://fintaxadviser.com/blogs/${blog.slug}`,
+      type: "article",
+      images: blog.image
+        ? [
+            {
+              url: blog.image,
+              width: 1200,
+              height: 630,
+            },
+          ]
+        : [],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.excerpt,
+      images: blog.image ? [blog.image] : [],
+    },
+  };
+}
+
+export default async function Page({ params }) {
+  const { slug } = await params;
+  const blog = await getBlog(slug);
+  
+  if (!blog) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-500 font-medium">
-        <div className="flex flex-col items-center gap-2">
-          <div className="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-          <span>Loading article...</span>
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 px-6">
+        <div className="max-w-lg w-full bg-white rounded-2xl shadow-lg p-10 text-center border border-slate-200">
+          <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-4xl mb-6">
+            📄
+          </div>
+
+          <h1 className="text-3xl font-bold text-slate-900 mb-3">
+            Blog Not Found
+          </h1>
+
+          <p className="text-slate-600 leading-relaxed mb-8">
+            Sorry, the blog you are looking for doesn't exist, may have been
+            removed, or the URL is incorrect.
+          </p>
+
+          <div className="flex justify-center gap-4">
+            <Link
+              href="/blogs"
+              className="px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+            >
+              ← Back to Blogs
+            </Link>
+
+            <Link
+              href="/"
+              className="px-6 py-3 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100 transition"
+            >
+              Go Home
+            </Link>
+          </div>
         </div>
       </div>
     );
   }
 
-  return (
-    <div className={styles.page}>
-      <article className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
-        {/* Navigation */}
-        <Link
-          href="/blogs"
-          className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors gap-1 group mb-8"
-        >
-          <span className="transform group-hover:-translate-x-1 transition-transform">←</span> Back to Blogs
-        </Link>
-
-        {/* Header Section */}
-        <header className="mb-8">
-          <span className={`${styles.categoryTag} uppercase tracking-wider text-xs px-3 py-1.5`}>
-            {blog.category}
-          </span>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 tracking-tight leading-tight whitespace-normal break-words">
-            {blog.title}
-          </h1>
-
-          <div className="mt-6 flex items-center text-sm text-slate-500 border-b border-slate-200 pb-6 gap-2 flex-wrap">
-            <span className="font-medium text-slate-700">By {blog.author}</span>
-            <span className="text-slate-300">•</span>
-            <time dateTime={blog.createdAt}>
-              {new Date(blog.createdAt).toLocaleDateString("en-IN", {
-                day: "numeric",
-                month: "long",
-                year: "numeric"
-              })}
-            </time>
-          </div>
-        </header>
-
-        {/* Featured Image */}
-        {blog.image && (
-          <div className="w-full aspect-[16/9] relative rounded-2xl overflow-hidden shadow-sm bg-slate-100 mb-10">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-
-        {/* Main Content Render */}
-        <div
-          className="prose prose-slate max-w-none w-full mt-6 
-            prose-headings:font-bold prose-headings:text-slate-900 prose-headings:tracking-tight
-            prose-h2:text-xl prose-h2:sm:text-2xl prose-h2:mt-10 prose-h2:mb-4
-            prose-h3:text-lg prose-h3:sm:text-xl prose-h3:mt-8 prose-h3:mb-3
-            prose-p:text-base prose-p:leading-relaxed prose-p:text-slate-700 prose-p:my-4 
-            prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
-            prose-strong:text-slate-900 prose-strong:font-semibold
-            prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6
-            prose-li:text-slate-700 prose-li:my-1.5
-            prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:italic prose-blockquote:bg-slate-50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg
-            [&_img]:rounded-xl [&_img]:mx-auto [&_table]:w-full [&_pre]:overflow-x-auto [&_code]:break-all"
-          dangerouslySetInnerHTML={{
-            __html: blog.content?.replace(/&nbsp;/g, " ")
-          }}
-        />
-      </article>
-    </div>
-  );
+  return <BlogClient blog={blog} />;
 }

@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import cors from "cors";
-import helmet from "helmet";
+// import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 // import mongoSanitize from "express-mongo-sanitize";
 
@@ -23,12 +23,14 @@ const limiter = rateLimit({
     message: "Too many requests. Please try again later.",
   },
 });
-app.use(helmet());
+// app.use(helmet());
 app.use(
   cors({
     origin: [
       "https://fintaxadviser.com",
       "https://www.fintaxadviser.com",
+      "http://localhost:5000",
+      "http://localhost:3000",
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],

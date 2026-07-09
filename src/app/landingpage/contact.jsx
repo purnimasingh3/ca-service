@@ -88,7 +88,7 @@ export default function Contact() {
             {/* Header */}
             <div className="text-center space-y-1">
                 <h3 className="text-base sm:text-lg font-black tracking-tight text-slate-900">
-                    Book a Free <span className="text-orange-500">CFO Consultation</span>
+                    Book a Free <span className="text-orange-500">Consultation</span>
                 </h3>
                 <p className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider">
                     Get Expert Guidance — <span className="text-blue-900">100% FREE</span>

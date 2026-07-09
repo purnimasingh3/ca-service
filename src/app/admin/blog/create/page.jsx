@@ -23,20 +23,6 @@ export default function CreateBlog() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [imageFile, setImageFile] = useState(null);
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   if (name === "title") {
-  //     const slug = value
-  //       .toLowerCase()
-  //       .replace(/[^a-z0-9 ]/g, "")
-  //       .replace(/\s+/g, "-");
-  //     setFormData({ ...formData, title: value, slug });
-  //     return;
-  //   }
-  //   setFormData({ ...formData, [name]: value });
-  // };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
