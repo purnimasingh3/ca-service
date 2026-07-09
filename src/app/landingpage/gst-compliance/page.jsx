@@ -161,7 +161,7 @@ export default function GstComplianceLandingPage() {
                                 <h3 className="text-2xl font-black text-slate-900">Basic GST Plan</h3>
                                 <p className="text-xs font-medium text-slate-400 mt-1">Perfect for Small Businesses & Startups</p>
                                 <div className="mt-5 flex items-baseline gap-2">
-                                    <span className="text-2xl font-black text-slate-900">₹2,999</span>
+                                    <span className="text-2xl font-black text-slate-900">₹1,499</span>
                                     <span className="text-xs text-slate-400 font-medium">/ month</span>
                                 </div>
                                 <button onClick={() => setIsContactOpen(true)} className="mt-6 w-full py-2.5 rounded-xl border border-blue-600 text-blue-600 bg-white font-bold text-sm hover:bg-blue-50/50 transition-colors text-center">
@@ -186,7 +186,7 @@ export default function GstComplianceLandingPage() {
                                 <h3 className="text-2xl font-black text-slate-900">Business GST Plan</h3>
                                 <p className="text-xs font-medium text-slate-400 mt-1">Ideal for Growing Businesses</p>
                                 <div className="mt-5 flex items-baseline gap-2">
-                                    <span className="text-2xl font-black text-slate-900">₹5,999</span>
+                                    <span className="text-2xl font-black text-slate-900">₹3,499</span>
                                     <span className="text-xs text-slate-400 font-medium">/ month</span>
                                 </div>
                                 <button onClick={() => setIsContactOpen(true)} className="mt-6 w-full py-2.5 rounded-xl bg-blue-600 text-white font-bold text-sm hover:opacity-95 transition-all text-center shadow-xs">
@@ -210,7 +210,7 @@ export default function GstComplianceLandingPage() {
                                 <h3 className="text-2xl font-black text-slate-900">Premium GST Plan</h3>
                                 <p className="text-xs font-medium text-slate-400 mt-1">Complete GST Compliance & Advisory</p>
                                 <div className="mt-5 flex items-baseline gap-2">
-                                    <span className="text-2xl font-black text-slate-900">₹9,999</span>
+                                    <span className="text-2xl font-black text-slate-900">₹7,499</span>
                                     <span className="text-xs text-slate-400 font-medium">/ month</span>
                                 </div>
                                 <button onClick={() => setIsContactOpen(true)} className="mt-6 w-full py-2.5 rounded-xl border border-blue-600 text-blue-600 bg-white font-bold text-sm hover:bg-blue-50/50 transition-colors text-center">
