@@ -121,9 +121,6 @@ const menuData = [
           name: "FCRA Registration",
           slug: "best-fcra-registration-service-delhi-india"
         }, {
-          name: "RERA Registration",
-          slug: "best-rera-registration-service-delhi-india"
-        }, {
           name: "Trade License",
           slug: "best-trade-license-service-delhi-india"
         }, {

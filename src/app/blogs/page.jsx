@@ -26,7 +26,6 @@ export default function Blogs() {
 
   useEffect(() => {
     setLoading(true);
-
     fetch("https://ca-service.onrender.com/api/blogs")
       .then((res) => res.json())
       .then((data) => {
