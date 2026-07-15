@@ -269,8 +269,16 @@ const menuData = [
             name: "TDS compliance",
             slug: "best-tds-compliance-service-delhi-india",
           }, {
+            name: "Income Tax Compliance ",
+            slug: "best-income-tax-compliance-service-delhi-india",
+          },
+           {
             name: "Small Business Accounting",
             slug: "best-small-business-accounting-service-delhi-india",
+          },
+          {
+            name: "Accounting Outsourcing Service ",
+            slug: "best-accounting-outsourcing-service-delhi-india",
           }, {
             name: "Healthcare Business Accounting",
             slug: "best-healthcare-business-accounting-service-delhi-india",
@@ -332,8 +340,8 @@ const menuData = [
         heading: "Tax Registration Closures",
         links: [
           {
-            name: "PAN/TAN Closure",
-            slug: "best-pan-tan-closure-service-delhi-india"
+            name: "PAN/TAN Surrender",
+            slug: "best-pan-tan-surrender-service-delhi-india"
           }, {
             name: "EPF/ESIC Registration Surrender",
             slug: "best-epf-esic-registration-surrender-service-delhi-india"
@@ -370,6 +378,9 @@ const menuData = [
           }, {
             name: "CA Services for Startups",
             slug: "best-ca-services-for-startups-delhi-india"
+          }, {
+            name: "Accounting & Bookkeeping in zoho",
+            slug: "best-accounting-bookkeeping-zoho-service-delhi-india"
           },
           {
             name: "Startup Consultancy Services",
@@ -393,12 +404,6 @@ const menuData = [
 
         ],
       },
-      // {
-      //   heading: "Financial Advisory",
-      //   links: [
-      //     "Cash Flow Management",
-      //   ],
-      // },
     ],
   },
   {

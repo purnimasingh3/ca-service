@@ -433,7 +433,7 @@ export default function Blogs() {
               <a href="https://www.facebook.com/profile.php?id=61589774084657" className="sf-fb"><FaFacebookF /></a>
               <a href="https://x.com/fintaxadviser" className="sf-tw"><FaXTwitter /></a>
               <a href="https://www.instagram.com/fintaxadviser" className="sf-ig"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/in/fintax-adviser-900a55410" className="sf-li"><FaLinkedinIn /></a>
+              <a href="https://www.linkedin.com/company/fintax-adviser/" className="sf-li"><FaLinkedinIn /></a>
               <a href="https://wa.me/+919990924477" className="sf-yt"><FaWhatsapp /></a>
             </div>
           </div>

@@ -43,7 +43,7 @@ export default function Footer() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/fintax-adviser-900a55410',
+      href: 'https://www.linkedin.com/company/fintax-adviser/',
       icon: <FaLinkedinIn />,
       hoverClass: 'hover:text-blue-600 hover:bg-blue-50 hover:border-blue-200'
     }
