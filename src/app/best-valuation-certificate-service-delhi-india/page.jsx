@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
-export const metadata = servicesMetadata.valuation || {
+export const metadata = servicesMetadata.valuationCertificate || {
   title: "Professional Business & Share Valuation Certificate Services in India | Fintax Adviser",
   description: "Get a professional Valuation Certificate for your startup, company, shares or business assets for fundraising, compliance and strategic transactions.",
 };
@@ -89,7 +89,7 @@ export default function ValuationServicesLanding() {
       {/* Corporate Intro Section */}
       <section className="py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Get Accurate Valuation Certificates for Startups, Companies & Investors
           </h2>
           <div className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal space-y-4">
@@ -353,7 +353,7 @@ export default function ValuationServicesLanding() {
 
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
                   Why Choose Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1 bg-blue-500 rounded"></div>

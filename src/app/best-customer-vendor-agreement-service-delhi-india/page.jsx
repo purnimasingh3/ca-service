@@ -9,7 +9,6 @@ export const metadata =
     title: "Customer & Vendor Agreement Drafting Services in India",
     description: "Professional legal agreement drafting and review services by Fintax Adviser."
   };
-
 export default function CustomerVendorAgreementLanding() {
   const HERO_STATS = [
     "15+ Years Experience",
@@ -17,7 +16,6 @@ export default function CustomerVendorAgreementLanding() {
     "500+ Happy Clients",
     "Strong Business Protection",
   ];
-
   const faqs = [
     { 
       q: "What is the difference between a Customer Agreement and a Vendor Agreement?", 
@@ -63,7 +61,7 @@ export default function CustomerVendorAgreementLanding() {
                 ⚡ Strong Agreements · Strong Relationships · Stronger Business
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Customer or Vendor Agreement
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Drafting & Review Services
@@ -345,7 +343,7 @@ export default function CustomerVendorAgreementLanding() {
             {/* Left Column: Six Step Process */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Our Execution Process
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

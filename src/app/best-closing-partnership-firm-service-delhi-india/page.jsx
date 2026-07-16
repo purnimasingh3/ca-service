@@ -4,8 +4,7 @@ import ContactForm from '../components/ContactForm';
 import FAQAccordion from '../components/FAQAccordion';
 import { servicesMetadata } from "@/data/servicesMetadata";
 
-// Ensure this key exists in your metadata registry or fallback gracefully
-export const metadata = servicesMetadata?.closingPartnershipFirm || {
+export const metadata = servicesMetadata.closingPartnershipFirm || {
   title: "Partnership Firm Closure Services in India | Fintax Adviser",
   description: "Professional Partnership Firm Closure & Dissolution Services for Registered & Unregistered Firms across India. Handled by CAs and Tax Experts.",
 };
@@ -59,7 +58,7 @@ export default function ClosingPartnershipFirmLanding() {
                 ⚡ Close The Right Way · Stay Compliant
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Partnership Firm
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Closure Services
@@ -291,7 +290,7 @@ export default function ClosingPartnershipFirmLanding() {
             {/* Left Box */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

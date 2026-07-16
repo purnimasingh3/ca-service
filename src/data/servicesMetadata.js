@@ -717,7 +717,7 @@ export const servicesMetadata = {
       "startup accounting India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-fintech-business-accounting-service-delhi-india"
+      "https://fintaxadviser.com/best-fintech-business-accounting-compliance-service-delhi-india"
   },
   agreetechAccountingCompliance: {
     title: "Best Agritech Accounting Service Delhi India",
@@ -741,9 +741,8 @@ export const servicesMetadata = {
       "roc office change India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-registered-office-change-service-delhi-india"
+      "https://fintaxadviser.com/best-change-of-registered-office-address-service-delhi-india"
   },
-
   rocCompliancePublicLimited: {
     title: "Best Public Limited ROC Compliance Service Delhi India",
     description:
@@ -754,9 +753,8 @@ export const servicesMetadata = {
       "roc compliance India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-public-limited-roc-compliance-service-delhi-india"
+      "https://fintaxadviser.com/best-roc-compliance-for-public-limited-company-registration-service-delhi-india"
   },
-
   privateToPublicConversion: {
     title: "Best Private to Public Company Conversion Service Delhi India",
     description:
@@ -767,9 +765,8 @@ export const servicesMetadata = {
       "public limited conversion India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-private-to-public-company-conversion-service-delhi-india"
+      "https://fintaxadviser.com/best-private-limited-to-public-limited-registration-service-delhi-india"
   },
-
   investorReporting: {
     title: "Best Investor Reporting Service Delhi India",
     description:
@@ -780,9 +777,8 @@ export const servicesMetadata = {
       "financial reporting India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-investor-reporting-service-delhi-india"
+      "https://fintaxadviser.com/best-investors-reporting-service-delhi-india"
   },
-
   seisMeisRefunds: {
     title: "Best SEIS & MEIS Refund Service Delhi India",
     description:
@@ -795,7 +791,6 @@ export const servicesMetadata = {
     canonical:
       "https://fintaxadviser.com/best-seis-meis-refund-service-delhi-india"
   },
-
   panTanSurrender: {
     title: "Best PAN TAN Surrender Service Delhi India",
     description:
@@ -808,7 +803,6 @@ export const servicesMetadata = {
     canonical:
       "https://fintaxadviser.com/best-pan-tan-surrender-service-delhi-india"
   },
-
   epfEsicSurrender: {
     title: "Best EPF ESIC Surrender Service Delhi India",
     description:
@@ -819,9 +813,8 @@ export const servicesMetadata = {
       "epf closure India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-epf-esic-surrender-service-delhi-india"
+      "https://fintaxadviser.com/best-epf-esic-registration-surrender-service-delhi-india"
   },
-
   closingPrivateLimited: {
     title: "Best Private Limited Company Closure Service Delhi India",
     description:
@@ -832,9 +825,8 @@ export const servicesMetadata = {
       "strike off company India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-private-limited-company-closure-service-delhi-india"
+      "https://fintaxadviser.com/best-closing-private-limited-company-service-delhi-india"
   },
-
   closingLlp: {
     title: "Best LLP Closure Service Delhi India",
     description:
@@ -845,9 +837,8 @@ export const servicesMetadata = {
       "llp strike off India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-llp-closure-service-delhi-india"
+      "https://fintaxadviser.com/best-closing-limited-liability-partnership-service-delhi-india"
   },
-
   closingPartnershipFirm: {
     title: "Best Partnership Firm Closure Service Delhi India",
     description:
@@ -858,9 +849,8 @@ export const servicesMetadata = {
       "firm closure India",
     ],
     canonical:
-      "https://fintaxadviser.com/best-partnership-firm-closure-service-delhi-india"
+      "https://fintaxadviser.com/best-closing-partnership-firm-service-delhi-india"
   },
-
   thirdPartyPayroll: {
     title: "Best Third Party Payroll Service Delhi India",
     description:
@@ -944,30 +934,6 @@ export const servicesMetadata = {
     ],
     canonical:
       "https://fintaxadviser.com/best-esi-registration-service-delhi-india"
-  },
-  esicCompliance: {
-    title: "Best ESIC Compliance Service Delhi India",
-    description:
-      "Expert ESIC compliance services in Delhi, India including filing, reporting and employee compliance management.",
-    keywords: [
-      "best esic compliance service Delhi India",
-      "esic compliance consultant Delhi",
-      "esic filing services India",
-    ],
-    canonical:
-      "https://fintaxadviser.com/best-esic-compliance-service-delhi-india"
-  },
-  professionalTaxRegistration: {
-    title: "Best Professional Tax Registration Service Delhi India",
-    description:
-      "Ensure complete professional tax registration in Delhi, India with expert filing and advisory services.",
-    keywords: [
-      "best professional tax registration service Delhi India",
-      "professional tax consultant Delhi",
-      "professional tax filing India",
-    ],
-    canonical:
-      "https://fintaxadviser.com/best-professional-tax-registration-service-delhi-india"
   },
   labourLawConsultancy: {
     title: "Best Labour Law Consultancy Service Delhi India",
@@ -1076,5 +1042,19 @@ export const servicesMetadata = {
     ],
     canonical:
       "https://fintaxadviser.com/best-financial-consultancy-service-delhi-india"
+  },
+  misReporting: {
+    title: "MIS Reporting Services in Delhi, India | Fintax Adviser",
+    description:
+      "Fintax Adviser offers expert mis reporting services in Delhi with fast turnaround, transparent pricing & dedicated CA support. Call +91 9990924477 — Book a free consultation",
+    keywords: [
+      "mis reporting services delhi", "mis reporting services india",
+       "best mis reporting services service", 
+       "mis reporting services online", "mis reporting services consultants delhi", 
+       "mis reporting services near me",
+       "fintax adviser"
+    ],
+    canonical:
+      "https://fintaxadviser.com/best-mis-reporting-service-delhi-india"
   },
 };

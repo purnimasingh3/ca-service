@@ -6,7 +6,6 @@ import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.gstRegistration;
-
 export default function PremiumGSTLanding() {
   const HERO_STATS = [
     "12+ Years Experience",
@@ -350,7 +349,7 @@ export default function PremiumGSTLanding() {
             {/* Left Column: Why Businesses Choose Us */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Businesses Trust Fintax Advisers
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

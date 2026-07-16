@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import FAQAccordion from '../components/FAQAccordion';
+import { servicesMetadata } from "@/data/servicesMetadata";
+
+export const metadata = servicesMetadata.startupIndiaRegistration;
 
 export default function StartupIndiaRegistrationLanding() {
   const HERO_STATS = [
@@ -90,7 +93,7 @@ export default function StartupIndiaRegistrationLanding() {
       {/* Corporate Intro */}
       <section className="py-20 bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900">
             Professional Startup Recognition Support by Fintax Adviser
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto">
@@ -120,7 +123,7 @@ export default function StartupIndiaRegistrationLanding() {
       {/* Eligibility Section */}
       <section className="py-20 bg-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 text-center">Entity Eligibility Mapping</h2>
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 text-center">Entity Eligibility Mapping</h2>
           <div className="bg-white p-8 rounded-2xl border border-slate-200 space-y-4 shadow-xs">
             <ul className="text-lg text-slate-700 space-y-4 font-medium">
               <li className="flex items-start gap-2">✔ Incorporated as a Private Limited Company, LLP, or Registered Partnership Firm.</li>

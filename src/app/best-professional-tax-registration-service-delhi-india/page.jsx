@@ -5,7 +5,7 @@ import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
 // Metadata hook referencing your configurations
-export const metadata = servicesMetadata?.professionalTax || {
+export const metadata = servicesMetadata.professionalTaxRegistration || {
   title: "Professional Tax Registration Services in India | Fintax Adviser",
   description: "Ensure state compliance with ease. Expert CA support for Professional Tax registration, enrollment, and monthly payroll deductions compliance."
 };
@@ -59,7 +59,7 @@ export default function ProfessionalTaxLanding() {
                 ⚡ Stay Compliant · Deduct & Deposit · Avoid Penalties
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Professional Tax Registration
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   & Compliance Services in India
@@ -281,7 +281,7 @@ export default function ProfessionalTaxLanding() {
             {/* Left Box: Why Choose Fintax Adviser */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import FAQAccordion from '../components/FAQAccordion';
+import { servicesMetadata } from "@/data/servicesMetadata";
+
+export const metadata = servicesMetadata.pitchDeckStartups;
 
 export default function StartupPitchDeckLanding() {
   const HERO_STATS = [
@@ -111,7 +114,7 @@ export default function StartupPitchDeckLanding() {
       {/* Corporate Intro */}
       <section className="py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Professional Startup Pitch Deck Services by Fintax Adviser
           </h2>
           <div className="text-lg sm:text-2xl text-slate-600 leading-relaxed font-normal space-y-6">
@@ -130,7 +133,7 @@ export default function StartupPitchDeckLanding() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4">
-              <h3 className="text-3xl sm:text-4xl font-bold text-slate-900">What is a Startup Pitch Deck?</h3>
+              <h3 className="text-4xl sm:text-4xl font-bold text-slate-900">What is a Startup Pitch Deck?</h3>
               <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
                 A startup pitch deck is a precise, high-impact presentation that explicitly details a company's business metrics, products, target validation parameters, and explicit funding utilization framework.
               </p>
@@ -206,7 +209,7 @@ export default function StartupPitchDeckLanding() {
       <section className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Startups and Industries We Serve
             </h2>
           </div>
@@ -298,7 +301,7 @@ export default function StartupPitchDeckLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="w-full space-y-8">
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d]">Why Partner With Fintax Adviser?</h2>
+              <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d]">Why Partner With Fintax Adviser?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {["Startup Advisory DNA", "Investor Aligned Copy", "Custom Financial Modelling", "Pan India Virtual Network"].map((benefit) => (
                   <div key={benefit} className="flex items-center gap-3 bg-slate-200 border border-slate-800 p-4 rounded-xl">

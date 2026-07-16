@@ -9,7 +9,6 @@ export const metadata = servicesMetadata?.fundraisingSecretarialCompliance || {
   title: "Fundraising Secretarial Compliance Services | Fintax Adviser",
   description: "Get end-to-end Secretarial Compliance for VC and Angel Investments. Build trust, comply, and drive rapid funding."
 };
-
 export default function FundraisingSecretarialCompliance() {
   const HERO_STATS = [
     "Investor Due Diligence Ready",
@@ -63,7 +62,7 @@ export default function FundraisingSecretarialCompliance() {
                 ⚡ Ensuring Compliance · Building Trust · Driving Investments
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Fundraising Secretarial
                 <span className="bg-blue-600 bg-clip-text text-transparent block mt-2">
                   Compliance Services
@@ -365,7 +364,7 @@ export default function FundraisingSecretarialCompliance() {
             {/* Left Box */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Partner With Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

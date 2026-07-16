@@ -1,17 +1,4 @@
 import Image from "next/image";
-export const metadata = {
-  title: "Tax Registration Services | Fintax Partners",
-  
-  description:
-    "Professional GST registration and taxation compliance services for startups and businesses.",
-
-  keywords: [
-    "GST registration",
-    "tax services",
-    "business taxation",
-    "CA services",
-  ],
-};
 export default function BusinessSetupPage() {
   return (
     <main className="bg-[#f8fafc] min-h-screen">

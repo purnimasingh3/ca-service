@@ -474,7 +474,7 @@ export default function Blogs() {
           <div>
             {currentBlogs.length === 0 ? (
               <div className="sf-no-results">
-                <h2>No Results Found</h2>
+                <h1>No Results Found</h1>
                 <p>We couldn't find any articles matching "{search}". Try a different search.</p>
                 <button onClick={handleBackToBlogs} className="sf-back-btn">← Back to Blogs</button>
               </div>

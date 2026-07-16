@@ -8,7 +8,6 @@ export const metadata = servicesMetadata.tradeLicense || {
   title: "Trade License Registration Services in India | Fintax Adviser",
   description: "Get Your Trade License Hassle-Free with Fintax Adviser. Expert consultation, 100% municipal compliance, and fast approval support across all states."
 };
-
 export default function TradeLicenseLanding() {
   const HERO_STATS = [
     "15+ Years of Experience",
@@ -46,7 +45,7 @@ export default function TradeLicenseLanding() {
                 ⚡ LEGAL BUSINESS OPERATIONS · MUNICIPAL COMPLIANCE · FAST APPROVAL SUPPORT
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Trade License Registration
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   in India
@@ -278,7 +277,7 @@ export default function TradeLicenseLanding() {
             {/* Left Column: Documents Required */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Documents Required
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

@@ -5,7 +5,6 @@ import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata = servicesMetadata.factoryLicense;
-
 export default function FactoryLicenseLanding() {
   const HERO_STATS = [
     "15+ Years Experience",
@@ -42,7 +41,7 @@ export default function FactoryLicenseLanding() {
                 ⚡ SAFE WORKPLACE · LEGAL OPERATION · STRONGER BUSINESS
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Factory License
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Registration Services
@@ -288,7 +287,7 @@ export default function FactoryLicenseLanding() {
             {/* Left Column: Documents Required */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Documents Required for Registration
                 </h2>
                 <p className="text-slate-600 text-xs">The required checklist components vary marginally depending on individual state rules and the specific factory baseline:</p>

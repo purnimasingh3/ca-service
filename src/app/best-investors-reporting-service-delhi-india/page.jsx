@@ -2,8 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import FAQAccordion from '../components/FAQAccordion';
+import { servicesMetadata } from "@/data/servicesMetadata";
 
-export const metadata = {
+export const metadata = servicesMetadata.investorReporting ||{
   title: "Investor Reporting Services in India | FinTax Adviser",
   description: "Get professional Investor Reporting Services for Startups, SMEs, and Funded Companies in India. Clear, timely, and transparent investor dashboards and financial reports by FinTax Adviser.",
   keywords: "Investor Reporting Services, Startup Reporting, Venture Capital Reporting, Board Reports, Investor Dashboards, Fundraising Support, FinTax Adviser",
@@ -71,7 +72,7 @@ export default function InvestorReportingLanding() {
                 ⚡ Transparent Reports · Stronger Relationships · Sustainable Growth
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Professional Investor 
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Reporting Services
@@ -280,7 +281,7 @@ export default function InvestorReportingLanding() {
             {/* Left Box: Why Choose FinTax Adviser */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

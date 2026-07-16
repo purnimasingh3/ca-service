@@ -1,20 +1,6 @@
 import Image from "next/image";
 import {BadgeCheck,Calculator,BarChart3,ShieldCheck,ArrowRight,} from "lucide-react";
 import Link from "next/link";
-export const metadata = {
-  title: "Tax Registration Services | Fintax Partners",
-  
-  description:
-    "Professional GST registration and taxation compliance services for startups and businesses.",
-
-  keywords: [
-    "GST registration",
-    "tax services",
-    "business taxation",
-    "CA services",
-  ],
-};
-
 export default function AccountingServicesPage() {
   return (
     <main className="bg-[#f8fafc] min-h-screen">

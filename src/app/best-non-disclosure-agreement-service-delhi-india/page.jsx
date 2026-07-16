@@ -7,6 +7,7 @@ import FAQAccordion from '../components/FAQAccordion';
 export const metadata = servicesMetadata.ndaServices || {
   title: "Best NDA Drafting & Registration Consultant in India | Fintax Adviser",
   description: "Protect your confidential information, business models, and trade secrets with premium legally drafted Non-Disclosure Agreements from Fintax Adviser.",
+  canonial:"https://fintaxadviser.com/best-non-disclosure-agreement-service-delhi-india"
 };
 
 export default function NdaLandingPage() {
@@ -44,7 +45,7 @@ export default function NdaLandingPage() {
                 ⚡ PROTECT YOUR INFORMATION | PROTECT YOUR BUSINESS
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Non-Disclosure Agreement
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   (NDA) Services in India
@@ -86,7 +87,7 @@ export default function NdaLandingPage() {
       {/* Corporate Intro Section */}
       <section className="py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Protect Your Confidential Business Information with a Legally Drafted NDA
           </h2>
           <div className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal space-y-4">
@@ -229,7 +230,7 @@ export default function NdaLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="w-full space-y-8">
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d]">Why Choose Fintax Adviser?</h2>
+              <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d]">Why Choose Fintax Adviser?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {["15+ Years Experience", "Experienced Legal Team", "Customized Adjustments", "Quick Turnaround Time", "Cost-Effective Packages", "Pan-India Virtual Processing"].map((benefit) => (
                   <div key={benefit} className="flex items-center gap-3 bg-slate-200 border border-slate-800 p-4 rounded-xl">

@@ -7,7 +7,8 @@ import FAQAccordion from '../components/FAQAccordion';
 // Metadata safely linked to data file
 export const metadata = servicesMetadata?.rocAnnualCompliance || {
   title: "ROC Annual Compliance Services in India | Agreetech",
-  description: "Complete MCA filing, company annual returns & statutory compliance solutions to keep your business 100% compliant and penalty-free."
+  description: "Complete MCA filing, company annual returns & statutory compliance solutions to keep your business 100% compliant and penalty-free.",
+  canonical:"https://fintaxadviser.com/best-roc-annual-compliance-service-delhi-india"
 };
 
 export default function RocAnnualComplianceLanding() {
@@ -44,7 +45,7 @@ export default function RocAnnualComplianceLanding() {
                 ⚡ 100% Compliant · Penalty-Free Filing
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 ROC Annual Compliance Services
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   in India
@@ -339,7 +340,7 @@ export default function RocAnnualComplianceLanding() {
             {/* Left Column */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Agreetech?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

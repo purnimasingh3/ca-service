@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
-export const metadata = servicesMetadata.termSheetSha || {
+export const metadata = servicesMetadata.termsSheetSha || {
   title: "Professional Term Sheet & Shareholders Agreement (SHA) Services | Fintax Adviser",
   description: "Secure your investments and protect company interests. Expert drafting and advisory services for Term Sheets & SHAs in India.",
 };
@@ -88,7 +88,7 @@ export default function TermSheetShaLanding() {
       {/* Corporate Intro Section */}
       <section className="py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Expert Drafting Services for Foundations of Corporate Governance
           </h2>
           <div className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal space-y-4">

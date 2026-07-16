@@ -8,7 +8,6 @@ export const metadata = servicesMetadata.nsicRegistration || {
   title: "NSIC Registration Services for MSMEs | Fintax Adviser",
   description: "Unlock government tender benefits for MSMEs. Avail EMD exemptions, tender fee waivers, and exclusive procurement advisory under the Single Point Registration Scheme."
 };
-
 export default function NSICRegistrationLanding() {
   const HERO_STATS = [
     "15+ Years of Experience",
@@ -46,7 +45,7 @@ export default function NSICRegistrationLanding() {
                 ⚡ UNLOCK GOVERNMENT TENDER BENEFITS FOR MSMEs
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 NSIC Registration
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Services in India
@@ -287,7 +286,7 @@ export default function NSICRegistrationLanding() {
             {/* Left Column: Documents Required */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Documents Required
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

@@ -8,6 +8,7 @@ import FAQAccordion from '../components/FAQAccordion';
 export const metadata = servicesMetadata.udyamRegistration || {
   title: "Online Udyam Registration Support | MSME Certificate Consulting - Fintax Adviser",
   description: "Get your Udyam Registration (formerly Udyog Aadhaar) online with expert CA guidance. Unlock MSME benefits, government schemes, and business loan subsidies seamlessly.",
+  canonical:"https://fintaxadviser.com/best-udyog-aadhar-msme-service-delhi-india"
 };
 
 export default function UdyogAadhaarLanding() {
@@ -59,7 +60,7 @@ export default function UdyogAadhaarLanding() {
                 ⚡ Register · Verify · Qualify · Save
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Online Udyam Registration
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   & MSME Certification
@@ -240,7 +241,7 @@ export default function UdyogAadhaarLanding() {
             {/* Left Box: Why Choose Fintax Adviser */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Handle Registrations via Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

@@ -44,7 +44,7 @@ export default function PremiumISOCertificationLanding() {
                                 ⚡ QUALITY ASSURANCE • GLOBAL RECOGNITION • BUSINESS GROWTH
                             </span>
 
-                            <h1 className="text-2xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.2]">
+                            <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.2]">
                                 Best ISO Certification
                                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-3">
                                     Consultant in Delhi India
@@ -90,7 +90,7 @@ export default function PremiumISOCertificationLanding() {
             {/* Corporate Intro Section */}
             <section className="py-24 bg-white border-b border-slate-200/60">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-                    <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    <h2 className="text-4xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                         ISO Registration Services by Fintax Adviser
                     </h2>
                     <div className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal space-y-6">
@@ -112,7 +112,7 @@ export default function PremiumISOCertificationLanding() {
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
-                            <h3 className="text-3xl sm:text-4xl font-bold text-slate-900">What is ISO Certification?</h3>
+                            <h3 className="text-4xl sm:text-4xl font-bold text-slate-900">What is ISO Certification?</h3>
                             <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
                                 ISO (International Organization for Standardization) Certification is an internationally recognized standard that demonstrates a company's commitment to quality, efficiency, safety, and continuous improvement.
                             </p>
@@ -315,7 +315,7 @@ export default function PremiumISOCertificationLanding() {
                         {/* Left Column */}
                         <div className="w-full space-y-8">
                             <div className="space-y-4">
-                                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
+                                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
                                     Why Choose Fintax Adviser?
                                 </h2>
                                 <div className="w-16 h-1.5 bg-blue-500 rounded"></div>

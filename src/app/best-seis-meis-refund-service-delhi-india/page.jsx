@@ -4,11 +4,10 @@ import ContactForm from '../components/ContactForm';
 import FAQAccordion from '../components/FAQAccordion';
 import { servicesMetadata } from "@/data/servicesMetadata";
 
-export const metadata = {
+export const metadata =servicesMetadata.seisMeisRefunds || {
   title: "SEIS & MEIS Refund Services in India | Fintax Adviser",
   description: "Expert assistance for SEIS & MEIS benefits with accurate documentation, DGFT compliance & timely refund support.",
 };
-
 export default function SeisMeisRefundLanding() {
   const HERO_STATS = [
     "Expert Support from Export Professionals",
@@ -58,7 +57,7 @@ export default function SeisMeisRefundLanding() {
                 ⚡ Recover Your Entitlements · Strengthen Your Exports
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 SEIS & MEIS Refund &
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Incentive Assistance Services
@@ -239,7 +238,7 @@ export default function SeisMeisRefundLanding() {
             {/* Left Box: Documents Generally Required */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Documents Generally Required
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

@@ -8,7 +8,6 @@ export const metadata = servicesMetadata.employmentAgreement || {
   title: "Professional Employment Agreement Services in India | Fintax Adviser",
   description: "Secure your business and empower your team with legally sound, customized, and professional employment contracts drafted by expert corporate lawyers.",
 };
-
 export default function EmploymentAgreementLanding() {
   const HERO_STATS = [
     "Expert Legal Support",
@@ -86,7 +85,7 @@ export default function EmploymentAgreementLanding() {
       {/* Corporate Intro Section */}
       <section className="py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Professional Employment Agreement Services for Businesses & Employers
           </h2>
           <div className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal space-y-4">
@@ -269,7 +268,7 @@ export default function EmploymentAgreementLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="w-full space-y-8">
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d]">Why Choose Fintax Adviser?</h2>
+              <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d]">Why Choose Fintax Adviser?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {["15+ Years Experience", "500+ Happy Clients", "Expert Legal Specialists", "Customized Document Drafting", "Quick Turnaround Architecture", "Pan India Virtual Operations"].map((benefit) => (
                   <div key={benefit} className="flex items-center gap-3 bg-slate-200 border border-slate-800 p-4 rounded-xl">

@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
-export const metadata = servicesMetadata.sepcRegistration || {
+export const metadata = servicesMetadata.sepcLicence|| {
   title: "Professional SEPC Registration Services India | Fintax Adviser",
   description: "Get SEPC (Services Export Promotion Council) Registration for your service business with expert guidance from Fintax Adviser.",
 };
@@ -44,7 +44,7 @@ export default function PremiumSEPCRegistrationLanding() {
                 ⚡ RECOGNIZE • EXPORT • GROW GLOBALLY
               </span>
 
-              <h1 className="text-3xl sm:text-3xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.2]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.2]">
                 Professional SEPC
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-3">
                   Registration Services in India

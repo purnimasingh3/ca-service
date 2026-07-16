@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import FAQAccordion from '../components/FAQAccordion';
+import { servicesMetadata } from "@/data/servicesMetadata";
+
+export const metadata = servicesMetadata.pitchDeckInvestors;
 
 export default function InvestorPitchDeckLanding() {
     const HERO_STATS = [
@@ -96,7 +99,7 @@ export default function InvestorPitchDeckLanding() {
             {/* Corporate Intro */}
             <section className="py-20 bg-white border-b border-slate-200">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900">
                         Create an Investor-Ready Pitch Deck That Builds Real Confidence
                     </h2>
                     <p className="text-xl sm:text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto">
@@ -127,7 +130,7 @@ export default function InvestorPitchDeckLanding() {
             <section className="py-20 bg-slate-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">Anatomy of an Institutional Investor Presentation</h2>
+                        <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900">Anatomy of an Institutional Investor Presentation</h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {sectionsList.map((sec, idx) => (
@@ -160,7 +163,7 @@ export default function InvestorPitchDeckLanding() {
             {/* Value Summary Card */}
             <section className="py-20 bg-slate-100 text-slate-900">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-                    <h2 className="text-3xl sm:text-4xl font-extrabold">Ready to Mobilize Growth Capital?</h2>
+                    <h2 className="text-4xl sm:text-4xl font-extrabold">Ready to Mobilize Growth Capital?</h2>
                     <p className="text-blue-600 text-xl max-w-2xl mx-auto">Leverage our professional compliance and corporate modeling specialists to maximize valuation potentials.</p>
                     <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 max-w-md mx-auto">
                         <span className="text-md font-bold text-white uppercase tracking-widest">Fintax Adviser Enterprise Support</span>

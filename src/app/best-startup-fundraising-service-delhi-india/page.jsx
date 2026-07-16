@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
-import { FAQAccordion } from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.fundraising;
@@ -382,7 +381,7 @@ export default function PremiumFundraisingLanding() {
             {/* Left Column: Why Startups Choose Us */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Startups Choose Fintax Adviser
                 </h2>
                 <div className="w-16 h-1 bg-white rounded"></div>

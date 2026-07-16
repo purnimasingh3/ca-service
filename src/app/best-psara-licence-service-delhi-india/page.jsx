@@ -5,7 +5,7 @@ import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
 // Metadata configuration for the PSARA service
-export const metadata = servicesMetadata.psaraLicense || {
+export const metadata = servicesMetadata.psaraLicence || {
   title: "Best PSARA License Registration Consultant in Delhi India | Fintax Adviser",
   description: "Get your PSARA License and operate your private security agency legally across India with expert guidance from Fintax Adviser.",
 };
@@ -64,7 +64,7 @@ export default function PremiumPsaraLicenseLanding() {
                 ⚡ LEGAL | TRUSTED | COMPLIANT
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 PSARA License 
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Registration Services
@@ -109,7 +109,7 @@ export default function PremiumPsaraLicenseLanding() {
       {/* Corporate Intro Section */}
       <section className="py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-4xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             Professional Consultancy by Fintax Adviser
           </h2>
           <div className="text-xl sm:text-2xl text-slate-600 leading-relaxed font-normal space-y-6 text-justify sm:text-center">
@@ -128,7 +128,7 @@ export default function PremiumPsaraLicenseLanding() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h3 className="text-3xl sm:text-4xl font-bold text-slate-900">What is a PSARA License?</h3>
+              <h3 className="text-4xl sm:text-4xl font-bold text-slate-900">What is a PSARA License?</h3>
               <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
                 The Private Security Agencies Regulation Act (PSARA), 2005 regulates private security agencies operating in India.
               </p>
@@ -230,7 +230,7 @@ export default function PremiumPsaraLicenseLanding() {
       <section className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">Benefits of PSARA License Registration</h2>
+            <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900">Benefits of PSARA License Registration</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -372,7 +372,7 @@ export default function PremiumPsaraLicenseLanding() {
             {/* Left Column: Why Choose Fintax Adviser */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
+                <h2 className="text-4xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
                   Why Choose Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1.5 bg-blue-600 rounded"></div>

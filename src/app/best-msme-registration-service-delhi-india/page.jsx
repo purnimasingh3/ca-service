@@ -6,7 +6,6 @@ import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.msme;
-
 export default function MSMERegistrationLanding() {
   const HERO_STATS = [
     "15+ Years of Experience",
@@ -360,7 +359,7 @@ export default function MSMERegistrationLanding() {
             {/* Left Column: Why Choose Us */}
             <div className="w-full space-y-6">
               <div className="space-y-2">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser for MSME Registration?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

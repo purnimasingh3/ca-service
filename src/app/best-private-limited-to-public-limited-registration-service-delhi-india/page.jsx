@@ -4,8 +4,7 @@ import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
-// Metadata safely linked to data file
-export const metadata = servicesMetadata?.privateToPublicConversion || {
+export const metadata = servicesMetadata.privateToPublicConversion || {
   title: "Private Limited to Public Limited Company Conversion Services | Agreetech",
   description: "Expert legal, ROC & MCA corporate assistance for converting your Private Limited Company into a Public Limited Company."
 };
@@ -44,7 +43,7 @@ export default function PrivateToPublicConversionLanding() {
                 ⚡ Corporate Scaling · Corporate Re-structuring
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Private Limited to Public Limited
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Company Conversion
@@ -357,7 +356,7 @@ export default function PrivateToPublicConversionLanding() {
             {/* Left Column */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Agreetech?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

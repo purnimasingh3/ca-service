@@ -6,7 +6,6 @@ import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata =
   servicesMetadata.misReporting;
-
 export default function PremiumMISReportingLanding() {
   const HERO_STATS = [
     "15+ Years Experience",
@@ -386,7 +385,7 @@ export default function PremiumMISReportingLanding() {
             {/* Left Column: Why Choose Us */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser for MIS Services?
                 </h2>
                 <div className="w-16 h-1 bg-white rounded"></div>

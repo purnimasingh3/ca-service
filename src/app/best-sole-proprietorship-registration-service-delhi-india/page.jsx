@@ -5,7 +5,6 @@ import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata = servicesMetadata.soleProprietorship;
-
 export default function SoleProprietorshipLanding() {
   const HERO_STATS = [
     "Simple Registration",

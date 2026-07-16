@@ -5,7 +5,7 @@ import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
 // Metadata configuration using your existing service architecture
-export const metadata = servicesMetadata.termsOfUse || {
+export const metadata = servicesMetadata.termsOfUseAgreement || {
   title: "Terms of Use Agreement Drafting & Review Services in India | Fintax Adviser",
   description: "Protect your digital assets and limit legal liability. Professionally drafted Terms & Conditions for websites, e-commerce stores, SaaS platforms, and mobile apps.",
 };
@@ -348,7 +348,7 @@ export default function TermsOfUseLanding() {
             {/* Left Column: Why Choose Fintax Adviser */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

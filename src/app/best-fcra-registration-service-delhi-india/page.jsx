@@ -13,7 +13,6 @@ export default function FCRARegistrationLanding() {
     "Legal Permission to Receive Foreign Funds",
     "Compliant with Government Regulations",
   ];
-
   const faqs = [
     { q: "What is FCRA Registration?", a: "FCRA Registration is government approval allowing eligible organizations to receive foreign contributions legally in India." },
     { q: "Who can apply for FCRA Registration?", a: "Trusts, Societies, Section 8 Companies, educational institutions, and charitable organizations engaged in public welfare activities." },
@@ -44,7 +43,7 @@ export default function FCRARegistrationLanding() {
                 🛡️ Accept Foreign Contributions Legally & Compliantly
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 FCRA Registration
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Empowering NGOs. Enabling Global Impact.
@@ -340,7 +339,7 @@ export default function FCRARegistrationLanding() {
             {/* Left Column: Why Choose Fintax Advisers */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

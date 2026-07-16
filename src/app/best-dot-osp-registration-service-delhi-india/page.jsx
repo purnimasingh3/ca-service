@@ -2,11 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import FAQAccordion from '../components/FAQAccordion';
+import { servicesMetadata } from "@/data/servicesMetadata";
 
-export const metadata = {
-    title: "Best DOT (OSP) Registration CA Firm in Delhi India | Fintax Adviser",
-    description: "Professional OSP Registration & Compliance Services by Fintax Adviser. 15+ Years Experience, 500+ Happy Clients Served. Fast Process & Affordable Pricing.",
-};
+export const metadata = servicesMetadata.dotOspRegistration;
 
 export default function DotOspRegistrationLanding() {
     const HERO_STATS = [
@@ -62,7 +60,7 @@ export default function DotOspRegistrationLanding() {
                                 ⚡ COMPLIANT · TRUSTED · RELIABLE
                             </span>
 
-                            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+                            <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                                 Best DOT (OSP) Registration
                                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                                     CA Firm in Delhi India
@@ -108,7 +106,7 @@ export default function DotOspRegistrationLanding() {
             {/* Corporate Intro Section */}
             <section className="py-24 bg-white border-b border-slate-200/60">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                         Professional OSP Registration Services by Fintax Adviser
                     </h2>
                     <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
@@ -131,7 +129,7 @@ export default function DotOspRegistrationLanding() {
             <section id="services" className="py-24 bg-slate-50 scroll-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                        <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
                             Services Offered by Fintax Adviser
                         </h2>
                         <p className="text-slate-600 text-lg sm:text-xl">
@@ -164,7 +162,7 @@ export default function DotOspRegistrationLanding() {
             <section className="py-24 bg-white border-t border-b border-slate-200/60">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                        <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
                             Who Needs DOT (OSP) Registration?
                         </h2>
                         <p className="text-slate-600 text-lg sm:text-xl">
@@ -198,7 +196,7 @@ export default function DotOspRegistrationLanding() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
                         <div className="lg:col-span-5 space-y-6">
-                            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                            <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
                                 Why Choose the Best DOT (OSP) Registration CA Firm in Delhi India?
                             </h2>
                             <p className="text-slate-600 text-lg leading-relaxed">
@@ -230,7 +228,7 @@ export default function DotOspRegistrationLanding() {
             <section className="py-24 bg-white border-t border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        <h2 className="text-4xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                             Benefits of DOT (OSP) Registration & Compliance
                         </h2>
                         <p className="text-slate-600 text-lg sm:text-xl">
@@ -260,7 +258,7 @@ export default function DotOspRegistrationLanding() {
             <section className="py-24 bg-sky-50 text-slate-900 scroll-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                        <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
                             Documents Required for DOT (OSP) Registration
                         </h2>
                         <p className="text-slate-600 text-base sm:text-lg">
@@ -310,7 +308,7 @@ export default function DotOspRegistrationLanding() {
             <section id="process" className="py-24 bg-white scroll-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                        <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
                             DOT (OSP) Registration Process
                         </h2>
                         <p className="text-slate-600 text-base sm:text-lg">
@@ -349,7 +347,7 @@ export default function DotOspRegistrationLanding() {
                         {/* Left Column: Why Choose Fintax Adviser */}
                         <div className="w-full space-y-8">
                             <div className="space-y-4">
-                                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
+                                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d] leading-tight">
                                     Why Fintax Adviser is the Best DOT (OSP) Registration CA Firm
                                 </h2>
                                 <div className="w-16 h-1 bg-blue-500 rounded"></div>

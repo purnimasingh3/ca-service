@@ -7,20 +7,6 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-export const metadata = {
-  title: "HR & Payroll Services | Fintax Partners",
-
-  description:
-    "Professional HR and payroll services for startups and businesses.",
-
-  keywords: [
-    "GST registration",
-    "tax services",
-    "business taxation",
-    "CA services",
-  ],
-};
-
 export default function HRPayrollPage() {
   return (
     <main className="bg-[#f8fafc] min-h-screen">

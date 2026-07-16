@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
-export const metadata = servicesMetadata.agreetechAccounting;
+export const metadata = servicesMetadata.agreetechAccountingCompliance;
 
 export default function AgreetechAccountingLanding() {
   const HERO_STATS = [
@@ -55,7 +55,7 @@ export default function AgreetechAccountingLanding() {
                 🌾 Accounting · Compliance · Advisory · Growth
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Agreetech Business Accounting
                 <span className="bg-blue-600 bg-clip-text text-transparent block mt-2">
                   & Compliance Services
@@ -275,7 +275,7 @@ export default function AgreetechAccountingLanding() {
             {/* Left Box: Why Choose Agreetech */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Agreetech?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

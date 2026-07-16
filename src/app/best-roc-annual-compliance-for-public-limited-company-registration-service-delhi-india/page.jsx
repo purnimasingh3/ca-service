@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
-export const metadata = servicesMetadata.rocCompliance;
+export const metadata = servicesMetadata.rocCompliancePublicLimited;
 
 export default function ROCAnnualComplianceLanding() {
   const HERO_STATS = [
@@ -55,7 +55,7 @@ export default function ROCAnnualComplianceLanding() {
                 ⚡ COMPLETE MCA FILING · STATUTORY COMPLIANCE & CORPORATE GOVERNANCE SERVICES
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 ROC Annual Compliances
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   of Public Limited Company
@@ -249,7 +249,7 @@ export default function ROCAnnualComplianceLanding() {
             {/* Left Column: Why Choose Agreetech */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Agreetech
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>

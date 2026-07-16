@@ -5,7 +5,7 @@ import { servicesMetadata } from "@/data/servicesMetadata";
 import FAQAccordion from '../components/FAQAccordion';
 
 // Metadata hook referencing your configurations
-export const metadata = servicesMetadata?.shopAndEstablishment || {
+export const metadata = servicesMetadata.shopEstablishmentRegistration || {
   title: "Shop & Establishment Registration Services in India | Fintax Adviser",
   description: "Secure quick and hassle-free Shop and Establishment Act registrations. Comply with local labour laws, open bank accounts, and gain complete legal recognition."
 };
@@ -59,7 +59,7 @@ export default function ShopEstablishmentLanding() {
                 ⚡ Legal Recognition · Labour Law Compliance · Credibility
               </span>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
+              <h1 className="text-4xl sm:text-4xl xl:text-5xl font-black text-[#071c3d] tracking-tight !leading-[1.15]">
                 Shop & Establishment
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block mt-2">
                   Registration Services in India
@@ -281,7 +281,7 @@ export default function ShopEstablishmentLanding() {
             {/* Left Box: Why Choose Fintax Adviser */}
             <div className="w-full space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                   Why Choose Fintax Adviser?
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 rounded"></div>
