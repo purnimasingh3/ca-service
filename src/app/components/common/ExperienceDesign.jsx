@@ -166,7 +166,7 @@ export default function SuccessJourney() {
                     </div>
 
                     {/* ================= CIRCULAR ORBIT (Consistent across mobile and desktop) ================= */}
-                    <div className="lg:col-span-7 flex justify-center items-center relative overflow-visible h-[500px] sm:h-[600px] lg:h-[700px] w-full">
+                    <div className="lg:col-span-7 flex justify-center items-center relative h-[500px] sm:h-[600px] lg:h-[700px] w-full">
 
                         <div className="relative w-[640px] h-[640px] shrink-0 scale-[0.58] sm:scale-[0.75] md:scale-[0.85] lg:scale-100 transition-transform duration-300 origin-center">
 

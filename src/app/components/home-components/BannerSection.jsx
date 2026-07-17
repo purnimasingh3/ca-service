@@ -169,7 +169,7 @@ export default function BannerSection() {
 
                     {/* Left: copy column */}
                     <div className="max-w-2xl text-left relative z-10">
-                        <p className="uppercase tracking-[3px] sm:tracking-[4px] text-amber-300 font-semibold text-xs sm:text-sm mb-4 " style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                        <p className="uppercase tracking-[3px] sm:tracking-[3px] text-amber-300 font-bold text-xs sm:text-sm mb-4 " style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                             FINTAX ADVISER · EST. COMPLIANCE PARTNERS
                         </p>
 
