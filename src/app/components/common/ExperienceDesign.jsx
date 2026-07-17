@@ -129,7 +129,7 @@ const trustBadges = [
 
 export default function SuccessJourney() {
     return (
-        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 via-white to-blue-50/20  relative min-h-screen flex flex-col justify-between">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 via-white to-blue-50/20 overflow-hidden relative min-h-screen flex flex-col justify-between">
 
             {/* Background Ambience */}
             <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
@@ -166,7 +166,7 @@ export default function SuccessJourney() {
                     </div>
 
                     {/* ================= CIRCULAR ORBIT (Consistent across mobile and desktop) ================= */}
-                    <div className="lg:col-span-7 flex justify-center items-center relative h-[500px] sm:h-[600px] lg:h-[700px] w-full">
+                    <div className="lg:col-span-7 flex justify-center items-center relative overflow-visible h-[500px] sm:h-[600px] lg:h-[700px] w-full">
 
                         <div className="relative w-[640px] h-[640px] shrink-0 scale-[0.58] sm:scale-[0.75] md:scale-[0.85] lg:scale-100 transition-transform duration-300 origin-center">
 
