@@ -1,9 +1,61 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { IoMdClose } from "react-icons/io";
+import Link from "next/link";
+import { FaWhatsapp } from 'react-icons/fa';
+import {
+    FiFileText,
+    FiShield,
+    FiTrendingUp,
+    FiCheck,
+    FiDollarSign,
+    FiBriefcase,
+    FiAward,
+    FiActivity,
+    FiPercent,
+    FiPieChart
+} from "react-icons/fi";
+import { FaBalanceScale, FaHandHoldingUsd } from "react-icons/fa";
 
 export default function BannerSection() {
     const [modal, setModal] = useState(false);
+    const [tilt, setTilt] = useState({ x: 0, y: 0 });
+    const sceneRef = useRef(null);
+
+    // Animated text content for Hero section
+    const animatedTexts = [
+        "GST Registration",
+        "Company Registration",
+        "Income Tax Filing",
+        "Trademark Registration",
+        "Accounting Services",
+        "Virtual CFO Services"
+    ];
+
+    const [currentTextIdx, setCurrentTextIdx] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsAnimating(false);
+            setTimeout(() => {
+                setCurrentTextIdx((prev) => (prev + 1) % animatedTexts.length);
+                setIsAnimating(true);
+            }, 3000);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
+    // Mouse-driven 3D parallax across the hero scene
+    const handleMouseMove = useCallback((e) => {
+        const rect = sceneRef.current?.getBoundingClientRect();
+        if (!rect) return;
+        const px = (e.clientX - rect.left) / rect.width - 0.5;
+        const py = (e.clientY - rect.top) / rect.height - 0.5;
+        setTilt({ x: px, y: py });
+    }, []);
+
+    const handleMouseLeave = () => setTilt({ x: 0, y: 0 });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,16 +68,14 @@ export default function BannerSection() {
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
             if (res.ok) {
-                alert(`Thank you ${formData.name}! Our senior investment consultant will contact you shortly.`);
-                setModal(false); // Close modal on success
-                e.target.reset(); // Safely reset HTML form inputs directly
+                alert(`Thank you ${formData.name}! Our expert will contact you shortly.`);
+                setModal(false);
+                e.target.reset();
             } else {
                 const errorData = await res.json();
                 alert(errorData.error || "Failed to send message. Please try again later.");
@@ -38,171 +88,173 @@ export default function BannerSection() {
 
     return (
         <>
+            <style jsx global>{`
+                @keyframes float-gentle {
+                    0%, 100% { transform: translateY(0px); }
+                    50% { transform: translateY(-12px); }
+                }
+                @keyframes float-slow {
+                    0%, 100% { transform: translateY(0px) rotate(0deg); }
+                    50% { transform: translateY(-20px) rotate(5deg); }
+                }
+                @keyframes float-delayed {
+                    0%, 100% { transform: translateY(0px) rotate(0deg); }
+                    50% { transform: translateY(-15px) rotate(-8deg); }
+                }
+                .animate-float {
+                    animation: float-gentle 6s ease-in-out infinite;
+                }
+                .animate-float-slow {
+                    animation: float-slow 8s ease-in-out infinite;
+                }
+                .animate-float-delayed {
+                    animation: float-delayed 7s ease-in-out infinite;
+                }
+            `}</style>
+
             {/* Modal Backdrop Overlay */}
             {modal && (
-                <div 
-                    className="fixed inset-0 bg-black/50 z-50 transition-opacity backdrop-blur-sm" 
-                    onClick={() => setModal(false)} 
+                <div
+                    className="fixed inset-0 bg-slate-900/40 z-50 transition-opacity backdrop-blur-md"
+                    onClick={() => setModal(false)}
                 />
             )}
 
             {/* Form Modal Box */}
-            <div className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-[92%] sm:w-full max-w-[500px] duration-300 transition-all ${
-                modal ? 'opacity-100 visible scale-100' : 'opacity-0 invisible scale-95'
-            }`}>
-                <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-8 rounded-2xl shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <div className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-[92%] sm:w-full max-w-[500px] duration-300 transition-all ${modal ? 'opacity-100 visible scale-100' : 'opacity-0 invisible scale-95'
+                }`}>
+                <form onSubmit={handleSubmit} className="bg-white text-slate-800 p-6 sm:p-8 rounded-2xl shadow-2xl relative border border-sky-100 max-h-[90vh] overflow-y-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
                     <button
                         type="button"
                         onClick={() => setModal(false)}
-                        className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition p-1 hover:bg-gray-100 rounded-full"
+                        className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition p-1 hover:bg-slate-100 rounded-full"
                     >
                         <IoMdClose size={22} />
                     </button>
 
-                    <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 text-gray-800">
-                        Enquire Now
+                    <p className="text-center text-[11px] tracking-[3px] uppercase text-sky-600 font-semibold mb-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                        Free Consultation
+                    </p>
+                    <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 text-slate-900" style={{ fontFamily: "'Fraunces', serif" }}>
+                        Talk to a Compliance Expert
                     </h2>
 
                     <div className="mb-4">
-                        <label htmlFor="name" className='block text-sm font-medium text-gray-700 mb-1.5'>
-                            Name
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
-                            placeholder="Enter your name"
-                            suppressHydrationWarning={true}
-                        />
+                        <label htmlFor="name" className='block text-sm font-medium text-slate-600 mb-1.5'>Name</label>
+                        <input type="text" id="name" name="name" required className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/60 focus:border-transparent transition text-sm text-slate-900 placeholder-slate-400" placeholder="Enter your name" />
                     </div>
 
                     <div className="mb-4">
-                        <label htmlFor="email" className='block text-sm font-medium text-gray-700 mb-1.5'>
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
-                            placeholder="Enter your email"
-                            suppressHydrationWarning={true}
-                        />
+                        <label htmlFor="email" className='block text-sm font-medium text-slate-600 mb-1.5'>Email</label>
+                        <input type="email" id="email" name="email" required className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/60 focus:border-transparent transition text-sm text-slate-900 placeholder-slate-400" placeholder="Enter your email" />
                     </div>
 
                     <div className="mb-4">
-                        <label htmlFor="phone" className='block text-sm font-medium text-gray-700 mb-1.5'>
-                            Phone
-                        </label>
-                        <input
-                            type="text"
-                            id="phone"
-                            name="contact"
-                            required
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
-                            placeholder="+91 XXXXXXXXXX"
-                            suppressHydrationWarning={true}
-                        />
+                        <label htmlFor="phone" className='block text-sm font-medium text-slate-600 mb-1.5'>Phone</label>
+                        <input type="text" id="phone" name="contact" required className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/60 focus:border-transparent transition text-sm text-slate-900 placeholder-slate-400" placeholder="+91 XXXXXXXXXX" />
                     </div>
 
                     <div className="mb-6">
-                        <label htmlFor="message" className='block text-sm font-medium text-gray-700 mb-1.5'>
-                            Message
-                        </label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="3"
-                            required
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm resize-none"
-                            placeholder="Tell us about your inquiry..."
-                            suppressHydrationWarning={true}
-                        />
+                        <label htmlFor="message" className='block text-sm font-medium text-slate-600 mb-1.5'>Message</label>
+                        <textarea id="message" name="message" rows="3" required className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/60 focus:border-transparent transition text-sm text-slate-900 placeholder-slate-400 resize-none" placeholder="Tell us about your inquiry..." />
                     </div>
 
-                    <button
-                        type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg text-sm"
-                    suppressHydrationWarning={true}
-                    >
-                        Submit
+                    <button type="submit" className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg text-sm">
+                        Submit Request
                     </button>
                 </form>
             </div>
 
-            {/* Main Hero Banner Section */}
-            <section className="relative min-h-screen lg:h-screen w-full flex items-center bg-slate-50 py-20 lg:py-0 overflow-hidden">
+            {/* Hero Banner — Dark Compliance Theme */}
+            <section className="relative min-h-screen lg:h-screen w-full flex items-center bg-slate-950 text-slate-800 py-16 lg:py-0 overflow-hidden">
                 
-                {/* Background Asset Wrapper */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="/assets/banner.avif"
-                        alt="fintax banner"
-                        className="w-full h-full object-cover object-center opacity-40 lg:opacity-100 "
-                    />
-                    {/* Soft gradient overlay to keep text highly legible over custom graphics on small screens */}
-                    <div className="absolute inset-0 bg-gradient-to-l from-white via-white/70 to-transparent lg:from-transparent" />
+                {/* Floating Ambient Background Icons */}
+                <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.07] text-white">
+                    <FiDollarSign className="absolute top-[15%] left-[10%] w-12 h-12 animate-float-slow" />
+                    <FiFileText className="absolute top-[25%] left-[45%] w-10 h-10 animate-float-delayed" />
+                    <FiShield className="absolute bottom-[20%] left-[15%] w-14 h-14 animate-float-slow" />
+                    <FiPercent className="absolute top-[60%] left-[38%] w-8 h-8 animate-float-delayed" />
                 </div>
 
-                {/* Primary Content Container */}
-                <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8">
-                    <div className="max-w-2xl">
-                        
-                        <p className="uppercase tracking-[3px] sm:tracking-[5px] text-blue-600 font-bold text-xs sm:text-sm mb-4 lg:mb-5">
-                            Clarity. Control. Growth.
+                <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-6 items-center">
+
+                    {/* Left: copy column */}
+                    <div className="max-w-2xl text-left relative z-10">
+                        <p className="uppercase tracking-[3px] sm:tracking-[4px] text-amber-300 font-semibold text-xs sm:text-sm mb-4 " style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                            FINTAX ADVISER · EST. COMPLIANCE PARTNERS
                         </p>
 
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight font-extrabold text-[#061C4B] leading-none">
-                            Virtual <span className="text-blue-600">CFO</span>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] tracking-tight leading-[1.1] mb-6 text-white" style={{ fontFamily: "'Fraunces', serif", fontWeight: 600 }}>
+                            India's Trusted Partner for
+                            <span className="block mt-1 text-transparent bg-clip-text bg-sky-500">
+                                Registration, Taxation &amp; <span className='text-indigo-600'>Compliance</span>
+                            </span>
                         </h1>
 
-                        <h2 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-tight font-bold text-[#0E2B63]">
-                            Smart Financial Guidance.
-                            <span className="block mt-1 text-blue-900/90 font-semibold">Stronger Business Decisions.</span>
-                        </h2>
+                        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-8 h-auto sm:h-12 overflow-hidden">
+                            <span className="text-slate-100 text-base sm:text-lg font-medium tracking-wide">
+                                Expertise in:
+                            </span>
+                            <div className="inline-block relative overflow-hidden h-9 sm:h-10">
+                                <span
+                                    className={`inline-block text-base sm:text-lg font-semibold text-emerald-500 transition-all duration-500 transform ${isAnimating
+                                        ? 'translate-y-0 opacity-100 scale-100'
+                                        : 'translate-y-4 opacity-0 scale-95'
+                                        }`}
+                                    style={{ fontFamily: "'Fraunces', serif" }}
+                                >
+                                    {animatedTexts[currentTextIdx]}
+                                </span>
+                                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-sky-600 rounded-full opacity-70" />
+                            </div>
+                        </div>
 
-                        <p className="mt-4 sm:mt-6 text-gray-700 text-base sm:text-lg leading-relaxed max-w-xl">
-                            Your trusted Virtual CFO partner for end-to-end
-                            financial management, compliance, forecasting,
-                            and business growth.
+                        <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mb-8 sm:mb-10">
+                            Fintax Adviser helps startups, entrepreneurs, professionals, and growing businesses manage
+                            registrations, taxation, compliance, and financial operations through expert guidance and
+                            practical business solutions — so you can focus on growth with confidence.
                         </p>
 
-                        {/* Interactive CTAs */}
-                        <div className="flex flex-wrap gap-4 mt-6 sm:mt-8">
-                            <button 
-                                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-blue-600/20 active:scale-[0.98]" 
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <button
+                                className="w-full sm:w-auto bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-sky-600/10 active:scale-[0.98]"
                                 onClick={() => setModal(true)}
-                                suppressHydrationWarning={true}
                             >
                                 Enquire Now
                             </button>
+                            <Link href="https://wa.me/919990924477" passHref>
+                                <button className="w-full sm:w-auto bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 active:scale-[0.98]">
+                                    Experts Chat 
+                                </button>
+                            </Link>
                         </div>
-
-                        {/* Mini Feature Blocks Row */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-12 sm:mt-16">
-                            {[
-                                "Financial Strategy",
-                                "Cash Flow",
-                                "Forecasting",
-                                "Risk Management"
-                            ].map((feature, idx) => (
-                                <div 
-                                    key={idx} 
-                                    className="bg-white/85 backdrop-blur-md p-3.5 sm:p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
-                                >
-                                    <h3 className="font-semibold text-xs sm:text-sm text-[#0E2B63]">
-                                        {feature}
-                                    </h3>
-                                </div>
-                            ))}
-                        </div>
-
                     </div>
+
+                    {/* Right side: Fixed 3D Image Layer with Floating Accent Icons */}
+                    <div className="relative h-[450px] sm:h-[500px] w-full flex items-center justify-center select-none">
+                        
+                        {/* Wrapper for image floating animation */}
+                        <div className="relative w-full h-full flex items-center justify-center animate-float">
+                            
+                            {/* Ambient Icons Floating Specific to Right Graphic */}
+                            <div className="absolute inset-0 pointer-events-none opacity-20 text-sky-400">
+                                <FiTrendingUp className="absolute top-[12%] right-[15%] w-7 h-7 animate-float-slow" />
+                                <FiPieChart className="absolute bottom-[14%] left-[8%] w-8 h-8 animate-float-delayed" />
+                                <FiBriefcase className="absolute top-[48%] left-[2%] w-6 h-6 animate-float-slow" />
+                                <FiAward className="absolute bottom-[28%] right-[4%] w-7 h-7 animate-float-delayed" />
+                            </div>
+
+                            {/* Main Banner Image Asset */}
+                            <img
+                                src="/assets/fintaxbanner.png"
+                                alt="Fintax Compliance Services"
+                                className="h-200px w-200px pointer-events-none drop-shadow-[0_15px_30px_rgba(14,165,233,0.15)] relative z-10"
+                            />
+                        </div>
+                    </div>
+
                 </div>
             </section>
-        </>
+		</>
     );
 }
