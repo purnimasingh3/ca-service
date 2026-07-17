@@ -11,7 +11,7 @@ export const metadata = servicesMetadata.drugLicence || {
 
 export default function PremiumDrugLicenseLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert CA & Compliance Team",
     "500+ Happy Clients Served",
     "Fast | Reliable | 100% Compliant",
@@ -102,7 +102,7 @@ export default function PremiumDrugLicenseLanding() {
               A Drug License is a mandatory approval issued by the State Drug Control Department under the <strong className="text-slate-900 font-medium">Drugs and Cosmetics Act, 1940</strong>, for businesses involved in the manufacture, sale, distribution, storage, or import of medicines and pharmaceutical products.
             </p>
             <p>
-              With 15+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser offers reliable and hassle-free Drug License Registration services for businesses of all sizes.
+              With 12+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser offers reliable and hassle-free Drug License Registration services for businesses of all sizes.
             </p>
           </div>
         </div>
@@ -398,7 +398,7 @@ export default function PremiumDrugLicenseLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years of Experience",
+                  "12+ Years of Experience",
                   "500+ Happy Clients",
                   "Expert Compliance Team",
                   "Fast Processing Layouts",

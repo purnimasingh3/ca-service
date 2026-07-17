@@ -7,7 +7,7 @@ import FAQAccordion from '../components/FAQAccordion';
 export const metadata = servicesMetadata.patentRegistration;
 export default function PatentRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients",
     "Expert Patent Consultants",
     "End-to-End Patent Support",
@@ -387,7 +387,7 @@ export default function PatentRegistrationLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years of Professional Experience",
+                  "12+ Years of Professional Experience",
                   "500+ Happy Clients Served",
                   "Expert Patent & Compliance Team",
                   "Affordable & Transparent Pricing",

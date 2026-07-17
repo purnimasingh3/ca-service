@@ -7,7 +7,7 @@ import FAQAccordion from '../components/FAQAccordion';
 export const metadata = servicesMetadata.factoryLicense;
 export default function FactoryLicenseLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Expert Compliance Team",
     "Pan India Services",

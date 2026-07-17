@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.trademarkAssignment;
 
 export default function TrademarkAssignmentLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert CA & Legal Team",
     "500+ Happy Clients",
     "Pan India Services",
@@ -362,7 +362,7 @@ export default function TrademarkAssignmentLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years of Experience",
+                  "12+ Years of Experience",
                   "500+ Happy Clients Served",
                   "Expert CA & Legal Team",
                   "Affordable Pricing Structure",

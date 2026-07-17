@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.misReporting;
 export default function PremiumMISReportingLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "100% Accurate & Secure Process",
     "Expert Consultation & Support",
@@ -393,7 +393,7 @@ export default function PremiumMISReportingLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years of Industry Experience",
+                  "12+ Years of Industry Experience",
                   "500+ Happy Clients Served",
                   "Customized Management Reports",
                   "Advanced Financial Dashboards",

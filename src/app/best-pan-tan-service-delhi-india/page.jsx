@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.panTan;
 export default function PremiumPanTanLanding() {
   const HERO_STATS = [
-    "12+ Years Experience",
+    "12+ Yearss Experience",
     "25+ Compliance Professionals",
     "200+ Happy Clients",
     "100% Secure & Compliant",
@@ -358,7 +358,7 @@ export default function PremiumPanTanLanding() {
               {/* Isolated Grid: Prevent items from collapsing into each other */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "12+ Years Industry Experience",
+                  "12+ Yearss Industry Experience",
                   "25+ Compliance Professionals",
                   "200+ Happy Corporate Clients",
                   "Fast Documentation Support",

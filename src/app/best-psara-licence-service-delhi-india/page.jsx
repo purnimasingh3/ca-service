@@ -12,7 +12,7 @@ export const metadata = servicesMetadata.psaraLicence || {
 
 export default function PremiumPsaraLicenseLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert Compliance Team",
     "Legal, Trusted & Compliant",
     "Fast | Reliable | 100% Approved",
@@ -380,7 +380,7 @@ export default function PremiumPsaraLicenseLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years of Professional Experience",
+                  "12+ Years of Professional Experience",
                   "Expert Compliance Team",
                   "Fast Processing Setup",
                   "Affordable Pricing Structure",

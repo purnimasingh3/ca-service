@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.transferPricingAgreement;
 
 export default function TransferPricingAgreementLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients",
     "Expert Tax & Legal Professionals",
     "Compliant Pricing, Lower Tax Risk",
@@ -388,7 +388,7 @@ export default function TransferPricingAgreementLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years of Professional Experience",
+                  "12+ Years of Professional Experience",
                   "Expert Tax & Legal Team",
                   "Customized Agreements",
                   "Compliance-Focused Approach",

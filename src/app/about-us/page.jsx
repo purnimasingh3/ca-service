@@ -94,7 +94,7 @@ export default function AboutUs() {
             <p className="text-sm font-medium text-slate-500 mt-1">Client Satisfaction</p>
           </div>
           <div>
-            <p className="text-4xl font-extrabold text-blue-600">15+</p>
+            <p className="text-4xl font-extrabold text-blue-600">12+</p>
             <p className="text-sm font-medium text-slate-500 mt-1">Years of Financial Excellence</p>
           </div>
         </div>

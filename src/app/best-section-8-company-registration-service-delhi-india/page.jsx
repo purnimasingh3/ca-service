@@ -6,12 +6,12 @@ import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata = servicesMetadata.section8Company || {
   title: "Best Section 8 Company (NGO) Registration CA Firm in Delhi India",
-  description: "Professional NGO Registration Services by Fintax Adviser. 15+ Years Experience, 500+ Happy Clients Served. Complete end-to-end incorporation and tax exemption support.",
+  description: "Professional NGO Registration Services by Fintax Adviser. 12+ Years Experience, 500+ Happy Clients Served. Complete end-to-end incorporation and tax exemption support.",
 };
 
 export default function Section8NGORegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients Served",
     "Legal Recognition & High Credibility",
     "Eligible for CSR Funding & Donations",
@@ -341,7 +341,7 @@ export default function Section8NGORegistrationLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Professional Experience",
+                  "12+ Years Professional Experience",
                   "500+ Happy Clients Served",
                   "Expert CA & Legal Team",
                   "Affordable Registration Packages",

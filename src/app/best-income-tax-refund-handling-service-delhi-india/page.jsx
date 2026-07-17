@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.incomeTaxRefund;
 export default function PremiumIncomeTaxRefundLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert Tax Consultants",
     "500+ Happy Clients",
     "Maximum Refund Guaranteed",
@@ -380,7 +380,7 @@ export default function PremiumIncomeTaxRefundLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert Tax Consultants",
                   "Fast Online Digital Services",

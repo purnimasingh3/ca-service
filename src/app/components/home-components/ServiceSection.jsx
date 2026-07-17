@@ -1,268 +1,147 @@
+"use client";
+import React from "react";
+import Link from "next/link";
 import {
   Briefcase,
   FileText,
   Landmark,
   BadgeDollarSign,
-  BarChart3,
   ShieldCheck,
-  Users,
-  Globe,
+  Award,
   TrendingUp,
   ArrowRight,
+  Gauge,
 } from "lucide-react";
-import Link from "next/link";
 
+const SERVICES_DATA = [
+  {
+    icon: Briefcase,
+    title: "Business Registration",
+    desc: "Seamless company incorporation and startup setup solutions customized for every entrepreneur.",
+    link: "/services/business-setup",
+  },
+  {
+    icon: FileText,
+    title: "GST Registration & Filing",
+    desc: "Complete GST registration, monthly returns filing, compliance management, and corporate tax structuring.",
+    link: "/services/tax-registration",
+    isFeatured: true, 
+  },
+  {
+    icon: Award,
+    title: "Trademark Registration",
+    desc: "Protect your brand name, logo, and intellectual assets with legal security and hassle-free trademark filing.",
+    link: "/services/trademark",
+  },
+  {
+    icon: BadgeDollarSign,
+    title: "Accounting & Bookkeeping",
+    desc: "Comprehensive bookkeeping, regular auditing, and streamlined ledger management for operational efficiency.",
+    link: "/services/accounting-services",
+  },
+  {
+    icon: ShieldCheck,
+    title: "ROC Compliance",
+    desc: "End-to-end ROC annual filings, structural reporting, and complete legal compliance to stay fully secure.",
+    link: "/services/compliance-services",
+  },
+  {
+    icon: Gauge,
+    title: "Virtual CFO Services",
+    desc: "Strategic financial advisory, forecasting, budgeting, cash flow monitoring, and corporate scaling strategies.",
+    link: "/services/virtual-cfo",
+  },
+];
 
 export default function ServicesSection() {
   return (
-    <section className="py-28 px-6 md:px-16 bg-[#f8fafc]">
+    <section className="relative overflow-hidden py-24 lg:py-32 px-6 md:px-16 bg-[#f8fafc] font-sans">
+      
+      {/* Premium subtle grid effect */}
+      <div className="absolute inset-0  bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none" />
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[100px] pointer-events-none" />
 
-      {/* ================= HEADING ================= */}
+      <div className="relative max-w-7xl mx-auto">
+        
+        {/* ================= HEADING (Section 4) ================= */}
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24 space-y-5">
+          <div className="inline-flex items-center gap-2 bg-[#2563EB]/5 border border-[#2563EB]/10 px-4 py-1.5 rounded-full">
+            <TrendingUp className="w-4 h-4 text-[#2563EB]" />
+            <span className="text-[11px] font-bold tracking-[2px] text-[#2563EB] uppercase font-mono">
+              OUR SERVICES
+            </span>
+          </div>
 
-      <div className="text-center mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0F172A] leading-tight font-heading">
+            Services Designed For{" "}
+            <span className="bg-gradient-to-r from-[#0F4C81] to-[#2563EB] bg-clip-text text-transparent">
+              Every Stage Of Business Growth
+            </span>
+          </h2>
 
-        <p className="inline-block bg-blue-100 text-blue-600 px-5 py-2 rounded-full text-sm font-semibold tracking-[2px] mb-5">
+          <p className="text-slate-500 text-base sm:text-lg leading-relaxed font-body">
+            Our comprehensive service portfolio is designed to support businesses from startup stage to long-term expansion.
+          </p>
+        </div>
 
-          OUR SERVICES
+        {/* ================= CARDS GRID ================= */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {SERVICES_DATA.map((service, index) => {
+            const Icon = service.icon;
+            
+            return (
+              <div
+                key={index}
+                className={`group relative bg-white p-8 sm:p-10 rounded-[30px] border transition-all duration-350 flex flex-col justify-between hover:-translate-y-2 ${
+                  service.isFeatured
+                    ? "border-blue-200 shadow-[0_20px_50px_rgba(37,99,235,0.06)] ring-1 ring-blue-100"
+                    : "border-slate-100 hover:border-slate-200/80 shadow-[0_10px_30px_rgba(15,76,129,0.02)] hover:shadow-[0_20px_40px_rgba(15,76,129,0.06)]"
+                }`}
+              >
+                {/* Popular Tag on Featured Item */}
+                {service.isFeatured && (
+                  <span className="absolute top-5 right-6 text-[10px] font-bold uppercase tracking-wider text-[#2563EB] bg-blue-50 px-3 py-1 rounded-full">
+                    Recommended
+                  </span>
+                )}
 
-        </p>
+                <div>
+                  {/* Dynamic Icon Box with smooth transition */}
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-colors duration-300 ${
+                    service.isFeatured 
+                      ? "bg-blue-50 text-blue-600 group-hover:bg-blue-100" 
+                      : "bg-slate-50 text-slate-700 group-hover:bg-blue-50 group-hover:text-blue-600"
+                  }`}>
+                    <Icon className="w-6 h-6" strokeWidth={1.8} />
+                  </div>
 
-        <h3 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          Our Comprehensive Services for Startups and Businesses
-        </h3>
+                  {/* Title */}
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] mb-4 group-hover:text-blue-600 transition-colors duration-200">
+                    {service.title}
+                  </h3>
 
-        <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-8">
+                  {/* Description */}
+                  <p className="text-slate-500 text-sm leading-relaxed mb-8">
+                    {service.desc}
+                  </p>
+                </div>
 
-          Premium taxation, registration and financial
-          consulting services designed for startups,
-          entrepreneurs and enterprises.
-
-        </p>
+                {/* Read More / Action Button */}
+                <Link
+                  href={service.link}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#2563EB] group/link"
+                >
+                  <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-blue-600 after:scale-x-0 group-hover/link:after:scale-x-100 after:transition-transform after:origin-left duration-250 pb-0.5">
+                    Explore Service
+                  </span>
+                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform duration-200" />
+                </Link>
+              </div>
+            );
+          })}
+        </div>
 
       </div>
-
-      {/* ================= CARDS ================= */}
-
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
-
-        {/* CARD 1 */}
-
-        <div className="group bg-white rounded-[35px] p-10 border border-gray-100 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
-
-          <div className="w-20 h-20 rounded-3xl bg-blue-100 flex items-center justify-center mb-8">
-
-            <Briefcase className="w-10 h-10 text-blue-600" />
-
-          </div>
-
-          <h3 className="text-3xl font-bold text-gray-900 mb-5">
-
-            Business Setup
-
-          </h3>
-
-          <p className="text-gray-500 leading-8 mb-8">
-
-            Company incorporation and startup setup
-            services with complete documentation support.
-
-          </p>
-
-          <Link
-            href="/services/business-setup"
-            className="flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all"
-          >
-
-            Read More
-
-            <ArrowRight className="w-5 h-5" />
-
-          </Link>
-
-        </div>
-
-        {/* CARD 2 */}
-
-        <div className="group bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#2563eb] rounded-[35px] p-10 text-white shadow-[0_20px_60px_rgba(37,99,235,0.25)] hover:-translate-y-3 transition duration-500">
-
-          <div className="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center mb-8">
-
-            <FileText className="w-10 h-10 text-blue-300" />
-
-          </div>
-
-          <h3 className="text-3xl font-bold mb-5">
-
-            Tax Registration
-
-          </h3>
-
-          <p className="text-blue-100 leading-8 mb-8">
-
-            GST registration and taxation compliance
-            services for growing businesses.
-
-          </p>
-
-          <Link
-            href="/services/tax-registration"
-            className="flex items-center gap-2 text-white font-semibold hover:gap-4 transition-all"
-          >
-
-            Read More
-
-            <ArrowRight className="w-5 h-5" />
-
-          </Link>
-
-        </div>
-
-        {/* CARD 3 */}
-
-        <div className="group bg-white rounded-[35px] p-10 border border-gray-100 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
-
-          <div className="w-20 h-20 rounded-3xl bg-blue-100 flex items-center justify-center mb-8">
-
-            <Landmark className="w-10 h-10 text-blue-600" />
-
-          </div>
-
-          <h3 className="text-3xl font-bold text-gray-900 mb-5">
-
-            Fundraising
-
-          </h3>
-
-          <p className="text-gray-500 leading-8 mb-8">
-
-            Investor connections and funding support
-            for startups and enterprises.
-
-          </p>
-
-          <Link
-            href="/services/fundraising"
-            className="flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all"
-          >
-
-            Read More
-
-            <ArrowRight className="w-5 h-5" />
-
-          </Link>
-
-        </div>
-
-        {/* CARD 4 */}
-
-        <div className="group bg-white rounded-[35px] p-10 border border-gray-100 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
-
-          <div className="w-20 h-20 rounded-3xl bg-blue-100 flex items-center justify-center mb-8">
-
-            <BadgeDollarSign className="w-10 h-10 text-blue-600" />
-
-          </div>
-
-          <h3 className="text-3xl font-bold text-gray-900 mb-5">
-
-            Accounting Services
-
-          </h3>
-
-          <p className="text-gray-500 leading-8 mb-8">
-
-            Professional bookkeeping and accounting
-            services for smooth business operations.
-
-          </p>
-
-          <Link
-            href="/services/accounting-services"
-            className="flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all"
-          >
-
-            Read More
-
-            <ArrowRight className="w-5 h-5" />
-
-          </Link>
-
-        </div>
-
-        {/* CARD 5 */}
-
-        <div className="group bg-white rounded-[35px] p-10 border border-gray-100 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
-
-          <div className="w-20 h-20 rounded-3xl bg-blue-100 flex items-center justify-center mb-8">
-
-            <ShieldCheck className="w-10 h-10 text-blue-600" />
-
-          </div>
-
-          <h3 className="text-3xl font-bold text-gray-900 mb-5">
-
-            Compliance Services
-
-          </h3>
-
-          <p className="text-gray-500 leading-8 mb-8">
-
-            Ensure business compliance with expert legal
-            and taxation consultation services.
-
-          </p>
-
-          <Link
-            href="/services/compliance-services"
-            className="flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all"
-          >
-
-            Read More
-
-            <ArrowRight className="w-5 h-5" />
-
-          </Link>
-
-        </div>
-        {/* CARD 7 */}
-
-        <div className="group bg-white rounded-[35px] p-10 border border-gray-100 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
-
-          <div className="w-20 h-20 rounded-3xl bg-blue-100 flex items-center justify-center mb-8">
-
-            <Users className="w-10 h-10 text-blue-600" />
-
-          </div>
-
-          <h3 className="text-3xl font-bold text-gray-900 mb-5">
-
-            HR & Payroll
-
-          </h3>
-
-          <p className="text-gray-500 leading-8 mb-8">
-
-            Complete HR management and payroll solutions
-            for startups and growing businesses.
-
-          </p>
-
-          <Link
-            href="/services/hr-payroll"
-            className="flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all"
-          >
-
-            Read More
-
-            <ArrowRight className="w-5 h-5" />
-
-          </Link>
-
-        </div>
-
-
-      </div>
-
     </section>
   );
 }

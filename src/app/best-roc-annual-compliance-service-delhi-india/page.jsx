@@ -13,7 +13,7 @@ export const metadata = servicesMetadata?.rocAnnualCompliance || {
 
 export default function RocAnnualComplianceLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "1200+ Businesses Assisted",
     "500+ Successful Filings",
     "98% Client Satisfaction Rate",

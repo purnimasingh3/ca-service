@@ -12,7 +12,7 @@ export const metadata = servicesMetadata.partnershipToLlp || {
 
 export default function PartnershipToLLPRegistration() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Expert CA & Compliance Team",
     "100% Compliant With Law",
@@ -329,7 +329,7 @@ export default function PartnershipToLLPRegistration() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Corporate Clients",
                   "Expert In-House CA Team",
                   "Affordable Upfront Pricing",

@@ -11,7 +11,7 @@ export const metadata = servicesMetadata.termsSheetSha || {
 
 export default function TermSheetShaLanding() {
   const HERO_STATS = [
-    "15+ Years Legal & Corporate Experience",
+    "12+ Years Legal & Corporate Experience",
     "Tailored, Conflict-Free Clause Design",
     "Founder & Investor Protection Balanced",
     "Comprehensive Post-Deal Advisory",

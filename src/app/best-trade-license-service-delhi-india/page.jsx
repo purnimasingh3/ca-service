@@ -10,7 +10,7 @@ export const metadata = servicesMetadata.tradeLicense || {
 };
 export default function TradeLicenseLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients",
     "Professional Compliance Experts",
     "Pan India Support"

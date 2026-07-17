@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.businessConsultation;
 
 export default function StartupConsultantLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients",
     "Expert Consultants & CA Professionals",
     "End-to-End Support for Startups",
@@ -154,7 +154,7 @@ export default function StartupConsultantLanding() {
             Welcome to <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>. Starting a business involves much more than registering a company. Entrepreneurs need strategic planning, business structuring, funding guidance, financial management, legal compliance, tax planning, and growth strategies.
           </p>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            With <strong>15+ Years of Experience</strong> and <strong>500+ Happy Clients Served</strong>, Fintax Adviser is recognized as the premier destination for helping startups build strong foundations for sustainable, scalable growth.
+            With <strong>12+ Years of Experience</strong> and <strong>500+ Happy Clients Served</strong>, Fintax Adviser is recognized as the premier destination for helping startups build strong foundations for sustainable, scalable growth.
           </p>
         </div>
       </section>
@@ -335,7 +335,7 @@ export default function StartupConsultantLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Experienced CA & Consulting Team",
                   "Customized Solutions per Startup",

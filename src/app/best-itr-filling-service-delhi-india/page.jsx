@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.itrFiling;
 export default function PremiumITRFilingLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Accurate & Secure Filing",
     "100% Tax Compliance",
@@ -443,7 +443,7 @@ export default function PremiumITRFilingLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert Tax Consultants",
                   "Fast Online Filing Services",

@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.gstRegistration;
 export default function PremiumGSTLanding() {
   const HERO_STATS = [
-    "12+ Years Experience",
+    "12+ Yearss Experience",
     "25+ Tax Professionals",
     "200+ Happy Clients",
     "100% Compliant Process",
@@ -358,7 +358,7 @@ export default function PremiumGSTLanding() {
               {/* Isolated Grid: Prevent items from collapsing into each other */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "12+ Years Experience",
+                  "12+ Yearss Experience",
                   "25+ Dedicated Professionals",
                   "200+ Happy Clients Across India",
                   "Affordable & Transparent Pricing",

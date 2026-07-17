@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.fssai;
 export default function FSSAIRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients Served",
     "100% Legal Compliance",
     "Fast & Easy Process",
@@ -90,7 +90,7 @@ export default function FSSAIRegistrationLanding() {
             Best FSSAI Registration Consultant in Delhi, India – Fintax Adviser
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Welcome to <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>, your reliable partner for complete FSSAI Registration, Food License Registration, FSSAI License Renewal, and food business compliance services. If you operate a food-related business, obtaining an FSSAI License is mandatory under Indian food safety regulations. With 15+ Years of Experience and more than 500+ Happy Clients Served, we provide complete support across India.
+            Welcome to <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>, your reliable partner for complete FSSAI Registration, Food License Registration, FSSAI License Renewal, and food business compliance services. If you operate a food-related business, obtaining an FSSAI License is mandatory under Indian food safety regulations. With 12+ Years of Experience and more than 500+ Happy Clients Served, we provide complete support across India.
           </p>
         </div>
       </section>
@@ -364,7 +364,7 @@ export default function FSSAIRegistrationLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Food License Experts",
                   "Affordable Service Packages",

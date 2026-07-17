@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.pfEsi;
 export default function PremiumPFESILanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients Served",
     "100% Compliance Assurance",
     "Expert Support At Every Step",

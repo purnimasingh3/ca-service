@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.privateLimited;
 export default function PremiumCompanyRegistrationLanding() {
   const HERO_STATS = [
-    "12+ Years of Excellence",
+    "12+ Yearss of Excellence",
     "25+ Dedicated Professionals",
     "200+ Happy Clients",
     "100% Legal Compliance",
@@ -289,7 +289,7 @@ const faqs = [
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "12+ Years Industry Experience",
+                  "12+ Yearss Industry Experience",
                   "25+ Professional Team Members",
                   "200+ Happy Clients Globally",
                   "Fast & Hassle-Free Approvals",

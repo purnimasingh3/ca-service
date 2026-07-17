@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.llpRegistration;
 export default function PremiumLLPLanding() {
   const HERO_STATS = [
-    "12+ Years Experience",
+    "12+ Yearss Experience",
     "25+ Legal & Tax Professionals",
     "200+ Happy Clients",
     "100% Legal Compliance",

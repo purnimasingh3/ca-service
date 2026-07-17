@@ -2,7 +2,7 @@ export const servicesMetadata = {
   privateLimited: {
     title: "Best Pvt Ltd Registration Service in Delhi India",
     description:
-      "12+ years experience & 500+ clients served. Get fast private limited company registration services in Delhi, India.",
+      "12+ Years experience & 500+ clients served. Get fast private limited company registration services in Delhi, India.",
     keywords: [
       "best private limited company registration service in Delhi India",
       "pvt ltd registration consultant Delhi India",
@@ -13,7 +13,7 @@ export const servicesMetadata = {
   llpRegistration: {
     title: "Best LLP Registration Service in Delhi India",
     description:
-      "12+ years experience & 500+ clients served. Expert LLP incorporation services in Delhi, India for startups & businesses.",
+      "12+ Years experience & 500+ clients served. Expert LLP incorporation services in Delhi, India for startups & businesses.",
     keywords: [
       "Best LLP registration service in Delhi India",
       "llp incorporation consultant Delhi India",
@@ -156,7 +156,7 @@ export const servicesMetadata = {
   itrFiling: {
     title: "Best ITR Filing Service Delhi India",
     description:
-      "File income tax returns in Delhi, India with expert tax consultants. 12+ years experience & 500+ clients served.",
+      "File income tax returns in Delhi, India with expert tax consultants. 12+ Years experience & 500+ clients served.",
     keywords: [
       "best itr filing service Delhi India",
       "income tax consultant Delhi India",

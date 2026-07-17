@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.nidhiCompanyRegistration;
 
 export default function NidhiCompanyRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Separate Legal Entity",
     "Limited Liability Protection",
@@ -98,7 +98,7 @@ export default function NidhiCompanyRegistrationLanding() {
             A Nidhi Company is a type of Non-Banking Financial Company (NBFC) recognized under the Companies Act, 2013. Its primary objective is to encourage savings and provide financial assistance among its members. Nidhi Companies are popular for promoting thrift, savings habits, and mutual financial support within a community.
           </p>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-semibold pt-2">
-            With 15+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser is trusted as the Best Nidhi Company Registration CA Firm in Delhi India for hassle-free registration and compliance services.
+            With 12+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser is trusted as the Best Nidhi Company Registration CA Firm in Delhi India for hassle-free registration and compliance services.
           </p>
         </div>
       </section>
@@ -373,7 +373,7 @@ export default function NidhiCompanyRegistrationLanding() {
             Why Fintax Adviser is the Best Nidhi Company Registration CA Firm in Delhi India
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-left pt-4">
-            <div className="p-4 bg-slate-50 rounded-xl border border-slate-200"><h5 className="font-bold text-xs text-blue-600">15+ Years Industry Experience</h5><p className="text-[11px] text-slate-500 mt-0.5">Extensive expertise in company registration.</p></div>
+            <div className="p-4 bg-slate-50 rounded-xl border border-slate-200"><h5 className="font-bold text-xs text-blue-600">12+ Years Industry Experience</h5><p className="text-[11px] text-slate-500 mt-0.5">Extensive expertise in company registration.</p></div>
             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200"><h5 className="font-bold text-xs text-blue-600">500+ Happy Clients Served</h5><p className="text-[11px] text-slate-500 mt-0.5">Trusted by startups and entrepreneurs.</p></div>
             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200"><h5 className="font-bold text-xs text-blue-600">Expert CA & Compliance Team</h5><p className="text-[11px] text-slate-500 mt-0.5">Dedicated compliance monitoring professionals.</p></div>
             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200"><h5 className="font-bold text-xs text-blue-600">End-to-End Support</h5><p className="text-[11px] text-slate-500 mt-0.5">From incorporation to annual compliance filings.</p></div>

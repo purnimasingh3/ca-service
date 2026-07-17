@@ -9,7 +9,7 @@ export const metadata =
   
 export default function PremiumGSTNoticeLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert GST Consultants",
     "500+ Happy Clients",
     "Accurate Reply & Resolution",
@@ -404,7 +404,7 @@ export default function PremiumGSTNoticeLanding() {
               {/* Isolated Grid: Prevent items from collapsing */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert GST Consultants & Advisors",
                   "Fast Online Digital Support",

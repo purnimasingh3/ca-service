@@ -9,7 +9,7 @@ export const metadata =
 
 export default function ROCComplianceLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Accurate & Reliable",
     "100% Legal Compliance",
@@ -360,7 +360,7 @@ export default function ROCComplianceLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert MCA Consultants",
                   "Fast Filing Process",

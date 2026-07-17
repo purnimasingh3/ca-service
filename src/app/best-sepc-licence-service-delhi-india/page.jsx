@@ -11,7 +11,7 @@ export const metadata = servicesMetadata.sepcLicence|| {
 
 export default function PremiumSEPCRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert Export Compliance Team",
     "500+ Happy Clients Served",
     "Fast | Reliable | 100% Virtual Support",
@@ -98,7 +98,7 @@ export default function PremiumSEPCRegistrationLanding() {
               Looking for reliable SEPC Registration Services in India? <strong className="text-blue-600 font-semibold">Fintax Adviser</strong> provides complete assistance for obtaining SEPC (Services Export Promotion Council) Registration for service exporters, IT companies, digital marketing agencies, consultants, freelancers, education service providers, healthcare service providers, and other businesses engaged in exporting services.
             </p>
             <p>
-              With 15+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser offers professional support for SEPC registration and export compliance across India.
+              With 12+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser offers professional support for SEPC registration and export compliance across India.
             </p>
           </div>
         </div>
@@ -281,7 +281,7 @@ export default function PremiumSEPCRegistrationLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years of Export Clearance Expertise",
+                  "12+ Years of Export Clearance Expertise",
                   "500+ Happy Corporate Clients Served",
                   "Dedicated Export Compliance Managers",
                   "Fast Architecture & Timeline Management",

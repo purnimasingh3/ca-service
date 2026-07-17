@@ -9,7 +9,7 @@ export const metadata =
 
 export default function Premium12AAnd80GRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Expert CA Team",
     "Pan India Service",
@@ -63,7 +63,7 @@ export default function Premium12AAnd80GRegistrationLanding() {
   ];
 
   const whyFintax = [
-    "15+ Years of Professional Experience",
+    "12+ Years of Professional Experience",
     "500+ Happy Clients Served",
     "Expert Chartered Accountant Team",
     "Affordable, Transparent Pricing",

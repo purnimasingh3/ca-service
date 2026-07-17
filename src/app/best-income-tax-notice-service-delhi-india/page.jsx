@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.incomeTaxNotice;
 export default function PremiumIncomeTaxNoticeLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Dedicated Notice Specialists",
     "500+ Happy Clients Served",
     "Complete Digital Consultation",
@@ -90,7 +90,7 @@ export default function PremiumIncomeTaxNoticeLanding() {
             Welcome to Fintax Adviser
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Receiving an Income Tax Notice can create stress for individuals and businesses, but it does not always mean penalties or legal issues. In many situations, notices are issued for clarification, verification, mismatch of records, return corrections, or compliance review. With <strong className="text-blue-600 font-semibold">15+ Years of Experience</strong>, our team provides expert notice reply drafting and assessment support to salaried employees, startups, business owners, professionals, and corporate organizations across India.
+            Receiving an Income Tax Notice can create stress for individuals and businesses, but it does not always mean penalties or legal issues. In many situations, notices are issued for clarification, verification, mismatch of records, return corrections, or compliance review. With <strong className="text-blue-600 font-semibold">12+ Years of Experience</strong>, our team provides expert notice reply drafting and assessment support to salaried employees, startups, business owners, professionals, and corporate organizations across India.
           </p>
         </div>
       </section>
@@ -386,7 +386,7 @@ export default function PremiumIncomeTaxNoticeLanding() {
               {/* Isolated Grid: Prevent items from collapsing into each other */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert Tax Notice Specialists",
                   "Fast Digital Consultation Support",

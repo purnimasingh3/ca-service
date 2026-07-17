@@ -9,7 +9,7 @@ export const metadata = servicesMetadata.foreignSubsidiaryRegistration;
 
 export default function ForeignSubsidiaryLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients Served",
     "100% Compliant with Indian Laws",
     "Transparent Pricing - No Hidden Charges",
@@ -293,7 +293,7 @@ export default function ForeignSubsidiaryLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served Globally",
                   "Expert In-House CA & Compliance Team",
                   "Complete FDI & FEMA Support Lifecycle",

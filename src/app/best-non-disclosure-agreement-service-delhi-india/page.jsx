@@ -12,7 +12,7 @@ export const metadata = servicesMetadata.ndaServices || {
 
 export default function NdaLandingPage() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients Served",
     "Expert Legal Professionals",
     "100% Confidential & Secure",
@@ -232,7 +232,7 @@ export default function NdaLandingPage() {
             <div className="w-full space-y-8">
               <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-[#071c3d]">Why Choose Fintax Adviser?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                {["15+ Years Experience", "Experienced Legal Team", "Customized Adjustments", "Quick Turnaround Time", "Cost-Effective Packages", "Pan-India Virtual Processing"].map((benefit) => (
+                {["12+ Years Experience", "Experienced Legal Team", "Customized Adjustments", "Quick Turnaround Time", "Cost-Effective Packages", "Pan-India Virtual Processing"].map((benefit) => (
                   <div key={benefit} className="flex items-center gap-3 bg-slate-200 border border-slate-800 p-4 rounded-xl">
                     <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 font-bold text-sm shrink-0">✓</div>
                     <span className="text-base font-bold text-slate-800 tracking-wide">{benefit}</span>

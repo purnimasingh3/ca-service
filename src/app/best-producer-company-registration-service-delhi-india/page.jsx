@@ -9,7 +9,7 @@ export const metadata = servicesMetadata.producerCompanyRegistration;
 
 export default function ProducerCompanyRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients Served",
     "Expert CA Support At Every Step",
     "100% Compliant With Indian Laws",
@@ -288,7 +288,7 @@ export default function ProducerCompanyRegistrationLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert Dedicated CA Support",
                   "Pan India Online Services",

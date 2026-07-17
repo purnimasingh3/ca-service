@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.msme;
 export default function MSMERegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients",
     "Expert Consultation & Support",
     "HASSLE-FREE Documentation",
@@ -112,7 +112,7 @@ export default function MSMERegistrationLanding() {
             Looking for trusted MSME Registration Services in Delhi, India? Welcome to <strong>Fintax Adviser</strong>, your reliable partner for complete MSME Registration, Udyam Registration Services, MSME Certificate Registration, and small business compliance solutions.
           </p>
           <p className="text-base text-slate-600 leading-relaxed font-normal">
-            If you own a startup, small business, manufacturing unit, service company, trading business, freelancer setup, or growing enterprise, obtaining MSME Registration can help you access government benefits, financial support, subsidies, and business growth opportunities. With 15+ Years of Experience and more than 500+ Happy Clients Served, Fintax Adviser provides complete Online MSME Registration Services across India with fast processing, expert consultation, and end-to-end support.
+            If you own a startup, small business, manufacturing unit, service company, trading business, freelancer setup, or growing enterprise, obtaining MSME Registration can help you access government benefits, financial support, subsidies, and business growth opportunities. With 12+ Years of Experience and more than 500+ Happy Clients Served, Fintax Adviser provides complete Online MSME Registration Services across India with fast processing, expert consultation, and end-to-end support.
           </p>
         </div>
       </section>
@@ -367,7 +367,7 @@ export default function MSMERegistrationLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert Documentation Support",
                   "Fast Online Processing Round",

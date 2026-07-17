@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { value: 15, suffix: "+", label: "Years Experience" },
+  { value: 12, suffix: "+", label: "Years Experience" },
   { value: 25, suffix: "+", label: "Financial Experts" },
   { value: 200, suffix: "+", label: "Successful Clients" },
   { value: 4.9, suffix: "★", label: "Google Rating", decimals: 1 },

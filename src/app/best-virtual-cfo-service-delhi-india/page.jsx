@@ -8,7 +8,7 @@ export const metadata =  servicesMetadata.virtualCFO;
 
 export default function PremiumVirtualCFOLanding() {
   const HERO_STATS = [
-    "12+ Years Experience",
+    "12+ Yearss Experience",
     "25+ Financial Experts",
     "200+ Happy Clients ",
     "Complete Compliance]",
@@ -338,7 +338,7 @@ export default function PremiumVirtualCFOLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "12+ Years Industry Experience",
+                  "12+ Yearss Industry Experience",
                   "25+ In-House Financial Experts",
                   "200+ Clients Served Globally",
                   "Affordable Virtual CFO Packages",

@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.trademarkObjection;
 export default function PremiumTrademarkLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert Trademark Consultants",
     "500+ Happy Clients Served",
     "100% Compliance Assurance",
@@ -377,7 +377,7 @@ export default function PremiumTrademarkLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Clients Successfully Served",
                   "Legal Response Expertise",
                   "Accurate Documentation Prep",

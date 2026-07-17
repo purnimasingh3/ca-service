@@ -7,7 +7,7 @@ import FAQAccordion from '../components/FAQAccordion';
 export const metadata = servicesMetadata.foundersAgreement;
 export default function FoundersAgreementLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Expert Legal Professionals",
     "Legally Sound Agreements",
@@ -94,7 +94,7 @@ export default function FoundersAgreementLanding() {
             Welcome to <strong className="text-blue-600 font-semibold">Fintax Adviser</strong>. Starting a business with co-founders is exciting, but without clear legal documentation, disputes can arise over ownership, responsibilities, decision-making, profit sharing, intellectual property, and exit rights. A Founders Agreement helps establish transparency and protects the interests of all founders from the beginning.
           </p>
           <p className="text-base text-slate-500 pt-2">
-            We provide professional Founders Agreement Drafting Services for startups, entrepreneurs, technology companies, partnerships, and growing businesses across India. With 15+ Years of Experience and 500+ Happy Clients, we help startups build a strong legal foundation through customized and legally compliant agreements.
+            We provide professional Founders Agreement Drafting Services for startups, entrepreneurs, technology companies, partnerships, and growing businesses across India. With 12+ Years of Experience and 500+ Happy Clients, we help startups build a strong legal foundation through customized and legally compliant agreements.
           </p>
         </div>
       </section>
@@ -343,7 +343,7 @@ export default function FoundersAgreementLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "Startup-Focused Legal Solutions",
                   "Experienced Legal Professionals",
                   "Transparent & Affordable Pricing",

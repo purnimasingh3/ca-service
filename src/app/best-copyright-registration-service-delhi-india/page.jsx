@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.copyrightRegistration;
 
 export default function CopyrightRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients",
     "Expert IP Consultants",
     "Pan India Services",
@@ -347,7 +347,7 @@ export default function CopyrightRegistrationLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Professional Experience",
+                  "12+ Years Professional Experience",
                   "500+ Happy Clients Served",
                   "Expert CA & IP Professionals",
                   "Affordable Transparent Pricing",

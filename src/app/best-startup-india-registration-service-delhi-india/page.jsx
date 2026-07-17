@@ -185,7 +185,7 @@ export default function StartupIndiaRegistrationLanding() {
       <section className="py-20 bg-slate-100 text-slate-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-3xl font-bold">15+ Years of Corporate Startup Experience</h3>
+            <h3 className="text-3xl font-bold">12+ Years of Corporate Startup Experience</h3>
             <p className="text-blue-600 text-lg mt-4">We simplify registration dynamics, allowing founders to lock down valid execution advantages quickly and focus entirely on operational scaling loops.</p>
           </div>
           <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center text-blue-400 font-bold text-xl">

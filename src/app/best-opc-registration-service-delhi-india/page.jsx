@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.opcRegistration;
 
 export default function PremiumOPCLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients Served",
     "Limited Liability Protection",
     "100% Digital & Fast Process",
@@ -265,7 +265,7 @@ export default function PremiumOPCLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Corporate Experience",
+                  "12+ Years Corporate Experience",
                   "500+ Happy Corporate Clients",
                   "Expert CA & Legal Team Support",
                   "Fast Online Digital Registration",

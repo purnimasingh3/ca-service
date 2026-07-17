@@ -8,7 +8,7 @@ export const metadata =
   servicesMetadata.labourLaw;
 export default function PremiumLabourComplianceLanding() {
   const HERO_STATS = [
-    "12+ Years Experience",
+    "12+ Yearss Experience",
     "25+ Compliance Experts",
     "200+ Happy Clients Across India",
     "100% Legal Compliance",
@@ -400,7 +400,7 @@ export default function PremiumLabourComplianceLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "12+ Years Industry Experience",
+                  "12+ Yearss Industry Experience",
                   "25+ In-House Compliance Experts",
                   "200+ Happy Clients Globally",
                   "Dedicated PF & ESI Specialists",

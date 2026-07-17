@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.isiCertification;
 
 export default function ISICertificationLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Happy Clients Across India",
     "Expert Core Technical Team",
     "End-to-End BIS Assistance",

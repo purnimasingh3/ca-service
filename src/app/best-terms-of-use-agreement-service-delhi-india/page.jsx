@@ -12,7 +12,7 @@ export const metadata = servicesMetadata.termsOfUseAgreement || {
 
 export default function TermsOfUseLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients",
     "Expert Legal Professionals",
     "Legally Sound Agreements",

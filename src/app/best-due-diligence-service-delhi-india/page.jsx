@@ -360,7 +360,7 @@ export default function DueDiligenceServicesLanding() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Professional Experience",
+                  "12+ Years Professional Experience",
                   "Multi-Disciplinary Advisory Team",
                   "Investor & Startup Focused Support",
                   "Strictly Confidential Processing",

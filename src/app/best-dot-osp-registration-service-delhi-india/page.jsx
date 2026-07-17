@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.dotOspRegistration;
 
 export default function DotOspRegistrationLanding() {
     const HERO_STATS = [
-        "15+ Years Experience",
+        "12+ Years Experience",
         "Best DOT (OSP) Registration CA Firm",
         "500+ Happy Clients Served",
         "Expert Support for Business Compliance",
@@ -37,7 +37,7 @@ export default function DotOspRegistrationLanding() {
         },
         {
             q: "Why choose Fintax Adviser?",
-            a: "Fintax Adviser provides expert consultation, accurate documentation management, affordable pricing matrix solutions, and complete compliance support backed by over 15+ years of real industry experience."
+            a: "Fintax Adviser provides expert consultation, accurate documentation management, affordable pricing matrix solutions, and complete compliance support backed by over 12+ Years of real industry experience."
         }
     ];
 
@@ -110,7 +110,7 @@ export default function DotOspRegistrationLanding() {
                         Professional OSP Registration Services by Fintax Adviser
                     </h2>
                     <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-                        Looking for the Best DOT (OSP) Registration CA Firm in Delhi India? <strong className="text-blue-600 font-bold">Fintax Adviser</strong> provides complete Other Service Provider (OSP) Registration and Compliance Services for BPOs, Call Centers, KPOs, ITES Companies, Customer Support Centers, Telemarketing Companies, and Businesses using telecom resources for commercial operations across India. With over 15+ Years of Experience and 500+ Happy Clients Served, we help businesses navigate Department of Telecommunications (DoT) guidelines smoothly.
+                        Looking for the Best DOT (OSP) Registration CA Firm in Delhi India? <strong className="text-blue-600 font-bold">Fintax Adviser</strong> provides complete Other Service Provider (OSP) Registration and Compliance Services for BPOs, Call Centers, KPOs, ITES Companies, Customer Support Centers, Telemarketing Companies, and Businesses using telecom resources for commercial operations across India. With over 12+ Years of Experience and 500+ Happy Clients Served, we help businesses navigate Department of Telecommunications (DoT) guidelines smoothly.
                     </p>
                 </div>
             </section>
@@ -355,7 +355,7 @@ export default function DotOspRegistrationLanding() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                                 {[
-                                    "15+ Years of Professional Experience",
+                                    "12+ Years of Professional Experience",
                                     "500+ Happy Clients Served",
                                     "Expert Compliance Professionals",
                                     "Affordable Service Packages",

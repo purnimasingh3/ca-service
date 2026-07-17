@@ -11,7 +11,7 @@ export const metadata =
   };
 export default function CustomerVendorAgreementLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "Expert Legal Professionals",
     "500+ Happy Clients",
     "Strong Business Protection",

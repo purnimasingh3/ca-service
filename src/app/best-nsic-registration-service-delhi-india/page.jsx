@@ -10,7 +10,7 @@ export const metadata = servicesMetadata.nsicRegistration || {
 };
 export default function NSICRegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients Across India",
     "Expert Compliance Team",
     "Pan India Online Services"

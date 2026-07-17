@@ -11,7 +11,7 @@ export const metadata = servicesMetadata.isoCertification || {
 
 export default function PremiumISOCertificationLanding() {
     const HERO_STATS = [
-        "15+ Years Experience",
+        "12+ Years Experience",
         "Expert Compliance Team",
         "500+ Happy Clients Served",
         "Fast | Reliable | Affordable Pricing",
@@ -101,7 +101,7 @@ export default function PremiumISOCertificationLanding() {
                             ISO Certification helps businesses improve quality standards, enhance customer trust, streamline operations, and strengthen their market reputation. Our expert team assists with complete documentation, implementation guidance, audit support, and certification coordination.
                         </p>
                         <p>
-                            With 15+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser is a trusted partner for ISO Certification and business compliance services.
+                            With 12+ Years of Experience and 500+ Happy Clients Served, Fintax Adviser is a trusted partner for ISO Certification and business compliance services.
                         </p>
                     </div>
                 </div>
@@ -323,7 +323,7 @@ export default function PremiumISOCertificationLanding() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                                 {[
-                                    "15+ Years of Industry Experience",
+                                    "12+ Years of Industry Experience",
                                     "500+ Happy Clients Across India",
                                     "Expert Compliance Team Professionals",
                                     "Affordable Pricing & Clear Packages",

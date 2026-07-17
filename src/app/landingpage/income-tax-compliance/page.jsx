@@ -13,7 +13,7 @@ import Footer from "../Footer";
 import LeadPopup from "../LeadPopup";
 
 const stats = [
-  { value: 15, suffix: "+", label: "Years Experience" },
+  { value: 12, suffix: "+", label: "Years Experience" },
   { value: 25, suffix: "+", label: "Financial Experts" },
   { value: 200, suffix: "+", label: "Successful Clients" },
   { value: 4.9, suffix: "★", label: "Google Rating", decimals: 1 },
@@ -84,7 +84,7 @@ export default function IncomeTaxComplianceLandingPage() {
                                     <span className="font-bold text-white">4.9</span> out of 5
                                 </div>
                                 <span className="text-slate-500">|</span>
-                                <div className="font-bold text-white">15+ Years Experience</div>
+                                <div className="font-bold text-white">12+ Years Experience</div>
                             </div>
 
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white max-w-2xl">

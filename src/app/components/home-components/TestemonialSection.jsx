@@ -23,19 +23,17 @@ export default function TestimonialSection() {
         <div className="text-center mb-20">
 
           <p className="inline-block bg-blue-100 text-blue-600 px-5 py-2 rounded-full text-sm font-semibold tracking-[2px] mb-5">
-
             CLIENT TESTIMONIALS
-
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#0F172A] leading-[1.1] font-heading">
 
             Trusted By Businesses
             Across India
 
           </h2>
 
-          <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-8">
+          <p className="text-lg text-blue-500 text-bold max-w-3xl mx-auto leading-8">
 
             Discover why startups and enterprises trust
             our financial and taxation expertise for

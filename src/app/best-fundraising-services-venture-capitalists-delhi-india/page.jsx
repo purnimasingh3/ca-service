@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.fundraisingVC;
 
 export default function VCFundraisingLanding() {
   const HERO_STATS = [
-    "15+ Years Experience",
+    "12+ Years Experience",
     "500+ Clients Served",
     "Investor-Ready Pitch Decks",
     "End-to-End Deal Closure",

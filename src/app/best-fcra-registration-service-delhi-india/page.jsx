@@ -8,7 +8,7 @@ export const metadata = servicesMetadata.fcraRegistration;
 
 export default function FCRARegistrationLanding() {
   const HERO_STATS = [
-    "15+ Years of Experience",
+    "12+ Years of Experience",
     "500+ Happy Clients Served",
     "Legal Permission to Receive Foreign Funds",
     "Compliant with Government Regulations",

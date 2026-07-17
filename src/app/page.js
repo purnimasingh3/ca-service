@@ -3,18 +3,22 @@ import TrustedSection from "./components/home-components/TrustedSection";
 import ServiceSection from "./components/home-components/ServiceSection";
 import ExperienceSection from "./components/home-components/ExperienceSection";
 import TestemonialSection from "./components/home-components/TestemonialSection";
-import { FaWhatsapp } from 'react-icons/fa';
-import { Phone } from "lucide-react";
+import PopularOfferings from "./components/home-components/PopularOffering";
+import ExperienceDesign from "./components/common/ExperienceDesign";
+// import { FaWhatsapp } from 'react-icons/fa';
+// import { Phone } from "lucide-react";
 export default function Home() {
   return (
     <>
       <BannerSection />
       <TrustedSection />
+      <PopularOfferings/>
       <ExperienceSection />
+      <ExperienceDesign/>
       <ServiceSection />
       <TestemonialSection />
 
-      <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-2">
+      {/* <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-2">
         <a
           href="https://wa.me/+919990924477"
           target="_blank"
@@ -30,7 +34,7 @@ export default function Home() {
         >
           <Phone className="w-5 h-5 text-white" />
         </a>
-      </div>
+      </div> */}
 
     </>
   );

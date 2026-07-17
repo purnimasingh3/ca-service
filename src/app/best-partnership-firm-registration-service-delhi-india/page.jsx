@@ -23,7 +23,7 @@ export default function PartnershipRegistrationLanding() {
     { q: "How long does partnership firm registration take?", a: "Generally, the formal setup can be completed within a few working days depending on structural document readiness and quick submissions." },
     { q: "What is the role of a partnership deed?", a: "The partnership deed acts as the primary legal document defining profit-sharing ratios, structural capital distribution, partner responsibilities, and operational guidelines." },
     { q: "Why should I choose the Best Partnership Firm Registration CA Firm in Delhi India?", a: "Professional registration minimizes legal risks, ensures smooth document formatting, sets up accurate tax profiles, and establishes a solid track for business scaling." },
-    { q: "Why choose Fintax Adviser?", a: "Fintax Adviser is recognized as a premiere CA firm in Delhi India, providing expert registration services backed by 15+ years of experience and 500+ satisfied clients." }
+    { q: "Why choose Fintax Adviser?", a: "Fintax Adviser is recognized as a premiere CA firm in Delhi India, providing expert registration services backed by 12+ Years of experience and 500+ satisfied clients." }
   ];
 
   return (
@@ -381,7 +381,7 @@ export default function PartnershipRegistrationLanding() {
               {/* Isolated Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Happy Clients Served",
                   "Expert CA & Compliance Team",
                   "Affordable Pricing Packages",

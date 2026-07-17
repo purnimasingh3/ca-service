@@ -8,7 +8,7 @@ export const metadata =
 
 export default function PremiumFundraisingLanding() {
   const HERO_STATS = [
-    "12+ Years Experience",
+    "12+ Yearss Experience",
     "25+ Legal Professionals",
     "200+ Happy Clients",
     "100% Legal Compliance",
@@ -390,7 +390,7 @@ export default function PremiumFundraisingLanding() {
               {/* Isolated Grid: Prevent items from collapsing into each other */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "15+ Years Industry Experience",
+                  "12+ Years Industry Experience",
                   "500+ Clients Successfully Served",
                   "Financial Modeling Expertise",
                   "Valuation Specialists",

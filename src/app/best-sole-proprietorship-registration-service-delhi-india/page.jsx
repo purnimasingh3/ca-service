@@ -93,7 +93,7 @@ export default function SoleProprietorshipLanding() {
             Looking for the <strong className="text-blue-600 font-semibold">Best Sole Proprietorship Registration CA Firm in Delhi India</strong>? Fintax Adviser offers complete Sole Proprietorship Registration services, GST registration, MSME registration, Shop & Establishment registration, business compliance, and tax advisory services for entrepreneurs across India.
           </p>
           <p className="text-base text-slate-600 leading-relaxed font-normal pt-2">
-            A Sole Proprietorship is the simplest and most widely preferred business structure in India. It is ideal for freelancers, consultants, traders, professionals, startups, online sellers, and small business owners who want to start their business with minimal compliance and complete control. With <strong>15+ Years of Experience and 500+ Happy Clients Served</strong>, Fintax Adviser is recognized for fast, affordable, and hassle-free registration.
+            A Sole Proprietorship is the simplest and most widely preferred business structure in India. It is ideal for freelancers, consultants, traders, professionals, startups, online sellers, and small business owners who want to start their business with minimal compliance and complete control. With <strong>12+ Years of Experience and 500+ Happy Clients Served</strong>, Fintax Adviser is recognized for fast, affordable, and hassle-free registration.
           </p>
         </div>
       </section>
@@ -370,7 +370,7 @@ export default function SoleProprietorshipLanding() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-xs font-bold text-slate-700">
             {[
-              "15+ Years Experience",
+              "12+ Years Experience",
               "500+ Happy Clients",
               "Expert In-House CAs",
               "Pan India Services",
