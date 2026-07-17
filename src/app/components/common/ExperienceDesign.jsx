@@ -129,7 +129,7 @@ const trustBadges = [
 
 export default function SuccessJourney() {
     return (
-        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 via-white to-blue-50/20 overflow-hidden relative min-h-screen flex flex-col justify-between">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 via-white to-blue-50/20  relative min-h-screen flex flex-col justify-between">
 
             {/* Background Ambience */}
             <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
