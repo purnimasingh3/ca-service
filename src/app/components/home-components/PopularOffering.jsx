@@ -20,7 +20,6 @@ const servicesData = {
         { title: "Shop & Establishment Registration", desc: "Get your Shop & Establishment registration quickly and legally.", slug: "best-shop-establishment-registration-service-delhi-india" },
         { title: "Foreign Subsidiary Company", desc: "Set up a foreign subsidiary company in India with expert assistance.", slug: "best-foreign-subsidiary-registration-service-delhi-india" },
         { title: "Partnership Firm Registration", desc: "Register your partnership firm with complete legal documentation.", slug: "best-partnership-firm-registration-service-delhi-india" },
-
     ],
     manage: [
         { title: "GST Registration", desc: "Unified indirect tax that combines several taxes including VAT, Service Tax etc.", slug: "best-gst-registration-service-delhi-india" },
@@ -37,7 +36,6 @@ const servicesData = {
         { title: "Terms of Use", desc: "Professionally drafted Terms of Use to protect your business and website.", slug: "best-terms-of-use-agreement-service-delhi-india" },
         { title: "Customer Vendor Agreement", desc: "Create legally compliant customer and vendor agreements for your business.", slug: "best-customer-vendor-agreement-service-delhi-india" },
         { title: "Founders Agreement", desc: "Draft a comprehensive founders agreement to define ownership and responsibilities.", slug: "best-founders-agreement-service-delhi-india" },
-
     ],
     vcfo: [
         { title: "Bookkeeping & Accounting", desc: "End-to-end management of books, accounts, and financial recording.", slug: "best-accounting-bookkeeping-zoho-service-delhi-india" },
@@ -99,26 +97,23 @@ export default function PopularOfferings() {
                             key={index}
                             style={{ animationDelay: `${index * 75}ms` }}
                             className="animate-fadeIn bg-white rounded-[24px] p-8 border border-gray-100 
-                 shadow-[0_10px_30px_rgba(0,0,0,0.02)] 
-                 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] 
-                 hover:-translate-y-2 hover:scale-[1.02]
-                 relative overflow-hidden
-                 transition-all duration-500 ease-out flex flex-col justify-between group"
+                 shadow-[0_20px_50px_rgba(37,99,235,0.12)]scale-[1.02] relative overflow-hidden
+                 transition-all duration-500 ease-out flex flex-col justify-between group hover:-translate-y-2 hover:scale-[1.02] scale-[1.02]"
                         >
-                            {/* Top Decorative Line Effect on Hover */}
-                            <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-blue-500 to-indigo-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                            {/* Decorative Line Effect - Always Visible */}
+                            <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-blue-500 to-indigo-600 scale-x-100 transition-transform duration-500 origin-left" />
 
-                            {/* Background Subtle Glow on Hover */}
-                            <div className="absolute -right-16 -top-16 w-32 h-32 bg-blue-50 rounded-full opacity-0 group-hover:opacity-60 blur-2xl transition-all duration-500 pointer-events-none" />
+                            {/* Background Subtle Glow - Always Visible */}
+                            <div className="absolute -right-16 -top-16 w-32 h-32 bg-blue-50 rounded-full opacity-60 blur-2xl transition-all duration-500 pointer-events-none" />
 
                             <div>
-                                {/* Title */}
-                                <h3 className="text-xl font-extrabold text-[#0F172A] mb-3 group-hover:text-blue-600 transition-colors duration-300 flex items-center gap-2">
+                                {/* Title - Always Blue */}
+                                <h3 className="text-xl font-extrabold text-blue-600 mb-3 transition-colors duration-300 flex items-center gap-2">
                                     {service.title}
                                 </h3>
 
-                                {/* Description */}
-                                <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 group-hover:text-gray-600 transition-colors duration-300">
+                                {/* Description - Styled permanently */}
+                                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-8 transition-colors duration-300">
                                     {service.desc}
                                 </p>
                             </div>

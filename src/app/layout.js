@@ -11,10 +11,6 @@ export const metadata = {
   verification: {
     google: "0V1FOsC4tZ8ptWxLwu-Oa4IdUeNxP7zhfaD6947WH0Q"
   },
-  // metadataBase: new URL('https://fintaxadviser.com'),
-  // alternates: {
-  //   canonical: 'https://fintaxadviser.com',
-  // },
   openGraph: {
     title: 'Fintax Adviser',
     description: 'Experts CA Services for Businesses and Individuals',
@@ -66,6 +62,21 @@ export default function RootLayout({ children }) {
          })(window,document,'script','dataLayer','GTM-KV22FR39');
          `}
         </Script>
+        {/* Meta Pixel */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+         !function(f,b,e,v,n,t,s)
+         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+         if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+         n.queue=[];t=b.createElement(e);t.async=!0;
+         t.src=v;s=b.getElementsByTagName(e)[0];
+         s.parentNode.insertBefore(t,s)}(window, document,'script',
+         'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '864000406560192');
+         fbq('track', 'PageView');
+         `}
+        </Script>
       </head>
 
       <body className="min-h-screen flex flex-col">
@@ -75,6 +86,15 @@ export default function RootLayout({ children }) {
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=864000406560192&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
 
