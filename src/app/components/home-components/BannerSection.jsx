@@ -46,17 +46,6 @@ export default function BannerSection() {
         return () => clearInterval(interval);
     }, []);
 
-    // Mouse-driven 3D parallax across the hero scene
-    const handleMouseMove = useCallback((e) => {
-        const rect = sceneRef.current?.getBoundingClientRect();
-        if (!rect) return;
-        const px = (e.clientX - rect.left) / rect.width - 0.5;
-        const py = (e.clientY - rect.top) / rect.height - 0.5;
-        setTilt({ x: px, y: py });
-    }, []);
-
-    const handleMouseLeave = () => setTilt({ x: 0, y: 0 });
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = {
@@ -166,7 +155,7 @@ export default function BannerSection() {
             </div>
 
             {/* Hero Banner — Dark Compliance Theme */}
-            <section className="relative min-h-screen lg:h-screen w-full flex items-center bg-slate-950 text-slate-800 py-16 lg:py-0 overflow-hidden">
+            <section className="relative min-h-screen lg:h-screen w-full flex items-center bg-gradient-to-br from-blue-950 via-[#111827] to-indigo-950 text-slate-800 py-16 lg:py-0 overflow-hidden">
                 
                 {/* Floating Ambient Background Icons */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.07] text-white">
@@ -187,7 +176,7 @@ export default function BannerSection() {
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] tracking-tight leading-[1.1] mb-6 text-white" style={{ fontFamily: "'Fraunces', serif", fontWeight: 600 }}>
                             India's Trusted Partner for
                             <span className="block mt-1 text-transparent bg-clip-text bg-sky-500">
-                                Registration, Taxation &amp; <span className='text-indigo-600'>Compliance</span>
+                                Registration, Taxation &amp; <span className='text-orange-400'>Compliance</span>
                             </span>
                         </h1>
 
@@ -248,7 +237,7 @@ export default function BannerSection() {
                             <img
                                 src="/assets/fintaxbanner.png"
                                 alt="Fintax Compliance Services"
-                                className="h-200px w-200px pointer-events-none drop-shadow-[0_15px_30px_rgba(14,165,233,0.15)] relative z-10"
+                                className="h-200px w-200px pointer-events-none drop-shadow-[0_15px_30px_rgba(14,165,233,0.15)] relative z-10 animate-[bounce_3s_infinite]"
                             />
                         </div>
                     </div>
