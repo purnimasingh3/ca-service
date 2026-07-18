@@ -31,7 +31,7 @@ const SERVICES_DATA = [
     icon: Award,
     title: "Trademark Registration",
     desc: "Protect your brand name, logo, and intellectual assets with legal security and hassle-free trademark filing.",
-    link: "/services/trademark",
+    link: "/services/fundraising",
   },
   {
     icon: BadgeDollarSign,
@@ -49,7 +49,7 @@ const SERVICES_DATA = [
     icon: Gauge,
     title: "Virtual CFO Services",
     desc: "Strategic financial advisory, forecasting, budgeting, cash flow monitoring, and corporate scaling strategies.",
-    link: "/services/virtual-cfo",
+    link: "/services/hr-payroll",
   },
 ];
 
