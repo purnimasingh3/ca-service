@@ -1,28 +1,52 @@
 "use client";
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
-import { FaWhatsapp } from 'react-icons/fa';
 import {
     FiFileText,
     FiShield,
     FiTrendingUp,
-    FiCheck,
-    FiDollarSign,
     FiBriefcase,
     FiAward,
-    FiActivity,
     FiPercent,
-    FiPieChart
+    FiPieChart,
+    FiDollarSign
 } from "react-icons/fi";
-import { FaBalanceScale, FaHandHoldingUsd } from "react-icons/fa";
 
 export default function BannerSection() {
     const [modal, setModal] = useState(false);
-    const [tilt, setTilt] = useState({ x: 0, y: 0 });
-    const sceneRef = useRef(null);
 
-    // Animated text content for Hero section
+    // Typing effect logic for the main tagline
+    const fullTagline = "FINTAX ADVISER. STRONG FINANCE. STRONG FUTURE";
+    const [typedText, setTypedText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [typingSpeed, setTypingSpeed] = useState(100);
+
+    useEffect(() => {
+        const handleTyping = () => {
+            if (!isDeleting) {
+                // Text type ho rha h
+                setTypedText(fullTagline.substring(0, typedText.length + 1));
+                if (typedText === fullTagline) {
+                    // Poora type hone ke baad 2 second hold krega
+                    setTimeout(() => setIsDeleting(true), 2000);
+                    setTypingSpeed(50);
+                }
+            } else {
+                // Text delete ho rha h
+                setTypedText(fullTagline.substring(0, typedText.length - 1));
+                if (typedText === "") {
+                    setIsDeleting(false);
+                    setTypingSpeed(100);
+                }
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [typedText, isDeleting, typingSpeed]);
+
+    // Animated text content for Expertise section
     const animatedTexts = [
         "GST Registration",
         "Company Registration",
@@ -90,6 +114,21 @@ export default function BannerSection() {
                     0%, 100% { transform: translateY(0px) rotate(0deg); }
                     50% { transform: translateY(-15px) rotate(-8deg); }
                 }
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                /* Blinking cursor effect for typing text */
+                @keyframes blinkCursor {
+                    from, to { border-color: transparent }
+                    50% { border-color: #f59e0b; } /* Amber color cursor */
+                }
                 .animate-float {
                     animation: float-gentle 6s ease-in-out infinite;
                 }
@@ -98,6 +137,13 @@ export default function BannerSection() {
                 }
                 .animate-float-delayed {
                     animation: float-delayed 7s ease-in-out infinite;
+                }
+                .animate-fade-in-up {
+                    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                }
+                .typing-cursor {
+                    border-right: 2px solid #f59e0b;
+                    animation: blinkCursor 0.75s step-end infinite;
                 }
             `}</style>
 
@@ -110,8 +156,7 @@ export default function BannerSection() {
             )}
 
             {/* Form Modal Box */}
-            <div className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-[92%] sm:w-full max-w-[500px] duration-300 transition-all ${modal ? 'opacity-100 visible scale-100' : 'opacity-0 invisible scale-95'
-                }`}>
+            <div className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-[92%] sm:w-full max-w-[500px] duration-300 transition-all ${modal ? 'opacity-100 visible scale-100' : 'opacity-0 invisible scale-95'}`}>
                 <form onSubmit={handleSubmit} className="bg-white text-slate-800 p-6 sm:p-8 rounded-2xl shadow-2xl relative border border-sky-100 max-h-[90vh] overflow-y-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
                     <button
                         type="button"
@@ -169,18 +214,22 @@ export default function BannerSection() {
 
                     {/* Left: copy column */}
                     <div className="max-w-2xl text-left relative z-10">
-                        <p className="uppercase tracking-[3px] sm:tracking-[3px] text-amber-300 font-bold text-xs sm:text-sm mb-4 " style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-                            FINTAX ADVISER · EST. COMPLIANCE PARTNERS
-                        </p>
+                        
+                        {/* Typing Effect Tagline Block */}
+                        <div className="mb-4 min-h-[24px]">
+                            <p className="uppercase tracking-[3px] text-amber-300 font-bold text-xs sm:text-sm inline-block typing-cursor pr-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                                {typedText}
+                            </p>
+                        </div>
 
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] tracking-tight leading-[1.1] mb-6 text-white" style={{ fontFamily: "'Fraunces', serif", fontWeight: 600 }}>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] tracking-tight leading-[1.1] mb-6 text-white animate-fade-in-up [animation-delay:200ms] opacity-0" style={{ fontFamily: "'Fraunces', serif", fontWeight: 600 }}>
                             India's Trusted Partner for
                             <span className="block mt-1 text-transparent bg-clip-text bg-sky-500">
                                 Registration, Taxation &amp; <span className='text-orange-400'>Compliance</span>
                             </span>
                         </h1>
 
-                        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-8 h-auto sm:h-12 overflow-hidden">
+                        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-8 h-auto sm:h-12 overflow-hidden animate-fade-in-up [animation-delay:400ms] opacity-0">
                             <span className="text-slate-100 text-base sm:text-lg font-medium tracking-wide">
                                 Expertise in:
                             </span>
@@ -198,13 +247,13 @@ export default function BannerSection() {
                             </div>
                         </div>
 
-                        <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mb-8 sm:mb-10">
+                        <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mb-8 sm:mb-10 animate-fade-in-up [animation-delay:800ms] opacity-0 transition-all duration-500 hover:text-white">
                             Fintax Adviser helps startups, entrepreneurs, professionals, and growing businesses manage
                             registrations, taxation, compliance, and financial operations through expert guidance and
                             practical business solutions — so you can focus on growth with confidence.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up [animation-delay:800ms] opacity-0">
                             <button
                                 className="w-full sm:w-auto bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-sky-600/10 active:scale-[0.98]"
                                 onClick={() => setModal(true)}
@@ -221,11 +270,7 @@ export default function BannerSection() {
 
                     {/* Right side: Fixed 3D Image Layer with Floating Accent Icons */}
                     <div className="relative h-[450px] sm:h-[500px] w-full flex items-center justify-center select-none">
-                        
-                        {/* Wrapper for image floating animation */}
                         <div className="relative w-full h-full flex items-center justify-center animate-float">
-                            
-                            {/* Ambient Icons Floating Specific to Right Graphic */}
                             <div className="absolute inset-0 pointer-events-none opacity-20 text-sky-400">
                                 <FiTrendingUp className="absolute top-[12%] right-[15%] w-7 h-7 animate-float-slow" />
                                 <FiPieChart className="absolute bottom-[14%] left-[8%] w-8 h-8 animate-float-delayed" />
@@ -233,7 +278,6 @@ export default function BannerSection() {
                                 <FiAward className="absolute bottom-[28%] right-[4%] w-7 h-7 animate-float-delayed" />
                             </div>
 
-                            {/* Main Banner Image Asset */}
                             <img
                                 src="/assets/fintaxbanner.png"
                                 alt="Fintax Compliance Services"
@@ -244,6 +288,6 @@ export default function BannerSection() {
 
                 </div>
             </section>
-		</>
+        </>
     );
 }

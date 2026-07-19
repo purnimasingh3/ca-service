@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { FiUser, FiPhone, FiMail, FiX, FiCheckCircle, FiLoader } from "react-icons/fi";
+import { FiUser, FiPhone, FiMail, FiX, FiCheckCircle, FiLoader, FiSearch } from "react-icons/fi";
 
 export default function LeadPopup() {
     const router = useRouter();
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    
+
     // 💡 जादू यहाँ है: यह ट्रैक रखेगा कि क्या दूसरी बार का पॉपअप शेड्यूल या दिख चुका है
     const [hasShownSecondTime, setHasShownSecondTime] = useState(false);
 
@@ -17,7 +17,7 @@ export default function LeadPopup() {
         name: "",
         contact: "",
         email: "",
-        message: "Lead from Popup Form",
+        message: "",
     };
 
     const [formData, setFormData] = useState(initialFormState);
@@ -48,7 +48,7 @@ export default function LeadPopup() {
         // अगर फॉर्म सबमिट नहीं हुआ है और अभी तक दूसरी बार वाला पॉपअप नहीं आया है
         if (!submitted && !hasShownSecondTime) {
             setHasShownSecondTime(true); // तुरंत इसे true कर दो ताकि अगली बार ये कंडीशन चले ही नहीं
-            
+
             setTimeout(() => {
                 setOpen(true); // ठीक 10 सेकंड बाद दूसरी बार खोल दो
             }, 10000);
@@ -180,6 +180,19 @@ export default function LeadPopup() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder="Email Address (Optional)"
+                                    className="w-full border border-slate-200 rounded-2xl pl-11 pr-4 py-3.5 bg-slate-50/50 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 focus:bg-white transition-all duration-200 shadow-sm"
+                                />
+                            </div>
+                            <div className="relative group">
+                                <span className="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400 group-focus-within:text-blue-500 transition-colors duration-200">
+                                    <FiSearch size={18} />
+                                </span>
+                                <textarea
+                                    type="text"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder="Write your query here.."
                                     className="w-full border border-slate-200 rounded-2xl pl-11 pr-4 py-3.5 bg-slate-50/50 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 focus:bg-white transition-all duration-200 shadow-sm"
                                 />
                             </div>

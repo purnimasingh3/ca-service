@@ -15,6 +15,7 @@ export default function Contact() {
         email: '',
         contact: '',
         state: '',
+        message: '',
     });
 
     const handleNext = () => {
@@ -62,6 +63,7 @@ export default function Contact() {
                     contact: "",
                     email: "",
                     state: "",
+                    message:"",
                 });
 
                 setActiveTab(1);
@@ -241,6 +243,13 @@ export default function Contact() {
                                 <ChevronDown size={16} />
                             </div>
                         </div>
+                         <textarea
+                            type="text"
+                            placeholder="Raise your Query"
+                            value={formData.message}
+                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                            className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition"
+                        />
 
                         <button
                             type="submit"

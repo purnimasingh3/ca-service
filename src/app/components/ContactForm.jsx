@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -8,9 +8,9 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    contact:'',
-    // stage: 'Idea Stage / Seed Funding',
-    // message: ''
+    contact: '',
+    stage: 'Idea Stage / Seed Funding',
+    message: ''
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default function ContactForm() {
       name: e.target.name.value,
       email: e.target.email.value,
       contact: e.target.contact.value,
-      // message: e.target.message.value,
+      message: e.target.message.value,
     };
     try {
       const res = await fetch("/api/contact", {
@@ -38,7 +38,7 @@ export default function ContactForm() {
           name: '',
           email: '',
           contact: '',
-          // message: '',
+          message: '',
         });
         e.target.reset();
       } else {
@@ -70,7 +70,6 @@ export default function ContactForm() {
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-sm transition-all"
             placeholder="Name*"
-            suppressHydrationWarning={true}
           />
         </div>
         <div>
@@ -82,7 +81,6 @@ export default function ContactForm() {
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-sm transition-all"
             placeholder="Email*"
-            suppressHydrationWarning={true}
           />
         </div>
         <div>
@@ -94,7 +92,17 @@ export default function ContactForm() {
             onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
             className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-sm transition-all"
             placeholder="Contact*"
-            suppressHydrationWarning={true}
+          />
+        </div>
+        <div>
+          <textarea
+            type="text"
+            name="message"
+            required
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-sm transition-all"
+            placeholder="Write your query here..."
           />
         </div>
 
