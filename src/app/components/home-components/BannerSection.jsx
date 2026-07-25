@@ -17,7 +17,7 @@ export default function BannerSection() {
     const [modal, setModal] = useState(false);
 
     // Typing effect logic for the main tagline
-    const fullTagline = "FINTAX ADVISER. STRONG FINANCE. STRONG FUTURE";
+    const fullTagline = "STRONG FINANCE. STRONG FUTURE";
     const [typedText, setTypedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
     const [typingSpeed, setTypingSpeed] = useState(100);

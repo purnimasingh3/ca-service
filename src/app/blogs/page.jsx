@@ -25,7 +25,7 @@ export default function Blogs() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Pagination State - Ek page par 4 bade blogs dikhane k liye
+  // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 4;
 
@@ -137,98 +137,158 @@ export default function Blogs() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
 
+        /* ── DYNAMIC GLOBAL WRAPPER ── */
         .sf-page {
           font-family: 'Poppins', sans-serif;
           background: #F5F7FA;
           color: #1A2340;
           min-height: 100vh;
+          width: 100%;
+          max-width: 100vw;
+          overflow-x: hidden;
+          box-sizing: border-box;
         }
 
-        /* ── TOP INFO BAR ── */
+        /* ── DYNAMIC TOP INFO BAR ── */
         .sf-topbar {
           background: #1B3A6B;
           color: #CBD5E1;
-          font-size: 12.5px;
-          padding: 0 32px;
+          font-size: 11px;
+          padding: 0 12px;
           height: 38px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           border-bottom: 3px solid #22C55E;
+          width: 100%;
+          box-sizing: border-box;
         }
+        @media (min-width: 640px) {
+          .sf-topbar { font-size: 12.5px; padding: 0 24px; }
+        }
+        @media (min-width: 1024px) {
+          .sf-topbar { padding: 0 32px; }
+        }
+
         .sf-topbar-date { display: flex; align-items: center; gap: 6px; }
-        .sf-topbar-right { display: flex; align-items: center; gap: 20px; }
-        .sf-social-icons { display: flex; gap: 6px; }
-        .sf-social-icons a {
-          width: 26px; height: 26px; border-radius: 50%;
-          display: flex; align-items: center; justify-content: center;
-          font-size: 11px; font-weight: 700; text-decoration: none;
-          transition: opacity 0.15s;
+        .sf-topbar-right { display: flex; align-items: center; gap: 12px; }
+        .sf-social-icons { display: flex; gap: 4px; }
+        @media (min-width: 640px) {
+          .sf-topbar-right { gap: 20px; }
+          .sf-social-icons { gap: 6px; }
         }
-        .sf-social-icons a:hover { opacity: 0.85; }
+        .sf-social-icons a {
+          width: 24px; height: 24px; border-radius: 50%;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 10px; font-weight: 700; text-decoration: none;
+          transition: transform 0.15s, opacity 0.15s;
+        }
+        @media (min-width: 640px) {
+          .sf-social-icons a { width: 26px; height: 26px; font-size: 11px; }
+        }
+        .sf-social-icons a:hover { transform: scale(1.08); opacity: 0.9; }
         .sf-fb  { background: #1877F2; color: #fff; }
         .sf-tw  { background: #021018; color: #fff; }
         .sf-ig  { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
         .sf-li  { background: #0A66C2; color: #fff; }
         .sf-yt  { background: #13c053; color: #fff; }
 
-        /* ── SEARCH + CATEGORY STRIP ── */
+        /* ── DYNAMIC SEARCH & CATEGORY STRIP ── */
         .sf-search-strip {
           background: linear-gradient(135deg, #1B3A6B 0%, #1e4a8a 100%);
-          padding: 28px 32px;
+          padding: 18px 12px;
+          width: 100%;
+          box-sizing: border-box;
         }
+        @media (min-width: 640px) {
+          .sf-search-strip { padding: 24px 20px; }
+        }
+        @media (min-width: 1024px) {
+          .sf-search-strip { padding: 28px 32px; }
+        }
+
         .sf-search-strip-inner {
           max-width: 1280px;
           margin: 0 auto;
+          width: 100%;
         }
         .sf-search-strip h3 {
           color: #fff;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 600;
-          margin-bottom: 14px;
+          margin-bottom: 10px;
           opacity: 0.9;
         }
+        @media (min-width: 640px) {
+          .sf-search-strip h3 { font-size: 15px; margin-bottom: 14px; }
+        }
+
         .sf-search-row {
           display: flex;
-          gap: 0;
+          width: 100%;
           max-width: 580px;
-          margin-bottom: 16px;
+          margin-bottom: 12px;
         }
+        @media (min-width: 640px) {
+          .sf-search-row { margin-bottom: 16px; }
+        }
+
         .sf-search-input {
           flex: 1;
+          min-width: 0;
           border: none;
           outline: none;
-          padding: 12px 18px;
-          font-size: 14px;
+          padding: 10px 14px;
+          font-size: 13px;
           font-family: 'Poppins', sans-serif;
           border-radius: 8px 0 0 8px;
           background: #fff;
           color: #1A2340;
         }
+        @media (min-width: 640px) {
+          .sf-search-input { padding: 12px 18px; font-size: 14px; }
+        }
         .sf-search-input::placeholder { color: #94A3B8; }
+
         .sf-search-btn {
           background: #22C55E;
           border: none;
-          padding: 0 20px;
+          padding: 0 16px;
           border-radius: 0 8px 8px 0;
           cursor: pointer;
           color: #fff;
           display: flex; align-items: center; justify-content: center;
           transition: background 0.15s;
+          flex-shrink: 0;
+        }
+        @media (min-width: 640px) {
+          .sf-search-btn { padding: 0 20px; }
         }
         .sf-search-btn:hover { background: #16A34A; }
-        .sf-cat-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+        .sf-cat-row {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        @media (min-width: 640px) {
+          .sf-cat-row { gap: 8px; }
+        }
+
         .sf-cat-btn {
-          padding: 6px 16px;
+          padding: 5px 12px;
           border-radius: 99px;
           border: 1.5px solid rgba(255,255,255,0.3);
           background: rgba(255,255,255,0.08);
           color: rgba(255,255,255,0.85);
-          font-size: 12.5px;
+          font-size: 11.5px;
           font-weight: 500;
           cursor: pointer;
           transition: all 0.15s;
           font-family: 'Poppins', sans-serif;
+        }
+        @media (min-width: 640px) {
+          .sf-cat-btn { padding: 6px 16px; font-size: 12.5px; }
         }
         .sf-cat-btn:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.6); color: #fff; }
         .sf-cat-btn.active {
@@ -238,44 +298,81 @@ export default function Blogs() {
           font-weight: 600;
         }
 
-        /* ── MAIN LAYOUT ── */
+        /* ── DYNAMIC MAIN LAYOUT ── */
         .sf-main {
           max-width: 1280px;
           margin: 0 auto;
-          padding: 28px 32px 64px;
+          padding: 16px 12px 32px;
           display: grid;
-          grid-template-columns: 1fr 400px;
-          gap: 28px;
+          grid-template-columns: 1fr;
+          gap: 24px;
           align-items: start;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+          .sf-main { padding: 24px 20px 48px; gap: 28px; }
+        }
+        @media (min-width: 1024px) {
+          .sf-main {
+            grid-template-columns: 1fr 380px;
+            padding: 28px 32px 64px;
+          }
+        }
+        @media (min-width: 1280px) {
+          .sf-main { grid-template-columns: 1fr 400px; }
         }
 
-        /* ── BLOG CARDS (Uniform Grid for all 4 blogs) ── */
+        /* ── DYNAMIC BLOG CARD GRID ── */
         .sf-blog-uniform-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 24px;
+          grid-template-columns: 1fr;
+          gap: 16px;
           margin-bottom: 24px;
         }
+        @media (min-width: 640px) {
+          .sf-blog-uniform-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+        }
+        @media (min-width: 1024px) {
+          .sf-blog-uniform-grid { gap: 24px; }
+        }
+
         .sf-featured-card {
           background: #fff;
           border-radius: 12px;
           overflow: hidden;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.06);
           transition: transform 0.2s, box-shadow 0.2s;
           display: flex;
           flex-direction: column;
+          height: 100%;
           text-decoration: none;
           color: inherit;
         }
         .sf-featured-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+
         .sf-featured-img {
           position: relative;
-          height: 220px;
+          height: 180px;
           overflow: hidden;
           background: #E2E8F0;
           flex-shrink: 0;
         }
-        .sf-featured-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
+        @media (min-width: 640px) {
+          .sf-featured-img { height: 200px; }
+        }
+        @media (min-width: 1024px) {
+          .sf-featured-img { height: 220px; }
+        }
+
+        .sf-featured-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
+        @media (min-width: 640px) {
+          .sf-featured-body { padding: 18px 20px 20px; }
+        }
+
         .sf-cat-tag {
           display: inline-flex;
           width: fit-content;
@@ -286,132 +383,120 @@ export default function Blogs() {
           border-radius: 99px;
           font-size: 11px;
           font-weight: 600;
-          margin-bottom: 10px;
-        }
-        .sf-featured-title {
-          font-family: 'Merriweather', serif;
-          font-size: 16px;
-          font-weight: 700;
-          color: #1A2340;
-          line-height: 1.45;
           margin-bottom: 8px;
         }
+
+        .sf-featured-title {
+          font-family: 'Merriweather', serif;
+          font-size: 15px;
+          font-weight: 700;
+          color: #1A2340;
+          line-height: 1.4;
+          margin-bottom: 8px;
+        }
+        @media (min-width: 640px) {
+          .sf-featured-title { font-size: 16px; line-height: 1.45; }
+        }
+
         .sf-featured-excerpt {
-          font-size: 13px;
+          font-size: 12.5px;
           color: #64748B;
-          line-height: 1.65;
+          line-height: 1.6;
           flex: 1;
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          margin-bottom: 14px;
+          margin-bottom: 12px;
         }
+        @media (min-width: 640px) {
+          .sf-featured-excerpt { font-size: 13px; line-height: 1.65; margin-bottom: 14px; }
+        }
+
         .sf-author-row {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          font-size: 12px;
+          font-size: 11.5px;
           color: #94A3B8;
           border-top: 1px solid #F1F5F9;
-          padding-top: 12px;
+          padding-top: 10px;
           margin-top: auto;
         }
+        @media (min-width: 640px) {
+          .sf-author-row { font-size: 12px; padding-top: 12px; }
+        }
+
         .sf-read-more-link {
           color: #1B3A6B;
           font-weight: 700;
         }
 
-        /* ── PAGINATION CONTROLS ── */
+        /* ── DYNAMIC PAGINATION ── */
         .sf-pagination {
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 16px;
-          margin-top: 40px;
-          padding-top: 20px;
+          gap: 12px;
+          margin-top: 24px;
+          padding-top: 16px;
           border-top: 1px solid #E2E8F0;
         }
+        @media (min-width: 640px) {
+          .sf-pagination { gap: 16px; margin-top: 40px; padding-top: 20px; }
+        }
+
         .sf-page-btn {
           background: #1B3A6B;
           color: #fff;
           border: none;
-          padding: 10px 22px;
+          padding: 8px 16px;
           border-radius: 8px;
           font-weight: 600;
-          font-size: 13.5px;
+          font-size: 12.5px;
           cursor: pointer;
           transition: background 0.2s, opacity 0.2s;
         }
-        .sf-page-btn:hover:not(:disabled) {
-          background: #142c52;
+        @media (min-width: 640px) {
+          .sf-page-btn { padding: 10px 22px; font-size: 13.5px; }
         }
-        .sf-page-btn:disabled {
-          background: #CBD5E1;
-          color: #64748B;
-          cursor: not-allowed;
-        }
+        .sf-page-btn:hover:not(:disabled) { background: #142c52; }
+        .sf-page-btn:disabled { background: #CBD5E1; color: #64748B; cursor: not-allowed; }
+
         .sf-page-info {
-          font-size: 14px;
+          font-size: 12.5px;
           font-weight: 600;
           color: #475569;
         }
+        @media (min-width: 640px) {
+          .sf-page-info { font-size: 14px; }
+        }
 
-        /* ── SIDEBAR ── */
-        .sf-sidebar { position: sticky; top: 24px; }
+        /* ── DYNAMIC SIDEBAR ── */
+        .sf-sidebar {
+          width: 100%;
+        }
+        @media (min-width: 1024px) {
+          .sf-sidebar { position: sticky; top: 24px; }
+        }
 
         /* ── NO RESULTS ── */
         .sf-no-results {
-          grid-column: 1;
-          padding: 64px 0;
+          padding: 48px 0;
           text-align: center;
         }
-        .sf-no-results h2 { font-size: 22px; font-weight: 700; color: #1A2340; margin-bottom: 8px; }
-        .sf-no-results p { color: #64748B; margin-bottom: 20px; }
+        .sf-no-results h1 { font-size: 20px; font-weight: 700; color: #1A2340; margin-bottom: 8px; }
+        .sf-no-results p { color: #64748B; margin-bottom: 20px; font-size: 14px; }
         .sf-back-btn {
           background: #1B3A6B;
           color: #fff;
           border: none;
           border-radius: 8px;
-          padding: 12px 28px;
-          font-size: 14px;
+          padding: 10px 24px;
+          font-size: 13.5px;
           font-weight: 600;
           cursor: pointer;
         }
-          @media (max-width: 900px) {
-  .sf-main { grid-template-columns: 1fr; }
-  .sf-blog-uniform-grid { grid-template-columns: 1fr; }
-  
-  /* Mobile par dono ko left-right ek line me rakhne ke liye */
-  .sf-topbar {
-    padding: 0 12px;
-    height: 42px;
-    display: flex;
-    flex-direction: row !important; /* Ek line me hi rakhega */
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Date ka size chota kiya taaki space bache */
-  .sf-topbar-date {
-    font-size: 10px; 
-    gap: 4px;
-  }
-  
-  /* Social icons ka gap chota kiya */
-  .sf-topbar-right {
-    gap: 8px;
-  }
-  .sf-social-icons {
-    gap: 4px;
-  }
-  .sf-social-icons a {
-    width: 22px;
-    height: 22px;
-    font-size: 10px;
-  }
-}
-         
       `}</style>
 
       <div className="sf-page">
@@ -430,11 +515,11 @@ export default function Blogs() {
           </div>
           <div className="sf-topbar-right">
             <div className="sf-social-icons">
-              <a href="https://www.facebook.com/profile.php?id=61589774084657" className="sf-fb"><FaFacebookF /></a>
-              <a href="https://x.com/fintaxadviser" className="sf-tw"><FaXTwitter /></a>
-              <a href="https://www.instagram.com/fintaxadviser" className="sf-ig"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/company/fintax-adviser/" className="sf-li"><FaLinkedinIn /></a>
-              <a href="https://wa.me/+919990924477" className="sf-yt"><FaWhatsapp /></a>
+              <a href="https://www.facebook.com/profile.php?id=61589774084657" className="sf-fb" aria-label="Facebook"><FaFacebookF /></a>
+              <a href="https://x.com/fintaxadviser" className="sf-tw" aria-label="Twitter"><FaXTwitter /></a>
+              <a href="https://www.instagram.com/fintaxadviser" className="sf-ig" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/company/fintax-adviser/" className="sf-li" aria-label="LinkedIn"><FaLinkedinIn /></a>
+              <a href="https://wa.me/+919990924477" className="sf-yt" aria-label="WhatsApp"><FaWhatsapp /></a>
             </div>
           </div>
         </div>
@@ -468,10 +553,10 @@ export default function Blogs() {
           </div>
         </div>
 
-        {/* MAIN CONTENT */}
+        {/* MAIN CONTENT WORKSPACE */}
         <div className="sf-main">
-          {/* LEFT — BLOG CONTENT */}
-          <div>
+          {/* LEFT SECTION — BLOG LISTING */}
+          <div className="w-full min-w-0">
             {currentBlogs.length === 0 ? (
               <div className="sf-no-results">
                 <h1>No Results Found</h1>
@@ -480,7 +565,6 @@ export default function Blogs() {
               </div>
             ) : (
               <>
-                {/* 4 BLOGS IN UNIFORM GRID (Same layout as featured ones) */}
                 <div className="sf-blog-uniform-grid">
                   {currentBlogs.map((blog) => (
                     <Link key={blog._id} href={`/blogs/${blog.slug}`} style={{ textDecoration: "none" }}>
@@ -491,7 +575,7 @@ export default function Blogs() {
                             alt={blog.title || "Blog Image"}
                             fill
                             loading="eager"
-                            sizes="(max-width: 900px) 100vw, 50vw"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             style={{ objectFit: "cover", objectPosition: "top" }}
                           />
                         </div>
@@ -512,7 +596,7 @@ export default function Blogs() {
                   ))}
                 </div>
 
-                {/* PAGINATION CONTROLS */}
+                {/* DYNAMIC PAGINATION CONTROLS */}
                 {totalPages > 1 && (
                   <div className="sf-pagination">
                     <button
@@ -538,9 +622,9 @@ export default function Blogs() {
             )}
           </div>
 
-          {/* RIGHT — SIDEBAR */}
+          {/* RIGHT SECTION — ADAPTIVE SIDEBAR */}
           <aside className="sf-sidebar">
-            <div className="w-full max-w-md bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl text-slate-900 border border-slate-100 mx-auto">
+            <div className="w-full max-w-md bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl sm:shadow-2xl text-slate-900 border border-slate-100 mx-auto box-border">
               {/* Top Rating Bar */}
               <div className="flex flex-wrap justify-between items-center gap-2 text-[11px] sm:text-xs md:text-sm text-indigo-900 font-bold border-b border-slate-100 pb-3 mb-4">
                 <div className="flex items-center gap-1">
@@ -601,11 +685,11 @@ export default function Blogs() {
                       placeholder="Full Name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition"
+                      className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition box-border"
                     />
 
                     <div className="flex gap-2">
-                      <div className="w-14 sm:w-16 flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 font-medium text-xs sm:text-sm text-slate-500">
+                      <div className="w-14 sm:w-16 flex-shrink-0 flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 font-medium text-xs sm:text-sm text-slate-500">
                         +91
                       </div>
                       <input
@@ -614,7 +698,7 @@ export default function Blogs() {
                         placeholder="Mobile Number"
                         value={formData.contact}
                         onChange={(e) => setFormData({ ...formData, contact: e.target.value.replace(/\D/g, '') })}
-                        className="flex-1 min-w-0 px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition"
+                        className="flex-1 min-w-0 px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition box-border"
                       />
                     </div>
 
@@ -651,14 +735,14 @@ export default function Blogs() {
                       placeholder="Email Address"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition"
+                      className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition box-border"
                     />
 
                     <div className="relative w-full">
                       <select
                         value={formData.state}
                         onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                        className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition bg-white appearance-none pr-10"
+                        className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-orange-500 transition bg-white appearance-none pr-10 box-border"
                       >
                         <option value="">Select State</option>
                         <option>Andhra Pradesh</option>
