@@ -205,6 +205,10 @@ const menuData = [
           }, {
             name: "Terms sheet & Shareholder agreement",
             slug: "best-terms-sheet-shareholder-agreement-service-delhi-india"
+          },
+          {
+            name: "Valuation certificate",
+            slug: "best-valuation-certificate-service-delhi-india"
           }, {
             name: "Due Diligenc services",
             slug: "best-due-diligence-service-delhi-india"
@@ -225,10 +229,6 @@ const menuData = [
       {
         heading: "Fundraising Compliance",
         links: [
-          {
-            name: "Valuation certificate",
-            slug: "best-valuation-certificate-service-delhi-india"
-          },
           {
             name: "Secretarial Compliance Fundraising",
             slug: "best-secretarial-compliance-for-fundraising-service-delhi-india"
@@ -272,7 +272,7 @@ const menuData = [
             name: "Income Tax Compliance ",
             slug: "best-income-tax-compliance-service-delhi-india",
           },
-           {
+          {
             name: "Small Business Accounting",
             slug: "best-small-business-accounting-service-delhi-india",
           },
@@ -397,11 +397,29 @@ const menuData = [
           }, {
             name: "Financial Consultancy",
             slug: "best-financial-consultancy-service-delhi-india"
-          }, {
+          },{
             name: "Company Valuation Services",
             slug: "best-company-valuation-service-delhi-india"
-          }
-
+          },
+           {
+            name: "Tax Consultancy Services",
+            slug: "best-tax-consultancy-service-delhi-india"
+          }, {
+            name: "Remote CFO Services",
+            slug: "best-remote-cfo-service-delhi-india"
+          }, {
+            name: "On Demand CFO Services",
+            slug: "best-on-demand-cfo-service-delhi-india"
+          }, {
+            name: "Hire Virtual CFO",
+            slug: "best-hire-virtual-cfo-delhi-india"
+          }, {
+            name: "CFO Support Services",
+            slug: "best-cfo-support-service-delhi-india"
+          }, {
+            name: "CFO Software Solutions",
+            slug: "best-cfo-software-solution-delhi-india"
+          },
         ],
       },
     ],

@@ -144,7 +144,6 @@ export default function Blogs() {
           color: #1A2340;
           min-height: 100vh;
           width: 100%;
-          max-width: 100vw;
           overflow-x: hidden;
           box-sizing: border-box;
         }
@@ -228,6 +227,7 @@ export default function Blogs() {
           width: 100%;
           max-width: 580px;
           margin-bottom: 12px;
+          box-sizing: border-box;
         }
         @media (min-width: 640px) {
           .sf-search-row { margin-bottom: 16px; }
@@ -244,6 +244,7 @@ export default function Blogs() {
           border-radius: 8px 0 0 8px;
           background: #fff;
           color: #1A2340;
+          box-sizing: border-box;
         }
         @media (min-width: 640px) {
           .sf-search-input { padding: 12px 18px; font-size: 14px; }
@@ -269,10 +270,16 @@ export default function Blogs() {
         .sf-cat-row {
           display: flex;
           gap: 6px;
-          flex-wrap: wrap;
+          overflow-x: auto;
+          white-space: nowrap;
+          padding-bottom: 4px;
+          -webkit-overflow-scrolling: touch;
+        }
+        .sf-cat-row::-webkit-scrollbar {
+          display: none;
         }
         @media (min-width: 640px) {
-          .sf-cat-row { gap: 8px; }
+          .sf-cat-row { gap: 8px; flex-wrap: wrap; overflow-x: visible; }
         }
 
         .sf-cat-btn {
@@ -286,6 +293,7 @@ export default function Blogs() {
           cursor: pointer;
           transition: all 0.15s;
           font-family: 'Poppins', sans-serif;
+          flex-shrink: 0;
         }
         @media (min-width: 640px) {
           .sf-cat-btn { padding: 6px 16px; font-size: 12.5px; }
@@ -393,6 +401,7 @@ export default function Blogs() {
           color: #1A2340;
           line-height: 1.4;
           margin-bottom: 8px;
+          word-break: break-word;
         }
         @media (min-width: 640px) {
           .sf-featured-title { font-size: 16px; line-height: 1.45; }
@@ -408,6 +417,7 @@ export default function Blogs() {
           -webkit-box-orient: vertical;
           overflow: hidden;
           margin-bottom: 12px;
+          word-break: break-word;
         }
         @media (min-width: 640px) {
           .sf-featured-excerpt { font-size: 13px; line-height: 1.65; margin-bottom: 14px; }
@@ -475,6 +485,7 @@ export default function Blogs() {
         /* ── DYNAMIC SIDEBAR ── */
         .sf-sidebar {
           width: 100%;
+          box-sizing: border-box;
         }
         @media (min-width: 1024px) {
           .sf-sidebar { position: sticky; top: 24px; }
@@ -624,7 +635,7 @@ export default function Blogs() {
 
           {/* RIGHT SECTION — ADAPTIVE SIDEBAR */}
           <aside className="sf-sidebar">
-            <div className="w-full max-w-md bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl sm:shadow-2xl text-slate-900 border border-slate-100 mx-auto box-border">
+            <div className="w-full bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl sm:shadow-2xl text-slate-900 border border-slate-100 mx-auto box-border">
               {/* Top Rating Bar */}
               <div className="flex flex-wrap justify-between items-center gap-2 text-[11px] sm:text-xs md:text-sm text-indigo-900 font-bold border-b border-slate-100 pb-3 mb-4">
                 <div className="flex items-center gap-1">
@@ -802,10 +813,10 @@ export default function Blogs() {
                   <span>Your details are secure and will not be shared.</span>
                 </p>
 
-                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-2 border-t border-slate-100">
                   <Link
                     href="tel:+919990924477"
-                    className="flex items-center justify-center gap-1.5 border border-slate-200 rounded-xl py-2.5 text-[11px] sm:text-xs font-bold text-blue-600 bg-white hover:bg-slate-50 transition"
+                    className="flex items-center justify-center gap-1 border border-slate-200 rounded-xl py-2.5 text-[10px] sm:text-xs font-bold text-blue-600 bg-white hover:bg-slate-50 transition"
                     title="Call Senior Advisor Desk"
                   >
                     <Phone className="h-3.5 w-3.5 text-blue-600 fill-blue-100 flex-shrink-0" /> Call Experts
@@ -815,7 +826,7 @@ export default function Blogs() {
                     href="https://wa.me/+919990924477"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-center gap-1.5 border border-emerald-200 rounded-xl py-2.5 text-[11px] sm:text-xs font-bold text-emerald-600 bg-emerald-50/50 hover:bg-emerald-50 transition"
+                    className="flex items-center justify-center gap-1 border border-emerald-200 rounded-xl py-2.5 text-[10px] sm:text-xs font-bold text-emerald-600 bg-emerald-50/50 hover:bg-emerald-50 transition"
                   >
                     <FaWhatsapp className="h-3.5 w-3.5 text-emerald-600 flex-shrink-0" /> WhatsApp
                   </Link>
