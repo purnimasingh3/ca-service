@@ -12,8 +12,16 @@ export async function POST(req) {
       number,
       mobile,
       message,
+      msg,
       service,
       state,
+      sourcePage,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_term,
+      utm_content,
+      gclid,
     } = body;
 
     // Different forms may use different field names
@@ -40,6 +48,14 @@ export async function POST(req) {
       service && `<p><b>Service:</b> ${service}</p>`,
       state && `<p><b>State:</b> ${state}</p>`,
       message && `<p><b>Message:</b> ${message}</p>`,
+      msg && `<p><b>Source:</b> ${msg}</p>`,
+      sourcePage && `<p><b>Source Page:</b> ${sourcePage}</p>`,
+      utm_source && `<p><b>UTM Source:</b> ${utm_source}</p>`,
+      utm_medium && `<p><b>UTM Medium:</b> ${utm_medium}</p>`,
+      utm_campaign && `<p><b>Campaign:</b> ${utm_campaign}</p>`,
+      utm_term && `<p><b>Keyword:</b> ${utm_term}</p>`,
+      utm_content && `<p><b>Ad Content:</b> ${utm_content}</p>`,
+      gclid && `<p><b>Google Click ID:</b> ${gclid}</p>`,
     ]
       .filter(Boolean)
       .join("");

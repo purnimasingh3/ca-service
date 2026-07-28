@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { FcGoogle } from 'react-icons/fc';
 import { Phone, ShieldCheck, Pencil, ChevronDown } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -10,6 +10,8 @@ export default function Contact() {
     // 1 for Personal Details, 2 for State/Email
     const [activeTab, setActiveTab] = useState(1);
     const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -23,36 +25,41 @@ export default function Contact() {
             alert("Please enter your name");
             return;
         }
-
         if (!/^[6-9]\d{9}$/.test(formData.contact)) {
             alert("Please enter a valid mobile number");
             return;
         }
-
         // Move to Stage 2
         setActiveTab(2);
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (!formData.email.trim()) {
             alert("Please enter your email");
             return;
         }
-
         if (!formData.state) {
             alert("Please select your state");
             return;
         }
-
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    // Kis landing page se form submit hua
+                    sourcePage: pathname,
+                    // Google Ads / campaign tracking
+                    utm_source: searchParams.get("utm_source") || "",
+                    utm_medium: searchParams.get("utm_medium") || "",
+                    utm_campaign: searchParams.get("utm_campaign") || "",
+                    utm_term: searchParams.get("utm_term") || "",
+                    utm_content: searchParams.get("utm_content") || "",
+                    gclid: searchParams.get("gclid") || "",
+                }),
             });
 
             if (res.ok) {
@@ -63,7 +70,7 @@ export default function Contact() {
                     contact: "",
                     email: "",
                     state: "",
-                    message:"",
+                    message: "",
                 });
 
                 setActiveTab(1);
@@ -243,7 +250,7 @@ export default function Contact() {
                                 <ChevronDown size={16} />
                             </div>
                         </div>
-                         <textarea
+                        <textarea
                             type="text"
                             placeholder="Raise your Query"
                             value={formData.message}
@@ -262,7 +269,7 @@ export default function Contact() {
 
                 {/* Footer Badges & Buttons */}
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-medium text-center pt-1 flex items-center justify-center gap-1">
-                    <ShieldCheck className="h-3 w-3 flex-shrink-0 text-slate-400" /> 
+                    <ShieldCheck className="h-3 w-3 flex-shrink-0 text-slate-400" />
                     <span>Your details are secure and will not be shared.</span>
                 </p>
 

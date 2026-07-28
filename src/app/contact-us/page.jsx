@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
-
+import { usePathname } from 'next/navigation';
 export default function ContactUs() {
+  const pathname = usePathname();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,18 +31,17 @@ export default function ContactUs() {
       message: e.target.message.value,
     };
 
-
     try {
-
       const res = await fetch("/api/contact", {
-
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
         },
-
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          // Kis landing page se form submit hua
+          sourcePage: pathname,
+        }),
       });
       if (res.ok) {
         alert(`Thank you ${formData.name}! Our senior investment consultant will contact you shortly.`);

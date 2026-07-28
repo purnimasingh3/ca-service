@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FiUser, FiPhone, FiMail, FiX, FiCheckCircle, FiLoader, FiSearch } from "react-icons/fi";
@@ -18,6 +17,7 @@ export default function LeadPopup() {
         contact: "",
         email: "",
         message: "",
+        msg:"Lead Popup form"
     };
 
     const [formData, setFormData] = useState(initialFormState);

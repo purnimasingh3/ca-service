@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function ContactForm() {
   const router = useRouter();
+  const pathname = usePathname();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,8 +30,10 @@ export default function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          sourcePage: pathname,
+        }),
       });
       if (res.ok) {
         router.push("/thank-you");

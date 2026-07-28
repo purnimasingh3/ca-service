@@ -1,9 +1,10 @@
 "use client";
-
 import { useState } from "react";
-
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 export default function ConsultantForm() {
-
+    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -19,37 +20,41 @@ export default function ConsultantForm() {
         });
     };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
-          alert(`Thank you ${formData.name}! Our senior investment consultant will contact you shortly.`);
-          setFormData({
-            name: '',
-            email: '',  
-            contact: '',
-            service: '',
-            message: '',  
-          });
-      }else {
-        const errorData = await res.json();
-        alert(errorData.error || "Failed to send message. Please try again later.");
-      }
-       
-      }catch (error) {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-      console.error("Error submitting form:", error);
-      alert("Failed to send message. Please try again later.");
-    } 
-  };
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    // Kis landing page se form submit hua
+                    sourcePage: pathname,
+                }),
+            });
+            if (res.ok) {
+                alert(`Thank you ${formData.name}! Our senior investment consultant will contact you shortly.`);
+                setFormData({
+                    name: '',
+                    email: '',
+                    contact: '',
+                    service: '',
+                    message: '',
+                });
+            } else {
+                const errorData = await res.json();
+                alert(errorData.error || "Failed to send message. Please try again later.");
+            }
+
+        } catch (error) {
+
+            console.error("Error submitting form:", error);
+            alert("Failed to send message. Please try again later.");
+        }
+    };
     return (
         <form className="consultant-form" onSubmit={handleSubmit}>
 
