@@ -5,6 +5,7 @@ import Script from "next/script";
 import HideLayout from "./components/HideLayout";
 
 export const metadata = {
+  metadataBase: new URL("https://fintaxadviser.com"),
   title: "Fintax Adviser",
   description:
     "Professional GST registration and taxation compliance services for startups and businesses.",
