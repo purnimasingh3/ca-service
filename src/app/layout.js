@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Professional GST registration and taxation compliance services for startups and businesses.",
   verification: {
-    google: "0V1FOsC4tZ8ptWxLwu-Oa4IdUeNxP7zhfaD6947WH0Q"
+    google: "qf9hzJOY8yo_XojgCn6UTtSp9q3fZvn7djJiXYGM5NE"
   },
   openGraph: {
     title: 'Fintax Adviser',
