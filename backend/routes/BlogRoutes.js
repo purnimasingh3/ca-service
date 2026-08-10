@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
     // });
 
     const blogs = await Blog.find(query)
-      .select("title slug category excerpt image author createdAt")
+      .select("title slug category excerpt image author status createdAt")
       .sort({ createdAt: -1 })
       .lean();
     res.json(blogs);

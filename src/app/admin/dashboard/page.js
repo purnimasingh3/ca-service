@@ -203,15 +203,24 @@ export default function Dashboard() {
                   <p className="text-sm text-slate-500">{formatDate(blog.createdAt)} • {blog.category || 'Uncategorized'}</p>
                   <h3 className="text-xl font-semibold text-slate-900 truncate">{blog.title}</h3>
                   <p className="text-red-500">
-                    Status: {blog.status}
+                    Status: {blog.status || "Not set"}
                   </p>
                   <p className="mt-2 text-sm text-slate-600 line-clamp-2">{blog.excerpt || 'No description available.'}</p>
 
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${blog.status === 'published' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>
-                    {blog.status?.charAt(0).toUpperCase() + blog.status?.slice(1)}
+                  <span
+                    className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${blog.status === "published"
+                        ? "bg-green-100 text-green-700"
+                        : blog.status === "draft"
+                          ? "bg-yellow-100 text-yellow-700"
+                          : "bg-slate-100 text-slate-600"
+                      }`}
+                  >
+                    {blog.status
+                      ? blog.status.charAt(0).toUpperCase() + blog.status.slice(1)
+                      : "Not set"}
                   </span>
                   <Link href={`/admin/blog/edit/${blog._id}`} className="inline-flex items-center rounded-2xl bg-yellow-500 px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-600 transition">
                     Edit
